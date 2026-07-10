@@ -9,6 +9,8 @@ labels = {
     "approve": ("0E8A16", "公開を承認"),
     "reject": ("B60205", "公開しない"),
     "needs-fix": ("D93F0B", "修正が必要"),
+    "weekly-report": ("1D76DB", "週次運用レポート"),
+    "monthly-product": ("5319E7", "月次商品候補"),
 }
 
 for name, (color, description) in labels.items():
