@@ -154,15 +154,42 @@ def build_rewrite_prompt(draft: dict, validation: dict) -> str:
 """.strip()
 
 
+
+def normalize_validation_score(validation: dict) -> dict:
+    """10点満点で返された可能性が高い採点だけを100点満点へ補正する。"""
+    try:
+        score = int(validation.get("score", 0))
+    except (TypeError, ValueError):
+        score = 0
+
+    issues = validation.get("issues", [])
+    has_high = any(
+        isinstance(issue, dict) and issue.get("severity") == "high"
+        for issue in issues
+    )
+
+    if (
+        1 <= score <= 10
+        and validation.get("status") == "pass"
+        and validation.get("publishable") is True
+        and not has_high
+    ):
+        score *= 10
+
+    validation["score"] = max(0, min(score, 100))
+    return validation
+
+
 def validate_and_rewrite(draft: dict) -> tuple[dict, dict]:
     validation = call_model(
         [
-            {"role": "system", "content": "厳格に判定し、有効なJSONだけを返してください。"},
+            {"role": "system", "content": "厳格に判定し、有効なJSONだけを返してください。scoreは必ず0〜100の整数で返してください。90点なら90と返し、9とは返さないでください。"},
             {"role": "user", "content": build_validator_prompt(draft)},
         ],
         temperature=0.1,
         max_tokens=1800,
     )
+    validation = normalize_validation_score(validation)
 
     if validation.get("status") == "rewrite":
         draft = call_model(
@@ -175,12 +202,13 @@ def validate_and_rewrite(draft: dict) -> tuple[dict, dict]:
         )
         validation = call_model(
             [
-                {"role": "system", "content": "再校閲し、有効なJSONだけを返してください。"},
+                {"role": "system", "content": "再校閲し、有効なJSONだけを返してください。scoreは必ず0〜100の整数で返してください。90点なら90と返し、9とは返さないでください。"},
                 {"role": "user", "content": build_validator_prompt(draft)},
             ],
             temperature=0.1,
             max_tokens=1800,
         )
+        validation = normalize_validation_score(validation)
 
     return draft, validation
 
