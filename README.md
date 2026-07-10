@@ -23,7 +23,7 @@
 - 修正版だけを再校閲し、Issue本文とラベルを更新
 - 公開処理で作成した同一成果物をGitHub Pagesへ渡す方式に修正
 - 書き込みWorkflowを直列化し、自動コミットの競合を抑制
-- 初期トップページの画像参照を `pikoron.png` に統一
+- GitHub上で実在する画像参照を `pikolon.png` に統一
 
 ## 更新方法
 
@@ -35,7 +35,7 @@
 - `scripts/`
 - `config/`
 - `docs/assets/style.css`
-- `docs/assets/pikoron.png`
+- `docs/assets/pikolon.png`
 - `requirements.txt`
 
 ## 毎日の操作
