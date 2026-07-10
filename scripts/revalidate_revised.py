@@ -99,6 +99,12 @@ def main():
             continue
         validation = call_model(draft)
         draft['_validation'] = validation
+        maximum_review = int(SETTINGS.get('max_review_minutes', 10))
+        try:
+            review_minutes = int(draft.get('estimated_review_minutes', maximum_review))
+        except (TypeError, ValueError):
+            review_minutes = maximum_review
+        draft['estimated_review_minutes'] = max(1, min(review_minutes, maximum_review))
         publishable = is_publishable(draft, validation)
         draft.setdefault('_meta', {})['status'] = 'review' if publishable else 'blocked'
         path.write_text(json.dumps(draft, ensure_ascii=False, indent=2), encoding='utf-8')
