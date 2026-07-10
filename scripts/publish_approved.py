@@ -5,11 +5,16 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / "config/settings.json").read_text(encoding="utf-8"))
+
+
+def now_local() -> datetime:
+    return datetime.now(ZoneInfo(SETTINGS.get("timezone", "Asia/Tokyo")))
 
 
 def github_get(path: str):
@@ -122,7 +127,7 @@ def publish(draft_path: Path) -> Path:
 </html>"""
     post_path.write_text(html, encoding="utf-8")
     data["_meta"]["status"] = "published"
-    data["_meta"]["published_at"] = datetime.now().isoformat()
+    data["_meta"]["published_at"] = now_local().isoformat()
     draft_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     return post_path
 
