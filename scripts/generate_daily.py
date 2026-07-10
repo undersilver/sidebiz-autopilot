@@ -180,6 +180,34 @@ def normalize_validation_score(validation: dict) -> dict:
     return validation
 
 
+def is_publishable(draft: dict, validation: dict) -> bool:
+    """公開候補Issueへ出せる条件を一か所で厳格に判定する。"""
+    try:
+        score = int(validation.get("score", 0))
+    except (TypeError, ValueError):
+        return False
+
+    issues = validation.get("issues", [])
+    has_high = any(
+        isinstance(issue, dict) and issue.get("severity") == "high"
+        for issue in issues
+    )
+    minimum = int(SETTINGS.get("validation", {}).get("minimum_score", 80))
+    article = str(draft.get("article_markdown", ""))
+    has_incomplete_marker = any(
+        marker in article for marker in ("要出典", "今後調査が必要")
+    )
+
+    return (
+        validation.get("status") == "pass"
+        and validation.get("publishable") is True
+        and score >= minimum
+        and not has_high
+        and not draft.get("sources_needed")
+        and not has_incomplete_marker
+    )
+
+
 def validate_and_rewrite(draft: dict) -> tuple[dict, dict]:
     validation = call_model(
         [
@@ -244,10 +272,11 @@ def save_draft(data: dict, seed: dict) -> Path:
     draft_dir = ROOT / "drafts"
     draft_dir.mkdir(exist_ok=True)
     path = draft_dir / f"{today}-{data['slug']}.json"
+    publishable = is_publishable(data, data.get("_validation", {}))
     data["_meta"] = {
         "created_at": datetime.now().isoformat(),
         "seed": seed,
-        "status": "review" if data.get("_validation", {}).get("publishable") else "blocked",
+        "status": "review" if publishable else "blocked",
     }
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -274,7 +303,7 @@ def create_issue(data: dict, draft_path: Path) -> None:
         for i in validation.get("issues", [])
     ) or "- なし"
 
-    publishable = bool(validation.get("publishable"))
+    publishable = is_publishable(data, validation)
     label = "review" if publishable else "needs-fix"
     body = f"""## 本日の公開候補
 
