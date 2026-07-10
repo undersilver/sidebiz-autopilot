@@ -18,5 +18,10 @@
     "date": "2026-07-10",
     "title": "力士を主人公にしたローグライクの戦闘設計",
     "draft": "drafts/2026-07-10-sumo-roguelike-combat-design.json"
+  },
+  {
+    "date": "2026-07-11",
+    "title": "ゲーム用キャラクター九面図で向きが崩れる原因",
+    "draft": "drafts/2026-07-11-game-character-nine-view-direction-issue-ai-fix.json"
   }
 ]
