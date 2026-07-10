@@ -6,6 +6,7 @@ import random
 import re
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -15,6 +16,10 @@ SEEDS = json.loads((ROOT / "config/topic_seeds.json").read_text(encoding="utf-8"
 CONTEXT = (ROOT / "config/context.md").read_text(encoding="utf-8")
 
 API_URL = "https://models.github.ai/inference/chat/completions"
+
+
+def now_local() -> datetime:
+    return datetime.now(ZoneInfo(SETTINGS.get("timezone", "Asia/Tokyo")))
 
 
 def choose_seed() -> dict:
@@ -77,6 +82,7 @@ def build_writer_prompt(seed: dict) -> str:
 - 既存作品名・キャラクター名・ブランド名は必要がない限り出さない
 - マスコット「ピコロン」は記事内で0〜1回。内容に不要なら登場させない
 - 1,500〜2,200字程度
+- 人間の確認時間は最大{SETTINGS['max_review_minutes']}分として設計する
 - JSONだけを返す
 
 JSON形式：
@@ -242,7 +248,7 @@ def validate_and_rewrite(draft: dict) -> tuple[dict, dict]:
 
 
 def fallback(seed: dict, error: Exception) -> dict:
-    slug = datetime.now().strftime("%Y-%m-%d-fallback")
+    slug = now_local().strftime("%Y-%m-%d-fallback")
     return {
         "title": seed["title"],
         "slug": slug,
@@ -268,13 +274,20 @@ def fallback(seed: dict, error: Exception) -> dict:
 
 
 def save_draft(data: dict, seed: dict) -> Path:
-    today = datetime.now().strftime("%Y-%m-%d")
+    now = now_local()
+    today = now.strftime("%Y-%m-%d")
+    maximum_review = int(SETTINGS.get("max_review_minutes", 10))
+    try:
+        review_minutes = int(data.get("estimated_review_minutes", maximum_review))
+    except (TypeError, ValueError):
+        review_minutes = maximum_review
+    data["estimated_review_minutes"] = max(1, min(review_minutes, maximum_review))
     draft_dir = ROOT / "drafts"
     draft_dir.mkdir(exist_ok=True)
     path = draft_dir / f"{today}-{data['slug']}.json"
     publishable = is_publishable(data, data.get("_validation", {}))
     data["_meta"] = {
-        "created_at": datetime.now().isoformat(),
+        "created_at": now.isoformat(),
         "seed": seed,
         "status": "review" if publishable else "blocked",
     }

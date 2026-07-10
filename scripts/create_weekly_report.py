@@ -3,14 +3,20 @@ import json, os
 from collections import Counter
 from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
+SETTINGS = json.loads((ROOT / 'config/settings.json').read_text(encoding='utf-8'))
+
+def now_local():
+    return datetime.now(ZoneInfo(SETTINGS.get('timezone', 'Asia/Tokyo')))
 
 def main():
     history_path = ROOT / 'data/history.json'
     history = json.loads(history_path.read_text(encoding='utf-8')) if history_path.exists() else []
-    cutoff = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+    now = now_local()
+    cutoff = (now - timedelta(days=7)).strftime('%Y-%m-%d')
     recent = [x for x in history if x.get('date', '') >= cutoff]
     published, scores, categories = [], [], Counter()
     for item in recent:
@@ -41,7 +47,7 @@ def main():
 - 公開件数より品質を優先する
 '''
     repo, token = os.environ['GITHUB_REPOSITORY'], os.environ['GITHUB_TOKEN']
-    r = requests.post(f'https://api.github.com/repos/{repo}/issues', headers={'Authorization':f'Bearer {token}','Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}, json={'title':f'【週次レポート】{datetime.now():%Y-%m-%d}','body':body,'labels':['weekly-report']}, timeout=60)
+    r = requests.post(f'https://api.github.com/repos/{repo}/issues', headers={'Authorization':f'Bearer {token}','Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}, json={'title':f'【週次レポート】{now:%Y-%m-%d}','body':body,'labels':['weekly-report']}, timeout=60)
     r.raise_for_status()
 
 if __name__ == '__main__': main()
