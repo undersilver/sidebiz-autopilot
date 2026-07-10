@@ -13,5 +13,10 @@
     "date": "2026-07-10",
     "title": "初心者がCodexで小規模ゲームを作るときの仕様書",
     "draft": "drafts/2026-07-10-codex-small-game-minimal-specs.json"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "力士を主人公にしたローグライクの戦闘設計",
+    "draft": "drafts/2026-07-10-sumo-roguelike-combat-design.json"
   }
 ]
