@@ -1,0 +1,22 @@
+name: Weekly operation report
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 19 * * 0"
+      timezone: "Asia/Tokyo"
+permissions:
+  contents: read
+  issues: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Create weekly report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/create_weekly_report.py

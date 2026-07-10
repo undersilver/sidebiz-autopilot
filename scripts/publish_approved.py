@@ -56,10 +56,20 @@ def assert_publishable(data: dict) -> None:
         raise RuntimeError("AI校閲で公開不可と判定されています")
     if validation.get("status") != "pass":
         raise RuntimeError("AI校閲がpassではありません")
-    if int(validation.get("score", 0)) < 80:
+    minimum = int(SETTINGS.get("validation", {}).get("minimum_score", 80))
+    if int(validation.get("score", 0)) < minimum:
         raise RuntimeError("AI校閲スコアが80未満です")
+    if any(
+        isinstance(issue, dict) and issue.get("severity") == "high"
+        for issue in validation.get("issues", [])
+    ):
+        raise RuntimeError("highリスクの問題が残っています")
     if data.get("sources_needed"):
         raise RuntimeError("未解決の出典確認項目が残っています")
+    article = str(data.get("article_markdown", ""))
+    markers = [marker for marker in ("要出典", "今後調査が必要") if marker in article]
+    if markers:
+        raise RuntimeError(f"未完成表現が本文に残っています：{', '.join(markers)}")
 
 
 def escape(text: str) -> str:
@@ -102,6 +112,7 @@ def publish(draft_path: Path) -> Path:
   <p class="category">{escape(data['category'])}</p>
   <h1>{escape(data['title'])}</h1>
   <p class="lead">{escape(data['summary'])}</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/{date}-{data['slug']}.png" alt="{escape(data['title'])}">
   {article_html}
   <hr>
   <p class="disclosure">{escape(SETTINGS['affiliate_disclosure'])}</p>
@@ -127,10 +138,11 @@ def rebuild_index() -> None:
                 "path": f"posts/{path.name}",
                 "title": title_match.group(1),
                 "lead": lead_match.group(1) if lead_match else "",
+                "thumbnail": f"assets/thumbnails/{path.stem}.png",
             })
 
     cards = "\n".join(
-        f'<article class="card"><h2><a href="{p["path"]}">{p["title"]}</a></h2><p>{p["lead"]}</p></article>'
+        f'<article class="card"><a href="{p["path"]}"><img src="{p["thumbnail"]}" alt="{p["title"]}"></a><div><h2><a href="{p["path"]}">{p["title"]}</a></h2><p>{p["lead"]}</p></div></article>'
         for p in posts
     ) or '<p>最初の記事を準備中です。</p>'
 
@@ -174,9 +186,18 @@ def main() -> None:
         try:
             post_path = publish(draft_path)
         except Exception as exc:
+            labels = [
+                label["name"] for label in issue.get("labels", [])
+                if label["name"] not in {"approve", "review"}
+            ]
+            if "needs-fix" not in labels:
+                labels.append("needs-fix")
             github_patch(
                 f"/issues/{issue['number']}",
-                {"body": issue["body"] + f"\n\n⚠️ 公開を停止しました：{exc}"},
+                {
+                    "body": issue["body"] + f"\n\n⚠️ 公開を停止しました：{exc}",
+                    "labels": labels,
+                },
             )
             continue
 

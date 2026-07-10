@@ -1,9 +1,7 @@
-name: Daily content generation
+name: Revise from issue comment
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 7 * * *"
-      timezone: "Asia/Tokyo"
+  issue_comment:
+    types: [created]
 permissions:
   contents: write
   issues: write
@@ -12,7 +10,8 @@ concurrency:
   group: sidebiz-content-writes
   cancel-in-progress: false
 jobs:
-  generate:
+  revise:
+    if: github.actor == github.repository_owner && github.event.comment.author_association == 'OWNER' && startsWith(github.event.comment.body, '/revise')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -24,21 +23,17 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y fonts-noto-cjk
           pip install -r requirements.txt
-      - name: Create labels
+      - name: Apply revision
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/create_labels.py
-      - name: Generate and validate one review item
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/generate_daily.py
-      - name: Generate branded thumbnail
+        run: python scripts/revise_from_comment.py
+      - name: Rebuild thumbnail
         run: python scripts/generate_thumbnails.py
-      - name: Save draft and thumbnail
+      - name: Commit revision
         run: |
           git config user.name "sidebiz-autopilot"
           git config user.email "actions@users.noreply.github.com"
-          git add drafts data docs/assets/thumbnails
-          git diff --cached --quiet || git commit -m "Generate validated daily content"
+          git add drafts docs/assets/thumbnails
+          git diff --cached --quiet || git commit -m "Revise draft from issue comment"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin HEAD:"$GITHUB_REF_NAME"

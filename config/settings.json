@@ -36,5 +36,20 @@
     ]
   },
   "affiliate_disclosure": "当サイトにはアフィリエイトリンクが含まれる場合があります。",
-  "default_cta": "制作の続きや検証結果も順次公開します。"
+  "default_cta": "制作の続きや検証結果も順次公開します。",
+  "site_url": "https://undersilver.github.io/sidebiz-autopilot",
+  "thumbnail": {
+    "width": 1280,
+    "height": 670,
+    "mascot_path": "docs/assets/pikolon.png",
+    "font_path": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
+  },
+  "validation": {
+    "minimum_score": 80,
+    "block_when_sources_needed": true,
+    "max_high_risk_issues": 0
+  },
+  "revision_command": "/revise",
+  "weekly_report_day": "Sunday",
+  "monthly_product": "Kindle・有料記事用Markdown原稿"
 }
