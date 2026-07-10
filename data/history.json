@@ -3,5 +3,10 @@
     "date": "2026-07-10",
     "title": "小説を漫画化するときに全ページへ同じ人物が出る問題",
     "draft": "drafts/2026-07-10-novel-to-comic-character-control.json"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "AIで100階ダンジョンの敵配置を設計する",
+    "draft": "drafts/2026-07-10-ai-100floor-dungeon-enemy-placement.json"
   }
 ]
