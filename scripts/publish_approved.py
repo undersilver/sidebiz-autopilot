@@ -95,7 +95,7 @@ def publish(draft_path: Path) -> Path:
 </head>
 <body>
 <header class="site-header">
-  <a href="../index.html"><img src="../assets/pikoron.png" alt="ピコロン"></a>
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
   <div><strong>{escape(SETTINGS['site_name'])}</strong><small>{escape(SETTINGS['site_description'])}</small></div>
 </header>
 <main class="article">
@@ -145,7 +145,7 @@ def rebuild_index() -> None:
 </head>
 <body>
 <header class="hero">
-  <img src="assets/pikoron.png" alt="ピコロン">
+  <img src="assets/pikolon.png" alt="ピコロン">
   <div>
     <p class="eyebrow">AI × GAME DEVELOPMENT</p>
     <h1>{escape(SETTINGS['site_name'])}</h1>
