@@ -1,0 +1,40 @@
+{
+  "site_name": "ピコロンのAIゲーム研究所",
+  "site_description": "AIとゲーム制作の実験、失敗、改善を記録する研究所",
+  "author": "雑煮餅",
+  "timezone": "Asia/Tokyo",
+  "daily_topic_count": 1,
+  "model": "openai/gpt-4.1-mini",
+  "categories": [
+    "ゲーム制作",
+    "AI活用",
+    "プログラミング",
+    "漫画化",
+    "小説",
+    "スポーツゲーム"
+  ],
+  "priority_categories": [
+    "ゲーム制作",
+    "AI活用",
+    "プログラミング"
+  ],
+  "avoid_topics": [
+    "自己啓発",
+    "仕事術",
+    "人間関係",
+    "トラブル相談"
+  ],
+  "max_review_minutes": 10,
+  "mascot": {
+    "name": "ピコロン",
+    "concept": "小さなダンジョン探索ロボット。丸いコンパス型の胴体、アンテナ、短い手足、巻物ケース。",
+    "usage": [
+      "サイト案内役",
+      "サムネイル",
+      "記事カテゴリー表示",
+      "将来のゲームキャラクター"
+    ]
+  },
+  "affiliate_disclosure": "当サイトにはアフィリエイトリンクが含まれる場合があります。",
+  "default_cta": "制作の続きや検証結果も順次公開します。"
+}

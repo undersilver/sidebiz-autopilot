@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t d">
+<title id="t">ピコロン</title>
+<desc id="d">コンパス型の小さなダンジョン探索ロボット</desc>
+<rect width="240" height="240" rx="48" fill="#eef2ff"/>
+<path d="M120 25v24M108 25h24" stroke="#1f2937" stroke-width="10" stroke-linecap="round"/>
+<circle cx="120" cy="20" r="11" fill="#f59e0b" stroke="#1f2937" stroke-width="6"/>
+<rect x="55" y="55" width="130" height="130" rx="48" fill="#fff" stroke="#1f2937" stroke-width="9"/>
+<circle cx="120" cy="120" r="48" fill="#c7d2fe" stroke="#4f46e5" stroke-width="8"/>
+<path d="M120 78l17 39-17 45-17-45z" fill="#ef4444" stroke="#1f2937" stroke-width="5"/>
+<circle cx="93" cy="96" r="8" fill="#1f2937"/>
+<circle cx="147" cy="96" r="8" fill="#1f2937"/>
+<path d="M96 143q24 20 48 0" fill="none" stroke="#1f2937" stroke-width="7" stroke-linecap="round"/>
+<path d="M55 105H35q-12 0-12 12v18M185 105h20q12 0 12 12v18" fill="none" stroke="#1f2937" stroke-width="10" stroke-linecap="round"/>
+<path d="M87 185v24M153 185v24" stroke="#1f2937" stroke-width="11" stroke-linecap="round"/>
+<path d="M72 211h28M140 211h28" stroke="#1f2937" stroke-width="11" stroke-linecap="round"/>
+<rect x="172" y="151" width="30" height="55" rx="9" fill="#fbbf24" stroke="#1f2937" stroke-width="7"/>
+<path d="M177 164h20M177 178h20" stroke="#1f2937" stroke-width="5"/>
+</svg>
