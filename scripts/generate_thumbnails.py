@@ -16,17 +16,30 @@ def get_font(size: int):
         return ImageFont.load_default()
 
 
-def wrap_japanese(text: str, width: int) -> list[str]:
+def wrap_japanese(text: str, draw: ImageDraw.ImageDraw, font, max_width: int) -> list[str]:
     lines, current = [], ''
     for char in text:
-        if len(current + char) > width:
+        candidate = current + char
+        box = draw.textbbox((0, 0), candidate, font=font)
+        if current and box[2] - box[0] > max_width:
             lines.append(current)
             current = char
         else:
-            current += char
+            current = candidate
     if current:
         lines.append(current)
-    return lines[:4]
+    return lines
+
+
+def fit_title(text: str, draw: ImageDraw.ImageDraw, max_width: int, max_height: int):
+    for size in (52, 48, 44, 40, 36, 32):
+        font = get_font(size)
+        lines = wrap_japanese(text, draw, font, max_width)
+        line_height = int(size * 1.3)
+        if len(lines) <= 6 and len(lines) * line_height <= max_height:
+            return font, lines, line_height
+    font = get_font(30)
+    return font, wrap_japanese(text, draw, font, max_width)[:6], 39
 
 
 def create_thumbnail(draft_path: Path) -> Path:
@@ -50,10 +63,13 @@ def create_thumbnail(draft_path: Path) -> Path:
 
     draw.text((835, 95), data.get('category', 'AIゲーム制作'),
               font=get_font(34), fill=(79, 70, 229))
-    y = 165
-    for line in wrap_japanese(data['title'], 15):
-        draw.text((835, y), line, font=get_font(58), fill=(27, 37, 53))
-        y += 78
+    title_x, y = 835, 165
+    title_font, title_lines, line_height = fit_title(
+        data['title'], draw, width - title_x - 85, height - 165 - 175
+    )
+    for line in title_lines:
+        draw.text((title_x, y), line, font=title_font, fill=(27, 37, 53))
+        y += line_height
     draw.rounded_rectangle((835, height - 145, width - 90, height - 90),
                            radius=18, fill=(79, 70, 229))
     draw.text((865, height - 137), SETTINGS['site_name'],
