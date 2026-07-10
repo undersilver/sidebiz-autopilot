@@ -1,14 +1,20 @@
 from __future__ import annotations
+import json
 import os
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
+SETTINGS = json.loads((ROOT / 'config/settings.json').read_text(encoding='utf-8'))
+
+def now_local():
+    return datetime.now(ZoneInfo(SETTINGS.get('timezone', 'Asia/Tokyo')))
 
 def main():
-    now = datetime.now()
+    now = now_local()
     month = (now.replace(day=1).month - 1) or 12
     year = now.year if now.month > 1 else now.year - 1
     prefix = f'{year:04d}-{month:02d}'
