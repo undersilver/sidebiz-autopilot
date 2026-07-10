@@ -1,0 +1,131 @@
+from __future__ import annotations
+
+import json
+import os
+import re
+from pathlib import Path
+import requests
+
+ROOT = Path(__file__).resolve().parents[1]
+SETTINGS = json.loads((ROOT / 'config/settings.json').read_text(encoding='utf-8'))
+API_URL = 'https://models.github.ai/inference/chat/completions'
+
+
+def headers():
+    return {
+        'Authorization': f"Bearer {os.environ['GITHUB_TOKEN']}",
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+    }
+
+
+def call_model(draft: dict) -> dict:
+    prompt = f'''次の原稿を0〜100点で厳格に校閲してください。
+scoreは必ず0〜100の整数。90点なら90と返し、9とは返さないでください。
+
+基準：一般読者向け、内部運用情報なし、未検証断定なし、未完成表現なし、具体性、タイトルとの一致、権利侵害懸念、不自然な宣伝や冗長さ。
+
+原稿：
+{json.dumps(draft, ensure_ascii=False)}
+
+JSONだけを返してください。
+{{"status":"pass|rewrite|block","score":0,"issues":[{{"severity":"low|medium|high","category":"...","detail":"..."}}],"rewrite_instructions":["..."],"publishable":true}}'''
+    r = requests.post(API_URL, headers={**headers(), 'Content-Type': 'application/json'}, json={
+        'model': SETTINGS['model'],
+        'messages': [
+            {'role': 'system', 'content': '有効なJSONだけを返してください。'},
+            {'role': 'user', 'content': prompt},
+        ],
+        'temperature': 0.1,
+        'max_tokens': 1800,
+    }, timeout=180)
+    r.raise_for_status()
+    content = re.sub(r'^```json\s*|\s*```$', '', r.json()['choices'][0]['message']['content'].strip(), flags=re.S)
+    result = json.loads(content)
+    score = int(result.get('score', 0))
+    if 1 <= score <= 10 and result.get('status') == 'pass' and result.get('publishable') is True:
+        if not any(i.get('severity') == 'high' for i in result.get('issues', [])):
+            result['score'] = score * 10
+    return result
+
+
+def is_publishable(draft: dict, validation: dict) -> bool:
+    try:
+        score = int(validation.get('score', 0))
+    except (TypeError, ValueError):
+        return False
+    has_high = any(
+        isinstance(item, dict) and item.get('severity') == 'high'
+        for item in validation.get('issues', [])
+    )
+    article = str(draft.get('article_markdown', ''))
+    has_incomplete_marker = any(
+        marker in article for marker in ('要出典', '今後調査が必要')
+    )
+    return (
+        validation.get('status') == 'pass'
+        and validation.get('publishable') is True
+        and score >= int(SETTINGS['validation']['minimum_score'])
+        and not has_high
+        and not draft.get('sources_needed')
+        and not has_incomplete_marker
+    )
+
+
+def replace_validation_section(body: str, section: str) -> str:
+    start = '<!-- revalidation:start -->'
+    end = '<!-- revalidation:end -->'
+    block = f'{start}\n{section}\n{end}'
+    pattern = re.compile(re.escape(start) + r'.*?' + re.escape(end), re.S)
+    if pattern.search(body):
+        return pattern.sub(block, body)
+    return body.rstrip() + '\n\n' + block
+
+
+def main():
+    repo = os.environ['GITHUB_REPOSITORY']
+    issues = requests.get(f'https://api.github.com/repos/{repo}/issues?state=open&labels=needs-fix&per_page=20', headers=headers(), timeout=60)
+    issues.raise_for_status()
+    for issue in issues.json():
+        match = re.search(r'`(drafts/[^`]+\.json)`', issue.get('body', ''))
+        if not match:
+            continue
+        path = ROOT / match.group(1)
+        if not path.exists():
+            continue
+        draft = json.loads(path.read_text(encoding='utf-8'))
+        # /revise 後は _validation が削除される。未修正のneeds-fix原稿は再校閲しない。
+        if '_validation' in draft:
+            continue
+        validation = call_model(draft)
+        draft['_validation'] = validation
+        publishable = is_publishable(draft, validation)
+        draft.setdefault('_meta', {})['status'] = 'review' if publishable else 'blocked'
+        path.write_text(json.dumps(draft, ensure_ascii=False, indent=2), encoding='utf-8')
+
+        status_text = '公開候補' if publishable else '引き続き要修正'
+        details = '\n'.join(f"- [{i.get('severity')}] {i.get('category')}：{i.get('detail')}" for i in validation.get('issues', [])) or '- 問題なし'
+        requests.post(f"https://api.github.com/repos/{repo}/issues/{issue['number']}/comments", headers=headers(), json={
+            'body': f"再校閲完了：**{validation.get('score', 0)} / 100**、判定：**{status_text}**\n\n{details}"
+        }, timeout=60).raise_for_status()
+
+        section = (
+            f"### 再校閲結果\n\n"
+            f"- スコア：**{validation.get('score', 0)} / 100**\n"
+            f"- 判定：**{status_text}**\n\n"
+            f"{details}"
+        )
+        requests.patch(
+            f"https://api.github.com/repos/{repo}/issues/{issue['number']}",
+            headers=headers(),
+            json={'body': replace_validation_section(issue.get('body', ''), section)},
+            timeout=60,
+        ).raise_for_status()
+
+        labels = [x['name'] for x in issue.get('labels', []) if x['name'] not in {'needs-fix', 'approve'}]
+        labels.append('review' if publishable else 'needs-fix')
+        requests.put(f"https://api.github.com/repos/{repo}/issues/{issue['number']}/labels", headers=headers(), json={'labels': labels}, timeout=60).raise_for_status()
+
+
+if __name__ == '__main__':
+    main()
