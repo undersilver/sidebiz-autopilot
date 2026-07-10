@@ -79,6 +79,12 @@ def main():
 ''')
     revised['_meta'] = draft.get('_meta', {})
     revised['_meta']['status'] = 'review'
+    maximum_review = int(SETTINGS.get('max_review_minutes', 10))
+    try:
+        review_minutes = int(revised.get('estimated_review_minutes', maximum_review))
+    except (TypeError, ValueError):
+        review_minutes = maximum_review
+    revised['estimated_review_minutes'] = max(1, min(review_minutes, maximum_review))
     revised.pop('_validation', None)
     draft_path.write_text(json.dumps(revised, ensure_ascii=False, indent=2), encoding='utf-8')
 
