@@ -72,14 +72,63 @@ def is_publishable(draft: dict, validation: dict) -> bool:
     )
 
 
-def replace_validation_section(body: str, section: str) -> str:
-    start = '<!-- revalidation:start -->'
-    end = '<!-- revalidation:end -->'
-    block = f'{start}\n{section}\n{end}'
-    pattern = re.compile(re.escape(start) + r'.*?' + re.escape(end), re.S)
-    if pattern.search(body):
-        return pattern.sub(block, body)
-    return body.rstrip() + '\n\n' + block
+def build_issue_body(draft: dict, path: Path, validation: dict, publishable: bool) -> str:
+    checks = '\n'.join(
+        f"- [{item.get('risk', '')}] **{item.get('type', '')}**：{item.get('item', '')}"
+        for item in draft.get('human_checks', [])
+    ) or '- なし'
+    issues = '\n'.join(
+        f"- [{item.get('severity', '')}] **{item.get('category', '')}**：{item.get('detail', '')}"
+        for item in validation.get('issues', [])
+    ) or '- なし'
+    status_text = '公開候補' if publishable else '公開不可・要修正'
+    instruction = (
+        '問題なければ `approve` ラベルを追加してください。'
+        if publishable else
+        '`approve` は付けず、コメント欄から `/revise 修正内容` を送信してください。'
+    )
+    return f'''## 本日の公開候補
+
+**タイトル**：{draft.get('title', '')}
+
+**カテゴリー**：{draft.get('category', '')}
+
+**概要**：{draft.get('summary', '')}
+
+**編集校閲スコア**：{validation.get('score', 0)} / 100
+
+**公開可否**：{status_text}
+
+**推定確認時間**：{draft.get('estimated_review_minutes', 10)}分
+
+### AI校閲で検出した問題
+
+{issues}
+
+### 人間が確認する項目
+
+{checks}
+
+### SNS投稿案
+
+{draft.get('social_post', '')}
+
+### ショート動画台本
+
+{draft.get('short_video_script', '')}
+
+### サムネイル生成指示
+
+{draft.get('thumbnail_prompt', '')}
+
+### 下書きファイル
+
+`{path.relative_to(ROOT)}`
+
+---
+
+{instruction}
+'''
 
 
 def main():
@@ -115,16 +164,10 @@ def main():
             'body': f"再校閲完了：**{validation.get('score', 0)} / 100**、判定：**{status_text}**\n\n{details}"
         }, timeout=60).raise_for_status()
 
-        section = (
-            f"### 再校閲結果\n\n"
-            f"- スコア：**{validation.get('score', 0)} / 100**\n"
-            f"- 判定：**{status_text}**\n\n"
-            f"{details}"
-        )
         requests.patch(
             f"https://api.github.com/repos/{repo}/issues/{issue['number']}",
             headers=headers(),
-            json={'body': replace_validation_section(issue.get('body', ''), section)},
+            json={'body': build_issue_body(draft, path, validation, publishable)},
             timeout=60,
         ).raise_for_status()
 
