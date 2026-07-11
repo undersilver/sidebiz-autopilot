@@ -9,6 +9,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
+from content_utils import format_pikoron_tips_for_issue, normalize_pikoron_tips
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / "config/settings.json").read_text(encoding="utf-8"))
@@ -83,6 +84,10 @@ def build_writer_prompt(seed: dict) -> str:
 - マスコット「ピコロン」は記事内で0〜1回。内容に不要なら登場させない
 - 1,500〜2,200字程度
 - 人間の確認時間は最大{SETTINGS['max_review_minutes']}分として設計する
+- ピコロンの吹き出しは、本当に重要な要点がある章だけ0〜3件にする
+- 吹き出しを全章や全段落へ付けない。要点がなければ空配列にする
+- after_headingはarticle_markdown内の「## 」見出しと完全に一致させる
+- messageはその章の内容だけを短くまとめ、新しい事実や内部情報を追加しない
 - JSONだけを返す
 
 JSON形式：
@@ -95,6 +100,9 @@ JSON形式：
   "social_post": "...",
   "short_video_script": "...",
   "thumbnail_prompt": "...",
+  "pikoron_tips": [
+    {{"after_heading": "記事内の##見出し（##を除く）", "message": "80〜120字以内の重要な要点"}}
+  ],
   "human_checks": [
     {{"type": "画像|事実|権利|表現", "item": "...", "risk": "低|中|高"}}
   ],
@@ -121,6 +129,7 @@ def build_validator_prompt(draft: dict) -> str:
 8. 不自然な宣伝文、過度なマスコット挿入、AIらしい冗長表現がないか
 9. 同じ主張の繰り返しがないか
 10. 公開可能な完成度か
+11. ピコロンの吹き出しが0〜3件で、対象章の重要な要点に直接関係しているか
 
 公開候補：
 {json.dumps(draft, ensure_ascii=False)}
@@ -155,6 +164,7 @@ def build_rewrite_prompt(draft: dict, validation: dict) -> str:
 - 未検証事項や「要出典」は本文に残さない
 - 具体例と実践手順を増やす
 - 不要なピコロン言及を削除
+- pikoron_tipsは重要な要点だけ0〜3件とし、対象の##見出しに完全一致させる
 - 元のJSON形式を維持
 - JSONだけを返す
 """.strip()
@@ -215,6 +225,7 @@ def is_publishable(draft: dict, validation: dict) -> bool:
 
 
 def validate_and_rewrite(draft: dict) -> tuple[dict, dict]:
+    normalize_pikoron_tips(draft)
     validation = call_model(
         [
             {"role": "system", "content": "厳格に判定し、有効なJSONだけを返してください。scoreは必ず0〜100の整数で返してください。90点なら90と返し、9とは返さないでください。"},
@@ -234,6 +245,7 @@ def validate_and_rewrite(draft: dict) -> tuple[dict, dict]:
             temperature=0.3,
             max_tokens=4200,
         )
+        normalize_pikoron_tips(draft)
         validation = call_model(
             [
                 {"role": "system", "content": "再校閲し、有効なJSONだけを返してください。scoreは必ず0〜100の整数で返してください。90点なら90と返し、9とは返さないでください。"},
@@ -258,6 +270,7 @@ def fallback(seed: dict, error: Exception) -> dict:
         "social_post": "",
         "short_video_script": "",
         "thumbnail_prompt": "",
+        "pikoron_tips": [],
         "human_checks": [{"type": "システム", "item": f"{type(error).__name__}: {error}", "risk": "高"}],
         "sources_needed": [],
         "affiliate_candidates": [],
@@ -282,6 +295,7 @@ def save_draft(data: dict, seed: dict) -> Path:
     except (TypeError, ValueError):
         review_minutes = maximum_review
     data["estimated_review_minutes"] = max(1, min(review_minutes, maximum_review))
+    normalize_pikoron_tips(data)
     draft_dir = ROOT / "drafts"
     draft_dir.mkdir(exist_ok=True)
     path = draft_dir / f"{today}-{data['slug']}.json"
@@ -315,6 +329,7 @@ def create_issue(data: dict, draft_path: Path) -> None:
         f"- [{i.get('severity','')}] **{i.get('category','')}**：{i.get('detail','')}"
         for i in validation.get("issues", [])
     ) or "- なし"
+    pikoron_tips = format_pikoron_tips_for_issue(data)
 
     publishable = is_publishable(data, validation)
     label = "review" if publishable else "needs-fix"
@@ -351,6 +366,10 @@ def create_issue(data: dict, draft_path: Path) -> None:
 ### サムネイル生成指示
 
 {data.get('thumbnail_prompt', '')}
+
+### ピコロンの要点吹き出し
+
+{pikoron_tips}
 
 ### 下書きファイル
 
