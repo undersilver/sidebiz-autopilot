@@ -93,34 +93,24 @@ def markdown_to_html(md: str) -> str:
 
 def insert_pikoron_tips(article_html: str, data: dict) -> str:
     """明示的に選ばれた章だけへピコロンの要点吹き出しを挿入する。"""
-    from bs4 import BeautifulSoup
-
     tips = normalize_pikoron_tips(data)
     if not tips:
         return article_html
 
-    soup = BeautifulSoup(article_html, "html.parser")
-    headings = {heading.get_text(strip=True): heading for heading in soup.find_all("h2")}
+    result = article_html
     for tip in tips:
-        heading = headings.get(tip["after_heading"])
-        if heading is None:
-            continue
-        aside = soup.new_tag("aside", attrs={"class": "pikoron-tip", "aria-label": "ピコロンの要点"})
-        image = soup.new_tag(
-            "img",
-            attrs={"class": "pikoron-tip-avatar", "src": "../assets/pikolon.png", "alt": "ピコロン"},
+        heading_html = escape(tip["after_heading"])
+        pattern = re.compile(rf'(<h2>\s*{re.escape(heading_html)}\s*</h2>)')
+        aside = (
+            '<aside class="pikoron-tip" aria-label="ピコロンの要点">'
+            '<img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン">'
+            '<div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong>'
+            f'<p>{escape(tip["message"])}</p></div></aside>'
         )
-        bubble = soup.new_tag("div", attrs={"class": "pikoron-tip-bubble"})
-        label = soup.new_tag("strong")
-        label.string = "ピコロンの要点"
-        message = soup.new_tag("p")
-        message.string = tip["message"]
-        bubble.append(label)
-        bubble.append(message)
-        aside.append(image)
-        aside.append(bubble)
-        heading.insert_after(aside)
-    return str(soup)
+        result, replaced = pattern.subn(rf'\1{aside}', result, count=1)
+        if replaced != 1:
+            print(f'吹き出し挿入対象の見出しが見つかりません: {tip["after_heading"]}')
+    return result
 
 
 def publish(draft_path: Path) -> Path:
