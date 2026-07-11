@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
@@ -31,12 +32,50 @@ def wrap_japanese(text: str, draw: ImageDraw.ImageDraw, font, max_width: int) ->
     return lines
 
 
+def wrap_title_naturally(text: str, draw: ImageDraw.ImageDraw, font, max_width: int) -> list[str] | None:
+    """単語途中を避け、助詞・述語・記号など意味の区切りでタイトルを折り返す。"""
+    break_points = {0, len(text)}
+    patterns = (
+        r'：|:|！|!|？|\?|　| ',
+        r'した|する|できる|活かす|使った|作る|方法|手順|設計|問題|原因|ポイント|コツ|活用|使い方|作り方|まとめ',
+        r'から|まで|とは|について|を|に|で|が|は',
+    )
+    for pattern in patterns:
+        for match in re.finditer(pattern, text):
+            break_points.add(match.end())
+
+    positions = sorted(break_points)
+    best: dict[int, tuple[float, list[str]]] = {0: (0.0, [])}
+    forbidden_starts = '、。・：:！？!?）】」』'
+
+    for end in positions[1:]:
+        for start in positions:
+            if start >= end or start not in best:
+                continue
+            segment = text[start:end].strip()
+            if not segment or segment[0] in forbidden_starts:
+                continue
+            box = draw.textbbox((0, 0), segment, font=font)
+            rendered_width = box[2] - box[0]
+            if rendered_width > max_width:
+                continue
+            unused = max_width - rendered_width
+            # 余白が均等になる構成を優先し、細かすぎる改行を避ける。
+            score = best[start][0] + unused * unused + 2000
+            if end not in best or score < best[end][0]:
+                best[end] = (score, best[start][1] + [segment])
+
+    return best.get(len(text), (0.0, []))[1] or None
+
+
 def fit_title(text: str, draw: ImageDraw.ImageDraw, max_width: int, max_height: int):
-    for size in (52, 48, 44, 40, 36, 32):
+    for size in (60, 56, 52, 48, 44, 40, 36, 32):
         font = get_font(size)
-        lines = wrap_japanese(text, draw, font, max_width)
+        lines = wrap_title_naturally(text, draw, font, max_width)
+        if not lines:
+            continue
         line_height = int(size * 1.3)
-        if len(lines) <= 6 and len(lines) * line_height <= max_height:
+        if len(lines) <= 5 and len(lines) * line_height <= max_height:
             return font, lines, line_height
     font = get_font(30)
     return font, wrap_japanese(text, draw, font, max_width)[:6], 39
