@@ -11,6 +11,7 @@ import requests
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / "config/settings.json").read_text(encoding="utf-8"))
+THUMBNAIL_VERSION = str(SETTINGS.get("thumbnail", {}).get("cache_version", "1"))
 
 
 def now_local() -> datetime:
@@ -117,7 +118,7 @@ def publish(draft_path: Path) -> Path:
   <p class="category">{escape(data['category'])}</p>
   <h1>{escape(data['title'])}</h1>
   <p class="lead">{escape(data['summary'])}</p>
-  <img class="article-thumbnail" src="../assets/thumbnails/{date}-{data['slug']}.png" alt="{escape(data['title'])}">
+  <img class="article-thumbnail" src="../assets/thumbnails/{date}-{data['slug']}.png?v={THUMBNAIL_VERSION}" alt="{escape(data['title'])}">
   {article_html}
   <hr>
   <p class="disclosure">{escape(SETTINGS['affiliate_disclosure'])}</p>
@@ -143,7 +144,7 @@ def rebuild_index() -> None:
                 "path": f"posts/{path.name}",
                 "title": title_match.group(1),
                 "lead": lead_match.group(1) if lead_match else "",
-                "thumbnail": f"assets/thumbnails/{path.stem}.png",
+                "thumbnail": f"assets/thumbnails/{path.stem}.png?v={THUMBNAIL_VERSION}",
             })
 
     cards = "\n".join(
