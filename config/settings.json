@@ -42,7 +42,8 @@
     "width": 1280,
     "height": 670,
     "mascot_path": "docs/assets/pikolon.png",
-    "font_path": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
+    "font_path": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+    "cache_version": "3"
   },
   "validation": {
     "minimum_score": 80,
