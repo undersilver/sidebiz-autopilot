@@ -5,6 +5,7 @@ import os
 import re
 from pathlib import Path
 import requests
+from content_utils import format_pikoron_tips_for_issue, normalize_pikoron_tips
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / 'config/settings.json').read_text(encoding='utf-8'))
@@ -23,7 +24,7 @@ def call_model(draft: dict) -> dict:
     prompt = f'''次の原稿を0〜100点で厳格に校閲してください。
 scoreは必ず0〜100の整数。90点なら90と返し、9とは返さないでください。
 
-基準：一般読者向け、内部運用情報なし、未検証断定なし、未完成表現なし、具体性、タイトルとの一致、権利侵害懸念、不自然な宣伝や冗長さ。
+基準：一般読者向け、内部運用情報なし、未検証断定なし、未完成表現なし、具体性、タイトルとの一致、権利侵害懸念、不自然な宣伝や冗長さ。pikoron_tipsは0〜3件で対象章の重要な要点に直接関係し、余計な場所へ表示されないこと。
 
 原稿：
 {json.dumps(draft, ensure_ascii=False)}
@@ -81,6 +82,7 @@ def build_issue_body(draft: dict, path: Path, validation: dict, publishable: boo
         f"- [{item.get('severity', '')}] **{item.get('category', '')}**：{item.get('detail', '')}"
         for item in validation.get('issues', [])
     ) or '- なし'
+    pikoron_tips = format_pikoron_tips_for_issue(draft)
     status_text = '公開候補' if publishable else '公開不可・要修正'
     instruction = (
         '問題なければ `approve` ラベルを追加してください。'
@@ -121,6 +123,10 @@ def build_issue_body(draft: dict, path: Path, validation: dict, publishable: boo
 
 {draft.get('thumbnail_prompt', '')}
 
+### ピコロンの要点吹き出し
+
+{pikoron_tips}
+
 ### 下書きファイル
 
 `{path.relative_to(ROOT)}`
@@ -146,6 +152,7 @@ def main():
         # /revise 後は _validation が削除される。未修正のneeds-fix原稿は再校閲しない。
         if '_validation' in draft:
             continue
+        normalize_pikoron_tips(draft)
         validation = call_model(draft)
         draft['_validation'] = validation
         maximum_review = int(SETTINGS.get('max_review_minutes', 10))
