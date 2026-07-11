@@ -54,25 +54,29 @@ def create_thumbnail(draft_path: Path) -> Path:
     draw = ImageDraw.Draw(canvas)
     draw.rounded_rectangle((50, 45, width - 50, height - 45), radius=36,
                            fill=(255, 255, 255), outline=(219, 226, 236), width=4)
-    draw.rounded_rectangle((65, 60, 790, height - 60), radius=28,
+    mascot_panel = (65, 60, 520, height - 60)
+    draw.rounded_rectangle(mascot_panel, radius=28,
                            fill=(238, 242, 255))
 
     mascot = Image.open(ROOT / THUMB['mascot_path']).convert('RGBA')
-    mascot.thumbnail((390, 500))
-    canvas.paste(mascot, (255 - mascot.width // 2, height // 2 - mascot.height // 2), mascot)
+    mascot.thumbnail((300, 400))
+    mascot_x = (mascot_panel[0] + mascot_panel[2] - mascot.width) // 2
+    mascot_y = (height - mascot.height) // 2
+    canvas.paste(mascot, (mascot_x, mascot_y), mascot)
 
-    draw.text((835, 95), data.get('category', 'AIゲーム制作'),
-              font=get_font(34), fill=(79, 70, 229))
-    title_x, y = 835, 165
+    title_x = 575
+    draw.text((title_x, 95), data.get('category', 'AIゲーム制作'),
+              font=get_font(36), fill=(79, 70, 229))
+    y = 165
     title_font, title_lines, line_height = fit_title(
         data['title'], draw, width - title_x - 85, height - 165 - 175
     )
     for line in title_lines:
         draw.text((title_x, y), line, font=title_font, fill=(27, 37, 53))
         y += line_height
-    draw.rounded_rectangle((835, height - 145, width - 90, height - 90),
+    draw.rounded_rectangle((title_x, height - 145, width - 90, height - 90),
                            radius=18, fill=(79, 70, 229))
-    draw.text((865, height - 137), SETTINGS['site_name'],
+    draw.text((title_x + 30, height - 137), SETTINGS['site_name'],
               font=get_font(27), fill=(255, 255, 255))
     canvas.save(output, quality=95)
     return output
