@@ -2,6 +2,14 @@ name: Rebuild published pages
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/publish_approved.py"
+      - "scripts/content_utils.py"
+      - "scripts/rebuild_published_pages.py"
+      - "docs/assets/style.css"
+      - ".github/workflows/rebuild-published-pages.yml"
 
 permissions:
   contents: write
