@@ -81,6 +81,24 @@ def fit_title(text: str, draw: ImageDraw.ImageDraw, max_width: int, max_height: 
     return font, wrap_japanese(text, draw, font, max_width)[:6], 39
 
 
+def refresh_html_thumbnail_versions() -> int:
+    version = str(THUMB.get('cache_version', '1'))
+    pattern = re.compile(
+        r'(src="(?:\.\./)?assets/thumbnails/[^"?]+\.png)(?:\?v=[^"]*)?(")'
+    )
+    updated = 0
+    html_paths = [ROOT / 'docs/index.html', *(ROOT / 'docs/posts').glob('*.html')]
+    for path in html_paths:
+        if not path.exists():
+            continue
+        original = path.read_text(encoding='utf-8')
+        revised = pattern.sub(rf'\1?v={version}\2', original)
+        if revised != original:
+            path.write_text(revised, encoding='utf-8')
+            updated += 1
+    return updated
+
+
 def create_thumbnail(draft_path: Path) -> Path:
     data = json.loads(draft_path.read_text(encoding='utf-8'))
     date = data['_meta']['created_at'][:10]
@@ -113,10 +131,16 @@ def create_thumbnail(draft_path: Path) -> Path:
     for line in title_lines:
         draw.text((title_x, y), line, font=title_font, fill=(27, 37, 53))
         y += line_height
-    draw.rounded_rectangle((title_x, height - 145, width - 90, height - 90),
-                           radius=18, fill=(79, 70, 229))
-    draw.text((title_x + 30, height - 137), SETTINGS['site_name'],
-              font=get_font(27), fill=(255, 255, 255))
+    site_bar = (title_x, height - 145, width - 90, height - 90)
+    draw.rounded_rectangle(site_bar, radius=18, fill=(79, 70, 229))
+    site_font = get_font(27)
+    site_text = SETTINGS['site_name']
+    site_box = draw.textbbox((0, 0), site_text, font=site_font)
+    site_text_width = site_box[2] - site_box[0]
+    site_text_height = site_box[3] - site_box[1]
+    site_x = site_bar[0] + (site_bar[2] - site_bar[0] - site_text_width) // 2
+    site_y = site_bar[1] + (site_bar[3] - site_bar[1] - site_text_height) // 2 - site_box[1]
+    draw.text((site_x, site_y), site_text, font=site_font, fill=(255, 255, 255))
     canvas.save(output, quality=95)
     return output
 
@@ -129,7 +153,9 @@ def main() -> None:
             continue
         print(create_thumbnail(draft_path))
         created += 1
+    updated_html = refresh_html_thumbnail_versions()
     print(f'サムネイル作成件数: {created}')
+    print(f'画像URL更新HTML件数: {updated_html}')
 
 
 if __name__ == '__main__':
