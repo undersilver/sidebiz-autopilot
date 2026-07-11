@@ -5,6 +5,7 @@ import os
 import re
 from pathlib import Path
 import requests
+from content_utils import normalize_pikoron_tips
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / 'config/settings.json').read_text(encoding='utf-8'))
@@ -74,6 +75,8 @@ def main():
 - 内部運用情報は本文に含めない
 - 未確認情報を断定しない
 - JSONの主要フィールドを維持する
+- pikoron_tipsは重要な要点だけ0〜3件とし、対象の##見出しへ完全一致させる
+- 関係のない章や全段落へ吹き出しを追加しない
 - _meta はそのまま維持する
 - _validation は削除し、再校閲待ちにする
 ''')
@@ -85,6 +88,7 @@ def main():
     except (TypeError, ValueError):
         review_minutes = maximum_review
     revised['estimated_review_minutes'] = max(1, min(review_minutes, maximum_review))
+    normalize_pikoron_tips(revised)
     revised.pop('_validation', None)
     draft_path.write_text(json.dumps(revised, ensure_ascii=False, indent=2), encoding='utf-8')
 

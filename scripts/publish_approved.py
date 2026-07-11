@@ -8,6 +8,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
+from content_utils import normalize_pikoron_tips
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / "config/settings.json").read_text(encoding="utf-8"))
@@ -90,6 +91,38 @@ def markdown_to_html(md: str) -> str:
     return markdown.markdown(md, extensions=["fenced_code", "tables"])
 
 
+def insert_pikoron_tips(article_html: str, data: dict) -> str:
+    """明示的に選ばれた章だけへピコロンの要点吹き出しを挿入する。"""
+    from bs4 import BeautifulSoup
+
+    tips = normalize_pikoron_tips(data)
+    if not tips:
+        return article_html
+
+    soup = BeautifulSoup(article_html, "html.parser")
+    headings = {heading.get_text(strip=True): heading for heading in soup.find_all("h2")}
+    for tip in tips:
+        heading = headings.get(tip["after_heading"])
+        if heading is None:
+            continue
+        aside = soup.new_tag("aside", attrs={"class": "pikoron-tip", "aria-label": "ピコロンの要点"})
+        image = soup.new_tag(
+            "img",
+            attrs={"class": "pikoron-tip-avatar", "src": "../assets/pikolon.png", "alt": "ピコロン"},
+        )
+        bubble = soup.new_tag("div", attrs={"class": "pikoron-tip-bubble"})
+        label = soup.new_tag("strong")
+        label.string = "ピコロンの要点"
+        message = soup.new_tag("p")
+        message.string = tip["message"]
+        bubble.append(label)
+        bubble.append(message)
+        aside.append(image)
+        aside.append(bubble)
+        heading.insert_after(aside)
+    return str(soup)
+
+
 def publish(draft_path: Path) -> Path:
     data = json.loads(draft_path.read_text(encoding="utf-8"))
     assert_publishable(data)
@@ -99,7 +132,7 @@ def publish(draft_path: Path) -> Path:
     post_dir.mkdir(parents=True, exist_ok=True)
     post_path = post_dir / f"{date}-{data['slug']}.html"
 
-    article_html = markdown_to_html(data["article_markdown"])
+    article_html = insert_pikoron_tips(markdown_to_html(data["article_markdown"]), data)
     html = f"""<!doctype html>
 <html lang="ja">
 <head>
