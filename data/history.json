@@ -28,5 +28,10 @@
     "date": "2026-07-12",
     "title": "ゲーム用キャラクター九面図で向きが崩れる原因",
     "draft": "drafts/2026-07-12-game-character-nine-direction-issues-ai-image-generation.json"
+  },
+  {
+    "date": "2026-07-13",
+    "title": "AIで100階ダンジョンの敵配置を設計する",
+    "draft": "drafts/2026-07-13-ai-dungeon-enemy-placement-100floors.json"
   }
 ]
