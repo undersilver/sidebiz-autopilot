@@ -9,6 +9,7 @@ on:
       - "scripts/content_utils.py"
       - "scripts/rebuild_published_pages.py"
       - "docs/assets/style.css"
+      - "docs/posts/**"
       - ".github/workflows/rebuild-published-pages.yml"
 
 permissions:
