@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIで100階ダンジョンの敵配置を設計する方法：10階層ごとの役割分担と難易度曲線の実例検証 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIを活用して100階層のダンジョン敵配置を設計する具体的な方法を紹介。10階層ごとの役割分担と難易度曲線の考え方、実際の設計例を交え、失敗例や改善ポイントも解説します。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>AIで100階ダンジョンの敵配置を設計する方法：10階層ごとの役割分担と難易度曲線の実例検証</h1>
+  <p class="lead">AIを活用して100階層のダンジョン敵配置を設計する具体的な方法を紹介。10階層ごとの役割分担と難易度曲線の考え方、実際の設計例を交え、失敗例や改善ポイントも解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-13-ai-dungeon-enemy-placement-100floors.png?v=3" alt="AIで100階ダンジョンの敵配置を設計する方法：10階層ごとの役割分担と難易度曲線の実例検証">
+  <h2>はじめに</h2>
+<p>ゲーム制作において、長大なダンジョンの敵配置はプレイヤーの興味を維持しつつ適切な難易度調整が求められます。今回はAIを活用し、100階層のダンジョン敵配置を設計する方法を、10階層ごとの役割分担と難易度曲線の視点から具体例を交えて解説します。</p>
+<h2>10階層ごとの役割分担と難易度曲線とは</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>10階層ごとに敵の役割を分けることで、プレイヤーの成長に合わせた自然な難易度上昇が実現できます。</p></div></aside>
+<p>ダンジョンを10階層ごとのブロックに分け、それぞれに特徴的な役割を持たせる方法です。序盤は基本的な敵で慣れさせ、中盤で新しいギミックや強敵を導入し、終盤は総仕上げとして高難度の敵を配置します。難易度は徐々に上げる曲線を意識し、プレイヤーの成長に合わせた調整がポイントです。</p>
+<h2>AIを使った設計手順</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>敵の強さや数を数値化し、AIに難易度目標を与えて敵配置を自動生成。調整は必須です。</p></div></aside>
+<ol>
+<li><strong>敵データの整理</strong>: 敵の種類、強さ、特殊能力をリスト化し、数値化できるパラメータを用意します。</li>
+<li><strong>難易度パラメータの設定</strong>: 10階層ごとの目標難易度を決め、敵の強さや数の合計値として表現。</li>
+<li><strong>AIモデルの選定</strong>: ルールベースのスクリプトや簡単な機械学習モデルを利用。</li>
+<li><strong>敵配置の自動生成</strong>: AIにより、各階層の目標難易度に合う敵の組み合わせを提案。</li>
+<li><strong>調整と検証</strong>: 生成結果を実際にプレイし、難易度の偏りや単調さを改善。</li>
+</ol>
+<h2>実際の設計例</h2>
+<p>例として、1〜10階は初心者向けの弱い敵のみで構成。11〜20階は新しい攻撃パターンを持つ敵を導入し、戦略性を増加。50階付近ではボス的存在を配置し、プレイヤーの技術を試します。80階以降は複数の強敵が混在し、最終階層は総合力が試される構成にしました。</p>
+<h2>失敗例と改善点</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>序盤に強敵が多すぎると難易度が急上昇。難易度目標の厳密設定が重要です。</p></div></aside>
+<ul>
+<li><strong>失敗例</strong>: AIが強敵を序盤に過剰配置し、難易度が急上昇。プレイヤーの離脱リスクが高まった。</li>
+<li><strong>改善例</strong>: 階層ごとの難易度目標をより厳密に設定し、AIにペナルティを設けて急激な難易度変化を防止。</li>
+</ul>
+<h2>まとめ</h2>
+<p>AIを活用した100階層ダンジョンの敵配置は、10階層ごとの役割分担と難易度曲線を設計の軸にすることで、プレイヤーの成長に応じたバランス調整が可能です。具体的な手順と失敗例から学び、より良いゲーム体験を目指しましょう。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
