@@ -33,5 +33,10 @@
     "date": "2026-07-13",
     "title": "AIで100階ダンジョンの敵配置を設計する",
     "draft": "drafts/2026-07-13-ai-dungeon-enemy-placement-100floors.json"
+  },
+  {
+    "date": "2026-07-14",
+    "title": "初心者がCodexで小規模ゲームを作るときの仕様書",
+    "draft": "drafts/2026-07-14-codex-small-game-minimum-specs.json"
   }
 ]
