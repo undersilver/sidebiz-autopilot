@@ -38,5 +38,10 @@
     "date": "2026-07-14",
     "title": "初心者がCodexで小規模ゲームを作るときの仕様書",
     "draft": "drafts/2026-07-14-codex-small-game-minimum-specs.json"
+  },
+  {
+    "date": "2026-07-15",
+    "title": "初心者がCodexで小規模ゲームを作るときの仕様書",
+    "draft": "drafts/2026-07-15-beginner-codex-small-game-spec.json"
   }
 ]
