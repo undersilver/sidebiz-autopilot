@@ -26,8 +26,27 @@ def now_local() -> datetime:
 def choose_seed() -> dict:
     history_file = ROOT / "data/history.json"
     history = json.loads(history_file.read_text(encoding="utf-8")) if history_file.exists() else []
-    used = {item.get("title") for item in history[-30:]}
-    candidates = [seed for seed in SEEDS if seed["title"] not in used] or SEEDS
+
+    recent = history[-30:]
+    recent_titles = {item.get("title") for item in recent}
+    candidates = [seed for seed in SEEDS if seed["title"] not in recent_titles]
+
+    # 全テーマを使い切った場合も、直近3件と同じテーマは選ばない。
+    if not candidates:
+        last_three_titles = {item.get("title") for item in history[-3:]}
+        candidates = [seed for seed in SEEDS if seed["title"] not in last_three_titles]
+
+    # 同じカテゴリーの連続を避け、記事一覧に変化を持たせる。
+    if history and candidates:
+        title_to_category = {seed["title"]: seed["category"] for seed in SEEDS}
+        last_category = history[-1].get("category") or title_to_category.get(history[-1].get("title"))
+        different_category = [seed for seed in candidates if seed["category"] != last_category]
+        if different_category:
+            candidates = different_category
+
+    if not candidates:
+        raise RuntimeError("重複しない記事テーマがありません。topic_seeds.jsonへテーマを追加してください")
+
     return random.choice(candidates)
 
 
@@ -310,7 +329,12 @@ def save_draft(data: dict, seed: dict) -> Path:
     history_file = ROOT / "data/history.json"
     history_file.parent.mkdir(exist_ok=True)
     history = json.loads(history_file.read_text(encoding="utf-8")) if history_file.exists() else []
-    history.append({"date": today, "title": seed["title"], "draft": str(path.relative_to(ROOT))})
+    history.append({
+        "date": today,
+        "title": seed["title"],
+        "category": seed["category"],
+        "draft": str(path.relative_to(ROOT)),
+    })
     history_file.write_text(json.dumps(history[-365:], ensure_ascii=False, indent=2), encoding="utf-8")
     return path
 
