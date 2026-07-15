@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>初心者がCodexで小規模ゲームを作るときの最小仕様書の作り方 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIのCodexを使って小規模ゲームを作る初心者向けに、実装前に決めるべき最小限の仕様項目と具体的な手順、失敗例や改善例を解説します。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>初心者がCodexで小規模ゲームを作るときの最小仕様書の作り方</h1>
+  <p class="lead">AIのCodexを使って小規模ゲームを作る初心者向けに、実装前に決めるべき最小限の仕様項目と具体的な手順、失敗例や改善例を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-15-beginner-codex-small-game-spec.png?v=3" alt="初心者がCodexで小規模ゲームを作るときの最小仕様書の作り方">
+  <h2>はじめに</h2>
+<p>AIのCodexを活用すると、プログラミング初心者でも小規模なゲーム制作に挑戦しやすくなりました。しかし、いきなりコードを書き始めると迷いが生じやすく、完成までの道のりが遠く感じることもあります。そこで、実装前に決めるべき最小限の仕様書の作成方法を紹介します。</p>
+<h2>仕様書で決めるべき最小構成項目</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>ゲーム制作の仕様は4つに絞ると迷いが減ります。ジャンル、操作方法、ルール、画面数をシンプルに決めましょう。</p></div></aside>
+<p>ゲーム制作の仕様書は詳細すぎると挫折の原因になります。まずは以下の4つに絞りましょう。</p>
+<ol>
+<li>ゲームのジャンルと目的</li>
+<li>操作方法</li>
+<li>ゲームのルール・勝敗条件</li>
+<li>使用する画面数と基本画面の役割</li>
+</ol>
+<p>例えば、ジャンルは「シンプルなクリックゲーム」、操作は「マウスクリックのみ」、ルールは「10回クリックでクリア」、画面は「タイトル画面とゲーム画面」の2つに絞るなどです。</p>
+<h2>具体的な仕様書作成手順</h2>
+<ol>
+<li><strong>ジャンルと目的を決める</strong></li>
+<li>例：「タイミングよくクリックしてスコアを競う」</li>
+<li><strong>操作方法を決める</strong></li>
+<li>キーボード、マウス、タッチなど、使いやすいものを選ぶ</li>
+<li><strong>ルールと勝敗条件を明文化する</strong></li>
+<li>何をもってゲームクリアとするか、失敗条件はあるか</li>
+<li><strong>画面構成を決める</strong></li>
+<li>例えば、開始画面、ゲーム画面、終了画面の3つ</li>
+</ol>
+<p>この仕様書をもとにCodexにコードを生成させると、目的に合ったゲームが作りやすくなります。</p>
+<h2>失敗例と改善例</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>あいまいな仕様はAIのコード生成を難しくします。具体的で単純なルールを明文化することが成功のコツです。</p></div></aside>
+<ul>
+<li><strong>失敗例</strong>: 仕様が曖昧で「クリックして何をするのか」が不明確だったため、生成されたコードが期待と違った。</li>
+<li>
+<p><strong>改善例</strong>: 「10秒以内に10回クリックしてスコアを競うゲーム」という具体的なルールを書き加えた。</p>
+</li>
+<li>
+<p><strong>失敗例</strong>: 操作方法を複数指定しすぎて混乱した。</p>
+</li>
+<li><strong>改善例</strong>: 最初はマウスクリックのみに絞り、慣れてから拡張を検討した。</li>
+</ul>
+<h2>まとめ</h2>
+<p>小規模ゲームをCodexで作るなら、まずは最小限の仕様書を作ることが成功の鍵です。ジャンル、操作、ルール、画面構成の4項目に絞り、具体的でシンプルな内容にしましょう。これでAIからのコード生成もスムーズになり、初心者でもゲーム完成までの道が見えてきます。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
