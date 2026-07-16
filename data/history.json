@@ -49,5 +49,11 @@
     "title": "ローグライクの敗北後も再挑戦したくなる成長設計",
     "category": "ゲーム制作",
     "draft": "drafts/2026-07-16-roguelike-growth-design-retry.json"
+  },
+  {
+    "date": "2026-07-17",
+    "title": "初心者向けWebゲームで最初に作るべき3画面",
+    "category": "プログラミング",
+    "draft": "drafts/2026-07-17-beginner-webgame-3screens.json"
   }
 ]
