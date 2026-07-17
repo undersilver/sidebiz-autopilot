@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>初心者が最初に作るべきWebゲームの3画面構成：タイトル・プレイ・結果画面を具体的に解説 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="初心者でも作りやすいWebゲームの基本画面「タイトル」「プレイ」「結果」の3つに絞り、具体的な作成手順や失敗例、改善案を解説します。簡単なコード例とポイントを押さえて、最初のゲーム完成を目指しましょう。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>初心者が最初に作るべきWebゲームの3画面構成：タイトル・プレイ・結果画面を具体的に解説</h1>
+  <p class="lead">初心者でも作りやすいWebゲームの基本画面「タイトル」「プレイ」「結果」の3つに絞り、具体的な作成手順や失敗例、改善案を解説します。簡単なコード例とポイントを押さえて、最初のゲーム完成を目指しましょう。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-17-beginner-webgame-3screens.png?v=3" alt="初心者が最初に作るべきWebゲームの3画面構成：タイトル・プレイ・結果画面を具体的に解説">
+  <h2>はじめに</h2>
+<p>Webゲーム制作を始めたい初心者にとって、どこから手をつければ良いか迷うことが多いです。今回は最初に作るべき3つの画面「タイトル画面」「プレイ画面」「結果画面」に絞り、具体的な作り方を紹介します。これらの画面を順に完成させることで、ゲームの基本構造が理解でき、実際に動くゲームを作れます。</p>
+<h2>タイトル画面の作り方</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>タイトル画面はユーザーの第一印象になるので、見やすく押しやすいスタートボタンを設置しましょう。</p></div></aside>
+<p>タイトル画面はゲームの顔です。ゲーム名やスタートボタンを配置し、ユーザーがゲームを始めやすいようにします。</p>
+<h3>手順</h3>
+<ol>
+<li>HTMLでゲーム名のテキストを配置</li>
+<li>スタートボタンを設置し、クリックでプレイ画面へ遷移させるJavaScriptを記述</li>
+</ol>
+<h3>失敗例と改善例</h3>
+<ul>
+<li>ボタンがわかりにくく押されない→色やサイズを調整し、ホバーで変化をつける</li>
+<li>画面が寂しい→背景色や簡単なイラストを追加して魅力アップ</li>
+</ul>
+<h2>プレイ画面の作り方</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>クリック判定やタイマー表示を工夫すると、ストレスなく遊べるゲームになります。</p></div></aside>
+<p>ゲームのメイン部分で、操作やルールを実装します。ここでは簡単なクリックゲームを例にします。</p>
+<h3>手順</h3>
+<ol>
+<li>ゲームエリアを用意し、クリックできるオブジェクトを配置</li>
+<li>クリックすると得点が増える仕組みをJavaScriptで実装</li>
+<li>制限時間を設定し、時間切れで結果画面へ遷移</li>
+</ol>
+<h3>失敗例と改善例</h3>
+<ul>
+<li>クリック判定が甘くストレス→クリック範囲を適切に設定</li>
+<li>時間表示がない→タイマーを画面に表示し、残り時間を視覚化</li>
+</ul>
+<h2>結果画面の作り方</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>得点表示は見やすく、リトライボタンは大きめにして押しやすくするのがポイントです。</p></div></aside>
+<p>ゲーム終了後に得点を表示し、再挑戦を促す画面です。</p>
+<h3>手順</h3>
+<ol>
+<li>得点を表示するテキストを用意</li>
+<li>「もう一度プレイ」ボタンを設置し、タイトル画面に戻る機能を実装</li>
+</ol>
+<h3>失敗例と改善例</h3>
+<ul>
+<li>得点が見づらい→フォントサイズや色を工夫</li>
+<li>リトライボタンが押しにくい→ボタンを大きくし、押しやすくする</li>
+</ul>
+<h2>まとめ</h2>
+<p>最初のWebゲームは「タイトル」「プレイ」「結果」の3画面に絞ることで、シンプルに完成まで導けます。具体的な手順と失敗例を参考に、まずは動くゲームを作り、徐々に機能やデザインを改善していきましょう。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
