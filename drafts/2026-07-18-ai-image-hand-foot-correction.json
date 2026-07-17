@@ -1,0 +1,52 @@
+{
+  "title": "AI画像の不自然な手足を減らす初心者向け確認＆修正手順",
+  "slug": "ai-image-hand-foot-correction",
+  "category": "AI活用",
+  "summary": "AI生成画像でよく見られる手足の不自然さを減らすための具体的な指示方法と生成後の部分修正手順を、初心者にもわかりやすく解説します。ゲームや漫画、創作に役立つ実践的なコツを紹介。",
+  "article_markdown": "AIが生成する画像では、特に手足の形や指の数が不自然になることが多く、初心者には困難に感じられることがあります。この記事では、生成前の指示（プロンプト）での工夫と、生成後に簡単にできる部分修正の手順を具体例とともに紹介し、誰でも効率よく自然な手足画像を作る方法をまとめました。\n\n## AI画像で手足が不自然になる理由\nAIは大量の画像データを学習して生成していますが、手や足の複雑な構造や指の数は認識しづらく、指が多すぎたり、指の形が変だったりします。これはAIの学習データの偏りや解像度の問題が主な原因です。\n\n## 生成前の指示で不自然さを減らす工夫\nまずはプロンプト（指示文）に「hands with five fingers」「clear fingers」「natural hand pose」など具体的なキーワードを入れてみましょう。曖昧な表現よりも、指の数や形を明示的に指示することでAIの生成精度が上がります。\n\n### 具体例\n- NGプロンプト例: \"a person holding a sword\"\n- 改善プロンプト例: \"a person holding a sword, hands with five fingers clearly visible, natural hand pose\"\n\nさらに、手や足に関するネガティブプロンプト（除外したい表現）に「extra fingers」「deformed hands」「blurry fingers」などを入れると、不自然な指の生成を減らせます。\n\n### 失敗例と改善例\n失敗例: 指が7本以上ある手が生成された。\n改善例: プロンプトに「five fingers only」と加え、ネガティブプロンプトで「extra fingers」を指定。\n\n## 生成後の部分修正手順\nAI画像生成ツールの中には、生成後に部分的に修正できる機能があります。例えば、指や手の部分だけを再生成（インペイント）する方法です。\n\n### 手順\n1. 画像の不自然な手足部分を選択しマスクを作成。\n2. \"five fingers\"や\"natural hand\"など具体的な指示を追加して再生成。\n3. 修正結果を確認し、必要に応じて再度マスクを調整。\n\nこの手順を繰り返すことで、全体を再生成せずに部分的な修正が可能です。\n\n### 失敗例\nマスクが大きすぎて手だけでなく周辺も変わってしまった。\n\n### 改善例\nマスクは手や指の範囲に厳密に絞り、背景に影響を与えないようにする。\n\n## まとめ\nAI画像の手足の不自然さは、生成前の指示を具体的にし、生成後は部分修正を活用することで大幅に改善できます。初心者の方も今回の手順を試して、ゲームや漫画、創作に使える自然な手足画像を作ってみてください。\n\nピコロンも不自然な指には困ったことがあるみたい！焦らず一歩ずつ直していきましょう！",
+  "social_post": "AI画像生成で悩みがちな手足の不自然さ、具体的な指示方法と部分修正の手順で解決！初心者でも簡単に自然な手足を作るコツを紹介します。ゲームや漫画創作に役立つ内容です。",
+  "short_video_script": "AI画像で手足が不自然に見えることありませんか？まずは生成前に「five fingers」「natural hand pose」など具体的な指示を入れてみましょう。次に生成後は不自然な部分だけを選択して再生成。これで自然な手足が作れます。初心者も簡単！ぜひ試してみてください。",
+  "thumbnail_prompt": "A clean and clear AI-generated illustration of a human hand with five natural fingers, showing a comparison between an unnatural and corrected hand, in a bright and friendly style suitable for beginners learning AI image correction",
+  "pikoron_tips": [
+    {
+      "after_heading": "生成前の指示で不自然さを減らす工夫",
+      "message": "具体的な指示を入れることでAIは正しい指の数や形を生成しやすくなります。曖昧な指示は避けましょう。"
+    },
+    {
+      "after_heading": "生成後の部分修正手順",
+      "message": "不自然な手足部分だけを選択して再生成する部分修正が効率的。マスクは必要最小限に絞りましょう。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "画像",
+      "item": "AI生成画像の手足の指の数と形が自然かどうか",
+      "risk": "中"
+    },
+    {
+      "type": "権利",
+      "item": "生成画像に既存キャラクターやブランドの要素が含まれていないか",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 8,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-07-18T07:47:36.591484+09:00",
+    "seed": {
+      "title": "AI画像の不自然な手足を減らす確認と修正の手順",
+      "category": "AI活用",
+      "original_angle": "生成前の指示と生成後の部分修正を初心者向けに整理する"
+    },
+    "status": "review"
+  }
+}

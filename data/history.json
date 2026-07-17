@@ -55,5 +55,11 @@
     "title": "初心者向けWebゲームで最初に作るべき3画面",
     "category": "プログラミング",
     "draft": "drafts/2026-07-17-beginner-webgame-3screens.json"
+  },
+  {
+    "date": "2026-07-18",
+    "title": "AI画像の不自然な手足を減らす確認と修正の手順",
+    "category": "AI活用",
+    "draft": "drafts/2026-07-18-ai-image-hand-foot-correction.json"
   }
 ]
