@@ -61,5 +61,11 @@
     "title": "AI画像の不自然な手足を減らす確認と修正の手順",
     "category": "AI活用",
     "draft": "drafts/2026-07-18-ai-image-hand-foot-correction.json"
+  },
+  {
+    "date": "2026-07-19",
+    "title": "100階ローグライクでボスを10階ごとに設計する方法",
+    "category": "ゲーム制作",
+    "draft": "drafts/2026-07-19-roguelike-100floors-boss-design.json"
   }
 ]
