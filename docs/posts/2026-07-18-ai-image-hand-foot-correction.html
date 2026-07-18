@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI画像の不自然な手足を減らす初心者向け確認＆修正手順 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AI生成画像でよく見られる手足の不自然さを減らすための具体的な指示方法と生成後の部分修正手順を、初心者にもわかりやすく解説します。ゲームや漫画、創作に役立つ実践的なコツを紹介。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI画像の不自然な手足を減らす初心者向け確認＆修正手順</h1>
+  <p class="lead">AI生成画像でよく見られる手足の不自然さを減らすための具体的な指示方法と生成後の部分修正手順を、初心者にもわかりやすく解説します。ゲームや漫画、創作に役立つ実践的なコツを紹介。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-18-ai-image-hand-foot-correction.png?v=3" alt="AI画像の不自然な手足を減らす初心者向け確認＆修正手順">
+  <p>AIが生成する画像では、特に手足の形や指の数が不自然になることが多く、初心者には困難に感じられることがあります。この記事では、生成前の指示（プロンプト）での工夫と、生成後に簡単にできる部分修正の手順を具体例とともに紹介し、誰でも効率よく自然な手足画像を作る方法をまとめました。</p>
+<h2>AI画像で手足が不自然になる理由</h2>
+<p>AIは大量の画像データを学習して生成していますが、手や足の複雑な構造や指の数は認識しづらく、指が多すぎたり、指の形が変だったりします。これはAIの学習データの偏りや解像度の問題が主な原因です。</p>
+<h2>生成前の指示で不自然さを減らす工夫</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>具体的な指示を入れることでAIは正しい指の数や形を生成しやすくなります。曖昧な指示は避けましょう。</p></div></aside>
+<p>まずはプロンプト（指示文）に「hands with five fingers」「clear fingers」「natural hand pose」など具体的なキーワードを入れてみましょう。曖昧な表現よりも、指の数や形を明示的に指示することでAIの生成精度が上がります。</p>
+<h3>具体例</h3>
+<ul>
+<li>NGプロンプト例: "a person holding a sword"</li>
+<li>改善プロンプト例: "a person holding a sword, hands with five fingers clearly visible, natural hand pose"</li>
+</ul>
+<p>さらに、手や足に関するネガティブプロンプト（除外したい表現）に「extra fingers」「deformed hands」「blurry fingers」などを入れると、不自然な指の生成を減らせます。</p>
+<h3>失敗例と改善例</h3>
+<p>失敗例: 指が7本以上ある手が生成された。
+改善例: プロンプトに「five fingers only」と加え、ネガティブプロンプトで「extra fingers」を指定。</p>
+<h2>生成後の部分修正手順</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>不自然な手足部分だけを選択して再生成する部分修正が効率的。マスクは必要最小限に絞りましょう。</p></div></aside>
+<p>AI画像生成ツールの中には、生成後に部分的に修正できる機能があります。例えば、指や手の部分だけを再生成（インペイント）する方法です。</p>
+<h3>手順</h3>
+<ol>
+<li>画像の不自然な手足部分を選択しマスクを作成。</li>
+<li>"five fingers"や"natural hand"など具体的な指示を追加して再生成。</li>
+<li>修正結果を確認し、必要に応じて再度マスクを調整。</li>
+</ol>
+<p>この手順を繰り返すことで、全体を再生成せずに部分的な修正が可能です。</p>
+<h3>失敗例</h3>
+<p>マスクが大きすぎて手だけでなく周辺も変わってしまった。</p>
+<h3>改善例</h3>
+<p>マスクは手や指の範囲に厳密に絞り、背景に影響を与えないようにする。</p>
+<h2>まとめ</h2>
+<p>AI画像の手足の不自然さは、生成前の指示を具体的にし、生成後は部分修正を活用することで大幅に改善できます。初心者の方も今回の手順を試して、ゲームや漫画、創作に使える自然な手足画像を作ってみてください。</p>
+<p>ピコロンも不自然な指には困ったことがあるみたい！焦らず一歩ずつ直していきましょう！</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
