@@ -67,5 +67,11 @@
     "title": "100階ローグライクでボスを10階ごとに設計する方法",
     "category": "ゲーム制作",
     "draft": "drafts/2026-07-19-roguelike-100floors-boss-design.json"
+  },
+  {
+    "date": "2026-07-20",
+    "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+    "category": "AI活用",
+    "draft": "drafts/2026-07-20-game-thumbnail-fixed-mascot-auto-generation.json"
   }
 ]

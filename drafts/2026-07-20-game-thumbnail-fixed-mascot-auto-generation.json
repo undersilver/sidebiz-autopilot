@@ -1,0 +1,61 @@
+{
+  "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+  "slug": "game-thumbnail-fixed-mascot-auto-generation",
+  "category": "AI活用",
+  "summary": "ゲーム関連のサムネイル作成で、毎回新しいキャラクターを生成せずに、PythonのPillowライブラリを使って固定マスコット画像を安定的に合成する具体的な手順と注意点を解説します。",
+  "article_markdown": "## はじめに\nゲームや漫画のサムネイルは視覚的に目を引くことが重要ですが、毎回新しいキャラクターをAIで生成するのは時間も手間もかかります。この記事では、固定のマスコットキャラクター画像を用いて、PythonのPillowライブラリで効率よくサムネイルを自動生成する方法を紹介します。\n\n## 固定マスコットを使うメリット\n毎回AIでキャラクターを生成すると画像の品質や雰囲気がばらつきやすく、安定したブランドイメージを作りにくいです。固定マスコットを用いることで、画像の統一感を保ちながら作業も簡略化できます。さらにPillowを使えば、文字や背景画像との合成も自由自在です。\n\n## 必要な準備\n- Python環境（バージョン3.6以上推奨）\n- Pillowライブラリ（インストールは`pip install pillow`）\n- 固定マスコットのPNG画像（背景透過推奨）\n- 背景画像やタイトル文字などの素材\n\n## 実際のサムネイル自動生成手順\n1. Pillowで背景画像を読み込みます。\n2. 固定マスコット画像を読み込んで背景に合成します。\n3. タイトルや説明文などのテキストを指定フォント・位置に描画します。\n4. 保存形式（PNGやJPEG）で出力します。\n\n### コード例\n```python\nfrom PIL import Image, ImageDraw, ImageFont\n\n# 画像読み込み\nbackground = Image.open('background.png')\nmascot = Image.open('mascot.png')\n\n# マスコットのサイズ調整（必要に応じて）\nmascot = mascot.resize((200, 200))\n\n# 合成\nbackground.paste(mascot, (50, 50), mascot)\n\ndraw = ImageDraw.Draw(background)\nfont = ImageFont.truetype('arial.ttf', 40)\n\n# テキスト描画\ntext = 'ゲームタイトル'\ndraw.text((300, 100), text, font=font, fill=(255, 255, 255))\n\n# 保存\nbackground.save('thumbnail.png')\n```\n\n## 失敗例と改善策\n- マスコットのサイズが大きすぎて文字が隠れる→サイズ調整か位置を変える\n- 透過PNGでないため背景が不自然→透過PNGを用意する\n- フォントが環境依存で表示されない→フリーのフォントを同梱または指定する\n\n## まとめ\n固定マスコットを使ったサムネイル生成は、安定感があり作業も効率化できます。Pillowの基本的な画像操作を覚えれば、背景やテキストの差し替えも簡単。ぜひ試してみてください。",
+  "social_post": "ゲーム用サムネイル作成で毎回キャラ生成は大変！PythonのPillowで固定マスコットを合成する方法なら簡単＆安定。コード例つきで初心者もすぐ実践可能です。#ゲーム制作 #AI活用 #Python",
+  "short_video_script": "ゲーム用サムネイルを作りたいけど、毎回キャラクターを生成するのは面倒ですよね。そこでPythonのPillowを使って、固定マスコット画像を背景に合成し、文字も入れる簡単な方法をご紹介します。まず背景とマスコット画像を読み込み、マスコットをサイズ調整して貼り付けます。次にタイトル文字を描画して、最後に保存するだけ。これで安定した見た目のサムネイルが自動生成できます。ぜひ試してみてください！",
+  "thumbnail_prompt": "A clean and colorful game thumbnail featuring a fixed cute mascot character on the left side, with bold Japanese game title text on the right, composed using digital art style, transparent background mascot, bright and eye-catching colors",
+  "pikoron_tips": [
+    {
+      "after_heading": "固定マスコットを使うメリット",
+      "message": "固定マスコットを使うことで、ブランドイメージを安定させつつ作業時間を大幅に短縮できます。"
+    },
+    {
+      "after_heading": "実際のサムネイル自動生成手順",
+      "message": "Pillowで画像の読み込みから合成、文字描画、保存までの流れを覚えれば誰でも簡単に自動生成可能です。"
+    },
+    {
+      "after_heading": "失敗例と改善策",
+      "message": "サイズや透過の問題は事前に素材を整えることで防げます。環境依存のフォントはフリーのものを使いましょう。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "画像",
+      "item": "固定マスコット画像の権利確認",
+      "risk": "中"
+    },
+    {
+      "type": "画像",
+      "item": "背景画像の著作権・利用許諾",
+      "risk": "中"
+    },
+    {
+      "type": "表現",
+      "item": "テキスト内容の誤字脱字や不適切表現",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 92,
+  "estimated_review_minutes": 8,
+  "_validation": {
+    "status": "pass",
+    "score": 92,
+    "issues": [],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-07-20T07:49:53.193468+09:00",
+    "seed": {
+      "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+      "category": "AI活用",
+      "original_angle": "毎回キャラクターを生成せずPillowで安定した画像を合成する"
+    },
+    "status": "review"
+  }
+}
