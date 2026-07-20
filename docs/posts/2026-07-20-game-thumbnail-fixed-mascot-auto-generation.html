@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ゲーム用サムネイルを固定マスコットで自動生成する方法 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="ゲーム関連のサムネイル作成で、毎回新しいキャラクターを生成せずに、PythonのPillowライブラリを使って固定マスコット画像を安定的に合成する具体的な手順と注意点を解説します。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>ゲーム用サムネイルを固定マスコットで自動生成する方法</h1>
+  <p class="lead">ゲーム関連のサムネイル作成で、毎回新しいキャラクターを生成せずに、PythonのPillowライブラリを使って固定マスコット画像を安定的に合成する具体的な手順と注意点を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-20-game-thumbnail-fixed-mascot-auto-generation.png?v=3" alt="ゲーム用サムネイルを固定マスコットで自動生成する方法">
+  <h2>はじめに</h2>
+<p>ゲームや漫画のサムネイルは視覚的に目を引くことが重要ですが、毎回新しいキャラクターをAIで生成するのは時間も手間もかかります。この記事では、固定のマスコットキャラクター画像を用いて、PythonのPillowライブラリで効率よくサムネイルを自動生成する方法を紹介します。</p>
+<h2>固定マスコットを使うメリット</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>固定マスコットを使うことで、ブランドイメージを安定させつつ作業時間を大幅に短縮できます。</p></div></aside>
+<p>毎回AIでキャラクターを生成すると画像の品質や雰囲気がばらつきやすく、安定したブランドイメージを作りにくいです。固定マスコットを用いることで、画像の統一感を保ちながら作業も簡略化できます。さらにPillowを使えば、文字や背景画像との合成も自由自在です。</p>
+<h2>必要な準備</h2>
+<ul>
+<li>Python環境（バージョン3.6以上推奨）</li>
+<li>Pillowライブラリ（インストールは<code>pip install pillow</code>）</li>
+<li>固定マスコットのPNG画像（背景透過推奨）</li>
+<li>背景画像やタイトル文字などの素材</li>
+</ul>
+<h2>実際のサムネイル自動生成手順</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>Pillowで画像の読み込みから合成、文字描画、保存までの流れを覚えれば誰でも簡単に自動生成可能です。</p></div></aside>
+<ol>
+<li>Pillowで背景画像を読み込みます。</li>
+<li>固定マスコット画像を読み込んで背景に合成します。</li>
+<li>タイトルや説明文などのテキストを指定フォント・位置に描画します。</li>
+<li>保存形式（PNGやJPEG）で出力します。</li>
+</ol>
+<h3>コード例</h3>
+<pre><code class="language-python">from PIL import Image, ImageDraw, ImageFont
+
+# 画像読み込み
+background = Image.open('background.png')
+mascot = Image.open('mascot.png')
+
+# マスコットのサイズ調整（必要に応じて）
+mascot = mascot.resize((200, 200))
+
+# 合成
+background.paste(mascot, (50, 50), mascot)
+
+draw = ImageDraw.Draw(background)
+font = ImageFont.truetype('arial.ttf', 40)
+
+# テキスト描画
+text = 'ゲームタイトル'
+draw.text((300, 100), text, font=font, fill=(255, 255, 255))
+
+# 保存
+background.save('thumbnail.png')
+</code></pre>
+<h2>失敗例と改善策</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>サイズや透過の問題は事前に素材を整えることで防げます。環境依存のフォントはフリーのものを使いましょう。</p></div></aside>
+<ul>
+<li>マスコットのサイズが大きすぎて文字が隠れる→サイズ調整か位置を変える</li>
+<li>透過PNGでないため背景が不自然→透過PNGを用意する</li>
+<li>フォントが環境依存で表示されない→フリーのフォントを同梱または指定する</li>
+</ul>
+<h2>まとめ</h2>
+<p>固定マスコットを使ったサムネイル生成は、安定感があり作業も効率化できます。Pillowの基本的な画像操作を覚えれば、背景やテキストの差し替えも簡単。ぜひ試してみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
