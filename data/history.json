@@ -73,5 +73,11 @@
     "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
     "category": "AI活用",
     "draft": "drafts/2026-07-20-game-thumbnail-fixed-mascot-auto-generation.json"
+  },
+  {
+    "date": "2026-07-21",
+    "title": "漫画の吹き出しを先に配置して絵の破綻を防ぐ方法",
+    "category": "漫画化",
+    "draft": "drafts/2026-07-21-manga-speech-bubble-layout-reverse-calculation.json"
   }
 ]
