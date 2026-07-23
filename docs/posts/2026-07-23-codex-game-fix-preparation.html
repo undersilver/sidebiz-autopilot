@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Codexへゲーム修正を依頼する前に準備すべき4つの情報 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIのCodexにゲームの修正を頼む際、スムーズに対応してもらうために必要な情報は「再現手順」「期待結果」「実際の結果」「関連ファイル」の4点です。具体例や失敗例を交えて、初心者でもわかりやすく解説します。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>Codexへゲーム修正を依頼する前に準備すべき4つの情報</h1>
+  <p class="lead">AIのCodexにゲームの修正を頼む際、スムーズに対応してもらうために必要な情報は「再現手順」「期待結果」「実際の結果」「関連ファイル」の4点です。具体例や失敗例を交えて、初心者でもわかりやすく解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-23-codex-game-fix-preparation.png?v=3" alt="Codexへゲーム修正を依頼する前に準備すべき4つの情報">
+  <p>ゲームの修正をAIのCodexに依頼する際、正確な対応を得るには事前に用意すべき情報が重要です。今回は「再現手順」「期待結果」「実際の結果」「関連ファイル」の4つに絞って解説します。これらを整理して伝えることで、修正がスムーズになり、時間の無駄を減らせます。</p>
+<h2>再現手順</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>問題を誰でも同じように再現できる具体的な操作手順を用意しましょう。曖昧な説明は修正の妨げになります。</p></div></aside>
+<p>まずは問題の発生する手順を具体的に書き出しましょう。たとえば「ゲーム起動後、メニュー画面で設定を開き、音量を変更するとクラッシュする」など、誰が見ても同じ操作で問題が再現できる内容が理想です。</p>
+<p>具体例:
+- ゲームを起動
+- メニュー画面で「設定」を選択
+- 音量スライダーを操作
+- 画面が固まりゲームが落ちる</p>
+<p>失敗例は「音量がおかしい」だけで終わるケース。これではCodexが何を直せばいいかわかりません。</p>
+<h2>期待結果</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>修正後の正しい動作を具体的に伝えることで、Codexが目標を理解しやすくなります。</p></div></aside>
+<p>次に、正しい動作や期待する結果を明確に伝えます。修正後にどうなるべきかを示すことで、AIが目標を理解しやすくなります。</p>
+<p>例:
+- 音量を変更してもゲームが落ちず、設定が反映される</p>
+<p>曖昧な表現は避けましょう。単に「うまく動いてほしい」ではなく、具体的な期待を記述してください。</p>
+<h2>実際の結果</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>発生している問題の詳細な挙動やエラーメッセージを正確に説明しましょう。</p></div></aside>
+<p>問題が発生している現在の動作を具体的に説明します。エラーメッセージや画面の状態、挙動の詳細が含まれると良いです。</p>
+<p>例:
+- 音量変更時に「NullReferenceException」が表示され、ゲームが強制終了する</p>
+<p>ここで重要なのは、可能な限り正確な情報を集めること。スクリーンショットやログも役立ちます。</p>
+<h2>関連ファイル</h2>
+<p>問題に関連するコードや設定ファイルを用意しましょう。特に修正してほしい箇所がわかるコードの抜粋があると、Codexが効率的に修正案を提示できます。</p>
+<p>具体例:</p>
+<pre><code class="language-csharp">void ChangeVolume(float volume) {
+  if(audioSource == null) return;
+  audioSource.volume = volume;
+}
+</code></pre>
+<p>もしコード全体が大きい場合は、問題が起きている部分だけを抜き出して送るのが効果的です。</p>
+<hr />
+<p>これら4つのポイントを押さえて準備することで、Codexはより正確で実用的な修正を提案しやすくなります。ピコロンからのひとこと：</p>
+<p>「具体的な再現手順と期待結果をしっかり伝えることが、AI活用成功のカギだよ！」</p>
+<p>ぜひ実際に試して、ゲーム制作の効率アップに役立ててください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
