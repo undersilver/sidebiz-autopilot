@@ -97,5 +97,11 @@
     "title": "AIにゲームバランス調整案を出させる入力表の作り方",
     "category": "AI活用",
     "draft": "drafts/2026-07-24-how-to-create-input-table-for-ai-game-balance.json"
+  },
+  {
+    "date": "2026-07-25",
+    "title": "PythonとPillowで日本語サムネイルを作るときの注意点",
+    "category": "プログラミング",
+    "draft": "drafts/2026-07-25-python-pillow-japanese-thumbnail-tips.json"
   }
 ]

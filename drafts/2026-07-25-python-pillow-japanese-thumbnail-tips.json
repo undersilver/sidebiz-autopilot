@@ -1,0 +1,59 @@
+{
+  "title": "PythonとPillowで日本語サムネイルを作るときの注意点",
+  "slug": "python-pillow-japanese-thumbnail-tips",
+  "category": "プログラミング",
+  "summary": "Pythonの画像処理ライブラリPillowを使って日本語テキスト入りのサムネイルを作成する際の具体的な注意点を解説。日本語フォントの指定方法、文字の折り返し、文字サイズ調整、余白の取り方でありがちな失敗例と改善策を豊富なコード例とともに紹介します。",
+  "article_markdown": "## はじめに\nPythonのPillowライブラリは画像生成に便利ですが、日本語テキストを扱う際には特有の注意点があります。本記事では、ゲームや漫画、創作分野で使える日本語サムネイル作成に焦点を当て、初心者向けに具体的な方法と失敗例を解説します。\n\n## 日本語フォントの指定方法\nPillowでは日本語を表示するために、対応したフォントファイル（ttfなど）を指定する必要があります。Windowsなら「meiryo.ttf」や「msgothic.ttc」、Macなら「ヒラギノ角ゴシック」などが使えます。フォントファイルのパスを間違えると文字が表示されないので注意してください。\n\n```python\nfrom PIL import Image, ImageDraw, ImageFont\n\nimg = Image.new('RGB', (400, 200), color='white')\ndraw = ImageDraw.Draw(img)\nfont = ImageFont.truetype('meiryo.ttf', 40)  # フォントファイルのパスを正確に\ntext = 'サンプルテキスト'\ndraw.text((10, 10), text, font=font, fill='black')\nimg.show()\n```\n\n### 失敗例\n- フォントファイルが見つからず文字が表示されない\n- フォントサイズが大きすぎて文字が画像からはみ出す\n\n### 改善例\n- 環境に合わせてフォントファイルの場所を確認\n- 文字サイズを画像サイズに合わせて調整\n\n## 文字の折り返し処理\nPillowの標準機能には自動折り返しがないため、長い日本語テキストは手動で改行を入れる必要があります。文字数や画面幅に応じて適切に改行しないと、文字が切れたり重なったりします。\n\n```python\nimport textwrap\n\nmax_width = 15  # 1行あたりの最大文字数（目安）\nwrapped_text = '\\n'.join(textwrap.wrap(text, width=max_width))\ndraw.multiline_text((10, 10), wrapped_text, font=font, fill='black')\n```\n\n### 失敗例\n- 文字数だけで折り返すと行の幅がバラバラになり見栄えが悪い\n- 改行位置を間違えて意味が伝わりにくい\n\n### 改善例\n- 実際の文字幅を計測しながら折り返す関数を自作すると効果的\n- 意味の区切りで改行を入れる工夫も重要\n\n## 文字サイズと余白の調整\n文字サイズを大きくすると迫力が出ますが、余白が足りないと文字が切れたり窮屈に見えます。サムネイルは小さな画面で表示されることも多いため、余白を十分に取りつつ文字サイズを調整しましょう。\n\n```python\n# 画像サイズ\nwidth, height = 400, 200\n\n# 余白\nmargin = 20\n\n# 文字サイズは余白を引いた領域に収まるよう計算\nmax_text_width = width - 2 * margin\nmax_text_height = height - 2 * margin\n\n# フォントサイズを調整する関数例（簡易版）\nfont_size = 40\nfont = ImageFont.truetype('meiryo.ttf', font_size)\ntext_width, text_height = draw.textsize(text, font=font)\nwhile (text_width > max_text_width or text_height > max_text_height) and font_size > 10:\n    font_size -= 2\n    font = ImageFont.truetype('meiryo.ttf', font_size)\n    text_width, text_height = draw.textsize(text, font=font)\n\n# 文字を中央寄せで描画\nx = (width - text_width) // 2\ny = (height - text_height) // 2\ndraw.text((x, y), text, font=font, fill='black')\n```\n\n### 失敗例\n- 余白が少なく文字が端に寄りすぎて見づらい\n- 文字が画像サイズを超えて切れる\n\n### 改善例\n- 余白を固定して文字サイズを自動調整\n- 複数行のときは行間も考慮する\n\n## まとめ\nPythonとPillowで日本語サムネイルを作る際は、フォント指定の正確さ、折り返し処理の工夫、文字サイズと余白のバランス調整が重要です。失敗例を参考にしながら、実際にコードを書いて試すことで理想のサムネイルが作れます。ピコロンも応援しているよ！",
+  "social_post": "PythonとPillowで日本語サムネイル作成のポイントを解説！フォント指定のコツや文字の折り返し、文字サイズ・余白調整の具体例で初心者でも安心。ゲームや漫画の創作に役立つ実践的な内容です。#Python #Pillow #日本語サムネイル #プログラミング",
+  "short_video_script": "PythonのPillowで日本語サムネイルを作るなら、まずは正しい日本語フォントを指定しましょう。次に長いテキストは自動で折り返せないので、手動で改行を入れる工夫が必要です。最後に文字サイズと余白を調整して、文字が切れないようにします。これで見やすい日本語サムネイルが完成！",
+  "thumbnail_prompt": "A clean and modern computer screen displaying Python code editing a Japanese text thumbnail image with clear Japanese characters, surrounded by icons representing programming and creativity, soft pastel colors, minimalistic style",
+  "pikoron_tips": [
+    {
+      "after_heading": "日本語フォントの指定方法",
+      "message": "日本語フォントは環境ごとにパスが異なるため、正しいファイルを指定しないと文字が表示されません。必ず確認しましょう。"
+    },
+    {
+      "after_heading": "文字の折り返し処理",
+      "message": "Pillowに自動折り返し機能はないため、文字数や幅に応じて手動で改行を入れる工夫が必要です。"
+    },
+    {
+      "after_heading": "文字サイズと余白の調整",
+      "message": "文字サイズが大きすぎると切れてしまうため、余白を考慮してサイズを自動調整すると見栄えが良くなります。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "権利",
+      "item": "使用する日本語フォントのライセンス",
+      "risk": "中"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 90,
+  "estimated_review_minutes": 8,
+  "_validation": {
+    "status": "pass",
+    "score": 90,
+    "issues": [
+      {
+        "severity": "medium",
+        "category": "権利",
+        "detail": "使用する日本語フォントのライセンスリスクが中程度と指摘されているため、フォントのライセンス確認を読者に促す注意書きを本文に明示するとより安全です。"
+      }
+    ],
+    "rewrite_instructions": [
+      "本文のどこかにフォントのライセンス確認を促す一文を追加してください。"
+    ],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-07-25T07:59:53.967146+09:00",
+    "seed": {
+      "title": "PythonとPillowで日本語サムネイルを作るときの注意点",
+      "category": "プログラミング",
+      "original_angle": "日本語フォント・折り返し・文字サイズ・余白の失敗例を扱う"
+    },
+    "status": "review"
+  }
+}
