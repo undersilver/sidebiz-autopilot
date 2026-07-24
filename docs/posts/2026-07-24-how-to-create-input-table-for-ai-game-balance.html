@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIにゲームバランス調整案を出させる入力表の作り方 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIを活用してゲームのバランス調整案を効率的に得るための具体的な入力表の作り方を解説します。HPや攻撃力、速度、出現階層を表形式で整理し、比較しやすい案を作る手順と注意点も紹介します。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AIにゲームバランス調整案を出させる入力表の作り方</h1>
+  <p class="lead">AIを活用してゲームのバランス調整案を効率的に得るための具体的な入力表の作り方を解説します。HPや攻撃力、速度、出現階層を表形式で整理し、比較しやすい案を作る手順と注意点も紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-24-how-to-create-input-table-for-ai-game-balance.png?v=3" alt="AIにゲームバランス調整案を出させる入力表の作り方">
+  <p>ゲーム制作や企画で重要なゲームバランス調整。AIを使って調整案を得る際、入力データの整理がポイントです。この記事では、HP（体力）、攻撃力、速度、出現階層を軸にした入力表の作り方を具体的に紹介します。</p>
+<h2>AIに投げる入力表の基本構造</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIが理解しやすいように、HPや攻撃力、速度、出現階層を表形式で整理しましょう。</p></div></aside>
+<p>ゲームの各キャラクターや敵のパラメーターを表にまとめます。項目は最低でも「HP」「攻撃力」「速度」「出現階層」を入れましょう。表形式にすることで、AIがパラメーターの相対関係を理解しやすくなり、バランス調整案を比較しやすくなります。</p>
+<p>例:
+| 敵名 | HP | 攻撃力 | 速度 | 出現階層 |
+|---|---|---|---|---|
+| 敵A | 100 | 15 | 10 | 1-3 |
+| 敵B | 150 | 20 | 8 | 4-6 |</p>
+<p>このような表をCSVやExcelで作成し、AIに渡す形が理想です。</p>
+<h2>具体的な入力表作成手順</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>重要なパラメーターを選び、数値を正規化し、難易度ごとに段階を分けて入力表を作るのがコツです。</p></div></aside>
+<ol>
+<li><strong>パラメーターの選定</strong>: プレイヤーに影響が大きい項目を選びます。HPや攻撃力は基本ですが、速度や出現階層もゲーム性に直結します。</li>
+<li><strong>数値の正規化</strong>: 数値の幅が大きい場合は、単位をそろえたり、スケールを調整してAIの理解を助けます。</li>
+<li><strong>段階的な難易度設定</strong>: 出現階層を階層ごとに分け、難易度の推移が分かるようにします。</li>
+<li><strong>比較用の複数案作成</strong>: 基本案と調整案を複数用意し、AIに比較検討させると効果的です。</li>
+</ol>
+<h2>AIへの投げ方と注意点</h2>
+<ul>
+<li>入力表はシンプルかつ見やすく整理しましょう。</li>
+<li>AIには「この表を参考に、バランスの良い敵のパラメーター案を3つ提案してください」など具体的な指示を与えます。</li>
+<li>AIの提案は案として受け取り、必ず人間が最終確認を行いましょう。</li>
+</ul>
+<h2>失敗例と改善例</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>パラメーターが多すぎるとAIが混乱します。シンプルで比較しやすい表を心がけましょう。</p></div></aside>
+<h3>失敗例</h3>
+<ul>
+<li>パラメーターが多すぎてAIが混乱し、調整案が曖昧になる。</li>
+<li>出現階層の記載が不明瞭で、難易度調整ができない。</li>
+</ul>
+<h3>改善例</h3>
+<ul>
+<li>重要なパラメーターに絞り、表を簡潔に。</li>
+<li>出現階層を具体的に記載し、難易度の変化を明確化。</li>
+</ul>
+<h2>まとめ</h2>
+<p>AIにゲームバランス調整を任せる際は、入力表の設計が鍵です。HP、攻撃力、速度、出現階層を整理した表を作り、複数案を比較できる形でAIに渡しましょう。ピコロンも言ってる通り、「シンプルで比較しやすい表作り」が成功のコツです。</p>
+<p>ぜひこの記事の手順を参考に、あなたのゲーム制作に役立ててください！</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
