@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PythonとPillowで日本語サムネイルを作るときの注意点 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="Pythonの画像処理ライブラリPillowを使って日本語テキスト入りのサムネイルを作成する際の具体的な注意点を解説。日本語フォントの指定方法、文字の折り返し、文字サイズ調整、余白の取り方でありがちな失敗例と改善策を豊富なコード例とともに紹介します。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>PythonとPillowで日本語サムネイルを作るときの注意点</h1>
+  <p class="lead">Pythonの画像処理ライブラリPillowを使って日本語テキスト入りのサムネイルを作成する際の具体的な注意点を解説。日本語フォントの指定方法、文字の折り返し、文字サイズ調整、余白の取り方でありがちな失敗例と改善策を豊富なコード例とともに紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-07-25-python-pillow-japanese-thumbnail-tips.png?v=3" alt="PythonとPillowで日本語サムネイルを作るときの注意点">
+  <h2>はじめに</h2>
+<p>PythonのPillowライブラリは画像生成に便利ですが、日本語テキストを扱う際には特有の注意点があります。本記事では、ゲームや漫画、創作分野で使える日本語サムネイル作成に焦点を当て、初心者向けに具体的な方法と失敗例を解説します。</p>
+<h2>日本語フォントの指定方法</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>日本語フォントは環境ごとにパスが異なるため、正しいファイルを指定しないと文字が表示されません。必ず確認しましょう。</p></div></aside>
+<p>Pillowでは日本語を表示するために、対応したフォントファイル（ttfなど）を指定する必要があります。Windowsなら「meiryo.ttf」や「msgothic.ttc」、Macなら「ヒラギノ角ゴシック」などが使えます。フォントファイルのパスを間違えると文字が表示されないので注意してください。</p>
+<pre><code class="language-python">from PIL import Image, ImageDraw, ImageFont
+
+img = Image.new('RGB', (400, 200), color='white')
+draw = ImageDraw.Draw(img)
+font = ImageFont.truetype('meiryo.ttf', 40)  # フォントファイルのパスを正確に
+text = 'サンプルテキスト'
+draw.text((10, 10), text, font=font, fill='black')
+img.show()
+</code></pre>
+<h3>失敗例</h3>
+<ul>
+<li>フォントファイルが見つからず文字が表示されない</li>
+<li>フォントサイズが大きすぎて文字が画像からはみ出す</li>
+</ul>
+<h3>改善例</h3>
+<ul>
+<li>環境に合わせてフォントファイルの場所を確認</li>
+<li>文字サイズを画像サイズに合わせて調整</li>
+</ul>
+<h2>文字の折り返し処理</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>Pillowに自動折り返し機能はないため、文字数や幅に応じて手動で改行を入れる工夫が必要です。</p></div></aside>
+<p>Pillowの標準機能には自動折り返しがないため、長い日本語テキストは手動で改行を入れる必要があります。文字数や画面幅に応じて適切に改行しないと、文字が切れたり重なったりします。</p>
+<pre><code class="language-python">import textwrap
+
+max_width = 15  # 1行あたりの最大文字数（目安）
+wrapped_text = '\n'.join(textwrap.wrap(text, width=max_width))
+draw.multiline_text((10, 10), wrapped_text, font=font, fill='black')
+</code></pre>
+<h3>失敗例</h3>
+<ul>
+<li>文字数だけで折り返すと行の幅がバラバラになり見栄えが悪い</li>
+<li>改行位置を間違えて意味が伝わりにくい</li>
+</ul>
+<h3>改善例</h3>
+<ul>
+<li>実際の文字幅を計測しながら折り返す関数を自作すると効果的</li>
+<li>意味の区切りで改行を入れる工夫も重要</li>
+</ul>
+<h2>文字サイズと余白の調整</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>文字サイズが大きすぎると切れてしまうため、余白を考慮してサイズを自動調整すると見栄えが良くなります。</p></div></aside>
+<p>文字サイズを大きくすると迫力が出ますが、余白が足りないと文字が切れたり窮屈に見えます。サムネイルは小さな画面で表示されることも多いため、余白を十分に取りつつ文字サイズを調整しましょう。</p>
+<pre><code class="language-python"># 画像サイズ
+width, height = 400, 200
+
+# 余白
+margin = 20
+
+# 文字サイズは余白を引いた領域に収まるよう計算
+max_text_width = width - 2 * margin
+max_text_height = height - 2 * margin
+
+# フォントサイズを調整する関数例（簡易版）
+font_size = 40
+font = ImageFont.truetype('meiryo.ttf', font_size)
+text_width, text_height = draw.textsize(text, font=font)
+while (text_width &gt; max_text_width or text_height &gt; max_text_height) and font_size &gt; 10:
+    font_size -= 2
+    font = ImageFont.truetype('meiryo.ttf', font_size)
+    text_width, text_height = draw.textsize(text, font=font)
+
+# 文字を中央寄せで描画
+x = (width - text_width) // 2
+y = (height - text_height) // 2
+draw.text((x, y), text, font=font, fill='black')
+</code></pre>
+<h3>失敗例</h3>
+<ul>
+<li>余白が少なく文字が端に寄りすぎて見づらい</li>
+<li>文字が画像サイズを超えて切れる</li>
+</ul>
+<h3>改善例</h3>
+<ul>
+<li>余白を固定して文字サイズを自動調整</li>
+<li>複数行のときは行間も考慮する</li>
+</ul>
+<h2>まとめ</h2>
+<p>PythonとPillowで日本語サムネイルを作る際は、フォント指定の正確さ、折り返し処理の工夫、文字サイズと余白のバランス調整が重要です。失敗例を参考にしながら、実際にコードを書いて試すことで理想のサムネイルが作れます。ピコロンも応援しているよ！</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
