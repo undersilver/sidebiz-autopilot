@@ -109,5 +109,11 @@
     "title": "ゲームの攻撃モーションで武器の左右が入れ替わる問題",
     "category": "AI活用",
     "draft": "drafts/2026-07-26-game-ai-weapon-left-right-switch-fix.json"
+  },
+  {
+    "date": "2026-07-27",
+    "title": "漫画の読み順が崩れないコマ割りの基本",
+    "category": "漫画化",
+    "draft": "drafts/2026-07-27-manga-komawari-rydensei-basic.json"
   }
 ]
