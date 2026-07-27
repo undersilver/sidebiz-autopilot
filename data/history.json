@@ -115,5 +115,11 @@
     "title": "漫画の読み順が崩れないコマ割りの基本",
     "category": "漫画化",
     "draft": "drafts/2026-07-27-manga-komawari-rydensei-basic.json"
+  },
+  {
+    "date": "2026-07-28",
+    "title": "AIが書いたゲーム記事から内部メモを除く校閲方法",
+    "category": "AI活用",
+    "draft": "drafts/2026-07-28-ai-game-article-proofreading-separation.json"
   }
 ]
