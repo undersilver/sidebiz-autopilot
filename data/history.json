@@ -121,5 +121,11 @@
     "title": "AIが書いたゲーム記事から内部メモを除く校閲方法",
     "category": "AI活用",
     "draft": "drafts/2026-07-28-ai-game-article-proofreading-separation.json"
+  },
+  {
+    "date": "2026-07-29",
+    "title": "小説を漫画化するときのコマごとの登場人物管理",
+    "category": "漫画化",
+    "draft": "drafts/2026-07-29-novel-to-manga-panel-character-management.json"
   }
 ]
