@@ -127,5 +127,11 @@
     "title": "小説を漫画化するときのコマごとの登場人物管理",
     "category": "漫画化",
     "draft": "drafts/2026-07-29-novel-to-manga-panel-character-management.json"
+  },
+  {
+    "date": "2026-07-30",
+    "title": "月間記事を電子書籍へまとめるときの重複整理",
+    "category": "AI活用",
+    "draft": "drafts/2026-07-30-organize-duplicate-content-for-ebook.json"
   }
 ]
