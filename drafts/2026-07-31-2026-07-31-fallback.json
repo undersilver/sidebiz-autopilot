@@ -1,0 +1,44 @@
+{
+  "title": "ローグライクの武器と防具を階層ごとに強くする方法",
+  "slug": "2026-07-31-fallback",
+  "category": "ゲーム制作",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "HTTPError: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-07-31T08:03:56.982865+09:00",
+    "seed": {
+      "title": "ローグライクの武器と防具を階層ごとに強くする方法",
+      "category": "ゲーム制作",
+      "original_angle": "10階層単位の入手計画と数値の上げ幅を初心者向けに整理する"
+    },
+    "status": "blocked"
+  }
+}
