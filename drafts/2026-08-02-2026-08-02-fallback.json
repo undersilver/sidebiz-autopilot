@@ -1,0 +1,44 @@
+{
+  "title": "ドット絵キャラクターの九面図をゲーム素材へ変換する手順",
+  "slug": "2026-08-02-fallback",
+  "category": "ゲーム制作",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "HTTPError: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-08-02T07:54:45.928351+09:00",
+    "seed": {
+      "title": "ドット絵キャラクターの九面図をゲーム素材へ変換する手順",
+      "category": "ゲーム制作",
+      "original_angle": "方向確認から切り出し・サイズ統一・命名までの実務手順を解説する"
+    },
+    "status": "blocked"
+  }
+}
