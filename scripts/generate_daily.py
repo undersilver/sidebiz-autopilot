@@ -369,6 +369,26 @@ def create_issue(data: dict, draft_path: Path) -> None:
         timeout=60,
     )
     response.raise_for_status()
+    created_issue = response.json()
+
+    # Issue作成時にassigneesが無視される場合があるため、結果を確認して再割り当てする。
+    assigned_logins = {
+        item.get("login")
+        for item in created_issue.get("assignees", [])
+        if isinstance(item, dict)
+    }
+    if repository_owner and repository_owner not in assigned_logins:
+        assign_response = requests.post(
+            f"https://api.github.com/repos/{repo}/issues/{created_issue['number']}/assignees",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            },
+            json={"assignees": [repository_owner]},
+            timeout=60,
+        )
+        assign_response.raise_for_status()
 
 
 def main() -> None:
