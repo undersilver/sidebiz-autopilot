@@ -3,21 +3,18 @@ from __future__ import annotations
 import json
 import os
 import random
-import re
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
 from content_utils import format_pikoron_tips_for_issue, normalize_pikoron_tips
+from gemini_client import call_json_model
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / "config/settings.json").read_text(encoding="utf-8"))
 SEEDS = json.loads((ROOT / "config/topic_seeds.json").read_text(encoding="utf-8"))
 CONTEXT = (ROOT / "config/context.md").read_text(encoding="utf-8")
-
-API_URL = "https://models.github.ai/inference/chat/completions"
-
 
 def now_local() -> datetime:
     return datetime.now(ZoneInfo(SETTINGS.get("timezone", "Asia/Tokyo")))
@@ -26,55 +23,18 @@ def now_local() -> datetime:
 def choose_seed() -> dict:
     history_file = ROOT / "data/history.json"
     history = json.loads(history_file.read_text(encoding="utf-8")) if history_file.exists() else []
-
-    recent = history[-30:]
-    recent_titles = {item.get("title") for item in recent}
-    candidates = [seed for seed in SEEDS if seed["title"] not in recent_titles]
-
-    # 全テーマを使い切った場合も、直近3件と同じテーマは選ばない。
-    if not candidates:
-        last_three_titles = {item.get("title") for item in history[-3:]}
-        candidates = [seed for seed in SEEDS if seed["title"] not in last_three_titles]
-
-    # 同じカテゴリーの連続を避け、記事一覧に変化を持たせる。
-    if history and candidates:
-        title_to_category = {seed["title"]: seed["category"] for seed in SEEDS}
-        last_category = history[-1].get("category") or title_to_category.get(history[-1].get("title"))
-        different_category = [seed for seed in candidates if seed["category"] != last_category]
-        if different_category:
-            candidates = different_category
-
-    if not candidates:
-        raise RuntimeError("重複しない記事テーマがありません。topic_seeds.jsonへテーマを追加してください")
-
+    used = {item.get("title") for item in history[-30:]}
+    candidates = [seed for seed in SEEDS if seed["title"] not in used] or SEEDS
     return random.choice(candidates)
 
 
 def call_model(messages: list[dict], temperature: float = 0.4, max_tokens: int = 4000) -> dict:
-    token = os.environ.get("GITHUB_TOKEN", "")
-    if not token:
-        raise RuntimeError("GITHUB_TOKEN がありません")
-
-    response = requests.post(
-        API_URL,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Accept": "application/vnd.github+json",
-            "Content-Type": "application/json",
-            "X-GitHub-Api-Version": "2022-11-28",
-        },
-        json={
-            "model": SETTINGS["model"],
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        },
-        timeout=180,
+    return call_json_model(
+        messages=messages,
+        model=SETTINGS["model"],
+        temperature=temperature,
+        max_tokens=max_tokens,
     )
-    response.raise_for_status()
-    content = response.json()["choices"][0]["message"]["content"]
-    content = re.sub(r"^```json\s*|\s*```$", "", content.strip(), flags=re.S)
-    return json.loads(content)
 
 
 def build_writer_prompt(seed: dict) -> str:
@@ -329,12 +289,7 @@ def save_draft(data: dict, seed: dict) -> Path:
     history_file = ROOT / "data/history.json"
     history_file.parent.mkdir(exist_ok=True)
     history = json.loads(history_file.read_text(encoding="utf-8")) if history_file.exists() else []
-    history.append({
-        "date": today,
-        "title": seed["title"],
-        "category": seed["category"],
-        "draft": str(path.relative_to(ROOT)),
-    })
+    history.append({"date": today, "title": seed["title"], "draft": str(path.relative_to(ROOT))})
     history_file.write_text(json.dumps(history[-365:], ensure_ascii=False, indent=2), encoding="utf-8")
     return path
 
@@ -342,7 +297,6 @@ def save_draft(data: dict, seed: dict) -> Path:
 def create_issue(data: dict, draft_path: Path) -> None:
     repo = os.environ.get("GITHUB_REPOSITORY")
     token = os.environ.get("GITHUB_TOKEN")
-    repository_owner = os.environ.get("GITHUB_REPOSITORY_OWNER") or (repo.split("/", 1)[0] if repo else "")
     if not repo or not token:
         return
 
@@ -411,12 +365,7 @@ def create_issue(data: dict, draft_path: Path) -> None:
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
         },
-        json={
-            "title": f"【確認】{data['title']}",
-            "body": body,
-            "labels": [label],
-            "assignees": [repository_owner] if repository_owner else [],
-        },
+        json={"title": f"【確認】{data['title']}", "body": body, "labels": [label]},
         timeout=60,
     )
     response.raise_for_status()
