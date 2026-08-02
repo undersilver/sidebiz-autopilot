@@ -7,7 +7,6 @@ on:
 permissions:
   contents: write
   issues: write
-  models: read
 concurrency:
   group: sidebiz-content-writes
   cancel-in-progress: false
@@ -31,6 +30,8 @@ jobs:
       - name: Generate and validate one review item
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_FREE_TIER_ONLY: "true"
         run: python scripts/generate_daily.py
       - name: Generate branded thumbnail
         run: python scripts/generate_thumbnails.py
