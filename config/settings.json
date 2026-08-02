@@ -5,7 +5,7 @@
   "timezone": "Asia/Tokyo",
   "daily_topic_count": 1,
   "ai_provider": "google_gemini",
-  "model": "gemini-2.5-flash-lite",
+  "model": "gemini-3.1-flash-lite",
   "categories": [
     "ゲーム制作",
     "AI活用",
