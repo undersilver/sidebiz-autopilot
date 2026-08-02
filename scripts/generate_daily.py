@@ -383,6 +383,7 @@ def main() -> None:
             max_tokens=4200,
         )
         draft, validation = validate_and_rewrite(draft)
+        draft["quality_score"] = validation.get("score", 0)
         draft["_validation"] = validation
     except Exception as exc:
         print(f"生成または校閲失敗: {exc}")
