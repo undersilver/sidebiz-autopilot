@@ -1,7 +1,7 @@
 {
-  "title": "ドット絵キャラクターの九面図をゲーム素材へ変換する手順",
+  "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
   "slug": "2026-08-02-fallback",
-  "category": "ゲーム制作",
+  "category": "プログラミング",
   "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
   "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
   "social_post": "",
@@ -11,7 +11,7 @@
   "human_checks": [
     {
       "type": "システム",
-      "item": "HTTPError: 410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions",
+      "item": "HTTPError: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent",
       "risk": "高"
     }
   ],
@@ -26,18 +26,18 @@
       {
         "severity": "high",
         "category": "system",
-        "detail": "410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+        "detail": "404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent"
       }
     ],
     "rewrite_instructions": [],
     "publishable": false
   },
   "_meta": {
-    "created_at": "2026-08-02T07:54:45.928351+09:00",
+    "created_at": "2026-08-02T19:52:03.719434+09:00",
     "seed": {
-      "title": "ドット絵キャラクターの九面図をゲーム素材へ変換する手順",
-      "category": "ゲーム制作",
-      "original_angle": "方向確認から切り出し・サイズ統一・命名までの実務手順を解説する"
+      "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
+      "category": "プログラミング",
+      "original_angle": "リポジトリ作成からActions公開までを初心者向けに整理する"
     },
     "status": "blocked"
   }
