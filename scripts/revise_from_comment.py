@@ -6,12 +6,10 @@ import re
 from pathlib import Path
 import requests
 from content_utils import normalize_pikoron_tips
+from gemini_client import call_json_model
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / 'config/settings.json').read_text(encoding='utf-8'))
-API_URL = 'https://models.github.ai/inference/chat/completions'
-
-
 def headers():
     return {
         'Authorization': f"Bearer {os.environ['GITHUB_TOKEN']}",
@@ -29,18 +27,15 @@ def api(method: str, path: str, payload=None):
 
 
 def model(prompt: str) -> dict:
-    r = requests.post(API_URL, headers={**headers(), 'Content-Type': 'application/json'}, json={
-        'model': SETTINGS['model'],
-        'messages': [
+    return call_json_model(
+        messages=[
             {'role': 'system', 'content': '修正指示を正確に反映し、有効なJSONだけを返してください。'},
             {'role': 'user', 'content': prompt},
         ],
-        'temperature': 0.3,
-        'max_tokens': 4500,
-    }, timeout=180)
-    r.raise_for_status()
-    content = re.sub(r'^```json\s*|\s*```$', '', r.json()['choices'][0]['message']['content'].strip(), flags=re.S)
-    return json.loads(content)
+        model=SETTINGS['model'],
+        temperature=0.3,
+        max_tokens=4500,
+    )
 
 
 def main():
