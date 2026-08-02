@@ -4,7 +4,8 @@
   "author": "雑煮餅",
   "timezone": "Asia/Tokyo",
   "daily_topic_count": 1,
-  "model": "openai/gpt-4.1-mini",
+  "ai_provider": "google_gemini",
+  "model": "gemini-2.5-flash-lite",
   "categories": [
     "ゲーム制作",
     "AI活用",
