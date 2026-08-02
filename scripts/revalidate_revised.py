@@ -6,12 +6,10 @@ import re
 from pathlib import Path
 import requests
 from content_utils import format_pikoron_tips_for_issue, normalize_pikoron_tips
+from gemini_client import call_json_model
 
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / 'config/settings.json').read_text(encoding='utf-8'))
-API_URL = 'https://models.github.ai/inference/chat/completions'
-
-
 def headers():
     return {
         'Authorization': f"Bearer {os.environ['GITHUB_TOKEN']}",
@@ -31,18 +29,15 @@ scoreは必ず0〜100の整数。90点なら90と返し、9とは返さないで
 
 JSONだけを返してください。
 {{"status":"pass|rewrite|block","score":0,"issues":[{{"severity":"low|medium|high","category":"...","detail":"..."}}],"rewrite_instructions":["..."],"publishable":true}}'''
-    r = requests.post(API_URL, headers={**headers(), 'Content-Type': 'application/json'}, json={
-        'model': SETTINGS['model'],
-        'messages': [
+    result = call_json_model(
+        messages=[
             {'role': 'system', 'content': '有効なJSONだけを返してください。'},
             {'role': 'user', 'content': prompt},
         ],
-        'temperature': 0.1,
-        'max_tokens': 1800,
-    }, timeout=180)
-    r.raise_for_status()
-    content = re.sub(r'^```json\s*|\s*```$', '', r.json()['choices'][0]['message']['content'].strip(), flags=re.S)
-    result = json.loads(content)
+        model=SETTINGS['model'],
+        temperature=0.1,
+        max_tokens=1800,
+    )
     score = int(result.get('score', 0))
     if 1 <= score <= 10 and result.get('status') == 'pass' and result.get('publishable') is True:
         if not any(i.get('severity') == 'high' for i in result.get('issues', [])):
