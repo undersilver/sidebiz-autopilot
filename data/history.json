@@ -161,5 +161,10 @@
     "date": "2026-08-02",
     "title": "宝箱限定装備に特別感を持たせる組み合わせ効果",
     "draft": "drafts/2026-08-02-unique-treasure-gear-design.json"
+  },
+  {
+    "date": "2026-08-04",
+    "title": "AI生成JSONを安全に公開記事へ変換する設計",
+    "draft": "drafts/2026-08-04-ai-json-safe-publishing-guide.json"
   }
 ]
