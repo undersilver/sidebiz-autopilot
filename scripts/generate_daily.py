@@ -299,6 +299,7 @@ def create_issue(data: dict, draft_path: Path) -> None:
     token = os.environ.get("GITHUB_TOKEN")
     if not repo or not token:
         return
+    repository_owner = repo.split("/", 1)[0] if "/" in repo else ""
 
     validation = data.get("_validation", {})
     checks = "\n".join(
@@ -365,7 +366,12 @@ def create_issue(data: dict, draft_path: Path) -> None:
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
         },
-        json={"title": f"【確認】{data['title']}", "body": body, "labels": [label]},
+        json={
+            "title": f"【確認】{data['title']}",
+            "body": body,
+            "labels": [label],
+            "assignees": [repository_owner] if repository_owner else [],
+        },
         timeout=60,
     )
     response.raise_for_status()
