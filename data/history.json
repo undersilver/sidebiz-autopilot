@@ -176,5 +176,10 @@
     "date": "2026-08-06",
     "title": "初心者がGitHub Actionsの失敗原因を見つける方法",
     "draft": "drafts/2026-08-06-github-actions-troubleshooting-guide.json"
+  },
+  {
+    "date": "2026-08-07",
+    "title": "小説を漫画化するときに全ページへ同じ人物が出る問題",
+    "draft": "drafts/2026-08-07-ai-manga-character-consistency-guide.json"
   }
 ]
