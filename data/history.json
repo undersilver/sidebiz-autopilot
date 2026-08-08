@@ -186,5 +186,10 @@
     "date": "2026-08-08",
     "title": "漫画化でキャラクターの服装をページ間で統一する方法",
     "draft": "drafts/2026-08-08-manga-costume-consistency-guide.json"
+  },
+  {
+    "date": "2026-08-09",
+    "title": "ゲームの距離システムを画面で分かりやすく伝える方法",
+    "draft": "drafts/2026-08-09-game-distance-ui-design.json"
   }
 ]

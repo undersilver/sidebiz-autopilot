@@ -1,0 +1,44 @@
+{
+  "title": "数値は捨てろ！ゲームの「間合い」を直感的に伝えるUIデザイン術",
+  "slug": "game-distance-ui-design",
+  "category": "ゲーム制作",
+  "summary": "数値表示に頼らず、色やUIの形状でプレイヤーに「攻撃が届く間合い」を直感的に伝えるためのデザイン手法を解説します。",
+  "article_markdown": "## なぜ数値の距離表示は直感に響かないのか\nゲーム制作において、敵との距離を「残り100m」といった数値で表示するのは避けるべきです。プレイヤーは激しいアクション中に数字を読み取る余裕はありません。数値は「正確」ですが、「直感的」ではないからです。重要なのは、プレイヤーが「今、攻撃が当たるか外れるか」を瞬時に判断できる視覚情報です。\n\n## 色の変化で間合いを可視化する\n最も簡単な方法は、ターゲットカーソルの色を変えることです。敵が射程圏外のときは「白」、射程内に入ると「赤」に変化させる手法です。これだけでプレイヤーは、数字を見ることなく「攻撃ボタンを押すべきタイミング」を身体で覚えることができます。ポイントは、色の変化を滑らかにせず、射程に入った瞬間にパッと切り替えることです。この「変化の速さ」が、アクションのキレを生みます。\n\n## 形状とエフェクトで奥行きを表現する\n2Dゲームやクォータービューの作品では、足元のサークルUIが有効です。敵の足元に表示される円を、射程圏内に入った瞬間に少しだけ太くしたり、脈動するようなアニメーションを追加したりします。「円が震えたら攻撃チャンス」というルールを視覚的に植え付けることで、プレイヤーは画面の隅々まで見なくても間合いを把握できるようになります。\n\n## 失敗例から学ぶ：情報過多の罠\n初心者が陥りやすい失敗は、UIを盛り込みすぎることです。距離計、射程バー、攻撃範囲のインジケーターを同時に表示すると、画面がノイズだらけになり、肝心の敵の動きが見えなくなります。UIはあくまで「敵の動き」を引き立てるための補助です。最も重要な情報は「敵が今何をしているか」であり、距離はその次であることを忘れないでください。\n\n## 実装のステップと改善のヒント\nまずは、キャラクターの足元にシンプルな円を一つ置くことから始めましょう。次に、敵との距離に応じてその円の直径を変化させるのではなく、「色」と「太さ」だけを変化させてみてください。もし「まだ分かりにくい」と感じる場合は、攻撃がヒットする瞬間にだけ、敵の周囲に小さなフラッシュエフェクトを出すのが効果的です。これにより、「この距離なら当たる」という成功体験がプレイヤーの脳に定着します。",
+  "social_post": "ゲームの「間合い」を数値で表示していませんか？プレイヤーは数字を読む暇なんてありません！色やUIの形状だけで「攻撃が届く距離」を伝える、直感的なデザインのコツをまとめました。 #ゲーム制作 #UIデザイン",
+  "short_video_script": "【ゲーム制作のヒント】敵との距離、数字で出してない？プレイヤーが欲しいのは「今、攻撃が当たるか」の情報だけ。射程に入ったらカーソルを赤くする、足元の円を光らせる。これだけでアクションの爽快感が劇的に変わります！詳しくは記事をチェック！",
+  "thumbnail_prompt": "A clean, minimalist game UI design concept showing a character facing an enemy, with a glowing red circular indicator on the ground under the enemy, high quality, digital art style, bright and clear colors.",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "表現",
+      "item": "UIデザインの具体例がゲーム制作初心者にとって再現可能か確認",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "metadata",
+        "detail": "The provided quality_score in the input was 9, which contradicts the content quality. The metadata field 'human_checks' and 'estimated_review_minutes' are internal operational data that should ideally be stripped before final publication, though they do not affect the article content itself."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-08-09T07:26:18.160553+09:00",
+    "seed": {
+      "title": "ゲームの距離システムを画面で分かりやすく伝える方法",
+      "category": "ゲーム制作",
+      "original_angle": "数値だけに頼らずUI・色・位置で間合いを示す"
+    },
+    "status": "review"
+  }
+}
