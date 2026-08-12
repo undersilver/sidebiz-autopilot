@@ -206,5 +206,10 @@
     "date": "2026-08-12",
     "title": "AIで100階ダンジョンの敵配置を設計する",
     "draft": "drafts/2026-08-12-ai-dungeon-enemy-design.json"
+  },
+  {
+    "date": "2026-08-13",
+    "title": "AIで100階ダンジョンの敵配置を設計する",
+    "draft": "drafts/2026-08-13-ai-dungeon-enemy-design.json"
   }
 ]
