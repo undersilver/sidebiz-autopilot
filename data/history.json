@@ -221,5 +221,10 @@
     "date": "2026-08-15",
     "title": "ローグライクの敗北後も再挑戦したくなる成長設計",
     "draft": "drafts/2026-08-15-roguelike-growth-design-tips.json"
+  },
+  {
+    "date": "2026-08-16",
+    "title": "初心者向けWebゲームで最初に作るべき3画面",
+    "draft": "drafts/2026-08-16-web-game-3-essential-screens.json"
   }
 ]
