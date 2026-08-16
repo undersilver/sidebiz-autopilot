@@ -226,5 +226,10 @@
     "date": "2026-08-16",
     "title": "初心者向けWebゲームで最初に作るべき3画面",
     "draft": "drafts/2026-08-16-web-game-3-essential-screens.json"
+  },
+  {
+    "date": "2026-08-17",
+    "title": "AI画像の不自然な手足を減らす確認と修正の手順",
+    "draft": "drafts/2026-08-17-ai-image-hand-foot-correction-guide.json"
   }
 ]
