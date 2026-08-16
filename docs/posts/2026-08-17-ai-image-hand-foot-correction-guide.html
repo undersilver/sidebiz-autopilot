@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI画像の手足が変？生成前の指示と後からの修正で自然に仕上げるコツ | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AI画像生成でよくある「手足の崩れ」を最小限にするための、プロンプトの工夫と修正テクニックを初心者向けに解説します。">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI画像の手足が変？生成前の指示と後からの修正で自然に仕上げるコツ</h1>
+  <p class="lead">AI画像生成でよくある「手足の崩れ」を最小限にするための、プロンプトの工夫と修正テクニックを初心者向けに解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-08-17-ai-image-hand-foot-correction-guide.png?v=3" alt="AI画像の手足が変？生成前の指示と後からの修正で自然に仕上げるコツ">
+  <h2>AI画像で手足が崩れる理由</h2>
+<p>AI画像生成において、手や足が不自然になったり、指の数が多かったりするのは「AIが手の構造を完全には理解していないから」です。AIは膨大な画像データから学習していますが、手足はポーズや重なりによって形状が複雑に変化するため、生成時にエラーが起きやすい箇所なのです。</p>
+<h2>生成前の指示でリスクを減らす</h2>
+<p>生成後の修正を楽にするためには、最初の指示（プロンプト）が重要です。手足が複雑に絡み合うポーズを避け、「シンプルな動作」を指定するだけで成功率は大幅に上がります。</p>
+<p>・具体的なポーズ指定：複雑な格闘シーンよりも「手を振る」「本を持つ」といった単純な動作にする。
+・ネガティブプロンプトの活用：<code>extra fingers</code>（余分な指）、<code>bad anatomy</code>（不自然な構造）、<code>mutated hands</code>（変形した手）などをネガティブプロンプトに入れておきましょう。</p>
+<h2>生成後の部分修正テクニック</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>広い範囲を一度に直そうとせず、指先や手首など小さな範囲をマスクして再生成するのがコツです。背景との境界線を馴染ませるために、周辺も少しだけ含めて塗りつぶすのが成功の秘訣ですよ。</p></div></aside>
+<p>どれだけ工夫しても崩れるときは崩れます。そんなときは「インペイント（部分再生成）」機能を使いましょう。</p>
+<ol>
+<li>修正したい手足の部分だけをツールで塗りつぶす（マスクする）。</li>
+<li>その部分に対して「手」「指」といった単語を添えて再生成する。</li>
+<li>納得いく形が出るまで数回繰り返す。</li>
+</ol>
+<p>コツは、広い範囲を一度に直そうとせず、指先や手首など小さな範囲で試すことです。背景と馴染まない場合は、周辺を含めて塗りつぶすと自然に繋がります。</p>
+<h2>最終確認のチェックリスト</h2>
+<p>最後に、人間の目で以下のポイントを確認しましょう。</p>
+<ul>
+<li>指の本数は5本か？（親指の位置は正しいか）</li>
+<li>関節の曲がり方は物理的に可能か？</li>
+<li>影の落ち方は違和感がないか？</li>
+</ul>
+<p>もし「指が6本ある」「関節が逆方向に曲がっている」といった明らかなエラーがあれば、その部分は公開前に必ず修正してください。この1分の確認が、作品のクオリティを大きく左右します。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
