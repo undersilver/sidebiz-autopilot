@@ -4,7 +4,10 @@ import json
 import os
 import re
 from datetime import datetime
+from email.utils import format_datetime
+from html import unescape
 from pathlib import Path
+from xml.sax.saxutils import escape as xml_escape
 from zoneinfo import ZoneInfo
 
 import requests
@@ -13,6 +16,7 @@ from content_utils import normalize_pikoron_tips
 ROOT = Path(__file__).resolve().parents[1]
 SETTINGS = json.loads((ROOT / "config/settings.json").read_text(encoding="utf-8"))
 THUMBNAIL_VERSION = str(SETTINGS.get("thumbnail", {}).get("cache_version", "1"))
+SITE_URL = str(SETTINGS.get("site_url", "")).rstrip("/")
 
 
 def now_local() -> datetime:
@@ -100,14 +104,14 @@ def insert_pikoron_tips(article_html: str, data: dict) -> str:
     result = article_html
     for tip in tips:
         heading_html = escape(tip["after_heading"])
-        pattern = re.compile(rf'(<h2>\s*{re.escape(heading_html)}\s*</h2>)')
+        pattern = re.compile(rf"(<h2>\s*{re.escape(heading_html)}\s*</h2>)")
         aside = (
             '<aside class="pikoron-tip" aria-label="ピコロンの要点">'
             '<img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン">'
             '<div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong>'
             f'<p>{escape(tip["message"])}</p></div></aside>'
         )
-        result, replaced = pattern.subn(rf'\1{aside}', result, count=1)
+        result, replaced = pattern.subn(rf"\1{aside}", result, count=1)
         if replaced != 1:
             print(f'吹き出し挿入対象の見出しが見つかりません: {tip["after_heading"]}')
     return result
@@ -121,8 +125,24 @@ def publish(draft_path: Path) -> Path:
     post_dir = ROOT / "docs/posts"
     post_dir.mkdir(parents=True, exist_ok=True)
     post_path = post_dir / f"{date}-{data['slug']}.html"
+    canonical_url = f"{SITE_URL}/posts/{post_path.name}"
+    image_url = f"{SITE_URL}/assets/thumbnails/{date}-{data['slug']}.png?v={THUMBNAIL_VERSION}"
+    published_at = data.get("_meta", {}).get("published_at") or now_local().isoformat()
+    modified_at = now_local().isoformat()
 
     article_html = insert_pikoron_tips(markdown_to_html(data["article_markdown"]), data)
+    structured_data = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": data["title"],
+        "description": data["summary"],
+        "image": [image_url],
+        "datePublished": published_at,
+        "dateModified": modified_at,
+        "author": {"@type": "Person", "name": SETTINGS.get("author", "")},
+        "publisher": {"@type": "Organization", "name": SETTINGS["site_name"]},
+        "mainEntityOfPage": canonical_url,
+    }
     html = f"""<!doctype html>
 <html lang="ja">
 <head>
@@ -130,6 +150,18 @@ def publish(draft_path: Path) -> Path:
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{escape(data['title'])} | {escape(SETTINGS['site_name'])}</title>
   <meta name="description" content="{escape(data['summary'])}">
+  <link rel="canonical" href="{escape(canonical_url)}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{escape(SETTINGS['site_name'])}">
+  <meta property="og:title" content="{escape(data['title'])}">
+  <meta property="og:description" content="{escape(data['summary'])}">
+  <meta property="og:url" content="{escape(canonical_url)}">
+  <meta property="og:image" content="{escape(image_url)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{escape(data['title'])}">
+  <meta name="twitter:description" content="{escape(data['summary'])}">
+  <meta name="twitter:image" content="{escape(image_url)}">
+  <script type="application/ld+json">{json.dumps(structured_data, ensure_ascii=False)}</script>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -148,32 +180,117 @@ def publish(draft_path: Path) -> Path:
   <p>{escape(SETTINGS['default_cta'])}</p>
 </main>
 </body>
-</html>"""
+</html>
+"""
     post_path.write_text(html, encoding="utf-8")
     data["_meta"]["status"] = "published"
-    data["_meta"]["published_at"] = now_local().isoformat()
+    data["_meta"]["published_at"] = published_at
+    data["_meta"]["updated_at"] = modified_at
     draft_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     return post_path
+
+
+def parse_post(path: Path) -> dict | None:
+    text = path.read_text(encoding="utf-8")
+    title_match = re.search(r"<h1>(.*?)</h1>", text, re.DOTALL)
+    lead_match = re.search(r'<p class="lead">(.*?)</p>', text, re.DOTALL)
+    canonical_match = re.search(r'<link rel="canonical" href="([^"]+)">', text)
+    json_ld_match = re.search(
+        r'<script type="application/ld\+json">(.*?)</script>', text, re.DOTALL
+    )
+    if not title_match:
+        return None
+    published_at = f"{path.stem[:10]}T00:00:00+09:00"
+    if json_ld_match:
+        try:
+            published_at = json.loads(json_ld_match.group(1)).get(
+                "datePublished", published_at
+            )
+        except (json.JSONDecodeError, TypeError):
+            pass
+    relative_path = f"posts/{path.name}"
+    return {
+        "path": relative_path,
+        "url": canonical_match.group(1) if canonical_match else f"{SITE_URL}/{relative_path}",
+        "title": unescape(title_match.group(1).strip()),
+        "lead": unescape(lead_match.group(1).strip()) if lead_match else "",
+        "thumbnail": f"assets/thumbnails/{path.stem}.png?v={THUMBNAIL_VERSION}",
+        "published_at": published_at,
+    }
+
+
+def write_feed(posts: list[dict]) -> None:
+    items = []
+    for post in posts[:30]:
+        try:
+            dt = datetime.fromisoformat(post["published_at"])
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=ZoneInfo(SETTINGS.get("timezone", "Asia/Tokyo")))
+            pub_date = format_datetime(dt)
+        except (TypeError, ValueError):
+            pub_date = format_datetime(now_local())
+        items.append(
+            "    <item>\n"
+            f"      <title>{xml_escape(post['title'])}</title>\n"
+            f"      <link>{xml_escape(post['url'])}</link>\n"
+            f"      <guid isPermaLink=\"true\">{xml_escape(post['url'])}</guid>\n"
+            f"      <pubDate>{xml_escape(pub_date)}</pubDate>\n"
+            f"      <description>{xml_escape(post['lead'])}</description>\n"
+            "    </item>"
+        )
+    feed = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0">\n'
+        '  <channel>\n'
+        f"    <title>{xml_escape(SETTINGS['site_name'])}</title>\n"
+        f"    <link>{xml_escape(SITE_URL + '/')}</link>\n"
+        f"    <description>{xml_escape(SETTINGS['site_description'])}</description>\n"
+        '    <language>ja</language>\n'
+        + ("\n".join(items) + "\n" if items else "")
+        + "  </channel>\n</rss>\n"
+    )
+    (ROOT / "docs/feed.xml").write_text(feed, encoding="utf-8")
+
+
+def write_sitemap(posts: list[dict]) -> None:
+    urls = [
+        "  <url>\n"
+        f"    <loc>{xml_escape(SITE_URL + '/')}</loc>\n"
+        "    <changefreq>daily</changefreq>\n"
+        "    <priority>1.0</priority>\n"
+        "  </url>"
+    ]
+    for post in posts:
+        lastmod = str(post["published_at"])[:10]
+        urls.append(
+            "  <url>\n"
+            f"    <loc>{xml_escape(post['url'])}</loc>\n"
+            f"    <lastmod>{xml_escape(lastmod)}</lastmod>\n"
+            "    <changefreq>monthly</changefreq>\n"
+            "    <priority>0.8</priority>\n"
+            "  </url>"
+        )
+    sitemap = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(urls)
+        + "\n</urlset>\n"
+    )
+    (ROOT / "docs/sitemap.xml").write_text(sitemap, encoding="utf-8")
 
 
 def rebuild_index() -> None:
     posts = []
     for path in sorted((ROOT / "docs/posts").glob("*.html"), reverse=True):
-        text = path.read_text(encoding="utf-8")
-        title_match = re.search(r"<h1>(.*?)</h1>", text)
-        lead_match = re.search(r'<p class="lead">(.*?)</p>', text)
-        if title_match:
-            posts.append({
-                "path": f"posts/{path.name}",
-                "title": title_match.group(1),
-                "lead": lead_match.group(1) if lead_match else "",
-                "thumbnail": f"assets/thumbnails/{path.stem}.png?v={THUMBNAIL_VERSION}",
-            })
+        post = parse_post(path)
+        if post:
+            posts.append(post)
 
     cards = "\n".join(
-        f'<article class="card"><a href="{p["path"]}"><img src="{p["thumbnail"]}" alt="{p["title"]}"></a><div><h2><a href="{p["path"]}">{p["title"]}</a></h2><p>{p["lead"]}</p></div></article>'
+        f'<article class="card"><a href="{escape(p["path"])}"><img src="{escape(p["thumbnail"])}" alt="{escape(p["title"])}"></a><div><h2><a href="{escape(p["path"])}">{escape(p["title"])}</a></h2><p>{escape(p["lead"])}</p></div></article>'
         for p in posts
-    ) or '<p>最初の記事を準備中です。</p>'
+    ) or "<p>最初の記事を準備中です。</p>"
+    canonical_url = f"{SITE_URL}/"
 
     html = f"""<!doctype html>
 <html lang="ja">
@@ -182,6 +299,13 @@ def rebuild_index() -> None:
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{escape(SETTINGS['site_name'])}</title>
   <meta name="description" content="{escape(SETTINGS['site_description'])}">
+  <link rel="canonical" href="{escape(canonical_url)}">
+  <link rel="alternate" type="application/rss+xml" title="{escape(SETTINGS['site_name'])}" href="{escape(SITE_URL + '/feed.xml')}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{escape(SETTINGS['site_name'])}">
+  <meta property="og:description" content="{escape(SETTINGS['site_description'])}">
+  <meta property="og:url" content="{escape(canonical_url)}">
+  <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -196,8 +320,11 @@ def rebuild_index() -> None:
 <main class="posts">{cards}</main>
 <footer>{escape(SETTINGS['affiliate_disclosure'])}</footer>
 </body>
-</html>"""
+</html>
+"""
     (ROOT / "docs/index.html").write_text(html, encoding="utf-8")
+    write_feed(posts)
+    write_sitemap(posts)
 
 
 def main() -> None:
