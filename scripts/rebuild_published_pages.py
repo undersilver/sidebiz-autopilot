@@ -23,3 +23,7 @@ def main() -> None:
         rebuilt += 1
     rebuild_index()
     print(f'公開記事再構築件数: {rebuilt}')
+
+
+if __name__ == "__main__":
+    main()
