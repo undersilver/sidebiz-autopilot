@@ -33,9 +33,40 @@ def normalized_theme_key(data: dict) -> str:
     return re.sub(r"[^0-9a-zA-Zぁ-んァ-ヶ一-龠]+", "", source).lower()
 
 
-def collect_published(prefix: str) -> tuple[list[dict], list[dict]]:
+def monthly_eligibility(data: dict) -> tuple[bool, str]:
+    validation = data.get("_validation", {})
+    minimum = int(SETTINGS.get("validation", {}).get("minimum_score", 80))
+    if validation.get("status") != "pass" or not validation.get("publishable"):
+        return False, "現行のAI校閲条件を満たしていない"
+    if int(validation.get("score", 0)) < minimum:
+        return False, f"校閲スコアが{minimum}未満"
+    if any(
+        isinstance(issue, dict) and issue.get("severity") == "high"
+        for issue in validation.get("issues", [])
+    ):
+        return False, "highリスクが残っている"
+    if data.get("sources_needed"):
+        return False, "出典確認が残っている"
+    article = str(data.get("article_markdown", ""))
+    blocked_markers = (
+        "要出典",
+        "今後調査が必要",
+        "今後の調査が必要",
+        "95％自動化",
+        "95%自動化",
+        "ピコロンの登場回数",
+        "毎日10分",
+    )
+    found = [marker for marker in blocked_markers if marker in article]
+    if found:
+        return False, "内部情報・未完成表現: " + "、".join(found)
+    return True, ""
+
+
+def collect_published(prefix: str) -> tuple[list[dict], list[dict], list[dict]]:
     selected: OrderedDict[str, dict] = OrderedDict()
     duplicates: list[dict] = []
+    excluded: list[dict] = []
     for path in sorted((ROOT / "drafts").glob("*.json")):
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
@@ -45,6 +76,10 @@ def collect_published(prefix: str) -> tuple[list[dict], list[dict]]:
         created_at = str(meta.get("created_at", ""))
         if meta.get("status") != "published" or not created_at.startswith(prefix):
             continue
+        eligible, reason = monthly_eligibility(data)
+        if not eligible:
+            excluded.append({"path": path, "data": data, "reason": reason})
+            continue
         key = normalized_theme_key(data)
         if not key:
             key = path.stem
@@ -53,10 +88,23 @@ def collect_published(prefix: str) -> tuple[list[dict], list[dict]]:
             duplicates.append(record)
             continue
         selected[key] = record
-    return list(selected.values()), duplicates
+    return list(selected.values()), duplicates, excluded
 
 
-def build_manuscript(prefix: str, records: list[dict], duplicates: list[dict]) -> str:
+def demote_headings(markdown_text: str) -> str:
+    def replace(match: re.Match) -> str:
+        level = min(6, len(match.group(1)) + 2)
+        return "#" * level + match.group(2)
+
+    return re.sub(r"^(#{1,6})(\s+)", replace, markdown_text, flags=re.MULTILINE)
+
+
+def build_manuscript(
+    prefix: str,
+    records: list[dict],
+    duplicates: list[dict],
+    excluded: list[dict],
+) -> str:
     grouped: OrderedDict[str, list[dict]] = OrderedDict()
     for record in records:
         category = str(record["data"].get("category", "未分類"))
@@ -88,7 +136,7 @@ def build_manuscript(prefix: str, records: list[dict], duplicates: list[dict]) -
                 [
                     f"### {article_number}. {data.get('title', '無題')}",
                     "",
-                    str(data.get("article_markdown", "")).strip(),
+                    demote_headings(str(data.get("article_markdown", "")).strip()),
                     "",
                     "---",
                     "",
@@ -115,12 +163,20 @@ def build_manuscript(prefix: str, records: list[dict], duplicates: list[dict]) -
             "",
             f"- 収録記事数：{len(records)}",
             f"- 重複除外数：{len(duplicates)}",
+            f"- 品質・内部情報による除外数：{len(excluded)}",
         ]
     )
     if duplicate_titles:
         lines.extend(["- 除外した重複候補：", *[f"  - {x}" for x in duplicate_titles]])
     else:
         lines.append("- 除外した重複候補：なし")
+    if excluded:
+        lines.append("- 品質・内部情報により除外した候補：")
+        for record in excluded:
+            title = record["data"].get("title", record["path"].stem)
+            lines.append(f"  - {title}（{record['reason']}）")
+    else:
+        lines.append("- 品質・内部情報により除外した候補：なし")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -132,7 +188,13 @@ def github_headers(token: str) -> dict:
     }
 
 
-def upsert_issue(prefix: str, output: Path, count: int, duplicate_count: int) -> None:
+def upsert_issue(
+    prefix: str,
+    output: Path,
+    count: int,
+    duplicate_count: int,
+    excluded: list[dict],
+) -> None:
     repo = os.environ["GITHUB_REPOSITORY"]
     token = os.environ["GITHUB_TOKEN"]
     headers = github_headers(token)
@@ -144,6 +206,7 @@ def upsert_issue(prefix: str, output: Path, count: int, duplicate_count: int) ->
 - 原稿：`{output.relative_to(ROOT)}`
 - 収録記事数：{count}
 - 重複除外数：{duplicate_count}
+- 品質・内部情報による除外数：{len(excluded)}
 - 状態：販売前の下書き
 
 ### 人間が確認する項目
@@ -195,7 +258,7 @@ def upsert_issue(prefix: str, output: Path, count: int, duplicate_count: int) ->
 def main() -> None:
     year, month = previous_month(now_local())
     prefix = f"{year:04d}-{month:02d}"
-    records, duplicates = collect_published(prefix)
+    records, duplicates, excluded = collect_published(prefix)
     if not records:
         print("対象記事なし")
         return
@@ -203,13 +266,14 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     output = out_dir / f"{prefix}-manuscript.md"
     output.write_text(
-        build_manuscript(prefix, records, duplicates),
+        build_manuscript(prefix, records, duplicates, excluded),
         encoding="utf-8",
     )
-    upsert_issue(prefix, output, len(records), len(duplicates))
+    upsert_issue(prefix, output, len(records), len(duplicates), excluded)
     print(f"月次原稿: {output.relative_to(ROOT)}")
     print(f"収録記事数: {len(records)}")
     print(f"重複除外数: {len(duplicates)}")
+    print(f"品質・内部情報による除外数: {len(excluded)}")
 
 
 if __name__ == "__main__":
