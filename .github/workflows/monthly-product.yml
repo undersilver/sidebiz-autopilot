@@ -1,6 +1,11 @@
 name: Monthly product manuscript
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/create_monthly_manuscript.py"
+      - ".github/workflows/monthly-product.yml"
   schedule:
     - cron: "0 8 1 * *"
       timezone: "Asia/Tokyo"
