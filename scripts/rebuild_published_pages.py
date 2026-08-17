@@ -10,12 +10,18 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main() -> None:
     rebuilt = 0
+    skipped = 0
     for path in sorted((ROOT / 'drafts').glob('*.json')):
         data = json.loads(path.read_text(encoding='utf-8'))
         if data.get('_meta', {}).get('status') != 'published':
             continue
         published_at = data.get('_meta', {}).get('published_at')
-        publish(path)
+        try:
+            publish(path)
+        except Exception as exc:
+            skipped += 1
+            print(f'再構築を除外: {path.name}: {exc}')
+            continue
         refreshed = json.loads(path.read_text(encoding='utf-8'))
         if published_at:
             refreshed['_meta']['published_at'] = published_at
@@ -23,6 +29,7 @@ def main() -> None:
         rebuilt += 1
     rebuild_index()
     print(f'公開記事再構築件数: {rebuilt}')
+    print(f'再構築除外件数: {skipped}')
 
 
 if __name__ == "__main__":
