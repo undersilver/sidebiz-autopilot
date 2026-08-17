@@ -58,3 +58,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+# SEO・RSS・sitemap再構築トリガー
