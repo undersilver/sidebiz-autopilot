@@ -231,5 +231,10 @@
     "date": "2026-08-17",
     "title": "AI画像の不自然な手足を減らす確認と修正の手順",
     "draft": "drafts/2026-08-17-ai-image-hand-foot-correction-guide.json"
+  },
+  {
+    "date": "2026-08-18",
+    "title": "100階ローグライクでボスを10階ごとに設計する方法",
+    "draft": "drafts/2026-08-18-2026-08-18-fallback.json"
   }
 ]

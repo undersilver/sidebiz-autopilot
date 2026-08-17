@@ -1,0 +1,44 @@
+{
+  "title": "100階ローグライクでボスを10階ごとに設計する方法",
+  "slug": "2026-08-18-fallback",
+  "category": "ゲーム制作",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "HTTPError: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-08-18T07:22:13.547725+09:00",
+    "seed": {
+      "title": "100階ローグライクでボスを10階ごとに設計する方法",
+      "category": "ゲーム制作",
+      "original_angle": "各区間の学習内容を確認するボス役割と段階的な難易度設計を解説する"
+    },
+    "status": "blocked"
+  }
+}
