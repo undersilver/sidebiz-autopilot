@@ -52,7 +52,7 @@
       "category": "漫画化",
       "original_angle": "コマ単位の登場人物制御とページ設計を解説する"
     },
-    "status": "published",
-    "published_at": "2026-07-10T09:21:00.741086"
+    "status": "blocked",
+    "block_reason": "現行の公開条件を満たさず、内部情報・未完成表現が残っているため"
   }
 }
