@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ピコロンのAIゲーム研究所</title>
+    <link>https://undersilver.github.io/sidebiz-autopilot/</link>
+    <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
+    <language>ja</language>
+    <item>
+      <title>AI画像の手足が変？生成前の指示と後からの修正で自然に仕上げるコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-17-ai-image-hand-foot-correction-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-17-ai-image-hand-foot-correction-guide.html</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0900</pubDate>
+      <description>AI画像生成でよくある「手足の崩れ」を最小限にするための、プロンプトの工夫と修正テクニックを初心者向けに解説します。</description>
+    </item>
+    <item>
+      <title>ローグライクの「敗北」を「成長」に変える！再挑戦したくなるゲーム設計のヒント</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-15-roguelike-growth-design-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-15-roguelike-growth-design-tips.html</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0900</pubDate>
+      <description>ローグライクゲームにおいて、プレイヤーが敗北しても「次はもっとうまくやれる」と感じるための成長設計を解説します。引き継ぐ要素とリセット要素の絶妙なバランスとは？</description>
+    </item>
+    <item>
+      <title>AIでゲーム開発！Codexで挫折しないための「最小仕様書」の作り方</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-14-game-dev-codex-minimal-spec.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-14-game-dev-codex-minimal-spec.html</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0900</pubDate>
+      <description>AI（Codex）を活用してゲームを開発する際、作り込みすぎて挫折しないための「最小構成の仕様書」作成術を解説します。</description>
+    </item>
+    <item>
+      <title>AIで攻略！100階ダンジョンの敵配置を設計するコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-13-ai-dungeon-enemy-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-13-ai-dungeon-enemy-design.html</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0900</pubDate>
+      <description>AIを活用して、100階層におよぶダンジョンの敵配置を効率的かつ魅力的に設計する方法を解説。階層ごとの役割分担と難易度曲線の作り方を具体例とともに紹介します。</description>
+    </item>
+    <item>
+      <title>AIで攻略！100階ダンジョンの敵配置を設計するコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-12-ai-dungeon-enemy-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-12-ai-dungeon-enemy-design.html</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0900</pubDate>
+      <description>AIを活用して100階層ものダンジョンの敵配置を効率よく設計する方法を解説。10階ごとの役割分担と難易度曲線を意識した、バランスの良い設計のコツを具体例と共に紹介します。</description>
+    </item>
+    <item>
+      <title>AIでキャラクターの三面図を崩さず生成する！プロンプト改善のコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-11-ai-character-sheet-optimization.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-11-ai-character-sheet-optimization.html</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 +0900</pubDate>
+      <description>ゲームや漫画制作に不可欠なキャラクターの三面図。AI生成で向きが崩れる原因を特定し、プロンプトの指定方法を改善して安定させるための具体的なテクニックを解説します。</description>
+    </item>
+    <item>
+      <title>土俵の上の戦略！力士を主人公にしたローグライクゲームの戦闘システム設計術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-10-sumo-roguelike-game-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-10-sumo-roguelike-game-design.html</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0900</pubDate>
+      <description>力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライクを構築する方法を解説します。</description>
+    </item>
+    <item>
+      <title>数値は捨てろ！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-09-game-distance-ui-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-09-game-distance-ui-design.html</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0900</pubDate>
+      <description>数値表示に頼らず、色やUIの形状でプレイヤーに「攻撃が届く間合い」を直感的に伝えるためのデザイン手法を解説します。</description>
+    </item>
+    <item>
+      <title>AI漫画制作の壁：全ページに同じキャラを登場させる「コマ単位」の制御術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-07-ai-manga-character-consistency-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-07-ai-manga-character-consistency-guide.html</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0900</pubDate>
+      <description>AIで小説を漫画化する際、全ページに同じキャラクターを登場させるための具体的なコマ割り設計と制御方法を解説します。</description>
+    </item>
+    <item>
+      <title>GitHub Actionsで「赤色」が出ても焦らない！失敗原因を最短で見つける手順</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-06-github-actions-troubleshooting-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-06-github-actions-troubleshooting-guide.html</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0900</pubDate>
+      <description>GitHub Actionsの実行結果が赤色（失敗）になったとき、どこを見れば解決できるのか？初心者でも迷わない、エラー箇所を特定する最短の手順を解説します。</description>
+    </item>
+    <item>
+      <title>ゲーム制作が劇的に変わる！敵キャラクターの5つの役割分類法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-05-game-enemy-design-5-roles.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-05-game-enemy-design-5-roles.html</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
+      <description>敵キャラクターを「高速」「高耐久」「遠距離」「状態異常」「特殊」の5つに分類するだけで、ゲームバランスが劇的に向上します。初心者でも実践できる敵設計のノウハウを解説します。</description>
+    </item>
+    <item>
+      <title>AI生成データを安全にWeb公開する仕組み：自動化と品質を両立する設計術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-04-ai-json-safe-publishing-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-04-ai-json-safe-publishing-guide.html</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0900</pubDate>
+      <description>AIで生成したJSONデータをWebサイトへ安全に公開するための設計手法を解説。入力検証からHTMLエスケープ、失敗時の停止処理まで、初心者でも実装可能な品質管理のコツを紹介します。</description>
+    </item>
+    <item>
+      <title>月間記事を電子書籍にまとめるときの重複整理術：似た説明を統合し章構成へ再配置する具体手順</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-30-organize-duplicate-content-for-ebook.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-30-organize-duplicate-content-for-ebook.html</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AIを活用してゲームや漫画、創作分野の記事を月間まとめから電子書籍にする際、似た説明の重複を整理し、章ごとに再構成する具体的な手順を初心者向けに解説します。具体例や失敗例も交え、実践的な編集方法を紹介。</description>
+    </item>
+    <item>
+      <title>小説を漫画化する時のコマ単位登場人物管理術：具体例と失敗から学ぶ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-29-novel-to-manga-panel-character-management.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-29-novel-to-manga-panel-character-management.html</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0900</pubDate>
+      <description>小説のストーリーを漫画化する際、コマごとに登場人物を管理する具体的な方法を紹介します。初心者でも試せる手順や失敗例、改善策を交えて、効率的かつ正確なキャラ配置を実現しましょう。</description>
+    </item>
+    <item>
+      <title>AI生成ゲーム記事の校閲術：公開文と内部メモを分ける具体手順</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-28-ai-game-article-proofreading-separation.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-28-ai-game-article-proofreading-separation.html</guid>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AIが書いたゲーム記事の校閲で重要な、公開用文章と内部メモを明確に分離する方法を具体例と手順で解説します。初心者でも実践しやすい失敗例や改善例も紹介し、効率的かつ誤情報を防ぐポイントに絞った内容です。</description>
+    </item>
+    <item>
+      <title>漫画の読み順が崩れないコマ割りの基本：視線誘導とページめくりをわかりやすく解説</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-27-manga-komawari-rydensei-basic.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-27-manga-komawari-rydensei-basic.html</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0900</pubDate>
+      <description>漫画の読み順が自然に伝わるコマ割りの基本ルールを、視線の流れやページめくりを意識した具体例を交えて解説します。初心者でもすぐ実践できる配置のコツや失敗例の改善方法を紹介し、読みやすい漫画作りをサポートします。</description>
+    </item>
+    <item>
+      <title>PythonとPillowで日本語サムネイルを作るときの注意点</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-25-python-pillow-japanese-thumbnail-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-25-python-pillow-japanese-thumbnail-tips.html</guid>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0900</pubDate>
+      <description>Pythonの画像処理ライブラリPillowを使って日本語テキスト入りのサムネイルを作成する際の具体的な注意点を解説。日本語フォントの指定方法、文字の折り返し、文字サイズ調整、余白の取り方でありがちな失敗例と改善策を豊富なコード例とともに紹介します。</description>
+    </item>
+    <item>
+      <title>AIにゲームバランス調整案を出させる入力表の作り方</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-24-how-to-create-input-table-for-ai-game-balance.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-24-how-to-create-input-table-for-ai-game-balance.html</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AIを活用してゲームのバランス調整案を効率的に得るための具体的な入力表の作り方を解説します。HPや攻撃力、速度、出現階層を表形式で整理し、比較しやすい案を作る手順と注意点も紹介します。</description>
+    </item>
+    <item>
+      <title>Codexへゲーム修正を依頼する前に準備すべき4つの情報</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-23-codex-game-fix-preparation.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-23-codex-game-fix-preparation.html</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AIのCodexにゲームの修正を頼む際、スムーズに対応してもらうために必要な情報は「再現手順」「期待結果」「実際の結果」「関連ファイル」の4点です。具体例や失敗例を交えて、初心者でもわかりやすく解説します。</description>
+    </item>
+    <item>
+      <title>AI画像生成で同じキャラクターの顔を保つ3つの効果的な方法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-22-ai-image-generation-consistent-character-face.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-22-ai-image-generation-consistent-character-face.html</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AI画像生成でゲームや漫画のキャラクターの顔を一定に保つための具体的な方法を解説。参照画像の活用、固定特徴の指定、差分指示の分け方を具体例とともに紹介し、よくある失敗例と改善策も解説します。</description>
+    </item>
+    <item>
+      <title>漫画の吹き出しを先に配置して絵の破綻を防ぐ方法：セリフ量から空白を逆算する手順</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-21-manga-speech-bubble-layout-reverse-calculation.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-21-manga-speech-bubble-layout-reverse-calculation.html</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0900</pubDate>
+      <description>漫画制作で絵の破綻を防ぐために、セリフ量から必要な空白を逆算して吹き出しを先に配置する具体的な手順を紹介。初心者でも実践しやすい方法と失敗例・改善例も解説します。</description>
+    </item>
+    <item>
+      <title>ゲーム用サムネイルを固定マスコットで自動生成する方法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-20-game-thumbnail-fixed-mascot-auto-generation.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-20-game-thumbnail-fixed-mascot-auto-generation.html</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0900</pubDate>
+      <description>ゲーム関連のサムネイル作成で、毎回新しいキャラクターを生成せずに、PythonのPillowライブラリを使って固定マスコット画像を安定的に合成する具体的な手順と注意点を解説します。</description>
+    </item>
+    <item>
+      <title>100階ローグライクでボスを10階ごとに設計する方法：段階的な難易度と学習効果を高める秘訣</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-19-roguelike-100floors-boss-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-19-roguelike-100floors-boss-design.html</guid>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 +0900</pubDate>
+      <description>100階のローグライクゲームで、10階ごとにボスを配置する際の具体的な設計方法を解説。各区間の学習内容を確認しながら段階的に難易度を調整する手順や、失敗例からの改善策も紹介します。</description>
+    </item>
+    <item>
+      <title>AI画像の不自然な手足を減らす初心者向け確認＆修正手順</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-18-ai-image-hand-foot-correction.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-18-ai-image-hand-foot-correction.html</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AI生成画像でよく見られる手足の不自然さを減らすための具体的な指示方法と生成後の部分修正手順を、初心者にもわかりやすく解説します。ゲームや漫画、創作に役立つ実践的なコツを紹介。</description>
+    </item>
+    <item>
+      <title>初心者が最初に作るべきWebゲームの3画面構成：タイトル・プレイ・結果画面を具体的に解説</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-17-beginner-webgame-3screens.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-17-beginner-webgame-3screens.html</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+      <description>初心者でも作りやすいWebゲームの基本画面「タイトル」「プレイ」「結果」の3つに絞り、具体的な作成手順や失敗例、改善案を解説します。簡単なコード例とポイントを押さえて、最初のゲーム完成を目指しましょう。</description>
+    </item>
+    <item>
+      <title>ローグライクゲームで敗北後も再挑戦したくなる成長設計の具体例</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-16-roguelike-growth-design-retry.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-16-roguelike-growth-design-retry.html</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0900</pubDate>
+      <description>ローグライクゲームにおける敗北後の再挑戦意欲を高めるための成長設計について、引き継ぐ要素とリセットする要素のバランスを具体例と手順で解説します。初心者から中級者のゲーム制作・AI活用者に向け、実践的な方法と失敗例・改善例も紹介。</description>
+    </item>
+    <item>
+      <title>初心者がCodexで小規模ゲームを作るときの最小仕様書の作り方</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-15-beginner-codex-small-game-spec.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-15-beginner-codex-small-game-spec.html</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AIのCodexを使って小規模ゲームを作る初心者向けに、実装前に決めるべき最小限の仕様項目と具体的な手順、失敗例や改善例を解説します。</description>
+    </item>
+    <item>
+      <title>初心者がCodexで小規模ゲームを作るときの最小仕様書の作り方</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-14-codex-small-game-minimum-specs.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-14-codex-small-game-minimum-specs.html</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AIのCodexを使って小規模ゲームを作る際に、実装前に決めるべき最小限の仕様項目を具体例とともに解説。初心者でも迷わず始められるよう、失敗例や改善例も交えてわかりやすく紹介します。</description>
+    </item>
+    <item>
+      <title>AIで100階ダンジョンの敵配置を設計する方法：10階層ごとの役割分担と難易度曲線の実例検証</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-13-ai-dungeon-enemy-placement-100floors.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-13-ai-dungeon-enemy-placement-100floors.html</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0900</pubDate>
+      <description>AIを活用して100階層のダンジョン敵配置を設計する具体的な方法を紹介。10階層ごとの役割分担と難易度曲線の考え方、実際の設計例を交え、失敗例や改善ポイントも解説します。</description>
+    </item>
+    <item>
+      <title>力士を主人公にしたローグライク戦闘設計：張り手・まわし・間合いを活かす具体的手法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-10-sumo-roguelike-combat-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-10-sumo-roguelike-combat-design.html</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+      <description>力士の特徴である張り手やまわし、間合いを戦闘システムに落とし込み、初心者でも試せるローグライクゲームの設計方法を具体例と失敗例を交えて解説します。ランごとのランダム強化や敗北後の再挑戦といったローグライク固有の要素も取り入れ、張り手・まわし・間合いの組み合わせによるビルド選択の具体例も紹介します。</description>
+    </item>
+  </channel>
+</rss>
