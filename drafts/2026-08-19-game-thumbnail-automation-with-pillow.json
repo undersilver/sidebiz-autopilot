@@ -1,0 +1,54 @@
+{
+  "title": "AIとPillowで実現！ゲーム実況サムネイルを自動生成する効率化術",
+  "slug": "game-thumbnail-automation-with-pillow",
+  "category": "AI活用",
+  "summary": "毎回キャラクターを描き直すのは非効率です。固定マスコット画像とPythonライブラリ『Pillow』を組み合わせ、AI生成の背景と合成してサムネイルを自動生成する方法を解説します。",
+  "article_markdown": "## なぜ「毎回生成」ではいけないのか\n\nゲーム実況のサムネイルにおいて、キャラクターの統一感は非常に重要です。しかし、毎回AIでキャラクターを生成し直すと、顔立ちや服装が微妙に変わり、視聴者が「誰の動画か」を認識しにくくなります。また、生成のたびにプロンプトを微調整する時間は、創作活動において大きなロスです。\n\n## 安定したサムネイル運用の仕組み\n\n解決策は「素材の分離」です。背景はAIでその日のゲーム内容に合わせて生成し、キャラクター部分は透過済みの固定画像（PNG）を合成します。これにはPythonの画像処理ライブラリ「Pillow」を使用します。\n\n## Pillowを使った自動合成の手順\n\nまずはPillowをインストールします。\n`pip install Pillow`\n\n次に、背景画像（background.jpg）の上にキャラクター（character.png）を重ねるスクリプトを作成します。\n\n```python\nfrom PIL import Image\n\n# 背景とキャラクターの読み込み\nbg = Image.open('background.jpg').resize((1280, 720))\nchar = Image.open('character.png')\n\n# 合成\nbg.paste(char, (800, 200), char)\nbg.save('thumbnail.jpg')\n```\n\nこのスクリプトを使えば、背景画像を変えるだけで、常に同じ位置・同じ表情のキャラクターが配置されたサムネイルが即座に完成します。\n\n## 失敗例と改善のポイント\n\nよくある失敗は「背景とキャラクターの色味の不一致」です。背景が明るいのにキャラクターが暗いと、合成した際に浮いて見えます。改善策として、Pillowの`ImageEnhance`機能で、合成前にキャラクターの明るさやコントラストを背景に合わせて自動調整する処理を追加しましょう。\n\nまた、キャラクターの縁に白い線が残る場合は、透過処理（アルファチャンネル）が正しく行われているか確認してください。Photoshop等のツールで背景を完全に削除し、PNG形式で保存することが基本です。\n\n## 運用を最適化するコツ\n\nキャラクターのバリエーションを増やしたい場合は、表情差分をフォルダ分けして管理しましょう。Python側で乱数を使って「今日は笑顔」「今日は驚き」といった表情をランダムに選ぶようにすれば、サムネイルに動きが出ます。\n\nこの手法なら、AIの生成コストを最小限に抑えつつ、ブランドイメージを固定できるため、長期的なチャンネル運営において非常に強力な武器になります。まずは一つの固定キャラクターから始めてみてください。",
+  "social_post": "ゲーム実況のサムネイル作り、毎回AI生成して疲れていませんか？固定マスコットをPillowで合成するだけで、作業時間を大幅短縮しつつ統一感も出せます！具体的なPythonコードと運用のコツをまとめました。",
+  "short_video_script": "ゲーム実況のサムネ作り、毎回AI生成してない？それ、時間の無駄かも。固定キャラをPillowで合成すれば、背景を変えるだけで一瞬で完成！統一感も出てクリック率アップ。詳しい方法はブログで解説中！",
+  "thumbnail_prompt": "A clean, modern YouTube thumbnail design showing a Python code snippet on a screen, with a consistent cute 2D game mascot character superimposed on a vibrant fantasy game background, high quality, 16:9 aspect ratio.",
+  "pikoron_tips": [
+    {
+      "after_heading": "安定したサムネイル運用の仕組み",
+      "message": "背景はAI、キャラは固定画像と分けるのが鉄則です。Pillowを使えば、毎回同じクオリティのサムネイルを誰でも簡単に量産できます。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "画像",
+      "item": "合成後のキャラクターと背景の境界線に不自然なノイズがないか",
+      "risk": "低"
+    },
+    {
+      "type": "権利",
+      "item": "使用するマスコット画像が自作または利用規約をクリアしているか",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "内部情報",
+        "detail": "human_checksフィールドに運営者向けの内部チェック項目が含まれていますが、これらは公開記事本文には含まれていないため問題ありません。"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-08-19T07:20:04.558914+09:00",
+    "seed": {
+      "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+      "category": "AI活用",
+      "original_angle": "毎回キャラクターを生成せずPillowで安定した画像を合成する"
+    },
+    "status": "review"
+  }
+}

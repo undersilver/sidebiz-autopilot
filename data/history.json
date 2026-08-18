@@ -236,5 +236,10 @@
     "date": "2026-08-18",
     "title": "100階ローグライクでボスを10階ごとに設計する方法",
     "draft": "drafts/2026-08-18-2026-08-18-fallback.json"
+  },
+  {
+    "date": "2026-08-19",
+    "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+    "draft": "drafts/2026-08-19-game-thumbnail-automation-with-pillow.json"
   }
 ]
