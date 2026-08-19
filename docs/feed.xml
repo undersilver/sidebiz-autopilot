@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI漫画制作の失敗を防ぐ！「吹き出し先行配置」で絵の破綻を解消する逆算テクニック</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-20-ai-manga-bubble-first-technique.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-20-ai-manga-bubble-first-technique.html</guid>
+      <pubDate>Thu, 20 Aug 2026 08:18:14 +0900</pubDate>
+      <description>AIで漫画を描く際、絵を先に描いてセリフが入らなくなる失敗を回避する方法を紹介します。吹き出しを先に配置する「逆算レイアウト」で、構成と絵のバランスを完璧に整える手順を解説します。</description>
+    </item>
+    <item>
       <title>AIとPillowで実現！ゲーム実況サムネイルを自動生成する効率化術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-19-game-thumbnail-automation-with-pillow.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-19-game-thumbnail-automation-with-pillow.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-14-codex-small-game-minimum-specs.html</guid>
       <pubDate>Tue, 14 Jul 2026 14:25:07 +0900</pubDate>
       <description>AIのCodexを使って小規模ゲームを作る際に、実装前に決めるべき最小限の仕様項目を具体例とともに解説。初心者でも迷わず始められるよう、失敗例や改善例も交えてわかりやすく紹介します。</description>
-    </item>
-    <item>
-      <title>AIで100階ダンジョンの敵配置を設計する方法：10階層ごとの役割分担と難易度曲線の実例検証</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-13-ai-dungeon-enemy-placement-100floors.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-13-ai-dungeon-enemy-placement-100floors.html</guid>
-      <pubDate>Tue, 14 Jul 2026 01:28:01 +0900</pubDate>
-      <description>AIを活用して100階層のダンジョン敵配置を設計する具体的な方法を紹介。10階層ごとの役割分担と難易度曲線の考え方、実際の設計例を交え、失敗例や改善ポイントも解説します。</description>
     </item>
   </channel>
 </rss>

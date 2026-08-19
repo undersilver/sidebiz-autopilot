@@ -44,6 +44,8 @@
       "category": "漫画化",
       "original_angle": "セリフ量から必要な空白を確保する逆算手順を紹介する"
     },
-    "status": "review"
+    "status": "published",
+    "published_at": "2026-08-20T08:18:14.246809+09:00",
+    "updated_at": "2026-08-20T08:18:14.246830+09:00"
   }
 }
