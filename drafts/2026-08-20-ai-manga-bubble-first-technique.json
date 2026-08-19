@@ -1,0 +1,49 @@
+{
+  "title": "AI漫画制作の失敗を防ぐ！「吹き出し先行配置」で絵の破綻を解消する逆算テクニック",
+  "slug": "ai-manga-bubble-first-technique",
+  "category": "漫画制作",
+  "summary": "AIで漫画を描く際、絵を先に描いてセリフが入らなくなる失敗を回避する方法を紹介します。吹き出しを先に配置する「逆算レイアウト」で、構成と絵のバランスを完璧に整える手順を解説します。",
+  "article_markdown": "## なぜAI漫画は「セリフが入らない」のか\nAIを使用して漫画を作成する際、多くの人が陥るのが「絵を完成させた後にセリフを入れようとして、スペースが足りない」という問題です。特にAIは構図を優先しがちで、セリフのための余白を意識してくれません。結果として、キャラクターの顔が吹き出しで隠れてしまったり、無理やり文字を押し込んで読みづらくなったりします。\n\nこれを解決する最も確実な方法は、絵を描く前に「吹き出しを先に配置する」ことです。この「逆算レイアウト」を取り入れるだけで、漫画としての読みやすさは劇的に向上します。\n\n## ステップ1：セリフ量から必要な空白を算出する\nまずは、描きたいシーンのセリフをすべて書き出します。重要なのは、セリフの「文字数」から必要な吹き出しのサイズを逆算することです。目安として、1つの吹き出しには全角で40文字程度までを上限としましょう。それ以上になる場合は、コマを分けるか、セリフを削る検討が必要です。\n\n次に、セリフを配置する予定の場所に、仮の長方形（プレースホルダー）を配置します。このとき、画面の端やキャラクターの顔にかからないよう、余白を広めにとるのがコツです。この「何もない空間」こそが、漫画の読みやすさを左右する命綱となります。\n\n## ステップ2：吹き出しを基準に構図を決める\n吹き出しの配置が決まったら、それを「避ける」ようにキャラクターを配置します。AIへのプロンプト指示においても、「吹き出しを置くための右上のスペースを空けて（Keep upper right corner empty for speech bubble）」といった指定を必ず含めましょう。\n\n失敗例として多いのが、キャラクターのアップを大きく描きすぎて、吹き出しを置く場所がなくなるケースです。最初から「吹き出しの場所＝描画禁止エリア」と設定しておくことで、絵の破綻を物理的に防ぐことができます。\n\n## ステップ3：修正と微調整のポイント\n配置が終わったら、実際にセリフを流し込みます。ここで重要なチェックポイントは以下の3点です。\n1. 吹き出しがキャラクターの目や口を隠していないか\n2. 視線の誘導（吹き出しの順番）が自然か\n3. 画面全体に対して文字の密度が高すぎないか\n\nもし窮屈に感じる場合は、絵を修正するのではなく、吹き出しのサイズを調整するか、セリフの改行位置を変えてみてください。絵を修正するのは時間がかかりますが、文字の調整は数分で完了します。\n\n## まとめ：逆算で漫画の質を上げる\n「絵を描く」ことと「ストーリーを伝える」ことは別の作業です。吹き出しを先に配置する工程を挟むだけで、AI特有の「絵は綺麗だが漫画として成立していない」という状況を回避できます。まずは1ページ、吹き出しを先に置くことから始めてみてください。完成した時の読みやすさが、これまでとは全く違うはずです。",
+  "social_post": "AI漫画で一番多い悩み「セリフが入らない問題」を解決！絵を描く前に吹き出しを配置する「逆算レイアウト」のコツをまとめました。これでもう、渾身のイラストが吹き出しで隠れる悲劇は起きません。ぜひ試してみてください！ #AI漫画 #漫画制作 #創作術",
+  "short_video_script": "AI漫画を描いていて、セリフが入らなくて困ったことはありませんか？解決策は簡単。絵を描く前に「吹き出し」を先に置くこと。配置した吹き出しを避けて絵を描けば、読みやすい漫画が完成します。詳しい手順は記事で解説中！",
+  "thumbnail_prompt": "A clean, professional infographic showing a comic strip layout with pre-placed empty speech bubbles, high contrast, minimalist style, digital art, vector illustration, bright colors, 4k",
+  "pikoron_tips": [
+    {
+      "after_heading": "ステップ2：吹き出しを基準に構図を決める",
+      "message": "吹き出しを置く場所は「描画禁止エリア」と決めてしまいましょう。AIへの指示でも「空白を作る」ことを意識するだけで、後からの修正が劇的に減りますよ！"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "事実",
+      "item": "吹き出し先行配置の有効性",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The article is high quality and meets all criteria. The score is slightly below 100 only because the 'human_checks' and 'estimated_review_minutes' fields in the input suggest internal metadata that should ideally be stripped before final publication, though they do not affect the article text itself."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-08-20T07:21:28.103001+09:00",
+    "seed": {
+      "title": "漫画の吹き出しを先に配置して絵の破綻を防ぐ方法",
+      "category": "漫画化",
+      "original_angle": "セリフ量から必要な空白を確保する逆算手順を紹介する"
+    },
+    "status": "review"
+  }
+}
