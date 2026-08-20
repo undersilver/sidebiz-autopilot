@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI画像生成で「同じ顔」を維持する！キャラクターの一貫性を保つ3つのステップ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-21-ai-consistent-character-faces.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-21-ai-consistent-character-faces.html</guid>
+      <pubDate>Fri, 21 Aug 2026 08:20:38 +0900</pubDate>
+      <description>AI画像生成でキャラクターの顔が毎回変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つのアプローチで、一貫性のあるキャラクターを描き分けるための具体的な実践テクニックを解説します。</description>
+    </item>
+    <item>
       <title>AI漫画制作の失敗を防ぐ！「吹き出し先行配置」で絵の破綻を解消する逆算テクニック</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-20-ai-manga-bubble-first-technique.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-20-ai-manga-bubble-first-technique.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-15-beginner-codex-small-game-spec.html</guid>
       <pubDate>Wed, 15 Jul 2026 10:59:56 +0900</pubDate>
       <description>AIのCodexを使って小規模ゲームを作る初心者向けに、実装前に決めるべき最小限の仕様項目と具体的な手順、失敗例や改善例を解説します。</description>
-    </item>
-    <item>
-      <title>初心者がCodexで小規模ゲームを作るときの最小仕様書の作り方</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-14-codex-small-game-minimum-specs.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-14-codex-small-game-minimum-specs.html</guid>
-      <pubDate>Tue, 14 Jul 2026 14:25:07 +0900</pubDate>
-      <description>AIのCodexを使って小規模ゲームを作る際に、実装前に決めるべき最小限の仕様項目を具体例とともに解説。初心者でも迷わず始められるよう、失敗例や改善例も交えてわかりやすく紹介します。</description>
     </item>
   </channel>
 </rss>
