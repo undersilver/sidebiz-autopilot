@@ -246,5 +246,10 @@
     "date": "2026-08-20",
     "title": "漫画の吹き出しを先に配置して絵の破綻を防ぐ方法",
     "draft": "drafts/2026-08-20-ai-manga-bubble-first-technique.json"
+  },
+  {
+    "date": "2026-08-21",
+    "title": "AI画像生成で同じキャラクターの顔を保つ方法",
+    "draft": "drafts/2026-08-21-ai-consistent-character-faces.json"
   }
 ]
