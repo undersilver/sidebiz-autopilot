@@ -251,5 +251,10 @@
     "date": "2026-08-21",
     "title": "AI画像生成で同じキャラクターの顔を保つ方法",
     "draft": "drafts/2026-08-21-ai-consistent-character-faces.json"
+  },
+  {
+    "date": "2026-08-22",
+    "title": "Codexへゲーム修正を頼む前に用意する情報",
+    "draft": "drafts/2026-08-22-ai-game-coding-tips.json"
   }
 ]
