@@ -256,5 +256,10 @@
     "date": "2026-08-22",
     "title": "Codexへゲーム修正を頼む前に用意する情報",
     "draft": "drafts/2026-08-22-ai-game-coding-tips.json"
+  },
+  {
+    "date": "2026-08-23",
+    "title": "AIにゲームバランス調整案を出させる入力表の作り方",
+    "draft": "drafts/2026-08-23-ai-game-balance-optimization-table.json"
   }
 ]
