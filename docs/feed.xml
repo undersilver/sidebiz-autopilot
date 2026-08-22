@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIにゲーム修正を頼むならこれだけ！「4つの必須情報」で爆速解決</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-22-ai-game-coding-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-22-ai-game-coding-tips.html</guid>
+      <pubDate>Sat, 22 Aug 2026 13:27:50 +0900</pubDate>
+      <description>AIにゲームのバグ修正や機能追加を依頼する際、曖昧な指示では期待通りの回答が得られません。この記事では、AIが短時間で正解を出せる「再現手順・期待結果・実際の結果・関連ファイル」という4つの必須情報を解説します。</description>
+    </item>
+    <item>
       <title>AI画像生成で「同じ顔」を維持する！キャラクターの一貫性を保つ3つのステップ</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-21-ai-consistent-character-faces.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-21-ai-consistent-character-faces.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-16-roguelike-growth-design-retry.html</guid>
       <pubDate>Thu, 16 Jul 2026 14:35:59 +0900</pubDate>
       <description>ローグライクゲームにおける敗北後の再挑戦意欲を高めるための成長設計について、引き継ぐ要素とリセットする要素のバランスを具体例と手順で解説します。初心者から中級者のゲーム制作・AI活用者に向け、実践的な方法と失敗例・改善例も紹介。</description>
-    </item>
-    <item>
-      <title>初心者がCodexで小規模ゲームを作るときの最小仕様書の作り方</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-15-beginner-codex-small-game-spec.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-15-beginner-codex-small-game-spec.html</guid>
-      <pubDate>Wed, 15 Jul 2026 10:59:56 +0900</pubDate>
-      <description>AIのCodexを使って小規模ゲームを作る初心者向けに、実装前に決めるべき最小限の仕様項目と具体的な手順、失敗例や改善例を解説します。</description>
     </item>
   </channel>
 </rss>
