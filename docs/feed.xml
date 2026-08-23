@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIでゲームバランスを最適化！パラメータ比較表を使った効率的な調整術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-23-ai-game-balance-optimization-table.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-23-ai-game-balance-optimization-table.html</guid>
+      <pubDate>Sun, 23 Aug 2026 13:31:30 +0900</pubDate>
+      <description>AIにゲームのパラメータ調整を依頼する際、表形式で出力させることで比較・検討が劇的に楽になります。HPや攻撃力などを整理し、バランス調整を効率化する方法を解説します。</description>
+    </item>
+    <item>
       <title>AIにゲーム修正を頼むならこれだけ！「4つの必須情報」で爆速解決</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-22-ai-game-coding-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-22-ai-game-coding-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-17-beginner-webgame-3screens.html</guid>
       <pubDate>Fri, 17 Jul 2026 11:12:55 +0900</pubDate>
       <description>初心者でも作りやすいWebゲームの基本画面「タイトル」「プレイ」「結果」の3つに絞り、具体的な作成手順や失敗例、改善案を解説します。簡単なコード例とポイントを押さえて、最初のゲーム完成を目指しましょう。</description>
-    </item>
-    <item>
-      <title>ローグライクゲームで敗北後も再挑戦したくなる成長設計の具体例</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-16-roguelike-growth-design-retry.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-16-roguelike-growth-design-retry.html</guid>
-      <pubDate>Thu, 16 Jul 2026 14:35:59 +0900</pubDate>
-      <description>ローグライクゲームにおける敗北後の再挑戦意欲を高めるための成長設計について、引き継ぐ要素とリセットする要素のバランスを具体例と手順で解説します。初心者から中級者のゲーム制作・AI活用者に向け、実践的な方法と失敗例・改善例も紹介。</description>
     </item>
   </channel>
 </rss>
