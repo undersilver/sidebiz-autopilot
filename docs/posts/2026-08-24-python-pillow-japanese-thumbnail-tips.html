@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="Pythonの画像処理ライブラリ「Pillow」を使って、日本語が含まれるサムネイルを自動生成する際の注意点を解説。文字化け、折り返し、レイアウト崩れを防ぐための具体的な解決策を紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント">
+  <meta property="og:description" content="Pythonの画像処理ライブラリ「Pillow」を使って、日本語が含まれるサムネイルを自動生成する際の注意点を解説。文字化け、折り返し、レイアウト崩れを防ぐための具体的な解決策を紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-24-python-pillow-japanese-thumbnail-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント">
+  <meta name="twitter:description" content="Pythonの画像処理ライブラリ「Pillow」を使って、日本語が含まれるサムネイルを自動生成する際の注意点を解説。文字化け、折り返し、レイアウト崩れを防ぐための具体的な解決策を紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-24-python-pillow-japanese-thumbnail-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント", "description": "Pythonの画像処理ライブラリ「Pillow」を使って、日本語が含まれるサムネイルを自動生成する際の注意点を解説。文字化け、折り返し、レイアウト崩れを防ぐための具体的な解決策を紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-24-python-pillow-japanese-thumbnail-tips.png?v=3"], "datePublished": "2026-08-24T08:16:07.130589+09:00", "dateModified": "2026-08-24T08:16:07.130605+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント</h1>
+  <p class="lead">Pythonの画像処理ライブラリ「Pillow」を使って、日本語が含まれるサムネイルを自動生成する際の注意点を解説。文字化け、折り返し、レイアウト崩れを防ぐための具体的な解決策を紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-08-24-python-pillow-japanese-thumbnail-tips.png?v=3" alt="PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント">
+  <h2>はじめに</h2>
+<p>Pythonの画像処理ライブラリ「Pillow」は、サムネイルの自動生成に非常に便利です。しかし、英語圏で開発されたライブラリであるため、日本語を扱う際にはいくつかの落とし穴があります。この記事では、プログラミング初心者でも陥りやすい「日本語サムネイル作成の失敗例」と、その改善策を解説します。</p>
+<h2>1. 日本語フォントの読み込みと文字化け</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>Pillowで日本語を扱う際は、必ず日本語対応のTrueTypeフォントファイルを指定してください。パス指定が間違っていると文字が正しく表示されません。</p></div></aside>
+<p>Pillowで日本語を表示する際、最も多い失敗が「文字化け」や「豆腐（□）」の表示です。これは、デフォルトのフォントが日本語に対応していないことが原因です。</p>
+<p><strong>失敗例：</strong>
+<code>ImageFont.truetype("arial.ttf", 40)</code> のように指定しても、日本語は正しく表示されません。</p>
+<p><strong>改善策：</strong>
+日本語に対応したTrueTypeフォント（.ttf）のパスを直接指定してください。Windowsなら <code>C:\Windows\Fonts\msgothic.ttc</code>、Macなら <code>/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc</code> などが利用可能です。</p>
+<h2>2. 自動折り返し機能の欠如</h2>
+<p>Pillowの <code>draw.text()</code> 関数には、自動で改行を入れる機能がありません。そのため、長い文字列をそのまま描画すると、画像から文字がはみ出してしまいます。</p>
+<p><strong>失敗例：</strong>
+長いタイトルをそのまま描画し、右端で文字が切れる。</p>
+<p><strong>改善策：</strong>
+<code>textwrap</code> モジュールを使用して、あらかじめ文字列を一定の文字数で分割してから描画します。または、<code>getbbox()</code> メソッドを使用して文字の幅を計算し、指定した幅を超えたら改行コードを挿入するロジックを組みましょう。</p>
+<h2>3. 文字サイズの最適化とレイアウト崩れ</h2>
+<p>サムネイルのタイトルは、文字数によって見栄えが大きく変わります。短いタイトルのときは巨大になり、長いときは枠を突き抜けるという現象がよく起こります。</p>
+<p><strong>失敗例：</strong>
+文字数に関わらずフォントサイズを固定している。</p>
+<p><strong>改善策：</strong>
+<code>getbbox()</code> でテキストの描画サイズを取得し、画像幅に対して大きすぎる場合は、フォントサイズを小さくするループ処理を実装します。これにより、どんな長さのタイトルでも枠内に収まるよう調整可能です。</p>
+<h2>4. 余白と配置のバランス</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>anchor=&quot;mm&quot;を使うのがコツ！これを使うとテキストのバウンディングボックスの中心を基準に配置できるので、レイアウトが崩れにくくなりますよ。</p></div></aside>
+<p>文字を画像の中心に配置する際、単に座標を指定するだけでは「重心」がズレて見栄えが悪くなることがあります。</p>
+<p><strong>失敗例：</strong>
+左上の座標を基準に配置し、画像全体で見たときに文字が右や下に寄ってしまう。</p>
+<p><strong>改善策：</strong>
+<code>draw.text()</code> の <code>anchor</code> 引数を使用しましょう。<code>anchor="mm"</code>（middle-middle）を指定することで、テキストのバウンディングボックスの中心を基準点に配置できます。これにより、余白のバランスが格段に良くなります。</p>
+<h2>まとめ</h2>
+<p>PythonとPillowで美しい日本語サムネイルを作るには、フォントの指定、テキストの折り返し、サイズ調整、そしてアンカーによる配置の4点が重要です。まずは小さな画像から試して、自分好みのレイアウトを見つけてみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

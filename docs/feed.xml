@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html</guid>
+      <pubDate>Mon, 24 Aug 2026 08:16:07 +0900</pubDate>
+      <description>Pythonの画像処理ライブラリ「Pillow」を使って、日本語が含まれるサムネイルを自動生成する際の注意点を解説。文字化け、折り返し、レイアウト崩れを防ぐための具体的な解決策を紹介します。</description>
+    </item>
+    <item>
       <title>AIでゲームバランスを最適化！パラメータ比較表を使った効率的な調整術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-23-ai-game-balance-optimization-table.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-23-ai-game-balance-optimization-table.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-18-ai-image-hand-foot-correction.html</guid>
       <pubDate>Sat, 18 Jul 2026 16:41:49 +0900</pubDate>
       <description>AI生成画像でよく見られる手足の不自然さを減らすための具体的な指示方法と生成後の部分修正手順を、初心者にもわかりやすく解説します。ゲームや漫画、創作に役立つ実践的なコツを紹介。</description>
-    </item>
-    <item>
-      <title>初心者が最初に作るべきWebゲームの3画面構成：タイトル・プレイ・結果画面を具体的に解説</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-17-beginner-webgame-3screens.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-17-beginner-webgame-3screens.html</guid>
-      <pubDate>Fri, 17 Jul 2026 11:12:55 +0900</pubDate>
-      <description>初心者でも作りやすいWebゲームの基本画面「タイトル」「プレイ」「結果」の3つに絞り、具体的な作成手順や失敗例、改善案を解説します。簡単なコード例とポイントを押さえて、最初のゲーム完成を目指しましょう。</description>
     </item>
   </channel>
 </rss>
