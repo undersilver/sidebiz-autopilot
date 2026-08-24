@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIイラストで武器の左右が入れ替わる！「一貫性」を保つためのプロンプトと検査術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-25-ai-weapon-consistency-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-25-ai-weapon-consistency-guide.html</guid>
+      <pubDate>Tue, 25 Aug 2026 08:18:33 +0900</pubDate>
+      <description>AI生成で発生しがちな「武器の左右反転」問題を解決。プロンプトでの指定方法と、公開前に必ず行うべきチェックリストを解説します。</description>
+    </item>
+    <item>
       <title>PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-19-roguelike-100floors-boss-design.html</guid>
       <pubDate>Sun, 19 Jul 2026 14:47:09 +0900</pubDate>
       <description>100階のローグライクゲームで、10階ごとにボスを配置する際の具体的な設計方法を解説。各区間の学習内容を確認しながら段階的に難易度を調整する手順や、失敗例からの改善策も紹介します。</description>
-    </item>
-    <item>
-      <title>AI画像の不自然な手足を減らす初心者向け確認＆修正手順</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-18-ai-image-hand-foot-correction.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-18-ai-image-hand-foot-correction.html</guid>
-      <pubDate>Sat, 18 Jul 2026 16:41:49 +0900</pubDate>
-      <description>AI生成画像でよく見られる手足の不自然さを減らすための具体的な指示方法と生成後の部分修正手順を、初心者にもわかりやすく解説します。ゲームや漫画、創作に役立つ実践的なコツを紹介。</description>
     </item>
   </channel>
 </rss>

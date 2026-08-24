@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIイラストで武器の左右が入れ替わる！「一貫性」を保つためのプロンプトと検査術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AI生成で発生しがちな「武器の左右反転」問題を解決。プロンプトでの指定方法と、公開前に必ず行うべきチェックリストを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-25-ai-weapon-consistency-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIイラストで武器の左右が入れ替わる！「一貫性」を保つためのプロンプトと検査術">
+  <meta property="og:description" content="AI生成で発生しがちな「武器の左右反転」問題を解決。プロンプトでの指定方法と、公開前に必ず行うべきチェックリストを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-25-ai-weapon-consistency-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-25-ai-weapon-consistency-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIイラストで武器の左右が入れ替わる！「一貫性」を保つためのプロンプトと検査術">
+  <meta name="twitter:description" content="AI生成で発生しがちな「武器の左右反転」問題を解決。プロンプトでの指定方法と、公開前に必ず行うべきチェックリストを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-25-ai-weapon-consistency-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIイラストで武器の左右が入れ替わる！「一貫性」を保つためのプロンプトと検査術", "description": "AI生成で発生しがちな「武器の左右反転」問題を解決。プロンプトでの指定方法と、公開前に必ず行うべきチェックリストを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-25-ai-weapon-consistency-guide.png?v=3"], "datePublished": "2026-08-25T08:18:33.577649+09:00", "dateModified": "2026-08-25T08:18:33.577668+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-25-ai-weapon-consistency-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AIイラストで武器の左右が入れ替わる！「一貫性」を保つためのプロンプトと検査術</h1>
+  <p class="lead">AI生成で発生しがちな「武器の左右反転」問題を解決。プロンプトでの指定方法と、公開前に必ず行うべきチェックリストを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-08-25-ai-weapon-consistency-guide.png?v=3" alt="AIイラストで武器の左右が入れ替わる！「一貫性」を保つためのプロンプトと検査術">
+  <h2>ゲームイラストにおける武器の左右反転問題</h2>
+<p>AIでゲームキャラクターのイラストを生成する際、剣や弓などの武器が、ポーズによって右手にあったり左手にあったりして困ったことはありませんか？特に攻撃モーションを描こうとすると、AIは「構図の美しさ」を優先してしまい、武器の持ち手を無視しがちです。</p>
+<p>これはAIが武器を「キャラクターの身体の一部」ではなく「背景や装飾品」と認識しているために起こる現象です。これを解決するには、AIに「武器の固定位置」を強く意識させる工夫が必要です。</p>
+<h2>プロンプトで武器の持ち手を固定する</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>武器の持ち手を固定するには、プロンプトの冒頭に「どの手に何を持っているか」を具体的に書き込むのが鉄則です。AIに身体の一部として認識させましょう。</p></div></aside>
+<p>武器の左右を固定するために最も効果的なのは、プロンプトの構成を工夫することです。単に「剣を持っている」と書くのではなく、身体の部位と組み合わせた指示を与えます。</p>
+<p>例えば、「holding a sword in right hand（右手に剣を持つ）」という記述をプロンプトの先頭近くに配置します。さらに、キャラクターの利き手設定を強調する単語を付け加えると、AIの認識精度が向上します。</p>
+<p>失敗例：<code>a warrior attacking with a sword</code>
+改善例：<code>a warrior, holding a sword in right hand, attacking, side view, fixed weapon position in right hand</code></p>
+<p>このように、「どの部位に何があるか」を明示することで、AIの迷いを減らすことができます。</p>
+<h2>検査表で確認するべきポイント</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>公開前のチェックは3点！持ち手、武器の形状、身体との整合性。特に刃の向きが逆になっていないかを確認するだけで、クオリティがグッと上がりますよ。</p></div></aside>
+<p>プロンプトを工夫しても、100%成功するわけではありません。公開前に以下の3点をチェックする「検査表」を作成し、短時間で確認する習慣をつけましょう。</p>
+<ol>
+<li>武器の持ち手：指定した手（右または左）から武器が離れていないか。</li>
+<li>武器の形状：反転した際に装飾や刃の向きが不自然になっていないか。</li>
+<li>身体との整合性：腕の関節が武器の重さに耐えられる角度になっているか。</li>
+</ol>
+<p>特に「武器の形状」は、AIが左右反転を繰り返すと刃の向きが逆になるなどの不自然な変形を起こしやすいため、注意が必要です。</p>
+<h2>修正のコツとAI活用術</h2>
+<p>もし武器の位置がずれてしまった場合、最初から生成し直すのではなく、画像編集ソフトでの加筆や、AIのインペイント機能を使って特定箇所だけを修正するのが効率的です。</p>
+<p>特に、武器の柄の部分をマスクして再生成させることで、キャラクター本体のポーズを維持したまま、武器の持ち手だけを修正することが可能です。このとき、元の画像で武器がどの位置にあったかを記録しておくと、修正作業がスムーズに進みます。</p>
+<p>AIによる制作は、完璧を求めるよりも「どの程度までなら許容できるか」という基準を自分の中で持つことが継続の秘訣です。まずは武器を固定するプロンプトを試して、自分なりの「武器持ち手テンプレート」を作ってみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
