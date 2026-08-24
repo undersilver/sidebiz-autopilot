@@ -266,5 +266,10 @@
     "date": "2026-08-24",
     "title": "PythonとPillowで日本語サムネイルを作るときの注意点",
     "draft": "drafts/2026-08-24-python-pillow-japanese-thumbnail-tips.json"
+  },
+  {
+    "date": "2026-08-25",
+    "title": "ゲームの攻撃モーションで武器の左右が入れ替わる問題",
+    "draft": "drafts/2026-08-25-ai-weapon-consistency-guide.json"
   }
 ]
