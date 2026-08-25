@@ -271,5 +271,10 @@
     "date": "2026-08-25",
     "title": "ゲームの攻撃モーションで武器の左右が入れ替わる問題",
     "draft": "drafts/2026-08-25-ai-weapon-consistency-guide.json"
+  },
+  {
+    "date": "2026-08-26",
+    "title": "漫画の読み順が崩れないコマ割りの基本",
+    "draft": "drafts/2026-08-26-manga-panel-layout-basics.json"
   }
 ]
