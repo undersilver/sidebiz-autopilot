@@ -276,5 +276,10 @@
     "date": "2026-08-26",
     "title": "漫画の読み順が崩れないコマ割りの基本",
     "draft": "drafts/2026-08-26-manga-panel-layout-basics.json"
+  },
+  {
+    "date": "2026-08-27",
+    "title": "AIが書いたゲーム記事から内部メモを除く校閲方法",
+    "draft": "drafts/2026-08-27-ai-game-article-editing-tips.json"
   }
 ]
