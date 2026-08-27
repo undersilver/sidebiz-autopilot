@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック">
+  <meta property="og:description" content="AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-27-ai-game-article-editing-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック">
+  <meta name="twitter:description" content="AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-27-ai-game-article-editing-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック", "description": "AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-27-ai-game-article-editing-tips.png?v=3"], "datePublished": "2026-08-27T22:39:39.075734+09:00", "dateModified": "2026-08-27T22:39:39.075756+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック</h1>
+  <p class="lead">AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-08-27-ai-game-article-editing-tips.png?v=3" alt="AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック">
+  <h2>AI記事に潜む「内部メモ」の罠</h2>
+<p>AIを使ってゲームレビューや攻略記事を作成していると、ついやってしまいがちなのが「AIへの指示や運営用のメモがそのまま記事に残ってしまう」というミスです。公開した記事の中に「ここで読者の興味を引くように」や「この部分は攻略の核心なので強調」といった指示書きが混ざっていると、読者は一気に興ざめしてしまいます。</p>
+<p>AIは非常に優秀なライターですが、人間側の意図と出力結果を区別する能力はありません。そのため、記事の執筆プロセスにおいて「公開する文章」と「自分用のメモ」を明確に分ける仕組み作りが重要になります。</p>
+<h2>執筆と校閲を分ける「分離ルール」の極意</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIへの指示と記事本文を分けるのが鉄則！プロンプトで「記事本文のみを出力」と指定するだけで、メモの混入リスクを劇的に減らせますよ。</p></div></aside>
+<p>最も簡単な解決策は、AIへのプロンプト（指示）と、出力された記事本文を別のツールやファイルで管理することです。具体的には、以下の3ステップで運用します。</p>
+<ol>
+<li>プロンプト管理シートを作成する</li>
+<li>AIからの出力は必ず「プレーンテキスト」として貼り付ける</li>
+<li>最終確認用のチェックリストを別枠で用意する</li>
+</ol>
+<p>特に重要なのは、AIに記事を書かせる際、出力形式を「記事本文のみ」と指定することです。「解説や補足は不要、記事本文のみを出力してください」とプロンプトに加えるだけで、余計なメモが混入する確率を大幅に下げることができます。</p>
+<h2>具体的な校閲プロセスと失敗例</h2>
+<p>失敗例として多いのが、AIが生成した「見出し案」や「構成案」をそのまま記事に含めてしまうケースです。例えば、記事の冒頭に「【重要：ここで読者の離脱を防ぐためのフックを入れること】」というAIの提案が残っていると、読者は「この記事は自動生成されたものだ」とすぐに気づいてしまいます。</p>
+<p>これを防ぐための校閲手順は以下の通りです。</p>
+<ul>
+<li>ステップ1：AIが出力したテキストを一度メモ帳などの装飾のない場所に貼り付ける。</li>
+<li>ステップ2：見出しと本文以外の「メタ情報（指示書きやメモ）」を検索機能で一括削除する。</li>
+<li>ステップ3：最後に人間が「読者の視点」で最初から最後まで読み直す。</li>
+</ul>
+<p>この作業自体は、慣れれば5分程度で完了します。人間が確認すべきは「文章の不自然さ」と「誤字脱字」、そして「意図しないメモの混入」の3点だけです。</p>
+<h2>読者に届けるための最後の仕上げ</h2>
+<p>AIが作成した記事は、論理的で分かりやすい反面、少し冷たい印象を与えることがあります。校閲の最後に、自分自身の言葉で「実際にプレイした感想」や「個人的なこだわりポイント」を一行加えるだけで、記事の信頼性は劇的に向上します。</p>
+<p>AIを「記事の土台を作るパートナー」、自分を「最終的な品質保証責任者」と定義することで、効率的かつ質の高いコンテンツ作りが可能になります。まずは今日から、AIへの指示と記事本文を分けて管理することから始めてみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html</guid>
+      <pubDate>Thu, 27 Aug 2026 22:39:39 +0900</pubDate>
+      <description>AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。</description>
+    </item>
+    <item>
       <title>読者が迷わない！漫画の読み順をコントロールする「視線誘導」の基本ルール</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-26-manga-panel-layout-basics.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-26-manga-panel-layout-basics.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-21-manga-speech-bubble-layout-reverse-calculation.html</guid>
       <pubDate>Tue, 21 Jul 2026 14:45:56 +0900</pubDate>
       <description>漫画制作で絵の破綻を防ぐために、セリフ量から必要な空白を逆算して吹き出しを先に配置する具体的な手順を紹介。初心者でも実践しやすい方法と失敗例・改善例も解説します。</description>
-    </item>
-    <item>
-      <title>ゲーム用サムネイルを固定マスコットで自動生成する方法</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-20-game-thumbnail-fixed-mascot-auto-generation.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-20-game-thumbnail-fixed-mascot-auto-generation.html</guid>
-      <pubDate>Mon, 20 Jul 2026 11:59:35 +0900</pubDate>
-      <description>ゲーム関連のサムネイル作成で、毎回新しいキャラクターを生成せずに、PythonのPillowライブラリを使って固定マスコット画像を安定的に合成する具体的な手順と注意点を解説します。</description>
     </item>
   </channel>
 </rss>
