@@ -296,5 +296,10 @@
     "date": "2026-08-29",
     "title": "ローグライクの武器と防具を階層ごとに強くする方法",
     "draft": "drafts/2026-08-29-roguelike-gear-progression-guide.json"
+  },
+  {
+    "date": "2026-08-30",
+    "title": "小説の長い説明を漫画の1ページへ圧縮する方法",
+    "draft": "drafts/2026-08-30-2026-08-30-fallback.json"
   }
 ]
