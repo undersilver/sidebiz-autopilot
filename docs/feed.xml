@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html</guid>
+      <pubDate>Mon, 31 Aug 2026 19:25:01 +0900</pubDate>
+      <description>AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。</description>
+    </item>
+    <item>
       <title>ローグライクゲームの攻略鍵！階層別・武器防具強化のロードマップ</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-29-roguelike-gear-progression-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-29-roguelike-gear-progression-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-24-how-to-create-input-table-for-ai-game-balance.html</guid>
       <pubDate>Fri, 24 Jul 2026 14:46:10 +0900</pubDate>
       <description>AIを活用してゲームのバランス調整案を効率的に得るための具体的な入力表の作り方を解説します。HPや攻撃力、速度、出現階層を表形式で整理し、比較しやすい案を作る手順と注意点も紹介します。</description>
-    </item>
-    <item>
-      <title>Codexへゲーム修正を依頼する前に準備すべき4つの情報</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-23-codex-game-fix-preparation.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-23-codex-game-fix-preparation.html</guid>
-      <pubDate>Thu, 23 Jul 2026 13:11:42 +0900</pubDate>
-      <description>AIのCodexにゲームの修正を頼む際、スムーズに対応してもらうために必要な情報は「再現手順」「期待結果」「実際の結果」「関連ファイル」の4点です。具体例や失敗例を交えて、初心者でもわかりやすく解説します。</description>
     </item>
   </channel>
 </rss>

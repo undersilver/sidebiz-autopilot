@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順">
+  <meta property="og:description" content="AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-31-pixel-art-character-sheet-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順">
+  <meta name="twitter:description" content="AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-31-pixel-art-character-sheet-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順", "description": "AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-08-31-pixel-art-character-sheet-guide.png?v=3"], "datePublished": "2026-08-31T19:25:01.160977+09:00", "dateModified": "2026-08-31T19:25:01.160995+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順</h1>
+  <p class="lead">AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-08-31-pixel-art-character-sheet-guide.png?v=3" alt="AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順">
+  <h2>はじめに</h2>
+<p>ゲーム制作において、キャラクターのドット絵素材をゼロから描くのは非常に時間がかかります。最近ではAIを活用して「九面図（キャラクターの前後左右や斜めなどの向きを並べた図）」を生成し、それを素材として活用する手法が一般的です。しかし、AIが生成した画像をそのままゲームに読み込ませることはできません。本記事では、AI生成物を実用的なゲーム素材に変換する効率的な手順を解説します。</p>
+<h2>1. 九面図の確認とクオリティチェック</h2>
+<p>まずは生成された九面図を確認します。重要なのは「ドットの密度が均一か」という点です。AIの性質上、特定の角度だけドットの大きさが異なったり、線が歪んだりすることがあります。まずは全体を俯瞰し、明らかに不自然な箇所を修正しましょう。修正はペイントソフトを使い、1ドット単位で調整します。</p>
+<h2>2. キャラクターチップの切り出し</h2>
+<p>次に、九面図から個別のキャラクター画像を切り出します。ここで重要なのは「グリッド（格子）」の活用です。多くのゲームエンジンでは、キャラクターチップは一定のサイズで区切られています。例えば、32x32ピクセルや64x64ピクセルといった基準に合わせ、正確に切り出すことが重要です。ズレが生じると、ゲーム内でキャラクターが歩く際にガタつきが発生します。</p>
+<h2>3. サイズと解像度の統一</h2>
+<p>切り出した画像は、プロジェクトの規格に合わせてサイズを統一します。AI生成物は解像度が不安定なことが多いため、リサイズする際は「ニアレストネイバー法」を使用してください。バイリニア法などを使うとドットがぼやけてしまい、せっかくのドット絵の質感が損なわれます。必ずドットの角が立つ設定で拡大・縮小を行いましょう。</p>
+<h2>4. 命名規則とファイル管理</h2>
+<p>最後に、ファイル名を整理します。ゲームエンジンはファイル名でキャラクターの向きやアニメーションを識別します。例えば「char_front_01.png」「char_back_01.png」のように、誰が見ても役割がわかるルールを決めましょう。この段階でフォルダ分けまで完了させておくと、後の実装作業が劇的に楽になります。</p>
+<h2>失敗例と改善のヒント</h2>
+<p>よくある失敗は「背景の透過処理忘れ」です。AI生成画像には背景が含まれていることが多いため、透過ツールやペイントソフトの自動選択機能を使って背景を確実に除去してください。また、キャラクターの足元の位置がバラバラだと、マップ上で浮いているように見えます。足元の座標を全パターンで一致させることで、違和感のない動きを実現できます。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
