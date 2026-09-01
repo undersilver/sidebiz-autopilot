@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>GitHub Pagesでゲーム開発記録サイトを無料公開！初心者向け構築ガイド</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-01-github-pages-game-dev-log-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-01-github-pages-game-dev-log-guide.html</guid>
+      <pubDate>Tue, 01 Sep 2026 16:08:53 +0900</pubDate>
+      <description>GitHub Pagesを使って、ゲーム開発の進捗や記録を無料で公開する方法を解説します。リポジトリ作成から自動公開設定まで、初心者でも迷わない手順をまとめました。</description>
+    </item>
+    <item>
       <title>AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-25-python-pillow-japanese-thumbnail-tips.html</guid>
       <pubDate>Sat, 25 Jul 2026 19:35:38 +0900</pubDate>
       <description>Pythonの画像処理ライブラリPillowを使って日本語テキスト入りのサムネイルを作成する際の具体的な注意点を解説。日本語フォントの指定方法、文字の折り返し、文字サイズ調整、余白の取り方でありがちな失敗例と改善策を豊富なコード例とともに紹介します。</description>
-    </item>
-    <item>
-      <title>AIにゲームバランス調整案を出させる入力表の作り方</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-24-how-to-create-input-table-for-ai-game-balance.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-24-how-to-create-input-table-for-ai-game-balance.html</guid>
-      <pubDate>Fri, 24 Jul 2026 14:46:10 +0900</pubDate>
-      <description>AIを活用してゲームのバランス調整案を効率的に得るための具体的な入力表の作り方を解説します。HPや攻撃力、速度、出現階層を表形式で整理し、比較しやすい案を作る手順と注意点も紹介します。</description>
     </item>
   </channel>
 </rss>
