@@ -1,0 +1,56 @@
+{
+  "title": "GitHub Pagesでゲーム開発記録サイトを無料公開！初心者向け構築ガイド",
+  "slug": "github-pages-game-dev-log-guide",
+  "category": "プログラミング",
+  "summary": "GitHub Pagesを使って、ゲーム開発の進捗や記録を無料で公開する方法を解説します。リポジトリ作成から自動公開設定まで、初心者でも迷わない手順をまとめました。",
+  "article_markdown": "## はじめに\nゲーム開発の進捗を記録し、世界中に公開したいと考えたことはありませんか？「サーバー代が高そう」「設定が難しそう」と諦める必要はありません。GitHub Pagesを使えば、無料で自分だけの開発記録サイトを公開できます。今回は、リポジトリ作成から自動公開まで、初心者でも迷わない手順を整理しました。\n\n## GitHub Pagesとは？\nGitHub Pagesは、GitHub上のリポジトリをそのままWebサイトとして公開できるサービスです。HTMLやCSSの知識が少しあれば、自分のゲーム開発日誌やポートフォリオを簡単にWeb上に展開できます。利用料は無料であり、GitHubのアカウントさえあれば誰でもすぐに始められるのが最大の魅力です。\n\n## リポジトリを作成する\nまずはGitHubにログインし、「New repository」から新しいリポジトリを作成します。リポジトリ名は「username.github.io」という形式にすると、特別な設定なしでメインサイトとして公開されます。公開設定は「Public」を選択しましょう。ここが公開の第一歩となります。\n\n## Webページを配置する\nリポジトリ内に「index.html」という名前のファイルを作成します。これがサイトのトップページになります。簡単なHTMLを記述してコミット（保存）しましょう。まずは「Hello World」と書くだけでも十分です。このファイルが公開のベースとなります。\n\n## GitHub Actionsで自動公開する\n手動でファイルをアップロードするのではなく、GitHub Actionsを使って自動化しましょう。リポジトリの「Actions」タブから「Static Web Pages」を選択し、設定ファイルを保存します。これにより、コードを更新するだけでサイトが自動的に更新される環境が整います。失敗例として、ファイル名が「index.html」になっていないケースが多いので注意してください。\n\n## サイトを改善する\n公開できたら、次は内容を充実させましょう。開発中のスクリーンショットや、技術的な学びをMarkdown形式のファイルで追加していきます。GitHubはMarkdownに対応しているため、日記感覚で記事を増やせます。改善例として、CSSフレームワークを導入すると、デザインが初心者っぽさを脱却し、見栄えの良いサイトに早変わりします。\n\n## まとめ\nGitHub Pagesを活用すれば、ゲーム開発の記録を誰でも簡単に公開できます。まずは小さな一歩として、今日の日記を1ページ書いてみることから始めてみてください。アウトプットを継続することで、開発のモチベーションも向上するはずです。",
+  "social_post": "ゲーム開発の記録、どこに残していますか？GitHub Pagesを使えば無料で自分だけの開発日誌サイトが作れます！リポジトリ作成から公開までの手順をまとめました。 #ゲーム開発 #プログラミング #GitHubPages",
+  "short_video_script": "ゲーム開発の記録、無料で公開してみませんか？GitHub Pagesならサーバー代0円！リポジトリを作って、HTMLを置くだけ。GitHub Actionsを使えば更新も自動化できます。今すぐあなたの開発日誌をWebへ！",
+  "thumbnail_prompt": "A clean, modern professional workspace with a laptop displaying code on a screen, minimalist aesthetic, bright lighting, high quality, 4k resolution.",
+  "pikoron_tips": [
+    {
+      "after_heading": "GitHub Actionsで自動公開する",
+      "message": "GitHub Actionsの設定は、ファイル名やパスの指定が重要です。index.htmlが正しくルートディレクトリにあるか必ず確認しましょう。ここがずれているとサイトが表示されません。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "事実",
+      "item": "GitHub Pagesの無料利用条件とリポジトリ名の命名規則",
+      "risk": "低"
+    },
+    {
+      "type": "権利",
+      "item": "使用するスクリーンショットに他者の著作物が含まれていないか",
+      "risk": "中"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 8,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "内容の具体性",
+        "detail": "GitHub Actionsの自動設定に関する説明がやや簡略化されており、初心者には設定ファイルの具体的な記述内容が不明瞭な可能性があります。"
+      }
+    ],
+    "rewrite_instructions": [
+      "GitHub Actionsのセクションで、設定ファイル（.github/workflows/static.ymlなど）の作成手順について、もう少し具体的なファイル構成や記述のヒントを補足すると、より親切なガイドになります。"
+    ],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-09-01T09:58:48.575820+09:00",
+    "seed": {
+      "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
+      "category": "プログラミング",
+      "original_angle": "リポジトリ作成からActions公開までを初心者向けに整理する"
+    },
+    "status": "review"
+  }
+}
