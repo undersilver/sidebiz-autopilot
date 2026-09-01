@@ -1,0 +1,44 @@
+{
+  "title": "宝箱限定装備に特別感を持たせる組み合わせ効果",
+  "slug": "2026-09-02-fallback",
+  "category": "ゲーム制作",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "JSONDecodeError: Extra data: line 28 column 1 (char 2213)",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "Extra data: line 28 column 1 (char 2213)"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-09-02T08:47:24.794022+09:00",
+    "seed": {
+      "title": "宝箱限定装備に特別感を持たせる組み合わせ効果",
+      "category": "ゲーム制作",
+      "original_angle": "単純な数値強化ではなくプレイスタイルが変わる効果を設計する"
+    },
+    "status": "blocked"
+  }
+}

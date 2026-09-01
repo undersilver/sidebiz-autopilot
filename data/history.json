@@ -311,5 +311,10 @@
     "date": "2026-09-01",
     "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
     "draft": "drafts/2026-09-01-github-pages-game-dev-log-guide.json"
+  },
+  {
+    "date": "2026-09-02",
+    "title": "宝箱限定装備に特別感を持たせる組み合わせ効果",
+    "draft": "drafts/2026-09-02-2026-09-02-fallback.json"
   }
 ]
