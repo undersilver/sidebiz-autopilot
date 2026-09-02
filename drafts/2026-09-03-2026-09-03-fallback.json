@@ -1,0 +1,44 @@
+{
+  "title": "AI生成JSONを安全に公開記事へ変換する設計",
+  "slug": "2026-09-03-fallback",
+  "category": "プログラミング",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "JSONDecodeError: Extra data: line 33 column 1 (char 2313)",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "Extra data: line 33 column 1 (char 2313)"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-09-03T08:50:55.535309+09:00",
+    "seed": {
+      "title": "AI生成JSONを安全に公開記事へ変換する設計",
+      "category": "プログラミング",
+      "original_angle": "入力検証・公開条件・HTMLエスケープ・失敗時停止を解説する"
+    },
+    "status": "blocked"
+  }
+}
