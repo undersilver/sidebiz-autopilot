@@ -1,0 +1,49 @@
+{
+  "title": "GitHub Actionsで「赤色」が出ても焦らない！失敗原因を最短で見つける読み解き術",
+  "slug": "github-actions-troubleshooting-guide",
+  "category": "プログラミング",
+  "summary": "GitHub Actionsの実行結果が赤色（失敗）になったとき、どこを見れば解決できるのか？初心者向けに、エラーログの効率的な追い方と修正のステップを解説します。",
+  "article_markdown": "## はじめに\nGitHub Actionsを使っていて、突然ワークフローが「赤色」になって驚いたことはありませんか？自動化の恩恵を受けている最中にエラーが出ると、どこから手をつければいいか迷ってしまうものです。しかし、実はエラーログには「どこで、何が起きたのか」が明確に記されています。今回は、この赤い表示から最短で原因を特定する手順を解説します。\n\n## 1. 失敗した工程（ジョブ）を特定する\nワークフローが失敗すると、GitHubのActionsタブには赤いバツ印が表示されます。まずは、どのステップで止まったのかを特定しましょう。\n\n1. 該当するワークフローの実行履歴をクリックします。\n2. 左側のリストから「失敗したジョブ」を選択します。\n3. 右側に表示されるステップ一覧のうち、赤いバツ印がついている項目を探します。\n\nここが「犯人」の現場です。多くの場合は、ビルドやテスト、デプロイといった特定の工程で処理が中断されています。\n\n## 2. ログを上からではなく「下から」読む\n失敗したステップをクリックすると、詳細なログが表示されます。ここで初心者が陥りがちなのが、最初からすべてを読もうとすることです。実は、エラーの原因はログの最後の方に書かれていることがほとんどです。\n\n- ログの一番下までスクロールする\n- 「Error」や「Fatal」という単語を探す\n- その周辺にある「何ができなかったのか」という文章に注目する\n\n例えば、「File not found」ならファイルパスの指定ミス、「Permission denied」なら権限の問題、「Command not found」なら必要なツールがインストールされていない可能性が高いです。\n\n## 3. 具体的な失敗例と改善のヒント\nよくある失敗パターンと、その解決策をいくつか紹介します。\n\n### 例1：ファイルが見つからない\nログに「No such file or directory」とある場合、リポジトリ内のフォルダ構成と、Actionsの設定ファイル（.github/workflows/xxx.yml）のパスが一致していないことが原因です。相対パスが正しいか確認しましょう。\n\n### 例2：環境変数が足りない\n「API key is missing」などのエラーが出る場合、GitHubの「Settings > Secrets and variables」に設定した値が、ワークフロー側で正しく参照できていない可能性があります。`${{ secrets.MY_KEY }}` の形式で正しく記述されているか再確認してください。\n\n## 4. 修正して再実行する\n原因が見つかったら、コードや設定ファイルを修正してコミット（またはプルリクエストを更新）します。GitHub Actionsは、新しいコミットがプッシュされるたびに自動で再実行されます。\n\nもし修正が正しいか不安な場合は、特定のステップだけをローカル環境で再現できるか試してみるのも有効です。複雑な処理であればあるほど、小さな変更を加えて動作を確認する「小さく直して、すぐ確認」のサイクルが重要です。\n\n## まとめ\nGitHub Actionsの失敗は、決して怖いものではありません。赤い表示は「ここに修正が必要ですよ」というGitHubからの親切なサインです。\n\n1. 失敗したステップを特定する\n2. ログの最後からエラーメッセージを読む\n3. メッセージを頼りに修正する\n\nこの手順を繰り返すことで、エラー解決のスピードは格段に上がります。ぜひ、次に赤い表示が出たときは、落ち着いてログをチェックしてみてください。",
+  "social_post": "GitHub Actionsの実行結果が「赤色」になって困っていませんか？実はエラーログは「下から読む」のが正解です。失敗した工程の特定方法と、よくあるエラーの読み解き方をまとめました。プログラミング初心者は必見です！ #GitHubActions #プログラミング初心者 #自動化",
+  "short_video_script": "GitHub Actionsが赤色で失敗！そんな時、どこを見ていますか？実はログは下から読むのが鉄則。最後にあるErrorの文字を探せば原因はすぐわかります。詳しくは記事をチェック！",
+  "thumbnail_prompt": "A clean, modern flat design illustration of a developer looking at a computer screen showing a red GitHub Actions error log, minimalist tech aesthetic, bright colors, high quality",
+  "pikoron_tips": [
+    {
+      "after_heading": "2. ログを上からではなく「下から」読む",
+      "message": "ログの冒頭には成功した処理が並んでいることが多いです。エラーの核心は常に最後の方に隠れているので、まずはスクロールして『Error』の文字を探すクセをつけましょう。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "事実",
+      "item": "GitHub Actionsのログの仕様とエラー確認手順の整合性",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The quality_score field in the input was 9, which contradicts the high quality of the article. This has been corrected in the evaluation."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-09-05T08:42:29.636882+09:00",
+    "seed": {
+      "title": "初心者がGitHub Actionsの失敗原因を見つける方法",
+      "category": "プログラミング",
+      "original_angle": "赤い実行結果から失敗した工程とメッセージを読む順番を説明する"
+    },
+    "status": "review"
+  }
+}

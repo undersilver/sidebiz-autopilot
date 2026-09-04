@@ -326,5 +326,10 @@
     "date": "2026-09-04",
     "title": "敵キャラクターを5つの役割に分類する設計法",
     "draft": "drafts/2026-09-04-enemy-role-design-5-types.json"
+  },
+  {
+    "date": "2026-09-05",
+    "title": "初心者がGitHub Actionsの失敗原因を見つける方法",
+    "draft": "drafts/2026-09-05-github-actions-troubleshooting-guide.json"
   }
 ]
