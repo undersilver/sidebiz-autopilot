@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html</guid>
+      <pubDate>Fri, 04 Sep 2026 09:40:33 +0900</pubDate>
+      <description>ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。</description>
+    </item>
+    <item>
       <title>GitHub Pagesでゲーム開発記録サイトを無料公開！初心者向け構築ガイド</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-01-github-pages-game-dev-log-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-01-github-pages-game-dev-log-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-27-manga-komawari-rydensei-basic.html</guid>
       <pubDate>Mon, 27 Jul 2026 15:58:42 +0900</pubDate>
       <description>漫画の読み順が自然に伝わるコマ割りの基本ルールを、視線の流れやページめくりを意識した具体例を交えて解説します。初心者でもすぐ実践できる配置のコツや失敗例の改善方法を紹介し、読みやすい漫画作りをサポートします。</description>
-    </item>
-    <item>
-      <title>PythonとPillowで日本語サムネイルを作るときの注意点</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-25-python-pillow-japanese-thumbnail-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-25-python-pillow-japanese-thumbnail-tips.html</guid>
-      <pubDate>Sat, 25 Jul 2026 19:35:38 +0900</pubDate>
-      <description>Pythonの画像処理ライブラリPillowを使って日本語テキスト入りのサムネイルを作成する際の具体的な注意点を解説。日本語フォントの指定方法、文字の折り返し、文字サイズ調整、余白の取り方でありがちな失敗例と改善策を豊富なコード例とともに紹介します。</description>
     </item>
   </channel>
 </rss>

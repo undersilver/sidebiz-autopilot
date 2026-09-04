@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術">
+  <meta property="og:description" content="ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-04-enemy-role-design-5-types.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術">
+  <meta name="twitter:description" content="ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-04-enemy-role-design-5-types.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術", "description": "ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-04-enemy-role-design-5-types.png?v=3"], "datePublished": "2026-09-04T09:40:33.103214+09:00", "dateModified": "2026-09-04T09:40:33.103231+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術</h1>
+  <p class="lead">ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-04-enemy-role-design-5-types.png?v=3" alt="ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術">
+  <p>ゲーム制作において、敵キャラクターの配置や能力設定に悩むことはありませんか？「なんとなく強そうな敵を並べたけれど、プレイヤーがすぐ飽きてしまう」「難易度の調整が難しい」といった課題を解決するためには、敵を明確な役割に分類することが近道です。</p>
+<p>今回は、初心者でもすぐに取り入れられる「敵の5つの役割分類法」をご紹介します。</p>
+<h2>敵キャラクターを構成する5つの役割</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>敵の役割を明確にすると、プレイヤーが「どの敵から倒すべきか」という戦略を立てやすくなります。まずはこの5タイプを基本の型として覚えておきましょう。</p></div></aside>
+<p>敵を以下の5つのタイプに分類することで、プレイヤーに「どう攻略すべきか」という戦略的な思考を促すことができます。</p>
+<ol>
+<li>高速（スピードタイプ）：移動や攻撃が速く、回避能力が高い。プレイヤーの隙を突く。</li>
+<li>高耐久（タンクタイプ）：防御力や体力が非常に高く、前線でプレイヤーの攻撃を受け止める。</li>
+<li>遠距離（スナイパータイプ）：離れた位置から攻撃し、プレイヤーに接近を強いる。</li>
+<li>状態異常（トリックスタータイプ）：毒や麻痺など、直接的なダメージ以外の妨害を行う。</li>
+<li>特殊（ギミックタイプ）：合体、自爆、回復など、特定の条件下で脅威となる特殊行動をとる。</li>
+</ol>
+<h2>具体的な設計手順と実践例</h2>
+<p>まずは、ステージごとに「メインとなる敵」を1種類決め、そこに補佐役を組み合わせるのが基本です。例えば、高耐久の敵が前衛にいる場合、その後ろから遠距離タイプの敵が攻撃してくる配置にすると、プレイヤーは「高耐久を無視して突っ込むか、遠距離から倒すか」という選択を迫られます。</p>
+<p>失敗例としてよくあるのが、全ての敵を「高耐久・高火力」にしてしまうことです。これではプレイヤーは単調な作業を強いられ、すぐに疲弊してしまいます。まずは「1つの役割に特化させる」ことを意識してください。</p>
+<h2>改善とバランス調整のポイント</h2>
+<p>作成した敵が意図通りに動いているか確認するには、実際にテストプレイを行い「プレイヤーがその敵に対してどのような行動をとったか」を観察します。もし、特定の敵が無視されているなら、その敵に「状態異常」の能力を付与して無視できない存在にするなど、役割を強化する調整を行いましょう。</p>
+<p>また、AIを活用して敵の行動パターンを生成する場合も、この5つの役割をプロンプトに含めることで、キャラクターごとの個性が際立ちます。「この敵は『高速』タイプで、攻撃の予備動作が短い」といった指示を出すだけで、ゲームのクオリティは格段に上がります。</p>
+<h2>まとめ</h2>
+<p>敵キャラクターの役割を明確にすることは、単なる難易度調整ではなく、プレイヤーに「ゲーム体験」をデザインすることに繋がります。まずは5つの役割を意識して、小さなステージから配置を試してみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
