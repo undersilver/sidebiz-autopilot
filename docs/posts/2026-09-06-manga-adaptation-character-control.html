@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術">
+  <meta property="og:description" content="AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-06-manga-adaptation-character-control.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術">
+  <meta name="twitter:description" content="AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-06-manga-adaptation-character-control.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術", "description": "AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-06-manga-adaptation-character-control.png?v=3"], "datePublished": "2026-09-06T16:32:34.838629+09:00", "dateModified": "2026-09-06T16:32:34.838649+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">漫画化</p>
+  <h1>小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術</h1>
+  <p class="lead">AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-06-manga-adaptation-character-control.png?v=3" alt="小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術">
+  <h2>はじめに</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>漫画は全コマに主役を詰め込む必要はありません。背景や状況を伝える「キャラなしのコマ」を意識的に作るのが、読みやすい漫画への第一歩ですよ！</p></div></aside>
+<p>小説を漫画化しようとすると、AIが「このシーンの登場人物」と認識したキャラクターを、すべてのコマに配置してしまうことがよくあります。結果として、背景が見えず、人物が並んでいるだけの単調な画面になりがちです。漫画は「誰が何をしているか」を伝える媒体であり、すべてのコマに主役を詰め込む必要はありません。</p>
+<h2>コマ単位の登場人物制御とは</h2>
+<p>漫画のコマにはそれぞれ役割があります。引きの絵（ロングショット）で状況を説明し、寄りの絵（クローズアップ）で感情や動作を強調します。AIに指示を出す際、全コマ共通のプロンプトを使うのではなく、コマごとに「誰が」「どこで」「何をしているか」を具体的に指定することが重要です。</p>
+<p>例えば、会話シーンでは「Aの顔」「Bの反応」「二人の距離感」を別々のコマに分けることで、視覚的な飽きを防げます。AI生成においても、コマごとに「人物の有無」を明示することで、背景描写の密度を上げることが可能です。</p>
+<h2>ページ設計の具体的手順</h2>
+<p>読者を飽きさせないページを作るには、以下の3ステップを意識しましょう。</p>
+<ol>
+<li>状況説明（ロングショット）：キャラクターをあえて小さく描くか、背景のみのコマを挟む。</li>
+<li>視線誘導（ミディアムショット）：キャラクターの顔だけでなく、手元や目線先の対象物を描く。</li>
+<li>感情強調（クローズアップ）：キャラクターの表情や、特定のパーツに焦点を当てる。</li>
+</ol>
+<p>失敗例として多いのは、すべてのコマでキャラクターの全身を描こうとすることです。改善策としては、あえて「キャラクターがフレームアウトしているコマ」を意図的に作成してください。これにより、読者は空間の広がりを感じ、次のコマへの期待感が高まります。</p>
+<h2>失敗例と改善のポイント</h2>
+<p>「AIが勝手にキャラを描いてしまう」という悩みは、プロンプトに「No character in this panel（このコマには人物を入れない）」というネガティブプロンプトを追加することで解決できます。また、背景だけを描いた素材をあらかじめ用意し、後からキャラクターを合成する手法も有効です。全てを一度に生成しようとせず、コマごとに分解して生成する「パーツ分け生成」が、クオリティ向上の鍵となります。</p>
+<h2>まとめ</h2>
+<p>漫画化において重要なのは、キャラクターを「配置」することではなく、物語の「リズム」を作ることです。全コマにキャラクターがいない状態を恐れず、むしろ「いないコマ」を効果的に使うことで、視覚的なメリハリが生まれます。まずは1ページ分、コマごとに役割を決めて生成することから始めてみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

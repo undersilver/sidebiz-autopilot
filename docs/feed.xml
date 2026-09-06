@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html</guid>
+      <pubDate>Sun, 06 Sep 2026 16:32:34 +0900</pubDate>
+      <description>AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。</description>
+    </item>
+    <item>
       <title>ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-28-ai-game-article-proofreading-separation.html</guid>
       <pubDate>Tue, 28 Jul 2026 11:55:32 +0900</pubDate>
       <description>AIが書いたゲーム記事の校閲で重要な、公開用文章と内部メモを明確に分離する方法を具体例と手順で解説します。初心者でも実践しやすい失敗例や改善例も紹介し、効率的かつ誤情報を防ぐポイントに絞った内容です。</description>
-    </item>
-    <item>
-      <title>漫画の読み順が崩れないコマ割りの基本：視線誘導とページめくりをわかりやすく解説</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-27-manga-komawari-rydensei-basic.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-27-manga-komawari-rydensei-basic.html</guid>
-      <pubDate>Mon, 27 Jul 2026 15:58:42 +0900</pubDate>
-      <description>漫画の読み順が自然に伝わるコマ割りの基本ルールを、視線の流れやページめくりを意識した具体例を交えて解説します。初心者でもすぐ実践できる配置のコツや失敗例の改善方法を紹介し、読みやすい漫画作りをサポートします。</description>
     </item>
   </channel>
 </rss>
