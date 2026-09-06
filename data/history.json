@@ -336,5 +336,10 @@
     "date": "2026-09-06",
     "title": "小説を漫画化するときに全ページへ同じ人物が出る問題",
     "draft": "drafts/2026-09-06-manga-adaptation-character-control.json"
+  },
+  {
+    "date": "2026-09-07",
+    "title": "漫画化でキャラクターの服装をページ間で統一する方法",
+    "draft": "drafts/2026-09-07-manga-costume-consistency-guide.json"
   }
 ]
