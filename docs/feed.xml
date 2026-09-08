@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html</guid>
+      <pubDate>Tue, 08 Sep 2026 11:49:58 +0900</pubDate>
+      <description>プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。</description>
+    </item>
+    <item>
       <title>漫画制作でキャラクターの服装を統一する！衣装設定表と変更禁止要素の活用術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-07-manga-costume-consistency-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-07-manga-costume-consistency-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-30-organize-duplicate-content-for-ebook.html</guid>
       <pubDate>Thu, 30 Jul 2026 12:53:10 +0900</pubDate>
       <description>AIを活用してゲームや漫画、創作分野の記事を月間まとめから電子書籍にする際、似た説明の重複を整理し、章ごとに再構成する具体的な手順を初心者向けに解説します。具体例や失敗例も交え、実践的な編集方法を紹介。</description>
-    </item>
-    <item>
-      <title>小説を漫画化する時のコマ単位登場人物管理術：具体例と失敗から学ぶ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-29-novel-to-manga-panel-character-management.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-29-novel-to-manga-panel-character-management.html</guid>
-      <pubDate>Wed, 29 Jul 2026 11:09:12 +0900</pubDate>
-      <description>小説のストーリーを漫画化する際、コマごとに登場人物を管理する具体的な方法を紹介します。初心者でも試せる手順や失敗例、改善策を交えて、効率的かつ正確なキャラ配置を実現しましょう。</description>
     </item>
   </channel>
 </rss>

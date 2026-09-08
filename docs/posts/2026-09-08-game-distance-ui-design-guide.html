@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術">
+  <meta property="og:description" content="プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-08-game-distance-ui-design-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術">
+  <meta name="twitter:description" content="プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-08-game-distance-ui-design-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術", "description": "プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-08-game-distance-ui-design-guide.png?v=3"], "datePublished": "2026-09-08T11:49:58.457909+09:00", "dateModified": "2026-09-08T11:49:58.457926+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術</h1>
+  <p class="lead">プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-08-game-distance-ui-design-guide.png?v=3" alt="数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術">
+  <h2>なぜ数値だけでは「間合い」が伝わらないのか</h2>
+<p>ゲーム制作において、敵との距離を「残り100m」といった数値で表示しても、プレイヤーは瞬時に反応できません。アクションや対戦ゲームにおいて、プレイヤーが知りたいのは「今、自分の攻撃が届くのかどうか」という事実だけです。</p>
+<p>数値は脳で処理するプロセスが必要ですが、視覚情報は直感に訴えかけます。今回は、プレイヤーが操作に集中できるよう、距離を直感的に伝えるUIデザインの工夫を紹介します。</p>
+<h2>色の変化で「攻撃範囲」を可視化する</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>距離を数値で表示するのではなく、攻撃が届くかどうかを色で分けるのがポイントです。人間は色による変化を瞬時に認識できるため、アクションのテンポを崩しません。</p></div></aside>
+<p>最も効果的なのは、敵との距離に応じてUIの色を変化させる手法です。例えば、攻撃が届かない距離では「青」、射程圏内に入ると「赤」に変化するサークルを足元に表示します。</p>
+<ul>
+<li>具体例：キャラクターの足元に薄い円形を表示し、敵が範囲内に入った瞬間に円の色を反転または発光させる。</li>
+<li>失敗例：色を細かくグラデーションさせすぎてしまい、プレイヤーが「今、攻撃できるのか？」を判断するのに迷いが生じる。</li>
+<li>改善例：二値化（届くか、届かないか）を徹底し、色変化の境界線を明確にすることで、迷いを排除しました。</li>
+</ul>
+<h2>位置関係を強調するガイドラインの活用</h2>
+<p>画面の端にいる敵との距離感は、カメラワークだけでは把握しにくいことがあります。そこで、画面の左右や中心に、敵の方向と距離を示すインジケーターを配置しましょう。</p>
+<p>この時、重要なのは「距離が縮まるほどインジケーターが大きくなる」あるいは「敵のアイコンが中央に近づく」といった動きを加えることです。これにより、視線を敵に固定したままでも、周辺視野で距離を把握できるようになります。</p>
+<h2>形状の変化で「危険度」を伝える</h2>
+<p>距離だけでなく、敵の攻撃準備が完了したかどうかを形状で示すのも有効です。攻撃が届く距離にある場合、ターゲットマーカーを「円」から「鋭角な三角形」に変えるなど、形状に変化を持たせます。</p>
+<p>人間は鋭い形状に対して本能的に警戒心を抱くため、プレイヤーは「今は攻めるべきか、避けるべきか」を論理的な思考を挟まずに判断できるようになります。</p>
+<h2>まとめ：直感的なUIが没入感を生む</h2>
+<p>ゲームにおける距離システムは、プレイヤーの「判断」をいかに速くするかが鍵です。数値という情報を削ぎ落とし、色・位置・形状という直感的なフィードバックを優先することで、ゲーム体験はより滑らかになります。</p>
+<p>まずは、現在制作中のゲームで「攻撃が届く瞬間に何かが変わる」という演出を一つ追加してみてください。それだけで、操作の心地よさが劇的に向上するはずです。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
