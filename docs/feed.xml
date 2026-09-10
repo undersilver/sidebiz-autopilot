@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>土俵の上の戦略！力士を主人公にしたローグライクゲームの戦闘システム設計術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-10-sumo-roguelike-combat-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-10-sumo-roguelike-combat-design.html</guid>
+      <pubDate>Thu, 10 Sep 2026 14:31:16 +0900</pubDate>
+      <description>力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込む方法を解説。独自のローグライク戦闘を設計するための具体的なステップを紹介します。</description>
+    </item>
+    <item>
       <title>数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-04-ai-json-safe-publishing-guide.html</guid>
       <pubDate>Tue, 04 Aug 2026 13:09:19 +0900</pubDate>
       <description>AIで生成したJSONデータをWebサイトへ安全に公開するための設計手法を解説。入力検証からHTMLエスケープ、失敗時の停止処理まで、初心者でも実装可能な品質管理のコツを紹介します。</description>
-    </item>
-    <item>
-      <title>月間記事を電子書籍にまとめるときの重複整理術：似た説明を統合し章構成へ再配置する具体手順</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-30-organize-duplicate-content-for-ebook.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-07-30-organize-duplicate-content-for-ebook.html</guid>
-      <pubDate>Thu, 30 Jul 2026 12:53:10 +0900</pubDate>
-      <description>AIを活用してゲームや漫画、創作分野の記事を月間まとめから電子書籍にする際、似た説明の重複を整理し、章ごとに再構成する具体的な手順を初心者向けに解説します。具体例や失敗例も交え、実践的な編集方法を紹介。</description>
     </item>
   </channel>
 </rss>
