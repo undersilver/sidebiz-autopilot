@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html</guid>
+      <pubDate>Fri, 11 Sep 2026 16:42:47 +0900</pubDate>
+      <description>ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。</description>
+    </item>
+    <item>
       <title>土俵の上の戦略！力士を主人公にしたローグライクゲームの戦闘システム設計術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-10-sumo-roguelike-combat-design.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-10-sumo-roguelike-combat-design.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-05-game-enemy-design-5-roles.html</guid>
       <pubDate>Wed, 05 Aug 2026 12:56:30 +0900</pubDate>
       <description>敵キャラクターを「高速」「高耐久」「遠距離」「状態異常」「特殊」の5つに分類するだけで、ゲームバランスが劇的に向上します。初心者でも実践できる敵設計のノウハウを解説します。</description>
-    </item>
-    <item>
-      <title>AI生成データを安全にWeb公開する仕組み：自動化と品質を両立する設計術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-04-ai-json-safe-publishing-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-04-ai-json-safe-publishing-guide.html</guid>
-      <pubDate>Tue, 04 Aug 2026 13:09:19 +0900</pubDate>
-      <description>AIで生成したJSONデータをWebサイトへ安全に公開するための設計手法を解説。入力検証からHTMLエスケープ、失敗時の停止処理まで、初心者でも実装可能な品質管理のコツを紹介します。</description>
     </item>
   </channel>
 </rss>

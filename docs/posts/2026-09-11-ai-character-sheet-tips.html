@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意">
+  <meta property="og:description" content="ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-11-ai-character-sheet-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意">
+  <meta name="twitter:description" content="ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-11-ai-character-sheet-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意", "description": "ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-11-ai-character-sheet-tips.png?v=3"], "datePublished": "2026-09-11T16:42:47.682105+09:00", "dateModified": "2026-09-11T16:42:47.682123+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意</h1>
+  <p class="lead">ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-11-ai-character-sheet-tips.png?v=3" alt="AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意">
+  <h2>なぜAIで九面図を作ると崩れるのか</h2>
+<p>ゲームのキャラクターデザインや漫画の資料として便利な「九面図（キャラクターシート）」。AIで生成すると、正面、側面、背面と並べるはずが、パーツが混ざったり、顔の造形が微妙に変わったりすることがあります。</p>
+<p>主な原因は、AIが「一枚の絵」として全体を捉えようとして、複数の視点を同時に生成しようと混乱するためです。特に「同じキャラクターであること」と「異なる角度であること」という相反する指示が、AIの判断を迷わせています。</p>
+<h2>プロンプト改善の前後比較</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIに「orthographic projection（投影図法）」と指示することで、図面としての正確さが格段に上がります。これだけでキャラクターの崩れを大きく減らせます。</p></div></aside>
+<p>プロンプトを工夫するだけで、キャラクターの整合性は大きく向上します。比較してみましょう。</p>
+<h3>改善前（失敗しやすい例）</h3>
+<p>「Character sheet of a hero, front view, side view, back view, high quality」
+このプロンプトでは、AIが各視点を独立したものとして認識できず、正面の顔が側面にも適用されたり、服の装飾が消えたりします。</p>
+<h3>改善後（成功率を高める例）</h3>
+<p>「Character sheet of a hero, multiple views including front view, side view, back view, consistent character design, white background, detailed, high resolution, orthographic projection」
+「orthographic projection（投影図法）」という言葉を加えることで、AIに「正確な図面」としての出力を促すのがポイントです。また、「consistent character design」と明記することで、同一性を保つよう強く指示します。</p>
+<h2>向きを安定させる3つのテクニック</h2>
+<p>プロンプト以外にも、生成の質を高めるための具体的な手法があります。</p>
+<ol>
+<li>視点を限定する: 一度に九面すべてを出そうとせず、まずは「正面と側面」など、2〜3個に絞って生成してから、後からパーツを組み合わせるのが確実です。</li>
+<li>構図の指定を具体的に: 「front view on the left, side view in the center, back view on the right」のように、位置関係を明確にプロンプトに含めると、AIの配置ミスが激減します。</li>
+<li>モデルの特性を活かす: アニメ調に強いモデルなら「anime style」を、写実系なら「photorealistic」を加え、キャラクターの質感を固定することも重要です。</li>
+</ol>
+<h2>失敗したときの修正方法</h2>
+<p>もし生成された画像の一部が崩れた場合、すべてをやり直す必要はありません。画像編集ソフトで正しい部分を切り出し、AIの「インペイント（部分描き直し）」機能を使って、不自然な箇所だけを修正しましょう。例えば、顔の向きだけが正面を向いてしまった場合、その部分をマスクして「side view of the face」と再生成することで、全体の整合性を保ったまま修正が可能です。</p>
+<p>まずは「orthographic projection」という言葉をプロンプトに加えるところから始めてみてください。これだけで、キャラクターの安定感が驚くほど変わるはずです。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
