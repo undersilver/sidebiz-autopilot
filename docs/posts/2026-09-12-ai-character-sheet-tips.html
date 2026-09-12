@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説">
+  <meta property="og:description" content="ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-12-ai-character-sheet-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説">
+  <meta name="twitter:description" content="ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-12-ai-character-sheet-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説", "description": "ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-12-ai-character-sheet-tips.png?v=3"], "datePublished": "2026-09-12T14:20:28.863860+09:00", "dateModified": "2026-09-12T14:20:28.863876+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説</h1>
+  <p class="lead">ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-12-ai-character-sheet-tips.png?v=3" alt="AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説">
+  <h2>なぜAIで描く九面図は崩れるのか</h2>
+<p>ゲーム制作でキャラクターの三面図や九面図を作成する際、AIが生成する画像が「左右で顔が違う」「体の向きが不自然」になることは珍しくありません。これは、AIがキャラクターを「立体」としてではなく、「複数の独立した画像」として認識していることが主な原因です。</p>
+<p>特に九面図のような複雑な構成では、一度のプロンプトですべてを完璧に描こうとすると、情報の過密化によりAIが混乱します。崩れを防ぐためには、AIに対する「方向の指示」を論理的に構造化する必要があります。</p>
+<h2>改善前のプロンプトと失敗例</h2>
+<p>多くの初心者が陥りがちなのが、単に「キャラクターの九面図、正面、背面、側面」と羅列するだけのプロンプトです。これでは、AIはそれぞれの視点をバラバラに解釈し、結果として髪型や服の装飾が微妙に異なるキャラクターが並んでしまいます。</p>
+<p>【失敗例のプロンプト】
+<code>character sheet, front view, back view, side view, 9 angles, high quality</code></p>
+<p>この方法では、AIは「どの視点がどの位置にあるべきか」というグリッド配置を無視し、一つの画面の中に視点が混在した不気味な画像が出力されやすくなります。</p>
+<h2>向きを安定させるための具体的な改善策</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIに「3x3 grid」という言葉を伝えるのがポイントです。これによりAIが画像を区画として認識しやすくなり、視点の配置が格段に安定します。曖昧な指示を避け、各視点を明確に記述しましょう。</p></div></aside>
+<p>AIに正確な九面図を描かせるためには、「視点の配置」と「視覚的な一貫性」を強調するプロンプトが有効です。以下の手順を試してみてください。</p>
+<ol>
+<li><strong>グリッド構造の指定</strong>: <code>character sheet, 3x3 grid, top view, front view, side view, back view</code>のように、配置を具体的に指示します。</li>
+<li><strong>一貫性の固定</strong>: <code>consistent character design, identical clothing, same hairstyle</code>といったキーワードを必ず含めます。</li>
+<li><strong>視点の明示</strong>: 曖昧な表現を避け、<code>view from front</code>, <code>view from back</code>, <code>view from side</code>と各視点を明確に区切ります。</li>
+</ol>
+<h2>改善後の比較：何が変わったのか</h2>
+<p>改善前後のプロンプトを比較すると、AIの出力には明らかな差が出ます。改善後は、各視点間での服のディテールや髪の跳ね方といった特徴が維持されやすくなります。</p>
+<p>特に、「グリッド」という言葉をプロンプトに含めることで、AIは画像を区画化して認識するようになります。これにより、九面図の各パーツが独立した視点として正しく配置され、全体としての一貫性が飛躍的に向上します。もちろん、完全に100％の再現は難しいため、最終的には画像編集ソフトでの微調整を前提とするのが現実的です。</p>
+<h2>まとめ：AIと協力して効率的に作成する</h2>
+<p>AIによる九面図作成は、完璧な一発出力ではなく「ベースを作成し、必要に応じて修正する」というプロセスが最も効率的です。プロンプトで方向を明確に指示し、AIが迷わない環境を作ってあげましょう。まずはシンプルなキャラクターから試して、プロンプトの調整を繰り返すことが上達への近道です。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

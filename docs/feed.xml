@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html</guid>
+      <pubDate>Sat, 12 Sep 2026 14:20:28 +0900</pubDate>
+      <description>ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。</description>
+    </item>
+    <item>
       <title>AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-06-github-actions-troubleshooting-guide.html</guid>
       <pubDate>Thu, 06 Aug 2026 14:43:57 +0900</pubDate>
       <description>GitHub Actionsの実行結果が赤色（失敗）になったとき、どこを見れば解決できるのか？初心者でも迷わない、エラー箇所を特定する最短の手順を解説します。</description>
-    </item>
-    <item>
-      <title>ゲーム制作が劇的に変わる！敵キャラクターの5つの役割分類法</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-05-game-enemy-design-5-roles.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-05-game-enemy-design-5-roles.html</guid>
-      <pubDate>Wed, 05 Aug 2026 12:56:30 +0900</pubDate>
-      <description>敵キャラクターを「高速」「高耐久」「遠距離」「状態異常」「特殊」の5つに分類するだけで、ゲームバランスが劇的に向上します。初心者でも実践できる敵設計のノウハウを解説します。</description>
     </item>
   </channel>
 </rss>
