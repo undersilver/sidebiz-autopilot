@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIで攻略！100階ダンジョンの敵配置を設計するコツ | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIで攻略！100階ダンジョンの敵配置を設計するコツ">
+  <meta property="og:description" content="100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-13-ai-dungeon-enemy-design.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIで攻略！100階ダンジョンの敵配置を設計するコツ">
+  <meta name="twitter:description" content="100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-13-ai-dungeon-enemy-design.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIで攻略！100階ダンジョンの敵配置を設計するコツ", "description": "100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-13-ai-dungeon-enemy-design.png?v=3"], "datePublished": "2026-09-13T16:56:46.880725+09:00", "dateModified": "2026-09-13T16:56:46.880741+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>AIで攻略！100階ダンジョンの敵配置を設計するコツ</h1>
+  <p class="lead">100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-13-ai-dungeon-enemy-design.png?v=3" alt="AIで攻略！100階ダンジョンの敵配置を設計するコツ">
+  <h2>100階ダンジョン設計の壁</h2>
+<p>ゲーム制作において、100階層ものダンジョンを設計するのは非常に骨が折れる作業です。単に敵を並べるだけではプレイヤーはすぐに飽きてしまいます。重要なのは、プレイヤーの成長に合わせて「適度な緊張感」と「達成感」を繰り返す難易度曲線です。</p>
+<p>AIを活用すれば、この膨大な配置作業を論理的に組み立てることが可能です。今回は、AIを使って納得感のあるダンジョン設計を行う手順を解説します。</p>
+<h2>10階層ごとの役割分担</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>100階を10階ごとのブロックに分け、役割を明確にしましょう。AIに役割を定義させることで、ダンジョン全体に一貫したゲーム体験を生み出すことができます。</p></div></aside>
+<p>100階を10階ごとのブロックに分け、それぞれに明確な「役割」を与えます。これが設計の指針となります。</p>
+<ul>
+<li>1-10階：操作習熟と基本ルールの理解</li>
+<li>11-20階：属性相性の導入</li>
+<li>21-30階：特殊能力を持つ敵の出現</li>
+<li>31-50階：中盤の壁（複数の敵との連携）</li>
+<li>51-80階：環境変化と複雑なギミック</li>
+<li>81-99階：極限のステータスと高難易度</li>
+<li>100階：総仕上げのボス戦</li>
+</ul>
+<p>この役割をAIにプロンプトとして入力することで、バラつきのない設計が可能です。</p>
+<h2>難易度曲線の作り方とAIプロンプト</h2>
+<p>難易度は一直線に上げるのではなく、「波」を作るのがコツです。例えば、10階層の終わりには少し難易度を下げて「休息」の階層を設けると、プレイヤーの満足度が高まります。</p>
+<p>AIへの指示例：
+「100階ダンジョンの敵配置表を作成してください。10階層ごとにテーマを設定し、難易度は『上昇・上昇・休息』のサイクルを繰り返してください。出力はCSV形式で、階層、敵の名前、特徴、推奨レベルを含めてください。」</p>
+<h2>失敗例と改善のヒント</h2>
+<p>よくある失敗は「AIに全て丸投げして、敵のステータスが単なる数値のインフレになること」です。これでは戦略性が失われます。</p>
+<p>改善策として、AIに「敵の個性を指定」させましょう。例えば「物理に強いが魔法に弱い」「集団で行動すると攻撃力が上がる」といった属性を付与させることで、プレイヤーはレベル上げ以外の戦略を考える必要が出てきます。</p>
+<h2>設計を検証する手順</h2>
+<p>AIが出力した配置表が適切かどうか、以下の項目でチェックします。</p>
+<ol>
+<li>属性の偏りはないか？（特定の武器だけで無双できないか）</li>
+<li>休息階層が適切に配置されているか？</li>
+<li>敵の特殊能力がゲームの進行度と合っているか？</li>
+</ol>
+<p>これらを自身のゲームシステムと照らし合わせ、微調整を加えることで、AIの出力を「使える設計図」へと昇華させます。まずは10階層分だけで試作し、バランスを確認してから全体に広げるのが最も効率的です。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

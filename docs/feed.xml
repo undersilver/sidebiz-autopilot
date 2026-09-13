@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIで攻略！100階ダンジョンの敵配置を設計するコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html</guid>
+      <pubDate>Sun, 13 Sep 2026 16:56:46 +0900</pubDate>
+      <description>100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。</description>
+    </item>
+    <item>
       <title>AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-07-ai-manga-character-consistency-guide.html</guid>
       <pubDate>Fri, 07 Aug 2026 12:46:58 +0900</pubDate>
       <description>AIで小説を漫画化する際、全ページに同じキャラクターを登場させるための具体的なコマ割り設計と制御方法を解説します。</description>
-    </item>
-    <item>
-      <title>GitHub Actionsで「赤色」が出ても焦らない！失敗原因を最短で見つける手順</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-06-github-actions-troubleshooting-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-06-github-actions-troubleshooting-guide.html</guid>
-      <pubDate>Thu, 06 Aug 2026 14:43:57 +0900</pubDate>
-      <description>GitHub Actionsの実行結果が赤色（失敗）になったとき、どこを見れば解決できるのか？初心者でも迷わない、エラー箇所を特定する最短の手順を解説します。</description>
     </item>
   </channel>
 </rss>
