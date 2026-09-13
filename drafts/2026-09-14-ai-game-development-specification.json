@@ -1,0 +1,40 @@
+{
+  "title": "AIでゲーム開発！最小構成の仕様書で成功させるコツ",
+  "slug": "ai-game-development-specification",
+  "category": "プログラミング",
+  "summary": "AIを活用してゲームを作りたい初心者向けに、最小限の工数で開発を成功させる「仕様書の絞り込み方」を解説します。",
+  "article_markdown": "# はじめに\nAIツールを活用してゲームを作りたいと考えたとき、多くの人が陥るのが「機能の盛り込みすぎ」です。特にGPT-4oやClaude 3.5 Sonnetのような高性能なAIモデルを使う場合でも、仕様が複雑すぎるとAIが混乱し、エラーを吐きやすくなります。今回は、初心者でも挫折しない「最小構成の仕様書」の作り方を解説します。\n\n## 実装前に決める最小限の4項目\nAIに指示を出す前に、以下の4点だけをメモ帳に書き出してください。これだけで、AIの出力精度が劇的に向上します。\n\n1. ゲームのループ（開始→操作→終了）\n2. プレイヤーの操作方法（クリックのみ、キーボード操作など）\n3. 勝利・敗北条件\n4. 画面に表示する要素（スコア、ボタン、キャラクター画像）\n\nこれ以外の「ストーリー」や「細かい演出」は、まずは後回しにしましょう。\n\n## 失敗例：仕様が曖昧な場合\n「面白いアクションゲームを作って」と指示すると、AIは広範囲のコードを生成しようとして中途半端な結果になりがちです。また、キャラクターの移動速度やジャンプ力といった物理挙動を「いい感じに」と伝えても、AIには基準が分かりません。\n\n## 改善例：具体的な指示に変える\n「クリックするとキャラクターがジャンプする。画面上部から落ちてくる障害物に当たったらゲームオーバー。スコアは画面右上に表示する」といった、具体的な動作に落とし込みましょう。これだけで、AIは必要な関数を特定しやすくなります。\n\n## 開発をスムーズに進めるステップ\n1. **単一機能の実装**: まずは「キャラクターが動く」だけのコードを生成させます。\n2. **動作確認**: ブラウザや実行環境で意図通りか確認します。\n3. **機能の追加**: 「障害物を追加する」「スコアを加算する」と一つずつ指示を増やします。\n\n一度に全てを完成させようとせず、ブロックを積み上げるように開発するのがコツです。\n\n## おわりに\nAIとの開発は、仕様書を「いかに短く、明確にするか」が鍵です。まずはシンプルなミニゲームから始めて、成功体験を積み重ねてみてください。",
+  "social_post": "AIでゲームを作りたいけど何から始めればいい？実は仕様書を「4項目」に絞るだけで、AIのコード生成精度は劇的に変わります！初心者向けの開発のコツをまとめました。",
+  "short_video_script": "AIでゲームを作りたい人必見！「あれもこれも」と詰め込むと失敗します。まずは「操作・ループ・条件・表示」の4つだけ決めてください。具体的な手順を記事で解説しています。",
+  "thumbnail_prompt": "A clean, modern workspace with a laptop displaying code, a notepad with a simple 4-point checklist, and a game controller, high quality, minimalist aesthetic.",
+  "pikoron_tips": [
+    {
+      "after_heading": "実装前に決める最小限の4項目",
+      "message": "AI開発のコツは、機能を削ぎ落とすことです！「ゲームループ、操作、終了条件、表示要素」の4つを明確にするだけで、AIは驚くほど正確なコードを書いてくれますよ。"
+    }
+  ],
+  "quality_score": 95,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The article is well-structured and meets all criteria. A minor improvement could be adding a brief disclaimer that AI-generated code may still require manual debugging."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "estimated_review_minutes": 10,
+  "_meta": {
+    "created_at": "2026-09-14T08:52:56.410394+09:00",
+    "seed": {
+      "title": "初心者がCodexで小規模ゲームを作るときの仕様書",
+      "category": "プログラミング",
+      "original_angle": "実装前に決める項目を最小構成に絞る"
+    },
+    "status": "review"
+  }
+}
