@@ -1,0 +1,44 @@
+{
+  "title": "ローグライクの敗北後も再挑戦したくなる成長設計",
+  "slug": "2026-09-15-fallback",
+  "category": "ゲーム制作",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "HTTPError: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-09-15T09:16:18.263655+09:00",
+    "seed": {
+      "title": "ローグライクの敗北後も再挑戦したくなる成長設計",
+      "category": "ゲーム制作",
+      "original_angle": "引き継ぐ要素とリセットする要素のバランスを具体例で考える"
+    },
+    "status": "blocked"
+  }
+}
