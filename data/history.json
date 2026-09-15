@@ -376,5 +376,10 @@
     "date": "2026-09-15",
     "title": "ローグライクの敗北後も再挑戦したくなる成長設計",
     "draft": "drafts/2026-09-15-2026-09-15-fallback.json"
+  },
+  {
+    "date": "2026-09-16",
+    "title": "初心者向けWebゲームで最初に作るべき3画面",
+    "draft": "drafts/2026-09-16-web-game-development-3-screens.json"
   }
 ]
