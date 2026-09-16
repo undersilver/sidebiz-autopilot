@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>挫折しない！Webゲーム開発で最初に作るべき「3つの画面」とは？</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-16-web-game-development-3-screens.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-16-web-game-development-3-screens.html</guid>
+      <pubDate>Wed, 16 Sep 2026 10:00:21 +0900</pubDate>
+      <description>Webゲーム開発で挫折しないための秘訣は、機能を絞り込むこと。タイトル、プレイ、結果の3画面に集中する開発手法を解説します。</description>
+    </item>
+    <item>
       <title>AIでゲーム開発！最小構成の仕様書で成功させるコツ</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-14-ai-game-development-specification.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-14-ai-game-development-specification.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-10-sumo-roguelike-game-design.html</guid>
       <pubDate>Mon, 10 Aug 2026 16:22:30 +0900</pubDate>
       <description>力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライクを構築する方法を解説します。</description>
-    </item>
-    <item>
-      <title>数値は捨てろ！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-09-game-distance-ui-design.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-09-game-distance-ui-design.html</guid>
-      <pubDate>Sun, 09 Aug 2026 14:51:36 +0900</pubDate>
-      <description>数値表示に頼らず、色やUIの形状でプレイヤーに「攻撃が届く間合い」を直感的に伝えるためのデザイン手法を解説します。</description>
     </item>
   </channel>
 </rss>
