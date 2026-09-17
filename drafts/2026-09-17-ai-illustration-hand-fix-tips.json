@@ -1,0 +1,40 @@
+{
+  "title": "AIイラストの「手足の崩れ」を最小限に！初心者でもできる生成と修正のコツ",
+  "slug": "ai-illustration-hand-fix-tips",
+  "category": "AI活用",
+  "summary": "AIイラストで悩みがちな「手足の崩れ」を、生成前の指示出しと生成後の修正テクニックで劇的に改善する方法を解説します。",
+  "article_markdown": "## AIイラストで手足が崩れる理由\nAIが描くイラストで、指が6本あったり、関節が不自然に曲がっていたりすることは珍しくありません。これはAIが「手足の構造」を物理的なルールとして理解しているのではなく、膨大な画像データから「手足らしい形」を確率的に予測しているためです。この特性を理解し、少しの工夫を加えるだけで修正の手間を大幅に減らすことができます。\n\n## 生成前の指示出しを工夫する\nAIに描かせる際、プロンプト（指示文）に「手」や「足」に関する情報を具体的に盛り込むことが重要です。例えば、単純に「hand」と書くのではなく、「detailed fingers（詳細な指）」「well-defined joints（明確な関節）」といった単語を付け加えるだけで精度が上がります。\n\nまた、手足が画面の端に配置されると崩れやすくなる傾向があります。構図を指定する際に「full body（全身）」や「close up（アップ）」など、被写体がフレームに収まりやすい指示を出すのも有効な対策です。\n\n## 生成後に部分修正を行う\nどれだけ工夫しても、完璧な手足が出ないことはあります。そんな時は「インペイント（部分修正）」機能を活用しましょう。画像の一部を塗りつぶして、その部分だけを再生成する機能です。\n\n1. 崩れている手足の部分をブラシで塗りつぶす\n2. 「hand」や「fingers」といった単語を追加して再生成する\n3. 納得いくまで数回繰り返す\n\nこの際、全体のバランスを崩さないよう、狭い範囲から少しずつ修正するのがコツです。一度に広範囲を塗りつぶすと、周囲の服や背景まで変わってしまう可能性があるため注意してください。\n\n## 手足の修正を効率化するチェックリスト\n修正作業をスムーズに行うために、以下の手順をルーチン化してみましょう。\n\n- 全体を確認し、明らかに不自然な箇所を特定する\n- 修正が必要な部位を最小限の範囲で選択する\n- 再生成時に「指の形」を詳細に指定する\n- 複数の生成パターンから、最も違和感のないものを選ぶ\n\nもし、どうしても修正が難しい場合は、あえて「手が見えない構図」に変更するのも一つの手です。ポケットに手を入れているポーズや、何か物を持っているポーズを指定することで、指の描写を省略しつつ、自然なイラストに仕上げることができます。\n\nAIイラストは試行錯誤の繰り返しです。まずは小さな範囲の修正から始めて、理想の作品を作り上げてください。",
+  "social_post": "AIイラストの「手足の崩れ」に悩んでいませんか？プロンプトの工夫とインペイント機能を使えば、驚くほど自然に修正できます！初心者でも今日から使えるテクニックをまとめました。",
+  "short_video_script": "【AIイラスト講座】手足の崩れを直す魔法のテク！生成前のプロンプトで「指の形」を具体的に指示しよう。それでもダメならインペイント機能で部分修正！今日から試せるコツを解説します。",
+  "thumbnail_prompt": "A high-quality, professional AI-generated illustration showing a split screen: one side with a messy hand, the other with a perfectly fixed, natural-looking hand. Bright, modern, clean aesthetic.",
+  "pikoron_tips": [
+    {
+      "after_heading": "生成後に部分修正を行う",
+      "message": "インペイント機能を使うときは、修正範囲を小さくするのがコツです。広範囲を塗りつぶすと全体の構図が崩れやすくなるため、指先だけ、関節だけといった単位で少しずつ修正を繰り返しましょう。"
+    }
+  ],
+  "quality_score": 95,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The article is highly practical and meets all criteria. A minor improvement could be adding a brief mention that specific AI tools (like Stable Diffusion or Midjourney) have different interfaces for inpainting, but it is not strictly necessary for a general guide."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "estimated_review_minutes": 10,
+  "_meta": {
+    "created_at": "2026-09-17T09:04:11.753587+09:00",
+    "seed": {
+      "title": "AI画像の不自然な手足を減らす確認と修正の手順",
+      "category": "AI活用",
+      "original_angle": "生成前の指示と生成後の部分修正を初心者向けに整理する"
+    },
+    "status": "review"
+  }
+}
