@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIイラストの「手足の崩れ」を最小限に！初心者でもできる生成と修正のコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-17-ai-illustration-hand-fix-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-17-ai-illustration-hand-fix-tips.html</guid>
+      <pubDate>Thu, 17 Sep 2026 12:06:20 +0900</pubDate>
+      <description>AIイラストで悩みがちな「手足の崩れ」を、生成前の指示出しと生成後の修正テクニックで劇的に改善する方法を解説します。</description>
+    </item>
+    <item>
       <title>挫折しない！Webゲーム開発で最初に作るべき「3つの画面」とは？</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-16-web-game-development-3-screens.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-16-web-game-development-3-screens.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-11-ai-character-sheet-optimization.html</guid>
       <pubDate>Tue, 11 Aug 2026 10:18:29 +0900</pubDate>
       <description>ゲームや漫画制作に不可欠なキャラクターの三面図。AI生成で向きが崩れる原因を特定し、プロンプトの指定方法を改善して安定させるための具体的なテクニックを解説します。</description>
-    </item>
-    <item>
-      <title>土俵の上の戦略！力士を主人公にしたローグライクゲームの戦闘システム設計術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-10-sumo-roguelike-game-design.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-10-sumo-roguelike-game-design.html</guid>
-      <pubDate>Mon, 10 Aug 2026 16:22:30 +0900</pubDate>
-      <description>力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライクを構築する方法を解説します。</description>
     </item>
   </channel>
 </rss>
