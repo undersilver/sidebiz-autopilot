@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>100階層ローグライクで「ボス」を攻略する！段階的な難易度設計ガイド</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-18-roguelike-dungeon-boss-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-18-roguelike-dungeon-boss-design.html</guid>
+      <pubDate>Fri, 18 Sep 2026 16:55:10 +0900</pubDate>
+      <description>100階層におよぶローグライクゲームにおいて、プレイヤーを飽きさせないボス設計の秘訣を解説。10階ごとの区切りで「学習」と「挑戦」を繰り返す仕組みを具体的に紹介します。</description>
+    </item>
+    <item>
       <title>AIイラストの「手足の崩れ」を最小限に！初心者でもできる生成と修正のコツ</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-17-ai-illustration-hand-fix-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-17-ai-illustration-hand-fix-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-12-ai-dungeon-enemy-design.html</guid>
       <pubDate>Wed, 12 Aug 2026 13:01:57 +0900</pubDate>
       <description>AIを活用して100階層ものダンジョンの敵配置を効率よく設計する方法を解説。10階ごとの役割分担と難易度曲線を意識した、バランスの良い設計のコツを具体例と共に紹介します。</description>
-    </item>
-    <item>
-      <title>AIでキャラクターの三面図を崩さず生成する！プロンプト改善のコツ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-11-ai-character-sheet-optimization.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-11-ai-character-sheet-optimization.html</guid>
-      <pubDate>Tue, 11 Aug 2026 10:18:29 +0900</pubDate>
-      <description>ゲームや漫画制作に不可欠なキャラクターの三面図。AI生成で向きが崩れる原因を特定し、プロンプトの指定方法を改善して安定させるための具体的なテクニックを解説します。</description>
     </item>
   </channel>
 </rss>
