@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法">
+  <meta property="og:description" content="毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-19-game-thumbnail-automation-with-pillow.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法">
+  <meta name="twitter:description" content="毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-19-game-thumbnail-automation-with-pillow.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法", "description": "毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-19-game-thumbnail-automation-with-pillow.png?v=3"], "datePublished": "2026-09-19T14:26:37.172461+09:00", "dateModified": "2026-09-19T14:26:37.172479+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法</h1>
+  <p class="lead">毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-19-game-thumbnail-automation-with-pillow.png?v=3" alt="AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法">
+  <h2>なぜ「毎回AI生成」ではサムネイルが安定しないのか</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>キャラクターの統一感は視聴者の信頼に直結します。AIのランダム性に頼らず、お気に入りのキャラを固定素材化して使い回すのが、効率と品質を両立させる唯一の近道です。</p></div></aside>
+<p>ゲーム実況や攻略動画のサムネイルにおいて、統一感のあるキャラクターは視聴者の目印になります。しかし、AI画像生成ツールで毎回キャラクターを生成し直すと、微妙な顔立ちの変化や服装の差異が発生し、ブランドイメージが崩れてしまいます。</p>
+<p>これを解決する鍵は「素材の分離」です。背景や文字はAIで生成し、キャラクターだけはあらかじめ用意した高品質な透過PNG素材を合成する手法をとることで、誰がいつ見ても同じキャラクターがそこにいる状態を保てます。</p>
+<h2>Pythonライブラリ「Pillow」を使った合成の基本</h2>
+<p>画像処理の定番ライブラリ「Pillow」を使えば、プログラムで自動的に画像を重ね合わせることができます。難しい知識は不要で、数行のコードで「背景画像の上にキャラクター画像を配置する」という処理が可能です。</p>
+<pre><code class="language-python">from PIL import Image
+
+# 背景とキャラクターの読み込み
+background = Image.open('background.jpg')
+character = Image.open('mascot.png')
+
+# 合成（位置を指定）
+background.paste(character, (100, 200), character)
+background.save('thumbnail.jpg')
+</code></pre>
+<p>このように、<code>paste</code>関数を使うだけで、キャラクターを背景の好きな位置に配置できます。第三引数にキャラクター自身を指定することで、透過情報（アルファチャンネル）を維持したまま自然に合成可能です。</p>
+<h2>失敗しないための画像素材準備と改善策</h2>
+<p>この手法で最も重要なのは「素材の品質」です。以下のポイントを意識してください。</p>
+<ol>
+<li><strong>キャラクターの切り抜き</strong>: 背景を透明にしたPNG形式で保存しておくこと。境界線がガタつくと合成時に違和感が出るため、AIの除去ツールなどで丁寧に処理してください。</li>
+<li><strong>解像度の統一</strong>: 背景画像が1280x720なら、キャラクターもそれに合わせたサイズで作成しましょう。拡大しすぎると画質が劣化するため、大きめの素材を作っておき、コード内で縮小処理を入れるのがコツです。</li>
+<li><strong>影の追加</strong>: キャラクターの下に薄い黒色の円を配置するだけで、背景から浮き上がって見え、サムネイルとしての視認性が劇的に向上します。</li>
+</ol>
+<h2>自動化に向けたステップアップ</h2>
+<p>基本の合成ができるようになったら、次は「文字入れ」を自動化します。Pillowの<code>ImageDraw</code>モジュールを使えば、指定したフォントでタイトルを画像上に書き込めます。これにより、AIで背景を生成し、プログラムでキャラとタイトルを合成するだけで、サムネイル作成が完了します。</p>
+<p>もし「AIが生成した背景とキャラの色味が合わない」と感じる場合は、Pillowの<code>ImageEnhance</code>を使ってキャラクターの明るさやコントラストを調整する処理をコードに組み込んでみてください。これにより、どんな背景でもキャラクターが馴染むようになります。</p>
+<p>この方法なら、一度キャラクター素材を作ってしまえば、あとは背景を生成するだけで無限にサムネイルを作り出すことが可能です。ぜひ試してみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

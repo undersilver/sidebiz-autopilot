@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html</guid>
+      <pubDate>Sat, 19 Sep 2026 14:26:37 +0900</pubDate>
+      <description>毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。</description>
+    </item>
+    <item>
       <title>100階層ローグライクで「ボス」を攻略する！段階的な難易度設計ガイド</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-18-roguelike-dungeon-boss-design.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-18-roguelike-dungeon-boss-design.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-13-ai-dungeon-enemy-design.html</guid>
       <pubDate>Thu, 13 Aug 2026 10:29:16 +0900</pubDate>
       <description>AIを活用して、100階層におよぶダンジョンの敵配置を効率的かつ魅力的に設計する方法を解説。階層ごとの役割分担と難易度曲線の作り方を具体例とともに紹介します。</description>
-    </item>
-    <item>
-      <title>AIで攻略！100階ダンジョンの敵配置を設計するコツ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-12-ai-dungeon-enemy-design.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-12-ai-dungeon-enemy-design.html</guid>
-      <pubDate>Wed, 12 Aug 2026 13:01:57 +0900</pubDate>
-      <description>AIを活用して100階層ものダンジョンの敵配置を効率よく設計する方法を解説。10階ごとの役割分担と難易度曲線を意識した、バランスの良い設計のコツを具体例と共に紹介します。</description>
     </item>
   </channel>
 </rss>

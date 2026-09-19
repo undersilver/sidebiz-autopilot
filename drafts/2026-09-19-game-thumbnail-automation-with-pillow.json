@@ -49,6 +49,8 @@
       "category": "AI活用",
       "original_angle": "毎回キャラクターを生成せずPillowで安定した画像を合成する"
     },
-    "status": "review"
+    "status": "published",
+    "published_at": "2026-09-19T14:26:37.172461+09:00",
+    "updated_at": "2026-09-19T14:26:37.172479+09:00"
   }
 }
