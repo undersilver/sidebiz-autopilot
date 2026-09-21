@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html</guid>
+      <pubDate>Mon, 21 Sep 2026 14:49:20 +0900</pubDate>
+      <description>AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。</description>
+    </item>
+    <item>
       <title>絵が崩れない！漫画制作で「吹き出し」から配置する逆算テクニック</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-20-manga-balloon-first-layout-technique.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-20-manga-balloon-first-layout-technique.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-15-roguelike-growth-design-tips.html</guid>
       <pubDate>Sat, 15 Aug 2026 14:20:47 +0900</pubDate>
       <description>ローグライクゲームにおいて、プレイヤーが敗北しても「次はもっとうまくやれる」と感じるための成長設計を解説します。引き継ぐ要素とリセット要素の絶妙なバランスとは？</description>
-    </item>
-    <item>
-      <title>AIでゲーム開発！Codexで挫折しないための「最小仕様書」の作り方</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-14-game-dev-codex-minimal-spec.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-14-game-dev-codex-minimal-spec.html</guid>
-      <pubDate>Fri, 14 Aug 2026 15:09:36 +0900</pubDate>
-      <description>AI（Codex）を活用してゲームを開発する際、作り込みすぎて挫折しないための「最小構成の仕様書」作成術を解説します。</description>
     </item>
   </channel>
 </rss>

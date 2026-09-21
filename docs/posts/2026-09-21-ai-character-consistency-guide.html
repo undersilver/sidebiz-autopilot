@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略">
+  <meta property="og:description" content="AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-21-ai-character-consistency-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略">
+  <meta name="twitter:description" content="AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-21-ai-character-consistency-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略", "description": "AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-21-ai-character-consistency-guide.png?v=3"], "datePublished": "2026-09-21T14:49:20.130026+09:00", "dateModified": "2026-09-21T14:49:20.130043+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略</h1>
+  <p class="lead">AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-21-ai-character-consistency-guide.png?v=3" alt="AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略">
+  <h2>AI画像生成でキャラクターの顔が安定しない理由</h2>
+<p>AI画像生成を楽しんでいると、「さっきまで同じキャラクターだったのに、ポーズを変えたら別人の顔になった」という経験はありませんか？これは、AIがプロンプトの言葉を毎回ランダムに解釈し、構図やスタイルを優先して生成してしまうためです。</p>
+<p>キャラクターの一貫性を保つためには、AIに対して「この顔こそが正解である」という情報を、より具体的に、かつ段階的に与える必要があります。今回は、特別なツールを使わずに、プロンプトと設定の工夫だけで顔を固定する3つの戦略を紹介します。</p>
+<h2>1. 参照画像を使って「顔の設計図」を渡す</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>参照画像の影響度設定は重要です！強すぎると元の画像と全く同じ構図になってしまうので、まずは0.3から試して、少しずつ調整していくのが一番の近道ですよ。</p></div></aside>
+<p>最も効果的なのは、自分が理想とする顔の画像を「参照画像（Image-to-Image）」として活用することです。AIに言葉だけで説明しようとすると限界がありますが、画像という視覚情報があれば、AIは顔の輪郭や目鼻立ちを模倣しやすくなります。</p>
+<p><strong>手順：</strong>
+1. 理想の顔が描かれた画像を1枚用意する。
+2. 参照画像として読み込ませ、影響度（Strength）を調整する。
+3. 影響度が高すぎると元の画像に引きずられるため、0.3〜0.5程度から試すのがコツです。</p>
+<h2>2. 髪型や瞳の色を「固定特徴」として記述する</h2>
+<p>参照画像だけでなく、テキストによる補強も欠かせません。特に重要なのは、キャラクターの外見を構成する要素を「固定特徴」としてプロンプトの先頭に配置することです。</p>
+<p><strong>具体例：</strong>
+「blue eyes, short silver hair, mole under left eye, sharp chin」のように、顔のパーツを詳細に記述します。ポイントは、形容詞を重ねすぎず、簡潔に特徴を伝えること。また、背景や服の描写と顔の描写を明確に分けることで、AIが顔の情報を優先的に処理しやすくなります。</p>
+<h2>3. 差分指示で「顔の崩れ」を防ぐ</h2>
+<p>ポーズや服装を変えるとき、顔が崩れる原因の多くは「構図のプロンプト」が顔の描写を上書きしてしまうことにあります。これを防ぐには、顔の指示とポーズの指示を分けて考えることが重要です。</p>
+<p><strong>成功のコツ：</strong>
+- 顔の固定プロンプトをテンプレート化しておく。
+- ポーズや背景を変える際は、顔のプロンプトを削除せず、その後に付け加える形で記述する。
+- 失敗した場合は、顔の特徴を強調するプロンプトを「強調構文（括弧で囲むなど）」で強めてみましょう。</p>
+<p><strong>よくある失敗例と改善策：</strong>
+- 失敗：毎回プロンプトを書き直してしまい、特徴がブレる。
+- 改善：固定用の「顔プロンプトセット」をメモ帳などに保存し、コピペで運用する。</p>
+<p>これら3つのステップを組み合わせることで、キャラクターの個性を維持したまま、さまざまなシチュエーションのイラストを生成できるようになります。まずは1枚、お気に入りの顔を固定することから始めてみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
