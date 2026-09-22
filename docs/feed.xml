@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html</guid>
+      <pubDate>Tue, 22 Sep 2026 14:47:10 +0900</pubDate>
+      <description>AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。</description>
+    </item>
+    <item>
       <title>AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-17-ai-image-hand-foot-correction-guide.html</guid>
       <pubDate>Mon, 17 Aug 2026 08:14:45 +0900</pubDate>
       <description>AI画像生成でよくある「手足の崩れ」を最小限にするための、プロンプトの工夫と修正テクニックを初心者向けに解説します。</description>
-    </item>
-    <item>
-      <title>ローグライクの「敗北」を「成長」に変える！再挑戦したくなるゲーム設計のヒント</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-15-roguelike-growth-design-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-15-roguelike-growth-design-tips.html</guid>
-      <pubDate>Sat, 15 Aug 2026 14:20:47 +0900</pubDate>
-      <description>ローグライクゲームにおいて、プレイヤーが敗北しても「次はもっとうまくやれる」と感じるための成長設計を解説します。引き継ぐ要素とリセット要素の絶妙なバランスとは？</description>
     </item>
   </channel>
 </rss>

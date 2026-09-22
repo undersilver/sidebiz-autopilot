@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう">
+  <meta property="og:description" content="AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-22-ai-game-coding-fix-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう">
+  <meta name="twitter:description" content="AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-22-ai-game-coding-fix-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう", "description": "AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-22-ai-game-coding-fix-tips.png?v=3"], "datePublished": "2026-09-22T14:47:10.126609+09:00", "dateModified": "2026-09-22T14:47:10.126627+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう</h1>
+  <p class="lead">AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-22-ai-game-coding-fix-tips.png?v=3" alt="AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう">
+  <h2>はじめに</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIへの指示は、情報の整理が9割です。曖昧な指示を避け、論理的な情報を渡すことで、修正作業の時間を大幅に短縮できます。</p></div></aside>
+<p>ゲーム制作中に発生するバグ。AIに修正を依頼しても、「思ったような回答が返ってこない」「修正コードが動かない」という経験はありませんか？実は、AIへの指示がうまくいかない原因の多くは、伝える情報の不足や整理不足にあります。</p>
+<p>AIは魔法の杖ではなく、入力された情報に基づいて論理を構築するツールです。今回は、AIから的確な修正案を引き出すために必要な「4つの必須情報」を整理する方法を解説します。</p>
+<h2>1. 再現手順：バグの発生条件を絞り込む</h2>
+<p>AIが最も困るのは「なんとなく動かない」という曖昧な報告です。まずは、バグが起きるまでの操作をステップバイステップで書き出しましょう。</p>
+<p>【悪い例】
+「キャラクターが壁を突き抜けます。直してください。」</p>
+<p>【良い例】
+1. ゲームを開始する
+2. マップ左上の岩の角へ移動する
+3. ジャンプボタンを長押ししながら右へ移動する
+4. すると、壁の中にめり込む</p>
+<p>このように、手順を番号で分けることで、AIはどのコードが問題のトリガーになっているかを推測しやすくなります。</p>
+<h2>2. 期待結果：何が起きるべきだったのか</h2>
+<p>次に、「本来はどうなってほしかったのか」を明確にします。ここが曖昧だと、AIは修正の方向性を間違えてしまいます。</p>
+<p>「壁に当たったら、それ以上移動しないのが正解です」といったように、理想の状態を簡潔に伝えましょう。AIが目指すべきゴールを理解できれば、修正案の精度は劇的に向上します。</p>
+<h2>3. 実際の結果：今起きている現象を正直に伝える</h2>
+<p>次に、現状の不具合を具体的に記述します。エラーメッセージが出ている場合は、その内容をそのままコピー＆ペーストしてください。エラーがない場合でも、画面上で何が起きているのか（例：キャラクターが消える、音が鳴り止まない）を具体的に書きましょう。</p>
+<h2>4. 関連ファイル：コードの範囲を特定する</h2>
+<p>プロジェクト全体をAIに読み込ませるのではなく、問題に関連するファイルや関数を絞って提示するのがコツです。例えば、「PlayerController.csの移動処理部分」や「CollisionManager.csの判定ロジック」など、該当箇所を抜粋して渡しましょう。情報量を絞ることで、AIの回答速度と正確性が上がります。</p>
+<h2>実践：4つの情報をまとめるテンプレート</h2>
+<p>以下のテンプレートをコピーして、AIへの入力画面に貼り付けてみてください。</p>
+<hr />
+<p>【再現手順】
+1. 
+2. 
+【期待結果】</p>
+<p>【実際の結果】</p>
+<p>【関連ファイル】</p>
+<hr />
+<p>この形式で送るだけで、AIの回答は劇的に変わります。まずはこの「4つの型」を意識して、快適な開発環境を手に入れましょう。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
