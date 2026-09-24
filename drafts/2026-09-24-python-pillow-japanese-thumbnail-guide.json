@@ -1,0 +1,52 @@
+{
+  "title": "PythonとPillowでつくる！日本語サムネイル作成の落とし穴と解決策",
+  "slug": "python-pillow-japanese-thumbnail-guide",
+  "category": "プログラミング",
+  "summary": "Pythonの画像処理ライブラリ「Pillow」を使って日本語サムネイルを自動生成する際の、フォント選択や折り返し、レイアウト調整などの失敗しがちなポイントと、その解決策を解説します。",
+  "article_markdown": "## はじめに\n\nAIを使ってゲームや漫画のコンテンツを制作していると、サムネイルの作成を自動化したくなる場面があるでしょう。Pythonの画像処理ライブラリ「Pillow」は非常に強力ですが、日本語の扱いでつまずく人が後を絶ちません。今回は、多くの初心者が陥る失敗例を挙げながら、きれいに日本語を表示するためのノウハウを紹介します。\n\n## 1. 日本語フォントが「豆腐」になる原因と対策\n\nPillowで最も多い失敗が、日本語が「□（豆腐）」と表示されてしまう現象です。これは、デフォルトのフォントが日本語に対応していないことが原因です。\n\n**失敗例：**\n標準のフォント設定をそのまま使い、日本語の文字列を渡すと文字化けが発生します。\n\n**解決策：**\n日本語に対応したTrueTypeフォント（.ttfファイル）を明示的に指定する必要があります。Google Fontsなどで配布されている「Noto Sans JP」などをダウンロードし、パスを指定しましょう。\n\n```python\nfrom PIL import ImageFont\nfont = ImageFont.truetype(\"fonts/NotoSansJP-Bold.ttf\", 40)\n```\n\n## 2. 文字が突き抜ける！自動折り返しの落とし穴\n\nサムネイルの横幅に合わせて文字を配置しようとして、そのまま描画すると、長いタイトルが画像の外側に突き抜けてしまいます。\n\n**失敗例：**\n`draw.text()`を使い、改行コードを入れずに文字列を渡すだけでは、画像からはみ出してしまいます。\n\n**解決策：**\n`textwrap`ライブラリを併用して、文字数で強制的に改行を入れる処理を挟みます。または、Pillowの`textbbox`メソッドを使って、現在のテキストの幅を算出し、一定の幅を超えたら改行コードを挿入するロジックを実装しましょう。\n\n## 3. 文字サイズと余白のバランス調整\n\n文字サイズを大きくしすぎて、画像の上端や下端ギリギリに配置すると、窮屈な印象を与えてしまいます。また、文字の「ベースライン」を考慮しないと、縦方向の中心合わせがずれる原因になります。\n\n**失敗例：**\n`draw.text()`の座標を適当に指定し、文字が画像枠に接触している状態。\n\n**解決策：**\n`draw.textbbox()`を使ってテキストのバウンディングボックスを取得し、その幅と高さから中央座標を計算します。\n\n```python\nbbox = draw.textbbox((0, 0), text, font=font)\ntext_width = bbox[2] - bbox[0]\ntext_height = bbox[3] - bbox[1]\n# 中央配置の計算例\nx = (image_width - text_width) / 2\ny = (image_height - text_height) / 2\n```\n\n## 4. 視認性を高めるための「縁取り」テクニック\n\n背景画像が複雑だと、白文字や黒文字だけでは読みにくくなります。サムネイルにおいて視認性は命です。\n\n**失敗例：**\n背景写真の上にそのまま文字を乗せ、背景の模様に文字が溶け込んでしまう。\n\n**解決策：**\n文字の周囲に縁取り（ストローク）を入れます。Pillowの`stroke_width`と`stroke_fill`引数を使うのが最も簡単です。\n\n```python\ndraw.text((x, y), text, font=font, fill=\"white\", stroke_width=3, stroke_fill=\"black\")\n```\n\nこれだけで、どんな背景画像でも文字がくっきりと浮かび上がり、クリック率を向上させるサムネイルが作れます。ぜひ試してみてください。",
+  "social_post": "PythonとPillowでサムネイルを自動化したい方必見！日本語フォントの豆腐化や、文字が突き抜ける失敗を防ぐための具体的なコツをまとめました。特に「縁取り」と「自動折り返し」のテクニックは必読です！ #Python #Pillow #プログラミング",
+  "short_video_script": "Pythonでサムネイルを作るとき、日本語が豆腐になったり、文字がはみ出したりしていませんか？今日はその解決策を教えます！ポイントは、日本語フォントの指定、textwrapでの折り返し、そしてstroke引数を使った縁取りです。これだけでクオリティが劇的に上がりますよ！",
+  "thumbnail_prompt": "A clean, modern tutorial thumbnail showing Python code snippets on a screen, with a clear 'Before' and 'After' comparison of a Japanese text overlay on an image. Professional, high contrast, minimalist design, 4k.",
+  "pikoron_tips": [
+    {
+      "after_heading": "1. 日本語フォントが「豆腐」になる原因と対策",
+      "message": "日本語を表示するには、必ず日本語対応のフォントファイルを指定してね。デフォルト設定のままでは文字化けしてしまうから注意が必要だよ。"
+    },
+    {
+      "after_heading": "4. 視認性を高めるための「縁取り」テクニック",
+      "message": "背景が複雑なときは、文字に縁取りを入れるのが鉄則！Pillowのstroke_width引数を使えば、たった1行で読みやすさが格段にアップするよ。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "表現",
+      "item": "日本語の文字化け（豆腐）に関する技術的な説明が正確か",
+      "risk": "低"
+    },
+    {
+      "type": "権利",
+      "item": "サンプルコードで使用するフォントの選定が著作権的に安全か",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-09-24T09:14:06.422624+09:00",
+    "seed": {
+      "title": "PythonとPillowで日本語サムネイルを作るときの注意点",
+      "category": "プログラミング",
+      "original_angle": "日本語フォント・折り返し・文字サイズ・余白の失敗例を扱う"
+    },
+    "status": "review"
+  }
+}
