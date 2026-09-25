@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIイラストで「武器の左右反転」を防ぐ！一貫性を保つプロンプトと検査術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-25-ai-weapon-consistency-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-25-ai-weapon-consistency-guide.html</guid>
+      <pubDate>Fri, 25 Sep 2026 16:02:57 +0900</pubDate>
+      <description>ゲームや漫画の制作で、AIが描く武器の左右が入れ替わる現象に悩んでいませんか？プロンプトの工夫と、仕上げのチェックリストで一貫性を維持する具体的な解決策を解説します。</description>
+    </item>
+    <item>
       <title>AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-19-game-thumbnail-automation-with-pillow.html</guid>
       <pubDate>Wed, 19 Aug 2026 08:17:49 +0900</pubDate>
       <description>毎回キャラクターを描き直すのは非効率です。固定マスコット画像とPythonライブラリ『Pillow』を組み合わせ、AI生成の背景と合成してサムネイルを自動生成する方法を解説します。</description>
-    </item>
-    <item>
-      <title>AI画像の手足が変？生成前の指示と後からの修正で自然に仕上げるコツ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-17-ai-image-hand-foot-correction-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-17-ai-image-hand-foot-correction-guide.html</guid>
-      <pubDate>Mon, 17 Aug 2026 08:14:45 +0900</pubDate>
-      <description>AI画像生成でよくある「手足の崩れ」を最小限にするための、プロンプトの工夫と修正テクニックを初心者向けに解説します。</description>
     </item>
   </channel>
 </rss>
