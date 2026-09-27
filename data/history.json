@@ -431,5 +431,10 @@
     "date": "2026-09-26",
     "title": "漫画の読み順が崩れないコマ割りの基本",
     "draft": "drafts/2026-09-26-2026-09-26-fallback.json"
+  },
+  {
+    "date": "2026-09-27",
+    "title": "AIが書いたゲーム記事から内部メモを除く校閲方法",
+    "draft": "drafts/2026-09-27-ai-game-article-editing-tips.json"
   }
 ]
