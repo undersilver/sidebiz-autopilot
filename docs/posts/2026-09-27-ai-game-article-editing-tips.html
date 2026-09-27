@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIでゲーム記事を作成する際、自分用のメモが混ざって公開してしまうミスを防ぐ方法を解説。AIへの指示出しを工夫し、記事本文と管理情報をスマートに切り分ける実践的なテクニックを紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術">
+  <meta property="og:description" content="AIでゲーム記事を作成する際、自分用のメモが混ざって公開してしまうミスを防ぐ方法を解説。AIへの指示出しを工夫し、記事本文と管理情報をスマートに切り分ける実践的なテクニックを紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-27-ai-game-article-editing-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術">
+  <meta name="twitter:description" content="AIでゲーム記事を作成する際、自分用のメモが混ざって公開してしまうミスを防ぐ方法を解説。AIへの指示出しを工夫し、記事本文と管理情報をスマートに切り分ける実践的なテクニックを紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-27-ai-game-article-editing-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術", "description": "AIでゲーム記事を作成する際、自分用のメモが混ざって公開してしまうミスを防ぐ方法を解説。AIへの指示出しを工夫し、記事本文と管理情報をスマートに切り分ける実践的なテクニックを紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-27-ai-game-article-editing-tips.png?v=3"], "datePublished": "2026-09-27T15:07:09.750416+09:00", "dateModified": "2026-09-27T15:07:09.750430+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術</h1>
+  <p class="lead">AIでゲーム記事を作成する際、自分用のメモが混ざって公開してしまうミスを防ぐ方法を解説。AIへの指示出しを工夫し、記事本文と管理情報をスマートに切り分ける実践的なテクニックを紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-27-ai-game-article-editing-tips.png?v=3" alt="AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術">
+  <h2>AI記事に「内部メモ」が混ざるリスク</h2>
+<p>AIを使ってゲームレビューや攻略記事を書く際、ついやってしまいがちなのが「AIへの指示や、自分用のメモがそのまま本文に残ってしまう」というミスです。AIは非常に優秀ですが、こちらの意図を汲み取って『記事の構成案』や『注意点』まで丁寧に書き出してくれるため、そのままコピー＆ペーストすると、読者には不要な情報まで公開されてしまいます。</p>
+<p>例えば、「このゲームの操作性は良いが、難易度が高いので初心者には注意と書いて」という指示に対し、AIが「【執筆メモ：難易度が高いので注意と記載】操作性は抜群ですが、難易度は高めです」と出力してしまったことはありませんか？読者にとって、このような裏側のメモはノイズでしかありません。これを防ぐためのスマートな解決策を解説します。</p>
+<h2>記事とメモを分ける「出力テンプレート」のルール</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIに「[ARTICLE]」と「[MEMO]」というタグを指定するだけで、公開用と自分用のテキストを明確に分けられます。このルールを徹底するだけで、誤公開のリスクが大幅に減りますよ。</p></div></aside>
+<p>AIに記事を書かせる際、あらかじめ「出力形式」を指定することで、公開用テキストと管理用メモを物理的に切り分けることができます。おすすめは、AIに対して『記事本文』と『管理用メモ』を明確なタグで区切るよう指示することです。</p>
+<p>具体的には、プロンプトの最後に以下のルールを追加します。</p>
+<p>「出力は以下の形式を守ってください。
+[ARTICLE]
+（ここに読者向けの本文のみを出力）
+[/ARTICLE]
+[MEMO]
+（ここに私への確認事項や補足メモを出力）
+[/MEMO]」</p>
+<p>このように指定するだけで、AIは情報を構造化して出力してくれます。公開する際は、<code>[ARTICLE]</code>で囲まれた部分だけをコピーすれば、メモが混入するリスクを劇的に減らすことができます。</p>
+<h2>失敗例と改善のポイント</h2>
+<p>よくある失敗例は、AIに一度で全てを完成させようとすることです。例えば「ゲームの魅力を紹介して」とだけ伝えると、AIは記事の構成からメモまでをバラバラに出力しがちです。また、修正を繰り返すうちに、古いメモが新しい文章の中に埋もれてしまうこともあります。</p>
+<p>改善策として、「一度AIに叩き台を作らせる」→「内容を精査する」→「清書用のプロンプトを投げる」という2段階ステップを踏むのが有効です。特に、ゲームの数値や固有名詞については、AIが勝手に推測して書くことがあるため、必ず最後に「事実に誤りがないか」というチェック工程を挟むようにしましょう。</p>
+<h2>公開前の最終チェックリスト</h2>
+<p>記事を公開する直前、以下の3点だけを確認する癖をつけましょう。</p>
+<ol>
+<li>括弧や記号の確認：<code>[ ]</code>や<code>【 】</code>で囲まれた不自然な見出しがないか。</li>
+<li>敬体・常体の混在：AIが文末を迷って「です・ます」と「だ・である」が混ざっていないか。</li>
+<li>権利情報の確認：ゲームのスクリーンショットや、引用した文章が著作権を侵害していないか。</li>
+</ol>
+<p>これらはAIが自動で完璧にこなすのは難しいため、人間が最後に目を通すだけで十分です。この「分離ルール」を取り入れることで、執筆から公開までのスピードを落とさず、かつ品質の高い記事を安定して提供できるようになります。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

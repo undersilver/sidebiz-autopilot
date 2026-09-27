@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html</guid>
+      <pubDate>Sun, 27 Sep 2026 15:07:09 +0900</pubDate>
+      <description>AIでゲーム記事を作成する際、自分用のメモが混ざって公開してしまうミスを防ぐ方法を解説。AIへの指示出しを工夫し、記事本文と管理情報をスマートに切り分ける実践的なテクニックを紹介します。</description>
+    </item>
+    <item>
       <title>AIイラストで「武器の左右反転」を防ぐ！一貫性を保つプロンプトと検査術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-25-ai-weapon-consistency-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-25-ai-weapon-consistency-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-20-ai-manga-bubble-first-technique.html</guid>
       <pubDate>Thu, 20 Aug 2026 08:18:14 +0900</pubDate>
       <description>AIで漫画を描く際、絵を先に描いてセリフが入らなくなる失敗を回避する方法を紹介します。吹き出しを先に配置する「逆算レイアウト」で、構成と絵のバランスを完璧に整える手順を解説します。</description>
-    </item>
-    <item>
-      <title>AIとPillowで実現！ゲーム実況サムネイルを自動生成する効率化術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-19-game-thumbnail-automation-with-pillow.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-19-game-thumbnail-automation-with-pillow.html</guid>
-      <pubDate>Wed, 19 Aug 2026 08:17:49 +0900</pubDate>
-      <description>毎回キャラクターを描き直すのは非効率です。固定マスコット画像とPythonライブラリ『Pillow』を組み合わせ、AI生成の背景と合成してサムネイルを自動生成する方法を解説します。</description>
     </item>
   </channel>
 </rss>
