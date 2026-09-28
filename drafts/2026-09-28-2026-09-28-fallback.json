@@ -1,0 +1,44 @@
+{
+  "title": "小説を漫画化するときのコマごとの登場人物管理",
+  "slug": "2026-09-28-fallback",
+  "category": "漫画化",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "JSONDecodeError: Extra data: line 33 column 1 (char 2225)",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "Extra data: line 33 column 1 (char 2225)"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-09-28T09:17:37.904678+09:00",
+    "seed": {
+      "title": "小説を漫画化するときのコマごとの登場人物管理",
+      "category": "漫画化",
+      "original_angle": "場面全体ではなくコマ単位で登場人物を指定する方法を示す"
+    },
+    "status": "blocked"
+  }
+}
