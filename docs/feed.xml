@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>月間記事を電子書籍へ！AIを活用した「重複整理」と構成再編の極意</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-29-ai-blog-to-ebook-restructuring.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-29-ai-blog-to-ebook-restructuring.html</guid>
+      <pubDate>Tue, 29 Sep 2026 12:54:53 +0900</pubDate>
+      <description>ブログの連載記事を電子書籍化する際、どうしても発生する「説明の重複」。AIを活用して効率的に内容を統合し、読みやすい章構成へ再配置する具体的な手順を解説します。</description>
+    </item>
+    <item>
       <title>AI執筆のゲーム記事をスマートに公開！「内部メモ」を分離する校閲術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-21-ai-consistent-character-faces.html</guid>
       <pubDate>Fri, 21 Aug 2026 08:20:38 +0900</pubDate>
       <description>AI画像生成でキャラクターの顔が毎回変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つのアプローチで、一貫性のあるキャラクターを描き分けるための具体的な実践テクニックを解説します。</description>
-    </item>
-    <item>
-      <title>AI漫画制作の失敗を防ぐ！「吹き出し先行配置」で絵の破綻を解消する逆算テクニック</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-20-ai-manga-bubble-first-technique.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-20-ai-manga-bubble-first-technique.html</guid>
-      <pubDate>Thu, 20 Aug 2026 08:18:14 +0900</pubDate>
-      <description>AIで漫画を描く際、絵を先に描いてセリフが入らなくなる失敗を回避する方法を紹介します。吹き出しを先に配置する「逆算レイアウト」で、構成と絵のバランスを完璧に整える手順を解説します。</description>
     </item>
   </channel>
 </rss>
