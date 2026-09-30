@@ -446,5 +446,10 @@
     "date": "2026-09-29",
     "title": "月間記事を電子書籍へまとめるときの重複整理",
     "draft": "drafts/2026-09-29-ai-blog-to-ebook-restructuring.json"
+  },
+  {
+    "date": "2026-09-30",
+    "title": "ローグライクの武器と防具を階層ごとに強くする方法",
+    "draft": "drafts/2026-09-30-roguelike-gear-progression-guide.json"
   }
 ]
