@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ">
+  <meta property="og:description" content="ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-30-roguelike-gear-progression-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ">
+  <meta name="twitter:description" content="ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-30-roguelike-gear-progression-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ", "description": "ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-09-30-roguelike-gear-progression-guide.png?v=3"], "datePublished": "2026-09-30T15:32:22.951153+09:00", "dateModified": "2026-09-30T15:32:22.951172+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ</h1>
+  <p class="lead">ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-09-30-roguelike-gear-progression-guide.png?v=3" alt="ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ">
+  <h2>はじめに</h2>
+<p>ローグライクゲームの面白さは、限られたリソースでいかに強く生き残るかにあります。特に武器と防具の更新タイミングは、プレイヤーの満足度に直結する重要な要素です。今回は、初心者でも設計しやすい「10階層単位の強化サイクル」について解説します。</p>
+<h2>10階層単位の入手計画</h2>
+<p>ローグライクのダンジョンを10階層ごとに区切り、装備の「更新目安」を作ることで、プレイヤーは迷わずに探索を進められます。</p>
+<ul>
+<li>1〜10階層：基本装備の入手。数値は控えめにし、操作に慣れる期間。</li>
+<li>11〜20階層：最初の強化ポイント。武器の攻撃力が1.5倍になるような装備を配置。</li>
+<li>21〜30階層：特殊効果付きの装備が登場。属性や追加ダメージなどの差別化を開始。</li>
+</ul>
+<p>このサイクルを守ることで、プレイヤーは「次の10階層で新しい装備が出るはずだ」という期待感を持ちながらプレイできます。</p>
+<h2>数値の上げ幅をシミュレーションする</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>インフレを防ぐため、前階層の1.2〜1.5倍程度に抑えるのがコツです。急激な数値変化は、それまでの努力を無駄に感じさせてしまうので注意しましょう。</p></div></aside>
+<p>装備の強さを決める際、最もやってはいけないのが「急激なインフレ」です。例えば、1階層で攻撃力1の武器、10階層で攻撃力100の武器が出てしまうと、中間の装備が無価値になります。</p>
+<p>おすすめの計算式は「前階層の装備×1.2〜1.5倍」です。例えば、10階層で攻撃力10の武器なら、20階層では12〜15程度の武器を配置します。これにより、プレイヤーは「少しずつ強くなっている」という実感を得やすくなります。</p>
+<h2>失敗例と改善策</h2>
+<p>よくある失敗は「すべての階層で同じような装備が出る」ことです。これでは探索の喜びがありません。改善策として、階層ごとに「入手できる武器の傾向」を変えましょう。</p>
+<ul>
+<li>失敗例：全階層で攻撃力だけが上がる剣が出る。</li>
+<li>改善例：10階層までは剣、20階層からはリーチの長い槍、30階層からは状態異常付与ができる短剣を混ぜる。</li>
+</ul>
+<p>このように、武器の種類を混ぜることで、プレイヤーは自分のプレイスタイルに合った装備を選択する楽しみが生まれます。</p>
+<h2>まとめ</h2>
+<p>武器と防具の強化は、プレイヤーに「成長の階段」を登らせる作業です。まずは10階層単位で数値を調整し、徐々に種類を増やしていくことから始めてみてください。完璧なバランスを目指すよりも、まずはプレイヤーが「強くなった！」と感じられる瞬間を一つでも多く作ることが大切です。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

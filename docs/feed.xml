@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html</guid>
+      <pubDate>Wed, 30 Sep 2026 15:32:22 +0900</pubDate>
+      <description>ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。</description>
+    </item>
+    <item>
       <title>月間記事を電子書籍へ！AIを活用した「重複整理」と構成再編の極意</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-29-ai-blog-to-ebook-restructuring.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-29-ai-blog-to-ebook-restructuring.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-22-ai-game-coding-tips.html</guid>
       <pubDate>Sat, 22 Aug 2026 13:27:50 +0900</pubDate>
       <description>AIにゲームのバグ修正や機能追加を依頼する際、曖昧な指示では期待通りの回答が得られません。この記事では、AIが短時間で正解を出せる「再現手順・期待結果・実際の結果・関連ファイル」という4つの必須情報を解説します。</description>
-    </item>
-    <item>
-      <title>AI画像生成で「同じ顔」を維持する！キャラクターの一貫性を保つ3つのステップ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-21-ai-consistent-character-faces.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-21-ai-consistent-character-faces.html</guid>
-      <pubDate>Fri, 21 Aug 2026 08:20:38 +0900</pubDate>
-      <description>AI画像生成でキャラクターの顔が毎回変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つのアプローチで、一貫性のあるキャラクターを描き分けるための具体的な実践テクニックを解説します。</description>
     </item>
   </channel>
 </rss>
