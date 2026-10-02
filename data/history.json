@@ -456,5 +456,10 @@
     "date": "2026-10-01",
     "title": "小説の長い説明を漫画の1ページへ圧縮する方法",
     "draft": "drafts/2026-10-01-novel-to-manga-compression-technique.json"
+  },
+  {
+    "date": "2026-10-02",
+    "title": "ドット絵キャラクターの九面図をゲーム素材へ変換する手順",
+    "draft": "drafts/2026-10-02-pixel-art-character-sheet-guide.json"
   }
 ]
