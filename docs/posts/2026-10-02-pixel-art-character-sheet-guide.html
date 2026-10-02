@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIで生成したドット絵の九面図を、ゲームエンジンで使える素材へ変換する具体的な手順を解説。切り出しからサイズ統一、命名規則まで、作業効率を上げるための実務フローを紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ">
+  <meta property="og:description" content="AIで生成したドット絵の九面図を、ゲームエンジンで使える素材へ変換する具体的な手順を解説。切り出しからサイズ統一、命名規則まで、作業効率を上げるための実務フローを紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-02-pixel-art-character-sheet-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ">
+  <meta name="twitter:description" content="AIで生成したドット絵の九面図を、ゲームエンジンで使える素材へ変換する具体的な手順を解説。切り出しからサイズ統一、命名規則まで、作業効率を上げるための実務フローを紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-02-pixel-art-character-sheet-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ", "description": "AIで生成したドット絵の九面図を、ゲームエンジンで使える素材へ変換する具体的な手順を解説。切り出しからサイズ統一、命名規則まで、作業効率を上げるための実務フローを紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-02-pixel-art-character-sheet-guide.png?v=3"], "datePublished": "2026-10-02T15:36:55.612958+09:00", "dateModified": "2026-10-02T15:36:55.612979+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ</h1>
+  <p class="lead">AIで生成したドット絵の九面図を、ゲームエンジンで使える素材へ変換する具体的な手順を解説。切り出しからサイズ統一、命名規則まで、作業効率を上げるための実務フローを紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-02-pixel-art-character-sheet-guide.png?v=3" alt="AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ">
+  <h2>はじめに</h2>
+<p>AIを活用してドット絵のキャラクター九面図を作成したものの、「ここからどうやってゲームで動かせる素材にするの？」と悩む方は少なくありません。せっかく生成したキャラクターも、適切な手順で処理しなければ、ゲーム画面で正しく表示されません。本記事では、九面図からキャラクター素材を切り出し、ゲームエンジンに実装可能な状態にするまでの実務的な手順を解説します。</p>
+<h2>1. 九面図の確認とグリッド設定</h2>
+<p>まずは生成した九面図を画像編集ソフト（AsepriteやPhotoshopなど）で開きます。重要なのは「グリッド設定」です。ドット絵はピクセル単位で管理されるため、AIが生成した画像のサイズに合わせてグリッドを表示させます。</p>
+<ul>
+<li>失敗例：グリッドを無視して手動で切り抜くと、キャラクターの足元がずれて歩行アニメーションがガタつく原因になります。</li>
+<li>改善例：画像全体の幅をキャラクターの数で割り、正確なピクセル数でグリッドを引くことで、切り出しミスをゼロにできます。</li>
+</ul>
+<h2>2. パーツの切り出しとキャンバスサイズ統一</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>キャンバスサイズを統一する際は、キャラクターの足元を基準に位置を揃えるのがコツです。ここを揃えるだけで、ゲーム内でのキャラクターの浮き沈みがなくなりますよ！</p></div></aside>
+<p>次に、各ポーズを個別のファイルとして切り出します。ここで最も重要なのが「キャンバスサイズの統一」です。例えば、32x32ピクセルのキャラクターなら、全てのポーズを32x32のキャンバスに収めるのが基本です。</p>
+<ul>
+<li>手順：キャラクターの中心軸を合わせるように配置します。この時、キャラクターの足元がキャンバスの下端から何ピクセル離れているかを一定に保つと、ゲーム内での配置が非常に楽になります。</li>
+</ul>
+<h2>3. 命名規則による管理</h2>
+<p>素材が増えると管理が煩雑になります。必ずルールを決めて命名しましょう。「キャラクター名_ポーズ名_方向_連番」の形式が推奨されます。</p>
+<p>例：<code>hero_walk_front_01.png</code>, <code>hero_walk_front_02.png</code></p>
+<p>このように命名しておくことで、ゲームエンジンのインポート時に自動ソートが効き、作業効率が飛躍的に向上します。</p>
+<h2>4. 最終確認と微調整</h2>
+<p>最後に、切り出した素材を実際にゲームエンジンのテスト画面で並べてみます。特に「歩行アニメーション」は、切り出した画像が左右に揺れていないか、中心軸がずれていないかを必ず確認してください。</p>
+<ul>
+<li>注意点：AI生成特有の「ドットの滲み」や「不要なノイズ」が混入していないか、拡大してチェックしましょう。必要であれば、1ドット単位で手修正を加えることで、よりクオリティの高い素材に仕上がります。</li>
+</ul>
+<h2>まとめ</h2>
+<p>AIで生成した九面図を素材化する作業は、一見地味ですが、ゲームの完成度を左右する重要なプロセスです。グリッドの活用、キャンバスの統一、そして徹底した命名管理を行うことで、制作時間を短縮しつつ、安定した品質のゲーム素材を揃えることができます。まずは手持ちのキャラクターで、歩行アニメーションの1パターンから試してみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
