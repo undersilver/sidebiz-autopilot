@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>GitHub Pagesでゲーム開発記録サイトを無料公開する方法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-03-github-pages-game-dev-log.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-03-github-pages-game-dev-log.html</guid>
+      <pubDate>Sat, 03 Oct 2026 16:30:40 +0900</pubDate>
+      <description>GitHub Pagesを活用して、あなたのゲーム開発記録を無料で公開する方法を解説。リポジトリ作成からGitHub Actionsによる自動公開まで、初心者でも迷わない手順をまとめました。</description>
+    </item>
+    <item>
       <title>AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-25-ai-weapon-consistency-guide.html</guid>
       <pubDate>Tue, 25 Aug 2026 08:18:33 +0900</pubDate>
       <description>AI生成で発生しがちな「武器の左右反転」問題を解決。プロンプトでの指定方法と、公開前に必ず行うべきチェックリストを解説します。</description>
-    </item>
-    <item>
-      <title>PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-24-python-pillow-japanese-thumbnail-tips.html</guid>
-      <pubDate>Mon, 24 Aug 2026 08:16:07 +0900</pubDate>
-      <description>Pythonの画像処理ライブラリ「Pillow」を使って、日本語が含まれるサムネイルを自動生成する際の注意点を解説。文字化け、折り返し、レイアウト崩れを防ぐための具体的な解決策を紹介します。</description>
     </item>
   </channel>
 </rss>
