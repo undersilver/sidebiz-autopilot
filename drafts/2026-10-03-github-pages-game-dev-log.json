@@ -1,0 +1,51 @@
+{
+  "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
+  "slug": "github-pages-game-dev-log",
+  "category": "プログラミング",
+  "summary": "GitHub Pagesを活用して、あなたのゲーム開発記録を無料で公開する方法を解説。リポジトリ作成からGitHub Actionsによる自動公開まで、初心者でも迷わない手順をまとめました。",
+  "article_markdown": "## はじめに\nゲーム開発をしていると、進捗を記録したり、作品を誰かに見てもらいたくなる場面が増えてきます。しかし、サーバー代やドメイン代をかけずに公開するのは難しいと感じていませんか？実は、エンジニアに定番の「GitHub Pages」を使えば、開発記録サイトを完全無料で公開可能です。この記事では、初心者の方でも迷わず進められる手順を整理しました。\n\n## GitHubでリポジトリを作成する\nまずはGitHubにログインし、新しいリポジトリを作成します。「New repository」ボタンから名前を入力し、「Public」を選択してください。このリポジトリが、あなたのサイトのデータ置き場になります。初期設定として「Add a README file」にチェックを入れておくと、後々の管理がスムーズです。\n\n## サイトの構成を考える\n開発記録サイトには、HTMLやCSSの知識が必要と思われがちですが、最近は静的サイトジェネレーターやシンプルなMarkdownファイルだけで構築可能です。まずは「index.md」というファイルを作り、そこに自己紹介や開発中のゲームのスクリーンショット、進捗状況を書き込んでみましょう。これだけで立派な記録サイトの基礎が完成します。\n\n## GitHub Actionsで自動公開する\nGitHub Pagesの最大の強みは、GitHub Actionsを使った自動公開機能です。リポジトリの「Actions」タブから「Pages」を選択し、デプロイ設定を行います。これにより、あなたがリポジトリにファイルをプッシュするだけで、Webサイトの内容が自動的に更新されます。複雑な設定は不要で、GitHubが推奨するテンプレートを選ぶだけで完了します。\n\n## 失敗しないためのポイントと改善例\nよくある失敗は、ファイルパスの指定ミスです。画像が表示されない場合は、相対パスが正しく記述されているか確認しましょう。また、最初は凝ったデザインにせず、テキストベースで情報を整理することから始めるのが継続のコツです。ある程度慣れてきたら、CSSフレームワークを導入してデザインを整えるなど、段階的に改善していくのがおすすめです。\n\n## まとめ\nGitHub Pagesを使えば、コストをかけずに自分の開発記録を世界中に発信できます。まずは小さな一歩として、今日作ったファイルをGitHubにアップロードしてみましょう。あなたのゲーム開発の歩みが、誰かにとっての刺激になるかもしれません。",
+  "social_post": "ゲーム開発記録を無料で公開したい方必見！GitHub Pagesならサーバー代0円でサイトが作れます。リポジトリ作成から自動公開までの手順をまとめました。 #ゲーム開発 #GitHubPages #プログラミング",
+  "short_video_script": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法！1. GitHubでリポジトリを作る。2. Markdownで記事を書く。3. GitHub Actionsで自動デプロイ。これだけでサーバー代0円！詳細は記事をチェック！",
+  "thumbnail_prompt": "Minimalist and clean workspace with a laptop showing code, professional aesthetic, high resolution, soft lighting, tech-focused, blue and white color palette.",
+  "pikoron_tips": [
+    {
+      "after_heading": "GitHub Actionsで自動公開する",
+      "message": "GitHub Actionsを使えば、ファイルを保存するだけでサイトが自動更新されます。複雑な操作は不要なので、まずはテンプレートの利用から始めてみましょう。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "権利",
+      "item": "GitHubの利用規約および公開コンテンツの著作権確認",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "technical_accuracy",
+        "detail": "GitHub Pagesの自動デプロイ設定において、リポジトリのルートにindex.mdを置くだけではGitHub Pagesが自動的にサイトとして認識しない場合がある（Jekyll等の設定が必要）。初心者向けには、GitHub PagesのSettingsからSourceを「Deploy from a branch」に設定する手順を補足するとより親切。"
+      }
+    ],
+    "rewrite_instructions": [
+      "GitHub PagesのSettings画面からデプロイ元（Branch）を指定する手順を簡潔に追記すると、読者が迷わず実行できます。"
+    ],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-10-03T09:55:03.518481+09:00",
+    "seed": {
+      "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
+      "category": "プログラミング",
+      "original_angle": "リポジトリ作成からActions公開までを初心者向けに整理する"
+    },
+    "status": "review"
+  }
+}
