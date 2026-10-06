@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ゲーム制作を効率化！敵キャラクターを5つの役割に分類する設計術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="複雑な敵の設計を「高速・高耐久・遠距離・状態異常・特殊」の5つの役割に分類することで、バランス調整が劇的に楽になる設計手法を解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-06-enemy-role-design-5-types.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="ゲーム制作を効率化！敵キャラクターを5つの役割に分類する設計術">
+  <meta property="og:description" content="複雑な敵の設計を「高速・高耐久・遠距離・状態異常・特殊」の5つの役割に分類することで、バランス調整が劇的に楽になる設計手法を解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-06-enemy-role-design-5-types.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-06-enemy-role-design-5-types.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ゲーム制作を効率化！敵キャラクターを5つの役割に分類する設計術">
+  <meta name="twitter:description" content="複雑な敵の設計を「高速・高耐久・遠距離・状態異常・特殊」の5つの役割に分類することで、バランス調整が劇的に楽になる設計手法を解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-06-enemy-role-design-5-types.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム制作を効率化！敵キャラクターを5つの役割に分類する設計術", "description": "複雑な敵の設計を「高速・高耐久・遠距離・状態異常・特殊」の5つの役割に分類することで、バランス調整が劇的に楽になる設計手法を解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-06-enemy-role-design-5-types.png?v=3"], "datePublished": "2026-10-06T13:33:14.311929+09:00", "dateModified": "2026-10-06T13:33:14.311952+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-06-enemy-role-design-5-types.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>ゲーム制作を効率化！敵キャラクターを5つの役割に分類する設計術</h1>
+  <p class="lead">複雑な敵の設計を「高速・高耐久・遠距離・状態異常・特殊」の5つの役割に分類することで、バランス調整が劇的に楽になる設計手法を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-06-enemy-role-design-5-types.png?v=3" alt="ゲーム制作を効率化！敵キャラクターを5つの役割に分類する設計術">
+  <h2>はじめに</h2>
+<p>ゲーム制作において、敵キャラクターの能力値や行動パターンをゼロから考えるのは非常に時間がかかります。特に初心者にとって、敵の強さのバランス調整は最大の難関です。今回は、敵を5つの役割に分類することで、誰でも簡単に、かつ戦略性の高い敵を配置できる設計法を紹介します。</p>
+<h2>敵を分類する5つの基本役割</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>敵を5つの役割に分けることで、プレイヤーに「何を優先して倒すべきか」という戦略的な思考を促せます。まずはこの5タイプを基本セットとして覚えておきましょう。</p></div></aside>
+<p>敵キャラクターを以下の5つの役割に分類することで、プレイヤーに「どう対処すべきか」という明確な選択肢を提示できます。</p>
+<ol>
+<li>高速型：移動速度が速く、回避行動をとる。</li>
+<li>高耐久型：防御力が高く、正面突破を阻む。</li>
+<li>遠距離型：離れた場所から攻撃を行い、行動を制限する。</li>
+<li>状態異常型：毒や麻痺などでプレイヤーの操作を妨害する。</li>
+<li>特殊型：自己再生や味方の強化など、戦況を変化させる。</li>
+</ol>
+<h2>高速型と高耐久型の対比</h2>
+<p>高速型はプレイヤーを翻弄し、高耐久型はプレイヤーの攻撃を耐え抜きます。これらを単体で出すのではなく、組み合わせるのがコツです。例えば、高速型がプレイヤーの注意を引いている間に、高耐久型がじわじわと距離を詰めてくる配置にすると、プレイヤーは「どちらを先に倒すべきか」という戦略的判断を迫られます。</p>
+<h2>遠距離型と状態異常型の役割</h2>
+<p>遠距離型は、プレイヤーに「遮蔽物を使う」というアクションを強要します。そこに状態異常型を混ぜることで、単に避けるだけでなく、異常を解除する手段を考える必要が出てきます。遠距離からの攻撃を避けながら、状態異常を付与する敵を優先的に排除する、といった優先順位の設計が可能になります。</p>
+<h2>特殊型の活用と失敗例</h2>
+<p>特殊型は戦況を大きく変える存在です。しかし、全ての敵を特殊型にしてしまうと、プレイヤーは混乱し、ゲームのテンポが悪くなります。失敗例として多いのは、敵全員が自己再生能力を持ってしまうケースです。これではプレイヤーの攻撃が「無意味」だと感じられ、モチベーションが低下します。特殊型は「1グループに1体」までとルールを決めるのが安全です。</p>
+<h2>実践的な配置手順</h2>
+<p>まずは、ステージのコンセプトを決めます。例えば「狭い通路」なら、高耐久型を配置してプレイヤーの進軍を止め、背後から遠距離型で攻撃を仕掛ける構成が有効です。逆に「広いフィールド」なら、高速型を複数配置し、プレイヤーを追いかけ回す構成が適しています。まずはこの5つの役割をカードのように並べ替え、ステージの難易度を調整してみてください。</p>
+<h2>まとめ</h2>
+<p>敵を5つの役割に分類することで、バランス調整の指針が明確になります。まずは既存のゲームをプレイする際、目の前の敵がどのタイプに当てはまるか観察してみてください。それだけで、自身のゲーム制作における敵配置の引き出しが格段に増えるはずです。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
