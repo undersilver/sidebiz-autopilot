@@ -1,0 +1,49 @@
+{
+  "title": "GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順",
+  "slug": "github-actions-troubleshooting-guide",
+  "category": "プログラミング",
+  "summary": "GitHub Actionsが失敗した際、どこを見ればいいのか迷っていませんか？赤いアイコンが表示された時の原因特定手順と、ログの読み方を初心者向けに解説します。",
+  "article_markdown": "## なぜGitHub Actionsは失敗するのか\n\nGitHub Actionsを使って自動化を始めると、必ず一度は遭遇するのが「赤いバツ印」です。一生懸命書いたコードが動かないと焦りますが、実はエラーの多くは「手順のどこかが少しだけ間違っている」という単純な原因です。大切なのは、焦ってコードを書き直す前に、まずは「どこで止まったのか」という事実を正確に把握することです。\n\n## 赤い実行結果から失敗箇所を特定する\n\nGitHubリポジトリの「Actions」タブを開くと、失敗したワークフローが赤く表示されています。まずはそのタイトルをクリックし、詳細画面へ進みましょう。\n\n画面左側には、ワークフローの各ステップがリストで表示されています。ここで重要なのは、**「緑色のチェック」から「赤いバツ印」に切り替わった最初のステップ**を探すことです。そのステップこそが、エラーの発生源です。それ以降のステップは、最初のエラーによって「実行されなかった」だけであり、根本的な原因ではないことがほとんどです。\n\n## ログを読み解く順番\n\n失敗したステップをクリックすると、右側にログが表示されます。初心者の方が陥りやすいミスは、ログを上から全部読もうとすることです。効率的に原因を見つけるには、以下の順番で確認してください。\n\n1. **ステップの最後の方を見る**\n   ログの末尾には、エラーの要約や終了コード（Exit code 1など）が記載されています。「Error」や「Failed」という単語が含まれる行を探しましょう。\n2. **エラーメッセージのキーワードを検索する**\n   「Command not found」や「Permission denied」といったエラーメッセージが見つかったら、それをコピーして検索サイトで調べてください。同じエラーで困っている先人の解決策がすぐに見つかります。\n3. **環境変数の確認**\n   もしコードに問題がなさそうな場合、GitHub Actionsの環境設定でパスが通っていない、あるいは必要なシークレット（APIキーなど）が設定されていない可能性があります。\n\n## 具体的な失敗例と改善の手順\n\n例えば、Node.jsのプロジェクトで「npm install」が失敗したとします。この場合、ログには「npm ERR!」という文字列が必ず残ります。ここを確認し、「依存関係が解決できない」のか「ネットワークエラー」なのかを判断します。\n\n改善の手順は以下の通りです。\n- **手順1:** ログの「npm ERR!」の直後の文章を読む。\n- **手順2:** ローカル環境でも同じコマンドを実行してみる。\n- **手順3:** ローカルで成功するならGitHub側の環境設定（Node.jsのバージョン指定など）を疑う。\n\nこのように、GitHub Actionsの失敗は「ローカル環境との違い」を埋める作業に他なりません。一つずつ確認していけば、必ず解決の糸口が見つかります。",
+  "social_post": "GitHub Actionsで赤いバツ印が出ると焦りますよね。実は、ログを全部読む必要はありません！「最初に失敗したステップ」を見つけ、「ログの末尾」を確認するだけで解決率は劇的に上がります。初心者向けトラブルシューティング術をまとめました。",
+  "short_video_script": "GitHub Actionsでエラーが出て困っていませんか？赤いバツ印が出たら、まずは左側のステップリストから「最初に赤くなった場所」をクリック。次に右側のログで「Error」の文字を探すだけ。全部読まずに、末尾からチェックするのがコツです！",
+  "thumbnail_prompt": "A clean, modern illustration of a computer screen showing a GitHub Actions workflow dashboard with a prominent red failure icon, professional tech style, minimalist UI design.",
+  "pikoron_tips": [
+    {
+      "after_heading": "ログを読み解く順番",
+      "message": "全部を読む必要はありません。まずはステップの末尾にある「Error」の文字を探すだけで、原因の8割は特定できますよ！"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "事実",
+      "item": "GitHub Actionsのログの構造とエラー確認手順の正確性",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The quality_score field in the input JSON was set to 10, which contradicts the high quality of the provided article content."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-10-07T10:12:53.176741+09:00",
+    "seed": {
+      "title": "初心者がGitHub Actionsの失敗原因を見つける方法",
+      "category": "プログラミング",
+      "original_angle": "赤い実行結果から失敗した工程とメッセージを読む順番を説明する"
+    },
+    "status": "review"
+  }
+}
