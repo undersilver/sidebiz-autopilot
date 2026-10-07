@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-07-github-actions-troubleshooting-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-07-github-actions-troubleshooting-guide.html</guid>
+      <pubDate>Wed, 07 Oct 2026 18:41:37 +0900</pubDate>
+      <description>GitHub Actionsが失敗した際、どこを見ればいいのか迷っていませんか？赤いアイコンが表示された時の原因特定手順と、ログの読み方を初心者向けに解説します。</description>
+    </item>
+    <item>
       <title>ゲーム制作を効率化！敵キャラクターを5つの役割に分類する設計術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-06-enemy-role-design-5-types.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-06-enemy-role-design-5-types.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html</guid>
       <pubDate>Thu, 27 Aug 2026 22:39:39 +0900</pubDate>
       <description>AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。</description>
-    </item>
-    <item>
-      <title>読者が迷わない！漫画の読み順をコントロールする「視線誘導」の基本ルール</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-26-manga-panel-layout-basics.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-26-manga-panel-layout-basics.html</guid>
-      <pubDate>Wed, 26 Aug 2026 08:20:55 +0900</pubDate>
-      <description>漫画制作で最も大切な「読みやすさ」を決定づけるコマ割り。視線誘導の基本原則から、ページめくりを意識した配置のコツまで、初心者でもすぐに実践できる構成術を解説します。</description>
     </item>
   </channel>
 </rss>

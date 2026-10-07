@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="GitHub Actionsが失敗した際、どこを見ればいいのか迷っていませんか？赤いアイコンが表示された時の原因特定手順と、ログの読み方を初心者向けに解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-07-github-actions-troubleshooting-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順">
+  <meta property="og:description" content="GitHub Actionsが失敗した際、どこを見ればいいのか迷っていませんか？赤いアイコンが表示された時の原因特定手順と、ログの読み方を初心者向けに解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-07-github-actions-troubleshooting-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-07-github-actions-troubleshooting-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順">
+  <meta name="twitter:description" content="GitHub Actionsが失敗した際、どこを見ればいいのか迷っていませんか？赤いアイコンが表示された時の原因特定手順と、ログの読み方を初心者向けに解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-07-github-actions-troubleshooting-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順", "description": "GitHub Actionsが失敗した際、どこを見ればいいのか迷っていませんか？赤いアイコンが表示された時の原因特定手順と、ログの読み方を初心者向けに解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-07-github-actions-troubleshooting-guide.png?v=3"], "datePublished": "2026-10-07T18:41:37.057231+09:00", "dateModified": "2026-10-07T18:41:37.057255+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-07-github-actions-troubleshooting-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順</h1>
+  <p class="lead">GitHub Actionsが失敗した際、どこを見ればいいのか迷っていませんか？赤いアイコンが表示された時の原因特定手順と、ログの読み方を初心者向けに解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-07-github-actions-troubleshooting-guide.png?v=3" alt="GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順">
+  <h2>なぜGitHub Actionsは失敗するのか</h2>
+<p>GitHub Actionsを使って自動化を始めると、必ず一度は遭遇するのが「赤いバツ印」です。一生懸命書いたコードが動かないと焦りますが、実はエラーの多くは「手順のどこかが少しだけ間違っている」という単純な原因です。大切なのは、焦ってコードを書き直す前に、まずは「どこで止まったのか」という事実を正確に把握することです。</p>
+<h2>赤い実行結果から失敗箇所を特定する</h2>
+<p>GitHubリポジトリの「Actions」タブを開くと、失敗したワークフローが赤く表示されています。まずはそのタイトルをクリックし、詳細画面へ進みましょう。</p>
+<p>画面左側には、ワークフローの各ステップがリストで表示されています。ここで重要なのは、<strong>「緑色のチェック」から「赤いバツ印」に切り替わった最初のステップ</strong>を探すことです。そのステップこそが、エラーの発生源です。それ以降のステップは、最初のエラーによって「実行されなかった」だけであり、根本的な原因ではないことがほとんどです。</p>
+<h2>ログを読み解く順番</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>全部を読む必要はありません。まずはステップの末尾にある「Error」の文字を探すだけで、原因の8割は特定できますよ！</p></div></aside>
+<p>失敗したステップをクリックすると、右側にログが表示されます。初心者の方が陥りやすいミスは、ログを上から全部読もうとすることです。効率的に原因を見つけるには、以下の順番で確認してください。</p>
+<ol>
+<li><strong>ステップの最後の方を見る</strong>
+   ログの末尾には、エラーの要約や終了コード（Exit code 1など）が記載されています。「Error」や「Failed」という単語が含まれる行を探しましょう。</li>
+<li><strong>エラーメッセージのキーワードを検索する</strong>
+   「Command not found」や「Permission denied」といったエラーメッセージが見つかったら、それをコピーして検索サイトで調べてください。同じエラーで困っている先人の解決策がすぐに見つかります。</li>
+<li><strong>環境変数の確認</strong>
+   もしコードに問題がなさそうな場合、GitHub Actionsの環境設定でパスが通っていない、あるいは必要なシークレット（APIキーなど）が設定されていない可能性があります。</li>
+</ol>
+<h2>具体的な失敗例と改善の手順</h2>
+<p>例えば、Node.jsのプロジェクトで「npm install」が失敗したとします。この場合、ログには「npm ERR!」という文字列が必ず残ります。ここを確認し、「依存関係が解決できない」のか「ネットワークエラー」なのかを判断します。</p>
+<p>改善の手順は以下の通りです。
+- <strong>手順1:</strong> ログの「npm ERR!」の直後の文章を読む。
+- <strong>手順2:</strong> ローカル環境でも同じコマンドを実行してみる。
+- <strong>手順3:</strong> ローカルで成功するならGitHub側の環境設定（Node.jsのバージョン指定など）を疑う。</p>
+<p>このように、GitHub Actionsの失敗は「ローカル環境との違い」を埋める作業に他なりません。一つずつ確認していけば、必ず解決の糸口が見つかります。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
