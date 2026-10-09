@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>漫画制作でキャラクターの服装を統一する！衣装設定表と「変更禁止要素」の活用術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-09-manga-character-costume-consistency.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-09-manga-character-costume-consistency.html</guid>
+      <pubDate>Fri, 09 Oct 2026 11:42:29 +0900</pubDate>
+      <description>漫画制作でキャラクターの服装がページごとに変わってしまう悩みを解決。衣装設定表の作り方と、絶対に守るべき「変更禁止要素」の定義方法を解説します。</description>
+    </item>
+    <item>
       <title>GitHub Actionsの「赤色」を攻略！失敗原因を最短で見つける手順</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-07-github-actions-troubleshooting-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-07-github-actions-troubleshooting-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-28-ai-blog-to-ebook-organization.html</guid>
       <pubDate>Fri, 28 Aug 2026 17:44:40 +0900</pubDate>
       <description>蓄積したブログ記事を電子書籍化する際、最大の壁となる「重複」をAIでスマートに解決する方法を解説。似た説明を統合し、読みやすい章構成へ再配置する具体的な手順を紹介します。</description>
-    </item>
-    <item>
-      <title>AIゲーム記事をプロ品質に！内部メモを分離する校閲テクニック</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-27-ai-game-article-editing-tips.html</guid>
-      <pubDate>Thu, 27 Aug 2026 22:39:39 +0900</pubDate>
-      <description>AIでゲーム記事を作成する際、運営用のメモが混入して公開してしまうミスを防ぐための「分離ルール」を解説。効率的な校閲手順で、読者に届けるコンテンツの質を高める方法を紹介します。</description>
     </item>
   </channel>
 </rss>
