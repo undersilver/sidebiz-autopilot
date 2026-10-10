@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="ゲームの距離感をプレイヤーに直感的に伝えるためのUI・色・位置を活用したデザイン手法を解説します。数値に頼らず、視覚的に間合いを理解させる具体的なテクニックを紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-10-game-distance-ui-design.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術">
+  <meta property="og:description" content="ゲームの距離感をプレイヤーに直感的に伝えるためのUI・色・位置を活用したデザイン手法を解説します。数値に頼らず、視覚的に間合いを理解させる具体的なテクニックを紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-10-game-distance-ui-design.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-10-game-distance-ui-design.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術">
+  <meta name="twitter:description" content="ゲームの距離感をプレイヤーに直感的に伝えるためのUI・色・位置を活用したデザイン手法を解説します。数値に頼らず、視覚的に間合いを理解させる具体的なテクニックを紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-10-game-distance-ui-design.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術", "description": "ゲームの距離感をプレイヤーに直感的に伝えるためのUI・色・位置を活用したデザイン手法を解説します。数値に頼らず、視覚的に間合いを理解させる具体的なテクニックを紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-10-game-distance-ui-design.png?v=3"], "datePublished": "2026-10-10T17:00:55.248264+09:00", "dateModified": "2026-10-10T17:00:55.248282+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-10-game-distance-ui-design.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術</h1>
+  <p class="lead">ゲームの距離感をプレイヤーに直感的に伝えるためのUI・色・位置を活用したデザイン手法を解説します。数値に頼らず、視覚的に間合いを理解させる具体的なテクニックを紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-10-game-distance-ui-design.png?v=3" alt="数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術">
+  <h2>なぜ「数値」ではプレイヤーに伝わらないのか</h2>
+<p>多くのゲーム制作初心者が陥りがちなのが、距離を「数値」で表示してしまうことです。例えば、敵との距離が「12.5m」と画面に表示されても、プレイヤーは瞬時にその距離が「攻撃が届く範囲なのか」「回避すべき範囲なのか」を判断できません。ゲームの醍醐味である「間合いの駆け引き」を面白くするには、脳による計算を挟ませず、直感的に距離を理解させる必要があります。</p>
+<h2>色の変化で危険範囲を可視化する</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>色は3段階まで！青・黄・赤のように信号機の色を使うと、プレイヤーは説明なしで危険度を理解できます。</p></div></aside>
+<p>最も効果的なのは、敵の攻撃範囲を「色」で表現することです。プレイヤーの周囲や敵の足元に、距離に応じたサークルを表示しましょう。</p>
+<p>・安全圏：青色や緑色の薄い円
+・警告圏：黄色い円
+・危険圏：赤い円</p>
+<p>このように色を段階的に変えることで、プレイヤーは「赤くなったから避ける」という反射的な行動をとれるようになります。ポイントは、色を濃くしすぎないこと。ゲーム画面の視認性を損なわないよう、不透明度を20〜30％程度に抑えるのがコツです。</p>
+<h2>プレイヤーの位置関係をUIで補完する</h2>
+<p>画面端に敵がいる場合、プレイヤーは距離感を把握しづらくなります。これを解決するには、画面の端に「敵の方向を示すインジケーター」を配置しましょう。このインジケーターの大きさを、敵との距離に比例して変化させるのです。敵が近づけばインジケーターは大きく、遠ざかれば小さく表示されます。これにより、カメラの画角外にいる敵に対しても、プレイヤーは「今、どれくらいの間合いにいるか」を無意識に把握できます。</p>
+<h2>失敗例と改善のポイント</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>UIは出しっぱなしにしないのが鉄則。必要な情報だけを必要な瞬間に出す「動的な表示」を意識しましょう。</p></div></aside>
+<p>よくある失敗例は、UIを詰め込みすぎて画面が情報過多になることです。全ての距離を円で囲むと、画面が円だらけになり、アクションの爽快感が消えてしまいます。改善策として、「最も重要な敵」や「プレイヤーの攻撃が届く瞬間」にだけUIを表示するようにしましょう。静止している時はUIを消し、敵が攻撃モーションに入った瞬間にだけ警告を表示する「動的なUI」が、最もプレイヤーの集中力を維持できます。</p>
+<h2>今すぐ試せる実装手順</h2>
+<p>まずは、プレイヤーキャラクターの足元に、自分の武器が届く範囲を示す円を一つだけ置いてみてください。これだけで、攻撃ボタンを押すタイミングが劇的に分かりやすくなります。次に、敵の攻撃範囲を赤く光らせるエフェクトを追加します。この二つの要素を組み合わせるだけで、プレイヤーは「自分の円」と「敵の円」が重なる瞬間を狙うという、高度な駆け引きを自然と楽しめるようになります。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

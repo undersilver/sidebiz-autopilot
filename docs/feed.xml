@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-10-game-distance-ui-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-10-game-distance-ui-design.html</guid>
+      <pubDate>Sat, 10 Oct 2026 17:00:55 +0900</pubDate>
+      <description>ゲームの距離感をプレイヤーに直感的に伝えるためのUI・色・位置を活用したデザイン手法を解説します。数値に頼らず、視覚的に間合いを理解させる具体的なテクニックを紹介します。</description>
+    </item>
+    <item>
       <title>漫画制作でキャラクターの服装を統一する！衣装設定表と「変更禁止要素」の活用術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-09-manga-character-costume-consistency.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-09-manga-character-costume-consistency.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-29-roguelike-gear-progression-guide.html</guid>
       <pubDate>Sat, 29 Aug 2026 19:41:34 +0900</pubDate>
       <description>ローグライクゲームで詰まりがちな「装備の強化」を効率化。10階層単位の目標設定と数値の上げ幅を整理し、初心者でも安定して後半へ進めるための具体的な運用計画を解説します。</description>
-    </item>
-    <item>
-      <title>ブログ記事を電子書籍へ！AIを活用した「重複整理」と章構成の最適化術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-28-ai-blog-to-ebook-organization.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-28-ai-blog-to-ebook-organization.html</guid>
-      <pubDate>Fri, 28 Aug 2026 17:44:40 +0900</pubDate>
-      <description>蓄積したブログ記事を電子書籍化する際、最大の壁となる「重複」をAIでスマートに解決する方法を解説。似た説明を統合し、読みやすい章構成へ再配置する具体的な手順を紹介します。</description>
     </item>
   </channel>
 </rss>
