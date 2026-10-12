@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-12-roguelike-boss-design-100-floors.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-12-roguelike-boss-design-100-floors.html</guid>
+      <pubDate>Mon, 12 Oct 2026 15:53:04 +0900</pubDate>
+      <description>100階層のローグライクゲームを制作する際、10階ごとのボスをどう配置し、難易度を設計すべきか。プレイヤーの学習体験を最適化する具体的なステップを解説します。</description>
+    </item>
+    <item>
       <title>数値は隠せ！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-10-game-distance-ui-design.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-10-game-distance-ui-design.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html</guid>
       <pubDate>Mon, 31 Aug 2026 19:25:01 +0900</pubDate>
       <description>AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。</description>
-    </item>
-    <item>
-      <title>ローグライクゲームの攻略鍵！階層別・武器防具強化のロードマップ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-29-roguelike-gear-progression-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-29-roguelike-gear-progression-guide.html</guid>
-      <pubDate>Sat, 29 Aug 2026 19:41:34 +0900</pubDate>
-      <description>ローグライクゲームで詰まりがちな「装備の強化」を効率化。10階層単位の目標設定と数値の上げ幅を整理し、初心者でも安定して後半へ進めるための具体的な運用計画を解説します。</description>
     </item>
   </channel>
 </rss>

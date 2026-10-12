@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="100階層のローグライクゲームを制作する際、10階ごとのボスをどう配置し、難易度を設計すべきか。プレイヤーの学習体験を最適化する具体的なステップを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-12-roguelike-boss-design-100-floors.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み">
+  <meta property="og:description" content="100階層のローグライクゲームを制作する際、10階ごとのボスをどう配置し、難易度を設計すべきか。プレイヤーの学習体験を最適化する具体的なステップを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-12-roguelike-boss-design-100-floors.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-12-roguelike-boss-design-100-floors.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み">
+  <meta name="twitter:description" content="100階層のローグライクゲームを制作する際、10階ごとのボスをどう配置し、難易度を設計すべきか。プレイヤーの学習体験を最適化する具体的なステップを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-12-roguelike-boss-design-100-floors.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み", "description": "100階層のローグライクゲームを制作する際、10階ごとのボスをどう配置し、難易度を設計すべきか。プレイヤーの学習体験を最適化する具体的なステップを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-12-roguelike-boss-design-100-floors.png?v=3"], "datePublished": "2026-10-12T15:53:04.699993+09:00", "dateModified": "2026-10-12T15:53:04.700011+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-12-roguelike-boss-design-100-floors.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み</h1>
+  <p class="lead">100階層のローグライクゲームを制作する際、10階ごとのボスをどう配置し、難易度を設計すべきか。プレイヤーの学習体験を最適化する具体的なステップを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-12-roguelike-boss-design-100-floors.png?v=3" alt="100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み">
+  <h2>はじめに</h2>
+<p>100階層に及ぶローグライクゲームを制作する際、最大の課題は「プレイヤーをいかに飽きさせないか」です。単に敵を強くするだけでは、作業感が増し、途中で離脱されてしまいます。今回は、10階ごとに配置するボスを「プレイヤーの学習成果を確認する試験官」と見立て、段階的に難易度を上げる設計手法を解説します。</p>
+<h2>1〜10階：基本操作とルールの習得</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>最初のボスは「教官」です。プレイヤーが操作に慣れたかを確認する、優しくも確実なギミックを用意しましょう。</p></div></aside>
+<p>最初の10階は、プレイヤーがゲームの基本操作とリソース管理を学ぶ期間です。この段階のボスは、複雑なギミックを避け、正面からの殴り合いや、特定のアイテムの使用を促す構成にします。</p>
+<ul>
+<li>役割：基本攻撃と回復アイテムの重要性を教える</li>
+<li>失敗例：即死攻撃や複雑な状態異常の付与</li>
+<li>改善例：一定間隔で予備動作を見せる攻撃を繰り返し、回避の快感を与える</li>
+</ul>
+<h2>11〜50階：戦略の多様化とシナジーの確認</h2>
+<p>中盤は、手に入れた武器やスキルを組み合わせる楽しさを実感させる時期です。10階ごとのボスは、特定の戦術を強いるような特徴を持たせます。</p>
+<ul>
+<li>20階：防御力重視のボス（高火力で押し切るか、長期戦で耐えるかの選択）</li>
+<li>30階：遠距離攻撃を多用するボス（接近手段や盾の活用を促す）</li>
+<li>40階：召喚を行うボス（範囲攻撃の重要性を確認）</li>
+</ul>
+<h2>51〜90階：複合的なギミックへの対応</h2>
+<p>後半戦は、これまでに学んだ複数の要素を同時に要求します。ボスは「攻撃」と「ギミック」を組み合わせ、プレイヤーの判断力を試します。</p>
+<ul>
+<li>60階：環境変化（床が消えるなど）＋ボス攻撃</li>
+<li>80階：状態異常の解除と攻撃のタイミングを両立させる構成</li>
+</ul>
+<h2>91〜100階：総決算としてのラスボス</h2>
+<p>最終階層のボスは、これまでの旅路で得た全ての知識を総動員させる存在です。ただし、理不尽な難易度ではなく、プレイヤーが「ここまで学んできたからこそ勝てる」という達成感を得られる設計を目指します。</p>
+<ul>
+<li>最終段階の設計：攻撃パターンを3段階に分け、HP減少とともに回避難易度が上がるように調整します。</li>
+</ul>
+<h2>まとめ</h2>
+<p>100階層の設計は、ボスを単なる関門とせず、プレイヤーの成長を測るマイルストーンとして扱うことで、最後まで夢中になれるゲーム体験を生み出せます。まずは10階ごとのボスの役割を書き出し、プレイヤーが何を学べるかを整理することから始めてみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
