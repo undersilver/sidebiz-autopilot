@@ -506,5 +506,10 @@
     "date": "2026-10-11",
     "title": "力士を主人公にしたローグライクの戦闘設計",
     "draft": "drafts/2026-10-11-sumo-roguelike-combat-design.json"
+  },
+  {
+    "date": "2026-10-12",
+    "title": "100階ローグライクでボスを10階ごとに設計する方法",
+    "draft": "drafts/2026-10-12-roguelike-boss-design-100-floors.json"
   }
 ]
