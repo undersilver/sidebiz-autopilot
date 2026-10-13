@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-13-ai-character-sheet-alignment-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-13-ai-character-sheet-alignment-guide.html</guid>
+      <pubDate>Tue, 13 Oct 2026 14:11:01 +0900</pubDate>
+      <description>AIでキャラクターの九面図を作ると顔や装飾が崩れがちです。プロンプトの記述方法を変えるだけで、驚くほど正確に描画できる改善テクニックを解説します。</description>
+    </item>
+    <item>
       <title>100階層ローグライクを攻略せよ！10階ごとのボス設計でプレイヤーを飽きさせない仕組み</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-12-roguelike-boss-design-100-floors.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-12-roguelike-boss-design-100-floors.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-01-github-pages-game-dev-log-guide.html</guid>
       <pubDate>Tue, 01 Sep 2026 16:08:53 +0900</pubDate>
       <description>GitHub Pagesを使って、ゲーム開発の進捗や記録を無料で公開する方法を解説します。リポジトリ作成から自動公開設定まで、初心者でも迷わない手順をまとめました。</description>
-    </item>
-    <item>
-      <title>AI生成ドット絵をゲーム素材へ：九面図からキャラクターチップを作成する実務手順</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-08-31-pixel-art-character-sheet-guide.html</guid>
-      <pubDate>Mon, 31 Aug 2026 19:25:01 +0900</pubDate>
-      <description>AIで生成したドット絵の九面図を、ゲームエンジンで使えるキャラクターチップに変換する効率的な手順を解説。切り出しからリサイズ、命名規則まで、初心者でも迷わない実務フローを紹介します。</description>
     </item>
   </channel>
 </rss>

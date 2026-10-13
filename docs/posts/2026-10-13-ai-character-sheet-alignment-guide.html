@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIでキャラクターの九面図を作ると顔や装飾が崩れがちです。プロンプトの記述方法を変えるだけで、驚くほど正確に描画できる改善テクニックを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-13-ai-character-sheet-alignment-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ">
+  <meta property="og:description" content="AIでキャラクターの九面図を作ると顔や装飾が崩れがちです。プロンプトの記述方法を変えるだけで、驚くほど正確に描画できる改善テクニックを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-13-ai-character-sheet-alignment-guide.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-13-ai-character-sheet-alignment-guide.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ">
+  <meta name="twitter:description" content="AIでキャラクターの九面図を作ると顔や装飾が崩れがちです。プロンプトの記述方法を変えるだけで、驚くほど正確に描画できる改善テクニックを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-13-ai-character-sheet-alignment-guide.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ", "description": "AIでキャラクターの九面図を作ると顔や装飾が崩れがちです。プロンプトの記述方法を変えるだけで、驚くほど正確に描画できる改善テクニックを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-13-ai-character-sheet-alignment-guide.png?v=3"], "datePublished": "2026-10-13T14:11:01.698165+09:00", "dateModified": "2026-10-13T14:11:01.698184+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-13-ai-character-sheet-alignment-guide.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ</h1>
+  <p class="lead">AIでキャラクターの九面図を作ると顔や装飾が崩れがちです。プロンプトの記述方法を変えるだけで、驚くほど正確に描画できる改善テクニックを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-13-ai-character-sheet-alignment-guide.png?v=3" alt="AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ">
+  <h2>なぜAIはキャラクターの向きを間違えるのか</h2>
+<p>ゲームや漫画のキャラクター設定資料として欠かせない「九面図（キャラクターシート）」。AIで生成しようとすると、正面、側面、背面で顔のパーツや衣装のデザインが微妙に変わってしまうことがよくあります。これは、AIが「一枚の絵の中にある複数のキャラクター」を個別の要素として認識し、文脈を維持できなくなるために発生します。</p>
+<h2>失敗例：プロンプトが曖昧な場合</h2>
+<p>「キャラクターの正面、側面、背面の図」とだけ指示すると、AIはそれぞれの視点をバラバラに解釈します。結果として、髪型や服の装飾が一致せず、別人のようなキャラクターが並んでしまうのです。</p>
+<h2>改善例：方向指定を具体化するテクニック</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIへの指示は「何を描くか」だけでなく「どう並べるか」を具体的に書くのがコツです。特に「一貫性（Consistent）」という単語をプロンプトに含めるだけで、パーツのズレを抑える効果が期待できます。</p></div></aside>
+<p>改善の鍵は「視点」と「一貫性」を強調することです。プロンプトに以下の要素を追加してみてください。</p>
+<ol>
+<li>「Character sheet, layout of 9 views」と配置を明確にする</li>
+<li>「Consistent character design」と一貫性を強調する</li>
+<li>各視点に「Front view, side view, back view」と詳細なタグを添える</li>
+</ol>
+<p>また、画像生成AIの種類によっては、特定の範囲を指定する機能を使うことで、顔のパーツの一貫性を保ちやすくなります。</p>
+<h2>実際に試すためのステップ</h2>
+<ol>
+<li>まずはキャラクターの基本情報を確定させる（髪色、目の形、服装など）</li>
+<li>プロンプトの冒頭に「Character sheet」を配置する</li>
+<li>各視点の指示をカンマで区切り、順序立てて記述する</li>
+<li>生成された画像から、最も崩れが少ないパーツを参考に修正を繰り返す</li>
+</ol>
+<p>AIは一度で完璧なものを出すのは難しいですが、プロンプトに「詳細な位置情報」を書き加えるだけで、修正の手間は大幅に減らせます。まずはシンプルな構成から試して、少しずつ情報を足していくのが成功の近道です。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
