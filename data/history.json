@@ -511,5 +511,10 @@
     "date": "2026-10-12",
     "title": "100階ローグライクでボスを10階ごとに設計する方法",
     "draft": "drafts/2026-10-12-roguelike-boss-design-100-floors.json"
+  },
+  {
+    "date": "2026-10-13",
+    "title": "ゲーム用キャラクター九面図で向きが崩れる原因",
+    "draft": "drafts/2026-10-13-ai-character-sheet-alignment-guide.json"
   }
 ]

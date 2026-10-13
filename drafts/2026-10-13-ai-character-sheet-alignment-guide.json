@@ -1,0 +1,54 @@
+{
+  "title": "AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ",
+  "slug": "ai-character-sheet-alignment-guide",
+  "category": "AI活用",
+  "summary": "AIでキャラクターの九面図を作ると顔や装飾が崩れがちです。プロンプトの記述方法を変えるだけで、驚くほど正確に描画できる改善テクニックを解説します。",
+  "article_markdown": "## なぜAIはキャラクターの向きを間違えるのか\n\nゲームや漫画のキャラクター設定資料として欠かせない「九面図（キャラクターシート）」。AIで生成しようとすると、正面、側面、背面で顔のパーツや衣装のデザインが微妙に変わってしまうことがよくあります。これは、AIが「一枚の絵の中にある複数のキャラクター」を個別の要素として認識し、文脈を維持できなくなるために発生します。\n\n## 失敗例：プロンプトが曖昧な場合\n\n「キャラクターの正面、側面、背面の図」とだけ指示すると、AIはそれぞれの視点をバラバラに解釈します。結果として、髪型や服の装飾が一致せず、別人のようなキャラクターが並んでしまうのです。\n\n## 改善例：方向指定を具体化するテクニック\n\n改善の鍵は「視点」と「一貫性」を強調することです。プロンプトに以下の要素を追加してみてください。\n\n1. 「Character sheet, layout of 9 views」と配置を明確にする\n2. 「Consistent character design」と一貫性を強調する\n3. 各視点に「Front view, side view, back view」と詳細なタグを添える\n\nまた、画像生成AIの種類によっては、特定の範囲を指定する機能を使うことで、顔のパーツの一貫性を保ちやすくなります。\n\n## 実際に試すためのステップ\n\n1. まずはキャラクターの基本情報を確定させる（髪色、目の形、服装など）\n2. プロンプトの冒頭に「Character sheet」を配置する\n3. 各視点の指示をカンマで区切り、順序立てて記述する\n4. 生成された画像から、最も崩れが少ないパーツを参考に修正を繰り返す\n\nAIは一度で完璧なものを出すのは難しいですが、プロンプトに「詳細な位置情報」を書き加えるだけで、修正の手間は大幅に減らせます。まずはシンプルな構成から試して、少しずつ情報を足していくのが成功の近道です。",
+  "social_post": "AIでキャラクターの九面図（キャラクターシート）を作ると、顔や装飾が崩れて困っていませんか？プロンプトの書き方を少し変えるだけで、一貫性を保った生成が可能になります。具体的な改善テクニックを解説しました！",
+  "short_video_script": "AIでキャラクターシートを作ると顔が変わっちゃう…そんな悩みありませんか？解決策は「視点の明確化」です。プロンプトの最初を「Character sheet」で始めて、各視点を具体的に記述するだけで劇的に変わります！ぜひ試してみてね。",
+  "thumbnail_prompt": "A clean, professional 3D character design sheet showing a character from multiple angles, high quality, digital art style, clear layout, white background.",
+  "pikoron_tips": [
+    {
+      "after_heading": "改善例：方向指定を具体化するテクニック",
+      "message": "AIへの指示は「何を描くか」だけでなく「どう並べるか」を具体的に書くのがコツです。特に「一貫性（Consistent）」という単語をプロンプトに含めるだけで、パーツのズレを抑える効果が期待できます。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "画像",
+      "item": "生成された九面図におけるパーツの整合性確認",
+      "risk": "低"
+    },
+    {
+      "type": "権利",
+      "item": "他者の著作権を侵害する特定のキャラクター名や作品名の混入確認",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "内部情報（estimated_review_minutes）がJSON内に含まれていますが、記事本文には影響がないため許容範囲と判断しました。"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-10-13T11:49:56.138652+09:00",
+    "seed": {
+      "title": "ゲーム用キャラクター九面図で向きが崩れる原因",
+      "category": "AI活用",
+      "original_angle": "画像生成AIへの方向指定を改善前後で比較する"
+    },
+    "status": "review"
+  }
+}
