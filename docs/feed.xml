@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-15-beginner-game-dev-codex-specification.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-15-beginner-game-dev-codex-specification.html</guid>
+      <pubDate>Thu, 15 Oct 2026 11:55:41 +0900</pubDate>
+      <description>AIを活用してゲームを作りたいけれど、どこから手をつければいいか分からない初心者向けに、最小限の仕様書で開発を成功させるコツを解説します。</description>
+    </item>
+    <item>
       <title>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するコツ</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-13-ai-character-sheet-alignment-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-13-ai-character-sheet-alignment-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html</guid>
       <pubDate>Fri, 04 Sep 2026 09:40:33 +0900</pubDate>
       <description>ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。</description>
-    </item>
-    <item>
-      <title>GitHub Pagesでゲーム開発記録サイトを無料公開！初心者向け構築ガイド</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-01-github-pages-game-dev-log-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-01-github-pages-game-dev-log-guide.html</guid>
-      <pubDate>Tue, 01 Sep 2026 16:08:53 +0900</pubDate>
-      <description>GitHub Pagesを使って、ゲーム開発の進捗や記録を無料で公開する方法を解説します。リポジトリ作成から自動公開設定まで、初心者でも迷わない手順をまとめました。</description>
     </item>
   </channel>
 </rss>

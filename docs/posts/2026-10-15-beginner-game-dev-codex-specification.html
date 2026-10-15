@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIを活用してゲームを作りたいけれど、どこから手をつければいいか分からない初心者向けに、最小限の仕様書で開発を成功させるコツを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-15-beginner-game-dev-codex-specification.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法">
+  <meta property="og:description" content="AIを活用してゲームを作りたいけれど、どこから手をつければいいか分からない初心者向けに、最小限の仕様書で開発を成功させるコツを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-15-beginner-game-dev-codex-specification.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-15-beginner-game-dev-codex-specification.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法">
+  <meta name="twitter:description" content="AIを活用してゲームを作りたいけれど、どこから手をつければいいか分からない初心者向けに、最小限の仕様書で開発を成功させるコツを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-15-beginner-game-dev-codex-specification.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法", "description": "AIを活用してゲームを作りたいけれど、どこから手をつければいいか分からない初心者向けに、最小限の仕様書で開発を成功させるコツを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-15-beginner-game-dev-codex-specification.png?v=3"], "datePublished": "2026-10-15T11:55:41.224025+09:00", "dateModified": "2026-10-15T11:55:41.224042+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-15-beginner-game-dev-codex-specification.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">プログラミング</p>
+  <h1>AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法</h1>
+  <p class="lead">AIを活用してゲームを作りたいけれど、どこから手をつければいいか分からない初心者向けに、最小限の仕様書で開発を成功させるコツを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-15-beginner-game-dev-codex-specification.png?v=3" alt="AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法">
+  <h2>AIゲーム開発で最初に陥る罠</h2>
+<p>AIにコードを書いてもらう際、多くの初心者が「とりあえず動くものを」と作り始めて失敗します。結果として、修正が困難なスパゲッティコードになったり、途中で何を作っているか分からなくなったりします。成功の鍵は、実装前に「何を作るか」を最小限の項目に絞って言語化することです。</p>
+<h2>開発前に決めるべき最小構成の4項目</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIへの指示は、曖昧だと結果も曖昧になります。この4項目を明確にすることで、AIが生成するコードの質が安定し、修正の手間も大幅に減りますよ。</p></div></aside>
+<p>複雑な仕様書は不要です。以下の4点だけをメモ帳に書き出してください。</p>
+<ol>
+<li><strong>ゲームの目的（ゴール）</strong>: プレイヤーは何をすればクリアか？（例：制限時間内にスコアを100点貯める）</li>
+<li><strong>操作方法</strong>: 何キーで何を動かすか？（例：左右キーで移動、スペースでジャンプ）</li>
+<li><strong>勝敗条件</strong>: どんな時にゲームオーバーになるか？（例：敵に触れたら終了）</li>
+<li><strong>画面構成</strong>: 必要な要素は何か？（例：自機、敵キャラ、スコア表示）</li>
+</ol>
+<p>これだけで、AIへの指示（プロンプト）が劇的に明確になります。</p>
+<h2>具体例：シンプルアクションゲームの仕様</h2>
+<p>例えば「ボールを避けるゲーム」を作る場合、仕様書は以下のようになります。</p>
+<ul>
+<li>目的：上から落ちてくるボールを左右移動で避ける</li>
+<li>操作：キーボードの左右矢印キー</li>
+<li>勝敗：ボールに当たったらゲームオーバー。10秒耐えたらクリア</li>
+<li>構成：プレイヤー（四角）、ボール（円）、スコア（生存時間）</li>
+</ul>
+<p>これをCodexに入力することで、AIは「何を実装すべきか」を正しく理解し、動くコードを生成してくれます。</p>
+<h2>失敗例と改善策</h2>
+<p>よくある失敗は「敵キャラを無数に出したい」「背景をアニメーションさせたい」といった、初期段階での機能盛り込みすぎです。まずは「ボールが一つ落ちてくる」という最小単位で動かし、そこから機能を一つずつ追加（拡張）していくのが鉄則です。</p>
+<p>もしAIが意図しない動きをした場合は、仕様書を見直しましょう。「ボールの速度が速すぎる」と感じたら、仕様書に「ボールの落下速度は1秒間に50ピクセル」と具体的に書き加えるだけで、AIの回答精度が向上します。</p>
+<h2>開発を継続するコツ</h2>
+<p>仕様書は一度書いたら終わりではありません。実際に動かしてみて「ここが面白い」「ここが分かりにくい」と感じたら、その都度仕様書を更新してください。この「仕様書を更新して、AIに再生成させる」サイクルこそが、AIゲーム開発の醍醐味です。まずは今日、この4項目を書き出すところから始めてみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
