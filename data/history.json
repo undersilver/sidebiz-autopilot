@@ -521,5 +521,10 @@
     "date": "2026-10-14",
     "title": "AIで100階ダンジョンの敵配置を設計する",
     "draft": "drafts/2026-10-14-2026-10-14-fallback.json"
+  },
+  {
+    "date": "2026-10-15",
+    "title": "初心者がCodexで小規模ゲームを作るときの仕様書",
+    "draft": "drafts/2026-10-15-beginner-game-dev-codex-specification.json"
   }
 ]
