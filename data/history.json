@@ -526,5 +526,10 @@
     "date": "2026-10-15",
     "title": "初心者がCodexで小規模ゲームを作るときの仕様書",
     "draft": "drafts/2026-10-15-beginner-game-dev-codex-specification.json"
+  },
+  {
+    "date": "2026-10-16",
+    "title": "ローグライクの敗北後も再挑戦したくなる成長設計",
+    "draft": "drafts/2026-10-16-roguelike-growth-design-balance.json"
   }
 ]
