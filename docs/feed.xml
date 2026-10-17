@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>初心者でも挫折しない！Webゲーム開発で最初に作るべき「3つの画面」</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-17-web-game-development-3-screens.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-17-web-game-development-3-screens.html</guid>
+      <pubDate>Sat, 17 Oct 2026 14:26:26 +0900</pubDate>
+      <description>Webゲーム開発で挫折しないための戦略を紹介。タイトル、プレイ、結果の3画面に絞ることで、最短で完成させるための具体的なロードマップを解説します。</description>
+    </item>
+    <item>
       <title>AIでゲーム開発！Codexで最小限の仕様書を作って挫折を防ぐ方法</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-15-beginner-game-dev-codex-specification.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-15-beginner-game-dev-codex-specification.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html</guid>
       <pubDate>Sun, 06 Sep 2026 16:32:34 +0900</pubDate>
       <description>AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。</description>
-    </item>
-    <item>
-      <title>ゲーム制作の効率化！敵キャラクターを「5つの役割」で分類する設計術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-04-enemy-role-design-5-types.html</guid>
-      <pubDate>Fri, 04 Sep 2026 09:40:33 +0900</pubDate>
-      <description>ゲームの面白さを左右する敵キャラクターの配置。役割を「高速・高耐久・遠距離・状態異常・特殊」の5つに分類することで、バランス調整が驚くほどスムーズになります。初心者でもすぐに実践できる設計のコツを解説します。</description>
     </item>
   </channel>
 </rss>
