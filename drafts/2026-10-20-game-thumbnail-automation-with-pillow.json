@@ -1,0 +1,40 @@
+{
+  "title": "ゲーム動画のサムネイルを「固定キャラ合成」で効率化するAI活用術",
+  "slug": "game-thumbnail-automation-with-pillow",
+  "category": "AI活用",
+  "summary": "AI生成のたびにキャラクターの顔が変わる悩みを解決。固定マスコット画像をPillowで自動合成し、誰でも短時間で統一感のあるサムネイルを作成する方法を解説します。",
+  "article_markdown": "## なぜAI生成サムネイルは「顔」が変わるのか\n\nゲーム動画やブログのサムネイルにAI生成画像を使う際、毎回プロンプトを入力してキャラクターを生成していませんか？AIは非常に優秀ですが、同じキャラクターを指定しても、微妙な表情や画風の変化が避けられません。これが続くと、視聴者は「同じチャンネルの動画」だと認識しにくくなり、ブランディングの機会を逃してしまいます。\n\n## 安定したサムネイル運用の鍵は「合成」にあり\n\n解決策は、キャラクターだけを「固定素材」として用意し、背景のゲーム画面やタイトル文字とプログラムで合成することです。毎回AIにキャラクターを描かせるのではなく、一度お気に入りのマスコット画像を作成し、それをPythonライブラリの「Pillow」を使って背景画像に重ね合わせる手法が最も効率的です。\n\n## Pillowを使った自動合成の基本ステップ\n\nまずは、背景となるゲームのスクリーンショットを用意します。次に、背景を透過させたキャラクター画像を準備します。PythonのPillowを使うと、以下の手順で自動化が可能です。\n\n1. 背景画像を読み込む\n2. キャラクター画像を読み込む\n3. pasteメソッドを使用して、キャラクターを背景の右下や左端に配置する\n4. タイトル文字を合成して保存する\n\nこの方法なら、AI生成の揺らぎに悩まされることなく、常に同じキャラクターがサムネイルの顔として存在し続けます。\n\n## 実装の具体例と注意点\n\nコードを組む際は、キャラクターのサイズをあらかじめ統一しておくことが重要です。例えば、横幅を背景の30%に固定するなどのルールを設けます。失敗例として多いのは、背景画像が明るすぎてキャラクターが見えなくなるケースです。これを防ぐには、キャラクター画像の背後に薄い影（ドロップシャドウ）をプログラムで追加すると、視認性が劇的に向上します。\n\n## 運用のためのチェックリスト\n\n自動化といっても、最後の仕上げは人間が行うのが鉄則です。以下の2点を確認するだけで十分です。\n\n- 文字がゲーム画面の重要な情報と被っていないか\n- キャラクターの配置が不自然で、他の要素を隠していないか\n\nこれらは数秒で判断可能です。AIで効率化し、人間が最後の一押しを行う。このバランスこそが、長く楽しく創作を続ける秘訣です。",
+  "social_post": "ゲーム動画のサムネイル、毎回AIで生成して顔が変わっていませんか？「固定キャラ素材」をPillowで合成するだけで、統一感と時短を両立できます。初心者向けの実装ガイドをまとめました！",
+  "short_video_script": "サムネイルの顔が変わる問題、解決します。AIで毎回生成するのではなく、固定キャラをPillowで合成するだけ。Pythonで自動化すれば、作業時間はわずか数分。統一感のあるチャンネル作りを始めましょう。",
+  "thumbnail_prompt": "A clean, modern tutorial setup, showing a computer screen with Python code on the left and a gaming thumbnail with a mascot character on the right, high quality, flat design, bright colors, digital art style.",
+  "pikoron_tips": [
+    {
+      "after_heading": "安定したサムネイル運用の鍵は「合成」にあり",
+      "message": "毎回AIで生成するのではなく、一度決めたキャラ画像を使い回すのがコツ。Pillowを使えば、背景画像とキャラを自動で重ね合わせるだけで、統一感のあるサムネイルが量産できます。"
+    }
+  ],
+  "quality_score": 95,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The article mentions 'human final check' which is good, but could be slightly more specific about what to look for in the context of the automated script."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "estimated_review_minutes": 10,
+  "_meta": {
+    "created_at": "2026-10-20T09:54:47.808148+09:00",
+    "seed": {
+      "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+      "category": "AI活用",
+      "original_angle": "毎回キャラクターを生成せずPillowで安定した画像を合成する"
+    },
+    "status": "review"
+  }
+}
