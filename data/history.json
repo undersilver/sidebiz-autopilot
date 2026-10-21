@@ -551,5 +551,10 @@
     "date": "2026-10-20",
     "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
     "draft": "drafts/2026-10-20-game-thumbnail-automation-with-pillow.json"
+  },
+  {
+    "date": "2026-10-21",
+    "title": "漫画の吹き出しを先に配置して絵の破綻を防ぐ方法",
+    "draft": "drafts/2026-10-21-manga-balloon-first-technique.json"
   }
 ]
