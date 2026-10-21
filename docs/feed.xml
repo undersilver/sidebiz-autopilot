@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>絵が描けないを卒業！吹き出しから配置する「逆算漫画術」で失敗を防ぐ方法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-21-manga-balloon-first-technique.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-21-manga-balloon-first-technique.html</guid>
+      <pubDate>Wed, 21 Oct 2026 15:57:07 +0900</pubDate>
+      <description>漫画制作で絵を描いてからセリフを入れると、スペースが足りず構図が破綻しがちです。本記事では、先に吹き出しを配置し、そこから絵を逆算して描くことで、誰でもバランスの良い漫画が作れる具体的な手順を解説します。</description>
+    </item>
+    <item>
       <title>初心者でも挫折しない！Webゲーム開発で最初に作るべき「3つの画面」</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-17-web-game-development-3-screens.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-17-web-game-development-3-screens.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-07-manga-costume-consistency-guide.html</guid>
       <pubDate>Mon, 07 Sep 2026 16:50:14 +0900</pubDate>
       <description>漫画制作でキャラクターの服装がページごとに変わってしまう悩みを解決。衣装設定表の作成と「変更禁止要素」の定義で、一貫性を保つための具体的な実践テクニックを紹介します。</description>
-    </item>
-    <item>
-      <title>小説を漫画化する際の悩み「全コマにキャラが出る」を解決するコマ割り設計術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-06-manga-adaptation-character-control.html</guid>
-      <pubDate>Sun, 06 Sep 2026 16:32:34 +0900</pubDate>
-      <description>AIで小説を漫画化する際、全ページに同じキャラクターが描き出されてしまう課題を解決します。コマごとの役割分担と、視点誘導を意識したページ設計で、読みやすい漫画を作るための具体的なテクニックを解説します。</description>
     </item>
   </channel>
 </rss>
