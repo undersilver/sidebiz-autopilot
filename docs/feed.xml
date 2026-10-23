@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIにゲームのバグ修正を依頼する！「伝わる」指示出しの黄金ルール</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-23-ai-game-bug-fix-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-23-ai-game-bug-fix-guide.html</guid>
+      <pubDate>Fri, 23 Oct 2026 12:06:20 +0900</pubDate>
+      <description>AIにゲームのコード修正を依頼する際、曖昧な指示では解決しません。再現手順、期待結果、実際の結果、関連ファイルの4点をまとめるだけで、回答の精度が劇的に向上するコツを解説します。</description>
+    </item>
+    <item>
       <title>絵が描けないを卒業！吹き出しから配置する「逆算漫画術」で失敗を防ぐ方法</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-21-manga-balloon-first-technique.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-21-manga-balloon-first-technique.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html</guid>
       <pubDate>Tue, 08 Sep 2026 11:49:58 +0900</pubDate>
       <description>プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。</description>
-    </item>
-    <item>
-      <title>漫画制作でキャラクターの服装を統一する！衣装設定表と変更禁止要素の活用術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-07-manga-costume-consistency-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-07-manga-costume-consistency-guide.html</guid>
-      <pubDate>Mon, 07 Sep 2026 16:50:14 +0900</pubDate>
-      <description>漫画制作でキャラクターの服装がページごとに変わってしまう悩みを解決。衣装設定表の作成と「変更禁止要素」の定義で、一貫性を保つための具体的な実践テクニックを紹介します。</description>
     </item>
   </channel>
 </rss>
