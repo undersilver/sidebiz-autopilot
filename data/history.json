@@ -561,5 +561,10 @@
     "date": "2026-10-22",
     "title": "AI画像生成で同じキャラクターの顔を保つ方法",
     "draft": "drafts/2026-10-22-2026-10-22-fallback.json"
+  },
+  {
+    "date": "2026-10-23",
+    "title": "Codexへゲーム修正を頼む前に用意する情報",
+    "draft": "drafts/2026-10-23-ai-game-bug-fix-guide.json"
   }
 ]
