@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIでゲームバランスを最適化！パラメータ比較表を活用した調整術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-24-ai-game-balance-optimization-table.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-24-ai-game-balance-optimization-table.html</guid>
+      <pubDate>Sat, 24 Oct 2026 14:19:24 +0900</pubDate>
+      <description>AIにゲームのステータス調整を依頼する際、表形式で出力させることで比較・検討が劇的に楽になります。具体的なプロンプト例と、バランス調整のコツを解説します。</description>
+    </item>
+    <item>
       <title>AIにゲームのバグ修正を依頼する！「伝わる」指示出しの黄金ルール</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-23-ai-game-bug-fix-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-23-ai-game-bug-fix-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-10-sumo-roguelike-combat-design.html</guid>
       <pubDate>Thu, 10 Sep 2026 14:31:16 +0900</pubDate>
       <description>力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込む方法を解説。独自のローグライク戦闘を設計するための具体的なステップを紹介します。</description>
-    </item>
-    <item>
-      <title>数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-08-game-distance-ui-design-guide.html</guid>
-      <pubDate>Tue, 08 Sep 2026 11:49:58 +0900</pubDate>
-      <description>プレイヤーが敵との距離感を直感的に把握できる、視覚的なUIデザイン手法を解説。数値に頼らず、色や形状の変化で間合いを伝える具体的なテクニックを紹介します。</description>
     </item>
   </channel>
 </rss>

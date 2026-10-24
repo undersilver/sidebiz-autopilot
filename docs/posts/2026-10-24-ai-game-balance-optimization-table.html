@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIでゲームバランスを最適化！パラメータ比較表を活用した調整術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIにゲームのステータス調整を依頼する際、表形式で出力させることで比較・検討が劇的に楽になります。具体的なプロンプト例と、バランス調整のコツを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-24-ai-game-balance-optimization-table.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIでゲームバランスを最適化！パラメータ比較表を活用した調整術">
+  <meta property="og:description" content="AIにゲームのステータス調整を依頼する際、表形式で出力させることで比較・検討が劇的に楽になります。具体的なプロンプト例と、バランス調整のコツを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-24-ai-game-balance-optimization-table.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-24-ai-game-balance-optimization-table.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIでゲームバランスを最適化！パラメータ比較表を活用した調整術">
+  <meta name="twitter:description" content="AIにゲームのステータス調整を依頼する際、表形式で出力させることで比較・検討が劇的に楽になります。具体的なプロンプト例と、バランス調整のコツを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-24-ai-game-balance-optimization-table.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIでゲームバランスを最適化！パラメータ比較表を活用した調整術", "description": "AIにゲームのステータス調整を依頼する際、表形式で出力させることで比較・検討が劇的に楽になります。具体的なプロンプト例と、バランス調整のコツを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-24-ai-game-balance-optimization-table.png?v=3"], "datePublished": "2026-10-24T14:19:24.618673+09:00", "dateModified": "2026-10-24T14:19:24.618689+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-24-ai-game-balance-optimization-table.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AIでゲームバランスを最適化！パラメータ比較表を活用した調整術</h1>
+  <p class="lead">AIにゲームのステータス調整を依頼する際、表形式で出力させることで比較・検討が劇的に楽になります。具体的なプロンプト例と、バランス調整のコツを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-24-ai-game-balance-optimization-table.png?v=3" alt="AIでゲームバランスを最適化！パラメータ比較表を活用した調整術">
+  <h2>ゲームバランス調整にAIを活用するメリット</h2>
+<p>ゲーム制作において、敵の強さやアイテムの性能を調整する「バランス取り」は非常に時間がかかる作業です。特に、HPや攻撃力、速度といった数値が連動している場合、一つを変更すると全体に影響が及びます。</p>
+<p>AIを活用すれば、これらの数値を一括でシミュレーションし、比較可能な形式で提示させることが可能です。今回は、AIから「比較可能な表」を引き出すためのプロンプト術を解説します。</p>
+<h2>比較表を作るためのプロンプト作成術</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIへの指示は「Markdownの表形式で出力」と指定するのが鉄則です。項目を固定することで、数値の比較が容易になり、調整の判断スピードが格段に上がります。</p></div></aside>
+<p>AIに単に「バランスを調整して」と頼むと、文章で回答が返ってきてしまい、数値の比較が困難です。重要なのは「Markdown形式の表で出力すること」と「比較項目を限定すること」です。</p>
+<p>以下のプロンプトを参考にしてください。</p>
+<p>「以下の項目で、ゲームの敵キャラクターのステータス表を作成してください。
+項目：名前、HP、攻撃力、速度、出現階層
+条件：出現階層が上がるごとに、HPは1.2倍、攻撃力は1.1倍になるように計算してください。
+出力形式：Markdownの表形式のみで出力してください。」</p>
+<p>このように項目を絞ることで、AIは一貫性のある数値を提示しやすくなります。</p>
+<h2>失敗例と改善のポイント</h2>
+<p>よくある失敗は「曖昧な指示」です。「強すぎず弱すぎない調整をして」といった抽象的な指示では、AIも基準を持てません。</p>
+<p>改善のコツは「基準となる1体目を提示する」ことです。</p>
+<p>失敗例：「バランスの良い敵キャラを5体考えて」
+改善例：「以下のスライム（HP10, 攻撃2）を基準として、それより強い敵を5体、表形式で作成してください」</p>
+<p>基準値を与えることで、AIは相対的な計算を行い、バランスの取れた数値を出力するようになります。</p>
+<h2>調整結果を検証する際のチェックリスト</h2>
+<p>AIが出した表をそのまま使うのではなく、以下の3点を確認しましょう。</p>
+<ol>
+<li>数値のインフレが起きていないか（序盤と終盤で数値が離れすぎていないか）</li>
+<li>役割が被っていないか（例：攻撃は高いが速度が遅いキャラと、その逆のキャラが明確に分かれているか）</li>
+<li>階層ごとの難易度曲線が滑らかか</li>
+</ol>
+<p>これらを確認し、不自然な点があれば「3階層目の攻撃力を少し下げて」のように再指示を出します。この繰り返しにより、短時間で精度の高いバランス調整が可能になります。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
