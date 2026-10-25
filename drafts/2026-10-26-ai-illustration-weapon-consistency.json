@@ -1,0 +1,54 @@
+{
+  "title": "AIイラストで武器の左右反転を防ぐ！一貫性を保つプロンプトとチェック術",
+  "slug": "ai-illustration-weapon-consistency",
+  "category": "AI活用",
+  "summary": "AIでゲームキャラクターを描く際、武器の左右が入れ替わってしまう問題を解決します。プロンプトでの固定方法と、短時間で完了する効率的なチェックリストを解説します。",
+  "article_markdown": "## なぜAIは武器の左右を入れ替えてしまうのか\n\nAIでキャラクターを生成していると、右手に持たせたはずの剣が、別のアングルでは左手に移動していることはありませんか？これはAIが「武器」という概念は理解していても、キャラクターの身体的特徴や利き手という「文脈」を完全に固定できていないために起こる現象です。\n\n特にゲーム用の素材として使う場合、武器の左右が入れ替わるとプレイヤーに違和感を与えてしまいます。この問題を解消するには、プロンプトでの指定を強化し、仕上げのチェック工程を簡略化する工夫が重要です。\n\n## 武器の配置を固定するプロンプトの工夫\n\n武器の左右を固定するために最も効果的なのは、プロンプトに「身体の部位と持ち物の関係性」を明示することです。\n\n具体的には、単に「holding a sword（剣を持っている）」と書くのではなく、「holding a sword in the right hand（右手に剣を持っている）」と利き手を指定します。さらに、キャラクターの立ち位置や向きを固定するキーワードを併用しましょう。\n\n- 改善前：a warrior holding a sword, dynamic pose\n- 改善後：a warrior holding a sword in the right hand, right-handed, facing forward, symmetrical body\n\nこのように「右利きであること」を強調することで、AIが生成する際の基準点が安定します。また、背景に左右がわかりやすい要素（盾を左手に持つ、鞘を左腰に下げるなど）を付け加えると、左右の反転を防ぐ効果が高まります。\n\n## 効率的にミスを見抜くためのチェックリスト\n\n生成された画像を確認する際、すべてを細かく見ていると時間がかかります。以下の3項目に絞った「クイック・チェック表」を活用してください。\n\n1. 利き手の確認：右手に武器があるか、あるいは意図した持ち方か。\n2. 装飾の左右：剣の柄の装飾や、防具の左右非対称なパーツが入れ替わっていないか。\n3. 視線の向き：武器を構える方向とキャラクターの視線が一致しているか。\n\nこの3点だけを集中して見ることで、チェックにかかる時間を大幅に短縮できます。特に武器の柄の向きは、左右反転のサインとして非常に見つけやすいポイントです。\n\n## 失敗例と改善のヒント\n\nよくある失敗例は、複雑なポーズを同時に要求することです。「剣を振り回しながら空を飛んでいる」といった複数の動作を一度に指定すると、AIは武器の持ち手を優先順位の低い情報として処理しがちです。\n\n改善策として、まずは「立ち姿で武器を持っている」という基本ポーズを固定し、その後にアクションのプロンプトを重ねていく「段階的生成」を試してみてください。土台となる「右手に武器」という情報が強固であれば、多少動きを加えても左右が入れ替わるリスクを抑えることができます。\n\nAI活用において完璧を求めすぎると作業が止まってしまいます。プロンプトで8割をコントロールし、残りの2割をこのチェックリストで補うという考え方が、長く創作を続けるコツです。",
+  "social_post": "AIイラストで武器の左右が入れ替わって困っていませんか？プロンプトで「利き手」を明示し、3つのポイントに絞ったチェックを行うだけで、修正の手間は劇的に減らせます。ゲーム素材作りにも役立つテクニックをまとめました。",
+  "short_video_script": "【AIイラスト攻略】武器の左右反転を防ぐ方法！プロンプトで「右手に剣」と指定するだけじゃ足りない？利き手の固定と、3秒で終わるチェック術を解説します。これでゲーム素材作りもサクサク進む！",
+  "thumbnail_prompt": "A professional digital illustration of a game character holding a sword, focus on the right hand, clean background, high quality, anime style, clear composition.",
+  "pikoron_tips": [
+    {
+      "after_heading": "効率的にミスを見抜くためのチェックリスト",
+      "message": "全部見る必要はありません！「利き手」「装飾の左右」「視線の向き」の3点に絞るだけで、チェック時間はぐっと短縮できますよ。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "画像",
+      "item": "プロンプト例の生成結果が意図通りか確認",
+      "risk": "低"
+    },
+    {
+      "type": "表現",
+      "item": "武器の持ち方が不自然ではないか",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The article mentions '95% automation' or 'internal check time' in the metadata (human_checks, estimated_review_minutes), but these are correctly excluded from the actual article_markdown."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-10-26T08:48:12.537290+09:00",
+    "seed": {
+      "title": "ゲームの攻撃モーションで武器の左右が入れ替わる問題",
+      "category": "AI活用",
+      "original_angle": "固定すべき特徴をプロンプトと検査表で維持する方法を示す"
+    },
+    "status": "review"
+  }
+}
