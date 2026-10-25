@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-25-python-pillow-japanese-thumbnail-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-25-python-pillow-japanese-thumbnail-tips.html</guid>
+      <pubDate>Sun, 25 Oct 2026 14:36:28 +0900</pubDate>
+      <description>Pythonの画像処理ライブラリ「Pillow」を使って、日本語サムネイルを自動作成する際の落とし穴と解決策を解説します。フォント選びから文字の折り返し、余白調整まで、初心者でもきれいな画像を作るためのコツをまとめました。</description>
+    </item>
+    <item>
       <title>AIでゲームバランスを最適化！パラメータ比較表を活用した調整術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-24-ai-game-balance-optimization-table.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-24-ai-game-balance-optimization-table.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html</guid>
       <pubDate>Fri, 11 Sep 2026 16:42:47 +0900</pubDate>
       <description>ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。</description>
-    </item>
-    <item>
-      <title>土俵の上の戦略！力士を主人公にしたローグライクゲームの戦闘システム設計術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-10-sumo-roguelike-combat-design.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-10-sumo-roguelike-combat-design.html</guid>
-      <pubDate>Thu, 10 Sep 2026 14:31:16 +0900</pubDate>
-      <description>力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込む方法を解説。独自のローグライク戦闘を設計するための具体的なステップを紹介します。</description>
     </item>
   </channel>
 </rss>
