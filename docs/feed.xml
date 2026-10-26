@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIイラストで武器の左右反転を防ぐ！一貫性を保つプロンプトとチェック術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-26-ai-illustration-weapon-consistency.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-26-ai-illustration-weapon-consistency.html</guid>
+      <pubDate>Mon, 26 Oct 2026 17:26:44 +0900</pubDate>
+      <description>AIでゲームキャラクターを描く際、武器の左右が入れ替わってしまう問題を解決します。プロンプトでの固定方法と、短時間で完了する効率的なチェックリストを解説します。</description>
+    </item>
+    <item>
       <title>PythonとPillowで日本語サムネイル作成！失敗しないための4つのポイント</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-25-python-pillow-japanese-thumbnail-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-25-python-pillow-japanese-thumbnail-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html</guid>
       <pubDate>Sat, 12 Sep 2026 14:20:28 +0900</pubDate>
       <description>ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。</description>
-    </item>
-    <item>
-      <title>AI画像生成で「九面図」が崩れる！キャラクターの向きを安定させるプロンプトの極意</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-11-ai-character-sheet-tips.html</guid>
-      <pubDate>Fri, 11 Sep 2026 16:42:47 +0900</pubDate>
-      <description>ゲームや漫画制作に欠かせないキャラクター九面図。AIで生成すると向きが崩れがちですが、プロンプトの指定方法を工夫するだけで劇的に改善できます。具体的な改善例とコツを解説します。</description>
     </item>
   </channel>
 </rss>
