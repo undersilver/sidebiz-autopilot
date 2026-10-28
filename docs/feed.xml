@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-28-ai-article-editing-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-28-ai-article-editing-tips.html</guid>
+      <pubDate>Wed, 28 Oct 2026 15:35:48 +0900</pubDate>
+      <description>AIでゲーム記事を作成する際、うっかり混入しがちな「内部メモ」や「指示文」。読者に届けたい情報だけを正確に抽出するための、効率的な校閲ルールを解説します。</description>
+    </item>
+    <item>
       <title>AIイラストで武器の左右反転を防ぐ！一貫性を保つプロンプトとチェック術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-26-ai-illustration-weapon-consistency.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-26-ai-illustration-weapon-consistency.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html</guid>
       <pubDate>Sun, 13 Sep 2026 16:56:46 +0900</pubDate>
       <description>100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。</description>
-    </item>
-    <item>
-      <title>AIでゲーム用キャラの九面図を破綻させない！向き指定のコツを徹底解説</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-12-ai-character-sheet-tips.html</guid>
-      <pubDate>Sat, 12 Sep 2026 14:20:28 +0900</pubDate>
-      <description>ゲーム制作に欠かせないキャラクターの九面図。画像生成AIで作成する際に「顔や体が崩れる」問題を解決するための、具体的かつ実践的な方向指定テクニックを解説します。</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIでゲーム記事を作成する際、うっかり混入しがちな「内部メモ」や「指示文」。読者に届けたい情報だけを正確に抽出するための、効率的な校閲ルールを解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-28-ai-article-editing-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック">
+  <meta property="og:description" content="AIでゲーム記事を作成する際、うっかり混入しがちな「内部メモ」や「指示文」。読者に届けたい情報だけを正確に抽出するための、効率的な校閲ルールを解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-28-ai-article-editing-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-28-ai-article-editing-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック">
+  <meta name="twitter:description" content="AIでゲーム記事を作成する際、うっかり混入しがちな「内部メモ」や「指示文」。読者に届けたい情報だけを正確に抽出するための、効率的な校閲ルールを解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-28-ai-article-editing-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック", "description": "AIでゲーム記事を作成する際、うっかり混入しがちな「内部メモ」や「指示文」。読者に届けたい情報だけを正確に抽出するための、効率的な校閲ルールを解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-10-28-ai-article-editing-tips.png?v=3"], "datePublished": "2026-10-28T15:35:48.118055+09:00", "dateModified": "2026-10-28T15:35:48.118076+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-28-ai-article-editing-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック</h1>
+  <p class="lead">AIでゲーム記事を作成する際、うっかり混入しがちな「内部メモ」や「指示文」。読者に届けたい情報だけを正確に抽出するための、効率的な校閲ルールを解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-10-28-ai-article-editing-tips.png?v=3" alt="AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック">
+  <h2>AI記事に潜む「内部メモ」の罠</h2>
+<p>AIを使ってゲームレビューや攻略記事を作成するのは非常に効率的です。しかし、AIは時折、人間向けの「指示文」や「構成案」といった内部メモを本文に混ぜて出力することがあります。これらをそのまま公開してしまうと、読者は混乱し、サイトの信頼性も損なわれます。</p>
+<h2>構造化プロンプトで情報を分離する</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIへの指示で出力エリアを明確に区切るのが鉄則です。本文とメモを物理的に分けるだけで、コピペ時のミスを劇的に減らせます。</p></div></aside>
+<p>校閲作業を楽にする最大のコツは、AIへの指示段階で「出力エリア」を明確に分けることです。例えば、以下のようなテンプレートをプロンプトに含めます。</p>
+<ul>
+<li>[構成案]</li>
+<li>[本文]</li>
+<li>[補足メモ]</li>
+</ul>
+<p>このように区切ることで、AIは「本文」以外の情報を別のブロックとして出力しやすくなります。校閲時には「[本文]」と書かれた箇所だけをコピーするルールにすれば、不要なメモが混入するリスクを大幅に減らせます。</p>
+<h2>視覚的にチェックする「3つのステップ」</h2>
+<p>文章を読み込む前に、機械的なチェックを行うことでミスを減らせます。</p>
+<ol>
+<li><strong>記号検索</strong>: 「[」「]」「【」「】」などの括弧記号を検索し、本文中に残っていないか確認します。これらは指示文でよく使われるため、ここをチェックするだけで8割のミスは見つかります。</li>
+<li><strong>一人称の確認</strong>: AIが「指示に従って執筆してください」といった自分への命令を書き残していないか、文末を流し読みします。</li>
+<li><strong>空行の削除</strong>: AIが作成した箇条書きのあとに、余計な改行や「以上が構成案です」といった結びの言葉がないかを確認します。</li>
+</ol>
+<h2>失敗例と改善策</h2>
+<p>【失敗例】
+「このゲームの魅力は探索です。[注：ここはもっと詳しく書くこと] プレイヤーは自由に歩き回れます。」</p>
+<p>このように、本文の途中に注釈が入ってしまうケースです。これはAIへの指示が曖昧な場合に発生します。</p>
+<p>【改善策】
+プロンプトに「本文には一切の注釈や構成案を含めず、読者への提供文のみを出力すること」と明記します。それでも混入する場合は、校閲時に「[」という文字が含まれていないかをチェックするフローを必ず挟みます。</p>
+<h2>最後に：人間が確認すべき「最後の10分」</h2>
+<p>AIの出力は完璧ではありません。公開前には必ず「読者の視点」で一度読み直してください。特にゲームの固有名詞や、攻略手順の数値が正しいかは、AIが最も間違いやすいポイントです。この確認さえ行えば、AIを活用した記事作成は、より安全で質の高いものになります。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
