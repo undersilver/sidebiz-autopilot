@@ -591,5 +591,10 @@
     "date": "2026-10-28",
     "title": "AIが書いたゲーム記事から内部メモを除く校閲方法",
     "draft": "drafts/2026-10-28-ai-article-editing-tips.json"
+  },
+  {
+    "date": "2026-10-29",
+    "title": "小説を漫画化するときのコマごとの登場人物管理",
+    "draft": "drafts/2026-10-29-manga-character-management-by-panel.json"
   }
 ]
