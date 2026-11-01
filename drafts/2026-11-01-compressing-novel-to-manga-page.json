@@ -49,6 +49,8 @@
       "category": "漫画化",
       "original_angle": "残す情報・絵に任せる情報・削る情報の判断基準を示す"
     },
-    "status": "review"
+    "status": "published",
+    "published_at": "2026-11-01T18:59:24.032005+09:00",
+    "updated_at": "2026-11-01T18:59:24.032025+09:00"
   }
 }

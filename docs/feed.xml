@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>小説の描写を漫画の1ページに凝縮する！情報整理の3ステップ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-01-compressing-novel-to-manga-page.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-01-compressing-novel-to-manga-page.html</guid>
+      <pubDate>Sun, 01 Nov 2026 18:59:24 +0900</pubDate>
+      <description>小説の長い説明を漫画へ変換する際、情報を「残す」「絵に任せる」「削る」の3つに分ける手法を解説。具体的な手順と判断基準で、読みやすい漫画制作をサポートします。</description>
+    </item>
+    <item>
       <title>AI生成記事を公開する前に！「内部メモ」を確実に除外する校閲テクニック</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-28-ai-article-editing-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-28-ai-article-editing-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-14-ai-game-development-specification.html</guid>
       <pubDate>Mon, 14 Sep 2026 14:42:12 +0900</pubDate>
       <description>AIを活用してゲームを作りたい初心者向けに、最小限の工数で開発を成功させる「仕様書の絞り込み方」を解説します。</description>
-    </item>
-    <item>
-      <title>AIで攻略！100階ダンジョンの敵配置を設計するコツ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-13-ai-dungeon-enemy-design.html</guid>
-      <pubDate>Sun, 13 Sep 2026 16:56:46 +0900</pubDate>
-      <description>100階層あるダンジョンの敵配置をAIで効率的に設計する方法を解説。階層ごとの役割分担と難易度曲線を意識した具体的なプロンプト例を紹介します。</description>
     </item>
   </channel>
 </rss>
