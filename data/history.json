@@ -606,5 +606,10 @@
     "date": "2026-10-31",
     "title": "ローグライクの武器と防具を階層ごとに強くする方法",
     "draft": "drafts/2026-10-31-2026-10-31-fallback.json"
+  },
+  {
+    "date": "2026-11-01",
+    "title": "小説の長い説明を漫画の1ページへ圧縮する方法",
+    "draft": "drafts/2026-11-01-compressing-novel-to-manga-page.json"
   }
 ]
