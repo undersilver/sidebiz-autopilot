@@ -611,5 +611,10 @@
     "date": "2026-11-01",
     "title": "小説の長い説明を漫画の1ページへ圧縮する方法",
     "draft": "drafts/2026-11-01-compressing-novel-to-manga-page.json"
+  },
+  {
+    "date": "2026-11-02",
+    "title": "ゲームの距離システムを画面で分かりやすく伝える方法",
+    "draft": "drafts/2026-11-02-game-distance-ui-design.json"
   }
 ]
