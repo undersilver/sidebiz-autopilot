@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-02-game-distance-ui-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-02-game-distance-ui-design.html</guid>
+      <pubDate>Mon, 02 Nov 2026 16:08:06 +0900</pubDate>
+      <description>ゲーム内の複雑な距離感を、数値ではなく視覚的なUIで直感的にプレイヤーへ伝えるための具体的なデザイン手法を解説します。</description>
+    </item>
+    <item>
       <title>小説の描写を漫画の1ページに凝縮する！情報整理の3ステップ</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-01-compressing-novel-to-manga-page.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-01-compressing-novel-to-manga-page.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-16-web-game-development-3-screens.html</guid>
       <pubDate>Wed, 16 Sep 2026 10:00:21 +0900</pubDate>
       <description>Webゲーム開発で挫折しないための秘訣は、機能を絞り込むこと。タイトル、プレイ、結果の3画面に集中する開発手法を解説します。</description>
-    </item>
-    <item>
-      <title>AIでゲーム開発！最小構成の仕様書で成功させるコツ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-14-ai-game-development-specification.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-14-ai-game-development-specification.html</guid>
-      <pubDate>Mon, 14 Sep 2026 14:42:12 +0900</pubDate>
-      <description>AIを活用してゲームを作りたい初心者向けに、最小限の工数で開発を成功させる「仕様書の絞り込み方」を解説します。</description>
     </item>
   </channel>
 </rss>
