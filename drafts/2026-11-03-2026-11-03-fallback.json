@@ -1,0 +1,44 @@
+{
+  "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
+  "slug": "2026-11-03-fallback",
+  "category": "プログラミング",
+  "summary": "AI生成または校閲に失敗したため、公開不可のテンプレートです。",
+  "article_markdown": "# 公開保留\n\n生成または校閲に失敗しました。再生成してください。",
+  "social_post": "",
+  "short_video_script": "",
+  "thumbnail_prompt": "",
+  "pikoron_tips": [],
+  "human_checks": [
+    {
+      "type": "システム",
+      "item": "HTTPError: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent",
+      "risk": "高"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 0,
+  "estimated_review_minutes": 1,
+  "_validation": {
+    "status": "block",
+    "score": 0,
+    "issues": [
+      {
+        "severity": "high",
+        "category": "system",
+        "detail": "503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": false
+  },
+  "_meta": {
+    "created_at": "2026-11-03T12:17:47.758145+09:00",
+    "seed": {
+      "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
+      "category": "プログラミング",
+      "original_angle": "リポジトリ作成からActions公開までを初心者向けに整理する"
+    },
+    "status": "blocked"
+  }
+}

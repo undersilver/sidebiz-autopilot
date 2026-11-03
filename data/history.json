@@ -616,5 +616,10 @@
     "date": "2026-11-02",
     "title": "ゲームの距離システムを画面で分かりやすく伝える方法",
     "draft": "drafts/2026-11-02-game-distance-ui-design.json"
+  },
+  {
+    "date": "2026-11-03",
+    "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
+    "draft": "drafts/2026-11-03-2026-11-03-fallback.json"
   }
 ]
