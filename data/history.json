@@ -621,5 +621,10 @@
     "date": "2026-11-03",
     "title": "GitHub Pagesでゲーム開発記録サイトを無料公開する方法",
     "draft": "drafts/2026-11-03-2026-11-03-fallback.json"
+  },
+  {
+    "date": "2026-11-04",
+    "title": "宝箱限定装備に特別感を持たせる組み合わせ効果",
+    "draft": "drafts/2026-11-04-treasure-chest-gear-design-guide.json"
   }
 ]
