@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>宝箱限定装備を「ただの強装備」で終わらせない！プレイスタイルを劇的に変える設計術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-04-treasure-chest-gear-design-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-04-treasure-chest-gear-design-guide.html</guid>
+      <pubDate>Wed, 04 Nov 2026 17:30:50 +0900</pubDate>
+      <description>宝箱から手に入る限定装備に、数値以上の「特別感」を持たせる方法を解説。プレイスタイルを根本から変える「組み合わせ効果」の設計アイデアと、具体的な実装ステップを紹介します。</description>
+    </item>
+    <item>
       <title>数値は捨てよう！ゲームの「間合い」を直感的に伝えるUIデザイン術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-02-game-distance-ui-design.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-02-game-distance-ui-design.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-17-ai-illustration-hand-fix-tips.html</guid>
       <pubDate>Thu, 17 Sep 2026 12:06:20 +0900</pubDate>
       <description>AIイラストで悩みがちな「手足の崩れ」を、生成前の指示出しと生成後の修正テクニックで劇的に改善する方法を解説します。</description>
-    </item>
-    <item>
-      <title>挫折しない！Webゲーム開発で最初に作るべき「3つの画面」とは？</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-16-web-game-development-3-screens.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-16-web-game-development-3-screens.html</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:21 +0900</pubDate>
-      <description>Webゲーム開発で挫折しないための秘訣は、機能を絞り込むこと。タイトル、プレイ、結果の3画面に集中する開発手法を解説します。</description>
     </item>
   </channel>
 </rss>
