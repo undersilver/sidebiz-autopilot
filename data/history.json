@@ -631,5 +631,10 @@
     "date": "2026-11-05",
     "title": "AI生成JSONを安全に公開記事へ変換する設計",
     "draft": "drafts/2026-11-05-2026-11-05-fallback.json"
+  },
+  {
+    "date": "2026-11-06",
+    "title": "敵キャラクターを5つの役割に分類する設計法",
+    "draft": "drafts/2026-11-06-enemy-role-classification-guide.json"
   }
 ]
