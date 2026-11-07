@@ -1,0 +1,49 @@
+{
+  "title": "GitHub Actionsが赤く光った！失敗原因を最短で見つけるための「読み方」ガイド",
+  "slug": "github-actions-troubleshooting-guide",
+  "category": "プログラミング",
+  "summary": "GitHub Actionsの実行結果が失敗（赤色）した際、どこを見て何を修正すべきか。初心者でも迷わない、エラー箇所を特定するための手順を解説します。",
+  "article_markdown": "# GitHub Actionsが赤く光った！失敗原因を最短で見つけるための「読み方」ガイド\n\nGitHub Actionsを使っていて、実行結果が「赤色（Failure）」になって焦ったことはありませんか？自動化の設定は便利ですが、エラーが出たときにどこを見ればいいのか分からず、時間を浪費してしまうのは避けたいものです。\n\nこの記事では、GitHub Actionsが失敗した際に、最短で原因を特定するための「見るべき順番」を解説します。\n\n## まずは「Actions」タブから詳細画面へ\n\n失敗したときは、リポジトリの「Actions」タブを開きましょう。直近の実行ログが一覧で表示され、失敗したものは赤いバツ印（×）がついています。まずはそのタイトルをクリックして、詳細画面を開いてください。\n\n## 失敗した工程（ジョブ）を特定する\n\n詳細画面を開くと、左側に「Jobs」というリストが表示されます。ここが最初の確認ポイントです。複数のジョブが並んでいる場合、どれか一つが赤くなっているはずです。その赤くなっているジョブ名をクリックしてください。\n\n## ログの「末尾」からエラーメッセージを探す\n\nジョブを選択すると、右側に詳細なログが表示されます。ここで多くの初心者がやってしまいがちなのが、一番上からすべてを読み込んでしまうこと。実は、エラーの原因はログの「一番下」に隠れていることがほとんどです。\n\nログ画面の右側にあるスクロールバーを一気に一番下まで下げてみましょう。そこには、処理が止まった直前のメッセージや、プログラムが吐き出したエラー内容が記載されています。\n\n## 具体的な失敗例と改善のヒント\n\n例えば、「npm install」で失敗している場合、ログの末尾には「404 Not Found」や「Permission Denied」といった文字列が見つかるはずです。これらはパッケージ名の間違いや権限の問題を示しています。\n\nまた、Pythonなどのスクリプトで失敗している場合、「Traceback」という文字を探してください。その直後に、どのファイルの何行目でエラーが起きたのかが具体的に書かれています。\n\n### 修正のステップ\n1. ログの末尾にある「エラーコード」や「例外メッセージ」をコピーする\n2. そのまま検索エンジンやAIツールに貼り付けて検索する\n3. 提示された修正案をコードに反映し、再度コミットする\n\n## 焦らず「赤色」を攻略しよう\n\nGitHub Actionsの失敗は、決して「壊れた」わけではありません。システムが「ここで止まったよ」と教えてくれているサインです。今回紹介した「ジョブの選択」→「ログの末尾を確認」という手順を繰り返せば、必ず解決策が見つかります。まずは落ち着いて、ログの最後の数行に注目してみてください。",
+  "social_post": "GitHub Actionsが赤色で失敗したとき、どこを見ていますか？実はログの「一番下」に解決のヒントが隠れています。初心者向けに、エラーを最短で見つけるための手順をまとめました！ #GitHubActions #プログラミング #初心者",
+  "short_video_script": "GitHub Actionsが赤く光って失敗！そんな時、どこを見ていますか？実は上から読んではいけません。正解は『一番下』。ジョブを選択して、ログの末尾を確認するだけで、エラーの原因がすぐに見つかりますよ！",
+  "thumbnail_prompt": "A clean, modern flat design illustration of a developer looking at a computer screen showing a GitHub Actions interface with a red failure icon, bright and professional colors, minimalist style.",
+  "pikoron_tips": [
+    {
+      "after_heading": "ログの「末尾」からエラーメッセージを探す",
+      "message": "エラーログは上から読む必要はありません！まずは一番下までスクロールして、処理が止まった瞬間のメッセージやエラーコードを探すのが、解決への最短ルートです。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "事実",
+      "item": "GitHub Actionsのログ構造とジョブの確認手順",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "内部情報",
+        "detail": "JSON内に運営者向けの内部情報（human_checks, estimated_review_minutesなど）が含まれていますが、記事本文自体は適切です。"
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-11-07T10:35:43.603952+09:00",
+    "seed": {
+      "title": "初心者がGitHub Actionsの失敗原因を見つける方法",
+      "category": "プログラミング",
+      "original_angle": "赤い実行結果から失敗した工程とメッセージを読む順番を説明する"
+    },
+    "status": "review"
+  }
+}
