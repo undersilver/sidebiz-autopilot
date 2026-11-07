@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>GitHub Actionsが赤く光った！失敗原因を最短で見つけるための「読み方」ガイド</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-07-github-actions-troubleshooting-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-07-github-actions-troubleshooting-guide.html</guid>
+      <pubDate>Sat, 07 Nov 2026 17:13:52 +0900</pubDate>
+      <description>GitHub Actionsの実行結果が失敗（赤色）した際、どこを見て何を修正すべきか。初心者でも迷わない、エラー箇所を特定するための手順を解説します。</description>
+    </item>
+    <item>
       <title>宝箱限定装備を「ただの強装備」で終わらせない！プレイスタイルを劇的に変える設計術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-04-treasure-chest-gear-design-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-04-treasure-chest-gear-design-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-18-roguelike-dungeon-boss-design.html</guid>
       <pubDate>Fri, 18 Sep 2026 16:55:10 +0900</pubDate>
       <description>100階層におよぶローグライクゲームにおいて、プレイヤーを飽きさせないボス設計の秘訣を解説。10階ごとの区切りで「学習」と「挑戦」を繰り返す仕組みを具体的に紹介します。</description>
-    </item>
-    <item>
-      <title>AIイラストの「手足の崩れ」を最小限に！初心者でもできる生成と修正のコツ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-17-ai-illustration-hand-fix-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-17-ai-illustration-hand-fix-tips.html</guid>
-      <pubDate>Thu, 17 Sep 2026 12:06:20 +0900</pubDate>
-      <description>AIイラストで悩みがちな「手足の崩れ」を、生成前の指示出しと生成後の修正テクニックで劇的に改善する方法を解説します。</description>
     </item>
   </channel>
 </rss>
