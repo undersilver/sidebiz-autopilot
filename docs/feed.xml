@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>小説を漫画化する際の悩み「全ページにキャラが出る」を解消するコマ割り術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-08-novel-to-manga-character-control.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-08-novel-to-manga-character-control.html</guid>
+      <pubDate>Sun, 08 Nov 2026 13:03:42 +0900</pubDate>
+      <description>小説を漫画化する際、すべてのコマに主要キャラが描かれてしまい、画面が単調になる問題を解決します。コマ単位での登場人物制御と、視点を切り替えるページ設計のコツを解説します。</description>
+    </item>
+    <item>
       <title>GitHub Actionsが赤く光った！失敗原因を最短で見つけるための「読み方」ガイド</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-07-github-actions-troubleshooting-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-07-github-actions-troubleshooting-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html</guid>
       <pubDate>Sat, 19 Sep 2026 14:26:37 +0900</pubDate>
       <description>毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。</description>
-    </item>
-    <item>
-      <title>100階層ローグライクで「ボス」を攻略する！段階的な難易度設計ガイド</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-18-roguelike-dungeon-boss-design.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-18-roguelike-dungeon-boss-design.html</guid>
-      <pubDate>Fri, 18 Sep 2026 16:55:10 +0900</pubDate>
-      <description>100階層におよぶローグライクゲームにおいて、プレイヤーを飽きさせないボス設計の秘訣を解説。10階ごとの区切りで「学習」と「挑戦」を繰り返す仕組みを具体的に紹介します。</description>
     </item>
   </channel>
 </rss>
