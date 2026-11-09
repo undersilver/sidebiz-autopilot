@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>漫画制作でキャラクターの服装を統一する！衣装設定表と「変更禁止要素」の活用術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-09-manga-costume-consistency-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-09-manga-costume-consistency-guide.html</guid>
+      <pubDate>Mon, 09 Nov 2026 17:59:33 +0900</pubDate>
+      <description>AIや手描きで漫画を作る際、ページ間でキャラクターの服装が変わってしまう悩みを解決。衣装設定表の作り方と、絶対に守るべき「変更禁止要素」のルールを解説します。</description>
+    </item>
+    <item>
       <title>小説を漫画化する際の悩み「全ページにキャラが出る」を解消するコマ割り術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-08-novel-to-manga-character-control.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-08-novel-to-manga-character-control.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-20-manga-balloon-first-layout-technique.html</guid>
       <pubDate>Sun, 20 Sep 2026 14:39:25 +0900</pubDate>
       <description>漫画制作で絵を描き始めた後にセリフが入らず困ったことはありませんか？吹き出しを先に配置する「逆算レイアウト」で、構図の破綻を防ぎ、読みやすい作品を作る具体的な手順を解説します。</description>
-    </item>
-    <item>
-      <title>AIとPythonで実現！ゲーム動画のサムネイルを「固定キャラ」で自動量産する方法</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-19-game-thumbnail-automation-with-pillow.html</guid>
-      <pubDate>Sat, 19 Sep 2026 14:26:37 +0900</pubDate>
-      <description>毎回AIでキャラを描き直すと表情やポーズが安定しません。本記事では、一度生成したマスコット画像をPythonライブラリ「Pillow」で背景画像に合成し、サムネイルを効率的に量産する具体的な手法を解説します。</description>
     </item>
   </channel>
 </rss>
