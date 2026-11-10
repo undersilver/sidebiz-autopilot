@@ -651,5 +651,10 @@
     "date": "2026-11-09",
     "title": "漫画化でキャラクターの服装をページ間で統一する方法",
     "draft": "drafts/2026-11-09-manga-costume-consistency-guide.json"
+  },
+  {
+    "date": "2026-11-10",
+    "title": "ローグライクの武器と防具を階層ごとに強くする方法",
+    "draft": "drafts/2026-11-10-2026-11-10-fallback.json"
   }
 ]
