@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>土俵の上のローグライク：力士を主人公にした戦闘システムの設計術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-11-sumo-roguelike-game-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-11-sumo-roguelike-game-design.html</guid>
+      <pubDate>Wed, 11 Nov 2026 21:22:47 +0900</pubDate>
+      <description>力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライク戦闘を作るための具体的な設計手法を解説します。</description>
+    </item>
+    <item>
       <title>漫画制作でキャラクターの服装を統一する！衣装設定表と「変更禁止要素」の活用術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-09-manga-costume-consistency-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-09-manga-costume-consistency-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html</guid>
       <pubDate>Mon, 21 Sep 2026 14:49:20 +0900</pubDate>
       <description>AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。</description>
-    </item>
-    <item>
-      <title>絵が崩れない！漫画制作で「吹き出し」から配置する逆算テクニック</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-20-manga-balloon-first-layout-technique.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-20-manga-balloon-first-layout-technique.html</guid>
-      <pubDate>Sun, 20 Sep 2026 14:39:25 +0900</pubDate>
-      <description>漫画制作で絵を描き始めた後にセリフが入らず困ったことはありませんか？吹き出しを先に配置する「逆算レイアウト」で、構図の破綻を防ぎ、読みやすい作品を作る具体的な手順を解説します。</description>
     </item>
   </channel>
 </rss>

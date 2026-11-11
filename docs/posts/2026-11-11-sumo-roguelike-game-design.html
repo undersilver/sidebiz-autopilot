@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>土俵の上のローグライク：力士を主人公にした戦闘システムの設計術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライク戦闘を作るための具体的な設計手法を解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-11-sumo-roguelike-game-design.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="土俵の上のローグライク：力士を主人公にした戦闘システムの設計術">
+  <meta property="og:description" content="力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライク戦闘を作るための具体的な設計手法を解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-11-sumo-roguelike-game-design.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-11-sumo-roguelike-game-design.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="土俵の上のローグライク：力士を主人公にした戦闘システムの設計術">
+  <meta name="twitter:description" content="力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライク戦闘を作るための具体的な設計手法を解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-11-sumo-roguelike-game-design.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "土俵の上のローグライク：力士を主人公にした戦闘システムの設計術", "description": "力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライク戦闘を作るための具体的な設計手法を解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-11-sumo-roguelike-game-design.png?v=3"], "datePublished": "2026-11-11T21:22:47.925936+09:00", "dateModified": "2026-11-11T21:22:47.925951+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-11-sumo-roguelike-game-design.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>土俵の上のローグライク：力士を主人公にした戦闘システムの設計術</h1>
+  <p class="lead">力士の「張り手」「まわし」「間合い」をゲームシステムに落とし込み、ユニークなローグライク戦闘を作るための具体的な設計手法を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-11-11-sumo-roguelike-game-design.png?v=3" alt="土俵の上のローグライク：力士を主人公にした戦闘システムの設計術">
+  <h2>はじめに</h2>
+<p>力士というモチーフは、格闘ゲームの文脈で語られることが多いですが、あえて「ローグライク」のシステムに組み込むと非常に奥深い戦略性が生まれます。限られたリソースとランダムな状況下で、いかにして「土俵」という限定空間を制するか。本記事では、力士の特性をメカニクスに変換する具体的な設計手法を解説します。</p>
+<h2>張り手：スタミナとリスクのトレードオフ</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>張り手は強力な攻撃ですが、使いすぎると重心が崩れるリスクを持たせることで、単調な連打を防ぐ緊張感のある戦闘になります。</p></div></aside>
+<p>「張り手」は、敵を突き放す強力な攻撃手段ですが、むやみに連打すれば自らの重心が崩れるリスクを伴います。これをシステム化するには「スタミナゲージ」と「重心メーター」を導入しましょう。</p>
+<ul>
+<li>具体例：張り手は敵をノックバックさせるが、使用するたびに重心メーターが上昇する。</li>
+<li>改善例：メーターが最大になると「突き出し」の威力が上がるが、次のターンまで回避不能になるというリスクを付与する。</li>
+</ul>
+<h2>まわし：防御と位置取りの要</h2>
+<p>「まわし」は、相手を掴むための重要なリソースです。ローグライクにおける「掴み」は、敵の行動を制限するデバフとして機能させます。</p>
+<ul>
+<li>手順：敵との距離が1マスの時のみ「まわし」コマンドが有効になる。</li>
+<li>失敗例：まわしを掴んでいる間、プレイヤーも移動できなくなる仕様にしたところ、囲まれると即死するゲームバランスになってしまった。</li>
+<li>改善例：まわしを掴んでいる間は、敵の攻撃を「受け流し」で軽減できるようにし、位置取りの重要性を高めた。</li>
+</ul>
+<h2>間合い：土俵という限定空間の活用</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>敵を壁に追い詰める「寄り切り」ボーナスなど、位置取りに報酬を与えることで、プレイヤーは自然と戦略的な移動を考えるようになります。</p></div></aside>
+<p>ローグライクにおいて「間合い」は、マス目と移動距離で表現します。力士の強みは、自分から仕掛ける「踏み込み」にあります。</p>
+<ul>
+<li>具体例：移動力は低いが、直線上の敵に対しては「踏み込み」で一気に距離を詰めることができる。</li>
+<li>戦略性：敵を土俵の端（壁）に追い詰めると、与ダメージが倍増する「寄り切り」ボーナスを発生させることで、位置取りの戦略を深めることができます。</li>
+</ul>
+<h2>敵のAI設計と立ち回り</h2>
+<p>敵キャラクターもまた、力士の特性を理解した動きをする必要があります。例えば、遠距離攻撃を持つ敵に対しては「突っ張り」で弾幕を相殺する、といったカウンター要素を盛り込むと、単なる殴り合いではないパズル的な戦闘が実現します。</p>
+<h2>まとめ</h2>
+<p>力士を主人公にしたローグライクは、移動の制限と位置取りの重要性を強調することで、他の作品にはない緊張感を生み出せます。まずは「張り手」によるノックバックの距離感と、「まわし」による防御の切り替えからプロトタイプを作成してみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>
