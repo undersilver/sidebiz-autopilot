@@ -656,5 +656,10 @@
     "date": "2026-11-10",
     "title": "ローグライクの武器と防具を階層ごとに強くする方法",
     "draft": "drafts/2026-11-10-2026-11-10-fallback.json"
+  },
+  {
+    "date": "2026-11-11",
+    "title": "力士を主人公にしたローグライクの戦闘設計",
+    "draft": "drafts/2026-11-11-sumo-roguelike-game-design.json"
   }
 ]
