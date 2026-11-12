@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>100階層ローグライクを攻略せよ！ボス設計で学ぶ「段階的難易度」の作り方</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-12-roguelike-boss-design-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-12-roguelike-boss-design-guide.html</guid>
+      <pubDate>Thu, 12 Nov 2026 18:09:59 +0900</pubDate>
+      <description>100階層に及ぶローグライクゲームで、プレイヤーを飽きさせないボス設計のコツを解説。10階ごとの区切りで何を学ばせ、どう難易度を上げるべきか、具体的なステップを紹介します。</description>
+    </item>
+    <item>
       <title>土俵の上のローグライク：力士を主人公にした戦闘システムの設計術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-11-sumo-roguelike-game-design.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-11-sumo-roguelike-game-design.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html</guid>
       <pubDate>Tue, 22 Sep 2026 14:47:10 +0900</pubDate>
       <description>AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。</description>
-    </item>
-    <item>
-      <title>AI画像生成で「キャラの顔」を固定する！一貫性を保つための3ステップ戦略</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-21-ai-character-consistency-guide.html</guid>
-      <pubDate>Mon, 21 Sep 2026 14:49:20 +0900</pubDate>
-      <description>AI画像生成でキャラクターの顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3つを使い分ける具体的な手法を解説します。</description>
     </item>
   </channel>
 </rss>
