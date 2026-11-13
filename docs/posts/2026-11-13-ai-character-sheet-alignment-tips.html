@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="ゲームや漫画制作に欠かせないキャラクターの九面図。AI生成で向きやデザインが崩れる原因を解説し、プロンプトの工夫で精度を高める具体的な改善策を紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-13-ai-character-sheet-alignment-tips.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術">
+  <meta property="og:description" content="ゲームや漫画制作に欠かせないキャラクターの九面図。AI生成で向きやデザインが崩れる原因を解説し、プロンプトの工夫で精度を高める具体的な改善策を紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-13-ai-character-sheet-alignment-tips.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-13-ai-character-sheet-alignment-tips.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術">
+  <meta name="twitter:description" content="ゲームや漫画制作に欠かせないキャラクターの九面図。AI生成で向きやデザインが崩れる原因を解説し、プロンプトの工夫で精度を高める具体的な改善策を紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-13-ai-character-sheet-alignment-tips.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術", "description": "ゲームや漫画制作に欠かせないキャラクターの九面図。AI生成で向きやデザインが崩れる原因を解説し、プロンプトの工夫で精度を高める具体的な改善策を紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-13-ai-character-sheet-alignment-tips.png?v=3"], "datePublished": "2026-11-13T21:48:50.803637+09:00", "dateModified": "2026-11-13T21:48:50.803654+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-13-ai-character-sheet-alignment-tips.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術</h1>
+  <p class="lead">ゲームや漫画制作に欠かせないキャラクターの九面図。AI生成で向きやデザインが崩れる原因を解説し、プロンプトの工夫で精度を高める具体的な改善策を紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-11-13-ai-character-sheet-alignment-tips.png?v=3" alt="AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術">
+  <h2>なぜAIで描く九面図は崩れるのか</h2>
+<p>ゲームや漫画のキャラクター制作において、全身の前後左右を網羅した「九面図」は非常に重要です。しかし、画像生成AIで作成しようとすると、顔のパーツが歪んだり、装飾品が左右で入れ替わったりと、一筋縄ではいきません。</p>
+<p>最大の原因は、AIが「キャラクターの同一性」よりも「画像全体の構図」を優先してしまう点にあります。特に複数のポーズを一枚に収めようとすると、AIはそれぞれの視点を個別のオブジェクトとして認識し、結果として別人のような仕上がりになってしまうのです。</p>
+<h2>方向指定を改善するプロンプトの具体例</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>AIに「同一人物であること」を強く意識させるのがコツです。『same character』や『consistent design』といった単語をプロンプトに含めるだけで、デザインのブレが大幅に軽減されますよ。</p></div></aside>
+<p>AIに正確な向きを指示するためには、単に「正面、背面、側面」と並べるだけでは不十分です。AIに「これは一つのキャラクターの異なる視点である」と理解させるための構造化が必要です。</p>
+<h3>改善前のプロンプト（失敗例）</h3>
+<p><code>Character sheet, front view, back view, side view, detailed, high quality</code>
+これだとAIはバラバラの視点を個別に生成しようとし、服のデザインや髪型が微妙に異なるキャラクターが並んでしまいがちです。</p>
+<h3>改善後のプロンプト（成功のコツ）</h3>
+<p><code>Character reference sheet of [キャラクターの特徴], showing front view, back view, side view, same character, consistent design, high quality, white background, multiple views in one image</code>
+ポイントは「same character（同一人物）」「consistent design（一貫したデザイン）」というキーワードを強調すること。また、視点を明確に区切るために「multiple views in one image」と添えることで、AIの出力傾向を安定させることができます。</p>
+<h2>実際に試せる改善ステップ</h2>
+<p>プロンプトを工夫しても崩れる場合は、以下の手順で生成環境を見直してみましょう。</p>
+<ol>
+<li><strong>単体生成から始める</strong>: 最初から九面図を狙わず、まずは「正面」の完璧な画像を生成し、それをシード値や画像参照機能（Image-to-Image）のベースとして活用します。</li>
+<li><strong>視点を限定する</strong>: 一度に九面図を作ろうとせず、正面と背面、側面と斜め前など、2〜3個の視点に絞って生成してから、後で組み合わせる方がクオリティが安定します。</li>
+<li><strong>ネガティブプロンプトの活用</strong>: 「different face, different hair, inconsistent clothing, distorted, messy」といった単語をネガティブプロンプトに入れ、デザインのブレを抑制します。</li>
+</ol>
+<h2>仕上げの確認ポイント</h2>
+<p>生成された画像は、必ず以下の点を人間がチェックしてください。
+- 左右の装飾品（イヤリングや肩当てなど）が正しく配置されているか
+- 髪の分け目や色味が全ての視点で一致しているか
+- 関節や手足の長さが不自然に伸びていないか</p>
+<p>AIはあくまで補助ツールです。出力された画像のうち、パーツの一部だけが優れている場合は、それらを切り抜いて合成する「加筆・修正」を前提にすると、作業効率が格段に上がります。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

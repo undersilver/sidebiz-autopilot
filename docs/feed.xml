@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-13-ai-character-sheet-alignment-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-13-ai-character-sheet-alignment-tips.html</guid>
+      <pubDate>Fri, 13 Nov 2026 21:48:50 +0900</pubDate>
+      <description>ゲームや漫画制作に欠かせないキャラクターの九面図。AI生成で向きやデザインが崩れる原因を解説し、プロンプトの工夫で精度を高める具体的な改善策を紹介します。</description>
+    </item>
+    <item>
       <title>100階層ローグライクを攻略せよ！ボス設計で学ぶ「段階的難易度」の作り方</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-12-roguelike-boss-design-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-12-roguelike-boss-design-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-25-ai-weapon-consistency-guide.html</guid>
       <pubDate>Fri, 25 Sep 2026 16:02:57 +0900</pubDate>
       <description>ゲームや漫画の制作で、AIが描く武器の左右が入れ替わる現象に悩んでいませんか？プロンプトの工夫と、仕上げのチェックリストで一貫性を維持する具体的な解決策を解説します。</description>
-    </item>
-    <item>
-      <title>AIにゲーム修正を頼むならこれだけ！「4つの必須情報」でバグ解決を爆速化しよう</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-22-ai-game-coding-fix-tips.html</guid>
-      <pubDate>Tue, 22 Sep 2026 14:47:10 +0900</pubDate>
-      <description>AIにゲームのバグ修正を依頼する際、曖昧な指示では期待通りの回答は得られません。再現手順・期待結果・実際の結果・関連ファイルの4点に絞った「情報の型」を解説します。</description>
     </item>
   </channel>
 </rss>
