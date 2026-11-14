@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIで攻略！100階ダンジョンの敵配置を効率的に設計するコツ | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AIを活用して、100階層のダンジョンの敵配置と難易度曲線を効率的に設計する方法を解説。階層ごとの役割分担と、計算式を用いた具体的なバランス調整のステップを紹介します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-14-ai-dungeon-enemy-design.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIで攻略！100階ダンジョンの敵配置を効率的に設計するコツ">
+  <meta property="og:description" content="AIを活用して、100階層のダンジョンの敵配置と難易度曲線を効率的に設計する方法を解説。階層ごとの役割分担と、計算式を用いた具体的なバランス調整のステップを紹介します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-14-ai-dungeon-enemy-design.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-14-ai-dungeon-enemy-design.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIで攻略！100階ダンジョンの敵配置を効率的に設計するコツ">
+  <meta name="twitter:description" content="AIを活用して、100階層のダンジョンの敵配置と難易度曲線を効率的に設計する方法を解説。階層ごとの役割分担と、計算式を用いた具体的なバランス調整のステップを紹介します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-14-ai-dungeon-enemy-design.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIで攻略！100階ダンジョンの敵配置を効率的に設計するコツ", "description": "AIを活用して、100階層のダンジョンの敵配置と難易度曲線を効率的に設計する方法を解説。階層ごとの役割分担と、計算式を用いた具体的なバランス調整のステップを紹介します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-14-ai-dungeon-enemy-design.png?v=3"], "datePublished": "2026-11-14T17:29:43.874930+09:00", "dateModified": "2026-11-14T17:29:43.874947+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-14-ai-dungeon-enemy-design.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">ゲーム制作</p>
+  <h1>AIで攻略！100階ダンジョンの敵配置を効率的に設計するコツ</h1>
+  <p class="lead">AIを活用して、100階層のダンジョンの敵配置と難易度曲線を効率的に設計する方法を解説。階層ごとの役割分担と、計算式を用いた具体的なバランス調整のステップを紹介します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-11-14-ai-dungeon-enemy-design.png?v=3" alt="AIで攻略！100階ダンジョンの敵配置を効率的に設計するコツ">
+  <h2>100階ダンジョンを設計する難しさ</h2>
+<p>ゲーム制作において、100階層ものダンジョンを設計するのは非常に骨が折れる作業です。ただ敵を並べるだけでは、プレイヤーはすぐに飽きてしまいます。重要なのは、10階層ごとに「山場」を作り、難易度の曲線を描くことです。今回は、AIを活用して設計のベースを素早く構築し、プレイヤーを夢中にさせる構成案を作成します。</p>
+<h2>10階層ごとの役割分担</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>10階層ごとに明確なテーマを持たせるのがコツです。AIに指示を出す際も、この役割を伝えると生成精度がぐっと上がります。</p></div></aside>
+<p>効率的な設計には、10階層を1セットとした「区切り」が有効です。役割を明確にすることで、AIへの指示も具体的になります。</p>
+<ul>
+<li>1-10階：チュートリアルと基本操作の習得</li>
+<li>11-20階：属性相性の導入</li>
+<li>21-30階：状態異常や特殊スキルの登場</li>
+<li>31-40階：集団戦の練習</li>
+<li>41-100階：これまでの要素の複合と難易度の上昇</li>
+</ul>
+<h2>AIを使った難易度曲線の作成</h2>
+<p>AIに配置を依頼する際は、数値を絡めた指示を出すのがコツです。例えば、以下のプロンプトテンプレートを活用してください。</p>
+<blockquote>
+<p>プロンプト例：「11階から20階までの敵データを生成してください。各階層の攻撃力は『基礎値 * 1.05^階層数』の計算式で算出し、15階と20階には防御力の高い中ボスを配置してください。」</p>
+</blockquote>
+<p>このように具体的な数式を指定することで、AIはバランスの取れたリストを出力しやすくなります。</p>
+<h2>具体的な設計手順と改善例</h2>
+<p>まず、スプレッドシートに100行のリストを作成し、AIで生成したデータを当てはめます。</p>
+<ol>
+<li>AIに役割を定義する（例：11-20階は水属性の敵を多めにする）</li>
+<li>生成されたリストをゲームバランス計算式に当てはめる</li>
+<li>実際にテストプレイし、詰まる場所を修正する</li>
+</ol>
+<p>改善の際は、AIに「この階層の敵が強すぎる場合、どのステータスを下げればいいか？」と相談しましょう。AIは客観的な分析が得意なため、調整のヒントをたくさんくれます。</p>
+<h2>最後に：プレイヤー視点の微調整を</h2>
+<p>AIは設計のベースを構築する強力なツールですが、最終的な面白さはプレイヤーの体験に依存します。AIが生成したデータをもとに、実際にプレイして「楽しいか」「理不尽ではないか」を確認し、微調整を加えて完成度を高めていきましょう。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIで攻略！100階ダンジョンの敵配置を効率的に設計するコツ</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-14-ai-dungeon-enemy-design.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-14-ai-dungeon-enemy-design.html</guid>
+      <pubDate>Sat, 14 Nov 2026 17:29:43 +0900</pubDate>
+      <description>AIを活用して、100階層のダンジョンの敵配置と難易度曲線を効率的に設計する方法を解説。階層ごとの役割分担と、計算式を用いた具体的なバランス調整のステップを紹介します。</description>
+    </item>
+    <item>
       <title>AI生成でキャラクターの九面図が崩れる？「方向指定」を劇的に改善するプロンプト術</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-13-ai-character-sheet-alignment-tips.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-13-ai-character-sheet-alignment-tips.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-27-ai-game-article-editing-tips.html</guid>
       <pubDate>Sun, 27 Sep 2026 15:07:09 +0900</pubDate>
       <description>AIでゲーム記事を作成する際、自分用のメモが混ざって公開してしまうミスを防ぐ方法を解説。AIへの指示出しを工夫し、記事本文と管理情報をスマートに切り分ける実践的なテクニックを紹介します。</description>
-    </item>
-    <item>
-      <title>AIイラストで「武器の左右反転」を防ぐ！一貫性を保つプロンプトと検査術</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-25-ai-weapon-consistency-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-25-ai-weapon-consistency-guide.html</guid>
-      <pubDate>Fri, 25 Sep 2026 16:02:57 +0900</pubDate>
-      <description>ゲームや漫画の制作で、AIが描く武器の左右が入れ替わる現象に悩んでいませんか？プロンプトの工夫と、仕上げのチェックリストで一貫性を維持する具体的な解決策を解説します。</description>
     </item>
   </channel>
 </rss>
