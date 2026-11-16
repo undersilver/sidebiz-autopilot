@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>ローグライクゲームを面白くする「成長とリセット」の黄金比</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-16-roguelike-game-design-growth-balance.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-16-roguelike-game-design-growth-balance.html</guid>
+      <pubDate>Mon, 16 Nov 2026 16:34:49 +0900</pubDate>
+      <description>何度も遊びたくなるローグライクの秘密は、リセットの虚無感を消し、成長の実感を残す設計にあります。具体的な引き継ぎ要素のバランスと、プレイヤーを飽きさせない仕組みを解説します。</description>
+    </item>
+    <item>
       <title>AIでゲーム開発！Codexで最小限に絞る「仕様書」の作り方</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-15-ai-game-dev-codex-spec.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-15-ai-game-dev-codex-spec.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html</guid>
       <pubDate>Wed, 30 Sep 2026 15:32:22 +0900</pubDate>
       <description>ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。</description>
-    </item>
-    <item>
-      <title>月間記事を電子書籍へ！AIを活用した「重複整理」と構成再編の極意</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-29-ai-blog-to-ebook-restructuring.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-29-ai-blog-to-ebook-restructuring.html</guid>
-      <pubDate>Tue, 29 Sep 2026 12:54:53 +0900</pubDate>
-      <description>ブログの連載記事を電子書籍化する際、どうしても発生する「説明の重複」。AIを活用して効率的に内容を統合し、読みやすい章構成へ再配置する具体的な手順を解説します。</description>
     </item>
   </channel>
 </rss>
