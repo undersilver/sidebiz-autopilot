@@ -686,5 +686,10 @@
     "date": "2026-11-16",
     "title": "ローグライクの敗北後も再挑戦したくなる成長設計",
     "draft": "drafts/2026-11-16-roguelike-game-design-growth-balance.json"
+  },
+  {
+    "date": "2026-11-17",
+    "title": "初心者向けWebゲームで最初に作るべき3画面",
+    "draft": "drafts/2026-11-17-web-game-development-first-3-screens.json"
   }
 ]
