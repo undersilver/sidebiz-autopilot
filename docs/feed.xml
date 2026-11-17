@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>挫折しない！Webゲーム開発：最初に作るべき「3つの画面」とは？</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-17-web-game-development-first-3-screens.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-17-web-game-development-first-3-screens.html</guid>
+      <pubDate>Tue, 17 Nov 2026 19:03:23 +0900</pubDate>
+      <description>Webゲーム開発で挫折しないための秘訣は、機能を絞り込むこと。まずは「タイトル」「プレイ」「結果」の3画面に集中して、最短で完成させるための具体的なロードマップを解説します。</description>
+    </item>
+    <item>
       <title>ローグライクゲームを面白くする「成長とリセット」の黄金比</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-16-roguelike-game-design-growth-balance.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-16-roguelike-game-design-growth-balance.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-01-novel-to-manga-compression-technique.html</guid>
       <pubDate>Thu, 01 Oct 2026 17:13:08 +0900</pubDate>
       <description>小説の長い説明文を漫画の1ページへ落とし込むための、情報の取捨選択術を解説。絵に任せるべき情報と、テキストで補うべき情報の境界線を具体例を交えて紹介します。</description>
-    </item>
-    <item>
-      <title>ローグライクゲームのバランス調整：10階層刻みで武器・防具を強化するコツ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-09-30-roguelike-gear-progression-guide.html</guid>
-      <pubDate>Wed, 30 Sep 2026 15:32:22 +0900</pubDate>
-      <description>ローグライク制作において、プレイヤーが適切に成長を実感できる武器・防具の強化設計を解説。10階層単位での入手計画と数値設定の具体例を紹介します。</description>
     </item>
   </channel>
 </rss>
