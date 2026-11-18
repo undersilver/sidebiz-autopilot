@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AI画像生成の「手足の違和感」を克服する！初心者向け修正テクニック</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-18-ai-image-hands-feet-correction-guide.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-18-ai-image-hands-feet-correction-guide.html</guid>
+      <pubDate>Wed, 18 Nov 2026 20:00:10 +0900</pubDate>
+      <description>AI画像生成でよくある「手足の崩れ」を最小限にするプロンプトのコツと、生成後の修正方法を初心者向けに解説します。</description>
+    </item>
+    <item>
       <title>挫折しない！Webゲーム開発：最初に作るべき「3つの画面」とは？</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-17-web-game-development-first-3-screens.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-17-web-game-development-first-3-screens.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html</guid>
       <pubDate>Fri, 02 Oct 2026 15:36:55 +0900</pubDate>
       <description>AIで生成したドット絵の九面図を、ゲームエンジンで使える素材へ変換する具体的な手順を解説。切り出しからサイズ統一、命名規則まで、作業効率を上げるための実務フローを紹介します。</description>
-    </item>
-    <item>
-      <title>小説を漫画の1ページに凝縮する：情報取捨選択の黄金ルール</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-01-novel-to-manga-compression-technique.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-01-novel-to-manga-compression-technique.html</guid>
-      <pubDate>Thu, 01 Oct 2026 17:13:08 +0900</pubDate>
-      <description>小説の長い説明文を漫画の1ページへ落とし込むための、情報の取捨選択術を解説。絵に任せるべき情報と、テキストで補うべき情報の境界線を具体例を交えて紹介します。</description>
     </item>
   </channel>
 </rss>
