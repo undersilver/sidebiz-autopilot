@@ -696,5 +696,10 @@
     "date": "2026-11-18",
     "title": "AI画像の不自然な手足を減らす確認と修正の手順",
     "draft": "drafts/2026-11-18-ai-image-hands-feet-correction-guide.json"
+  },
+  {
+    "date": "2026-11-19",
+    "title": "ドット絵キャラクターの九面図をゲーム素材へ変換する手順",
+    "draft": "drafts/2026-11-19-pixel-art-sprite-conversion-guide.json"
   }
 ]
