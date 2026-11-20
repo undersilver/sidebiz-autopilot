@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法 | ピコロンのAIゲーム研究所</title>
+  <meta name="description" content="AI生成で毎回変わってしまうキャラクターの表情や服装に悩んでいませんか？本記事では、固定マスコット画像をPythonライブラリ『Pillow』で背景と自動合成し、サムネイル作成を効率化・安定化させる具体的な手順を解説します。">
+  <link rel="canonical" href="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-20-ai-game-thumbnail-automation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ピコロンのAIゲーム研究所">
+  <meta property="og:title" content="AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法">
+  <meta property="og:description" content="AI生成で毎回変わってしまうキャラクターの表情や服装に悩んでいませんか？本記事では、固定マスコット画像をPythonライブラリ『Pillow』で背景と自動合成し、サムネイル作成を効率化・安定化させる具体的な手順を解説します。">
+  <meta property="og:url" content="https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-20-ai-game-thumbnail-automation.html">
+  <meta property="og:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-20-ai-game-thumbnail-automation.png?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法">
+  <meta name="twitter:description" content="AI生成で毎回変わってしまうキャラクターの表情や服装に悩んでいませんか？本記事では、固定マスコット画像をPythonライブラリ『Pillow』で背景と自動合成し、サムネイル作成を効率化・安定化させる具体的な手順を解説します。">
+  <meta name="twitter:image" content="https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-20-ai-game-thumbnail-automation.png?v=3">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法", "description": "AI生成で毎回変わってしまうキャラクターの表情や服装に悩んでいませんか？本記事では、固定マスコット画像をPythonライブラリ『Pillow』で背景と自動合成し、サムネイル作成を効率化・安定化させる具体的な手順を解説します。", "image": ["https://undersilver.github.io/sidebiz-autopilot/assets/thumbnails/2026-11-20-ai-game-thumbnail-automation.png?v=3"], "datePublished": "2026-11-20T17:17:43.941657+09:00", "dateModified": "2026-11-20T17:17:43.941674+09:00", "author": {"@type": "Person", "name": "雑煮餅"}, "publisher": {"@type": "Organization", "name": "ピコロンのAIゲーム研究所"}, "mainEntityOfPage": "https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-20-ai-game-thumbnail-automation.html"}</script>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="../index.html"><img src="../assets/pikolon.png" alt="ピコロン"></a>
+  <div><strong>ピコロンのAIゲーム研究所</strong><small>AIとゲーム制作の実験、失敗、改善を記録する研究所</small></div>
+</header>
+<main class="article">
+  <p class="category">AI活用</p>
+  <h1>AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法</h1>
+  <p class="lead">AI生成で毎回変わってしまうキャラクターの表情や服装に悩んでいませんか？本記事では、固定マスコット画像をPythonライブラリ『Pillow』で背景と自動合成し、サムネイル作成を効率化・安定化させる具体的な手順を解説します。</p>
+  <img class="article-thumbnail" src="../assets/thumbnails/2026-11-20-ai-game-thumbnail-automation.png?v=3" alt="AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法">
+  <h2>はじめに</h2>
+<p>ゲーム実況のサムネイル作りで、毎回AIにキャラクターを生成させていませんか？服装や髪型が微妙に変わってしまうと、視聴者がチャンネルを認識しづらくなってしまいます。</p>
+<p>そこで提案したいのが、あらかじめ用意した「固定マスコット画像」を、AI生成した背景に重ねる手法です。Pythonの画像処理ライブラリ『Pillow』を使えば、この作業を自動化し、ブランドの統一感と作業効率を両立できます。</p>
+<h2>固定マスコットを用意する</h2>
+<p>まずは、チャンネルの顔となるマスコット画像を1枚作成しましょう。背景を透過したPNG形式で保存するのが鉄則です。一度作成すれば使い回せるため、毎回AIで生成する手間が省けます。</p>
+<p>ポイントは「表情のバリエーション」です。笑顔、驚き、真剣な顔など、数パターン用意しておけば、動画のテーマに合わせて使い分けるだけで、サムネイルの表現力がぐっと広がります。</p>
+<h2>Pillowで画像を自動合成する</h2><aside class="pikoron-tip" aria-label="ピコロンの要点"><img class="pikoron-tip-avatar" src="../assets/pikolon.png" alt="ピコロン"><div class="pikoron-tip-bubble"><strong>ピコロンの要点</strong><p>Pillowのpaste関数を使う際は、第三引数に透過画像自体を指定するのがコツです。これで背景をきれいに抜いた状態で合成できます。</p></div></aside>
+<p>PythonのPillowライブラリを使えば、背景とキャラクターの合成を数行のコードで実行できます。</p>
+<pre><code class="language-python">from PIL import Image
+
+# 背景とマスコットを読み込み
+background = Image.open('background.png')
+mascot = Image.open('mascot.png')
+
+# マスコットを重ねる（位置を指定）
+background.paste(mascot, (100, 200), mascot)
+
+# 保存
+background.save('thumbnail.png')
+</code></pre>
+<p><code>paste</code>関数の第三引数にマスコット画像自体を指定することで、透過情報を保持したままきれいに合成できます。</p>
+<h2>失敗例と改善策</h2>
+<p>背景とキャラクターが浮いて見える場合は、以下の調整を試してみてください。</p>
+<ol>
+<li>明るさとコントラスト：<code>ImageEnhance</code>モジュールを使い、背景の雰囲気に合わせてマスコットの色味を微調整します。</li>
+<li>ドロップシャドウ：マスコットの背後に薄い黒い影を描画すると、背景との境界がはっきりし、立体感が生まれます。</li>
+</ol>
+<h2>まとめ</h2>
+<p>「背景はAI、キャラは固定素材」と役割を分担することで、サムネイル作成の安定感は大きく変わります。まずは手持ちの素材でテンプレートを構築し、効率的な動画制作環境を整えてみてください。</p>
+  <hr>
+  <p class="disclosure">当サイトにはアフィリエイトリンクが含まれる場合があります。</p>
+  <p>制作の続きや検証結果も順次公開します。</p>
+</main>
+</body>
+</html>

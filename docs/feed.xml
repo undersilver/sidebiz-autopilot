@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-20-ai-game-thumbnail-automation.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-20-ai-game-thumbnail-automation.html</guid>
+      <pubDate>Fri, 20 Nov 2026 17:17:43 +0900</pubDate>
+      <description>AI生成で毎回変わってしまうキャラクターの表情や服装に悩んでいませんか？本記事では、固定マスコット画像をPythonライブラリ『Pillow』で背景と自動合成し、サムネイル作成を効率化・安定化させる具体的な手順を解説します。</description>
+    </item>
+    <item>
       <title>AI画像生成の「手足の違和感」を克服する！初心者向け修正テクニック</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-18-ai-image-hands-feet-correction-guide.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-18-ai-image-hands-feet-correction-guide.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-03-github-pages-game-dev-log.html</guid>
       <pubDate>Sat, 03 Oct 2026 16:30:40 +0900</pubDate>
       <description>GitHub Pagesを活用して、あなたのゲーム開発記録を無料で公開する方法を解説。リポジトリ作成からGitHub Actionsによる自動公開まで、初心者でも迷わない手順をまとめました。</description>
-    </item>
-    <item>
-      <title>AI生成のドット絵キャラクターをゲーム素材へ！九面図からパーツ化する実務ステップ</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-02-pixel-art-character-sheet-guide.html</guid>
-      <pubDate>Fri, 02 Oct 2026 15:36:55 +0900</pubDate>
-      <description>AIで生成したドット絵の九面図を、ゲームエンジンで使える素材へ変換する具体的な手順を解説。切り出しからサイズ統一、命名規則まで、作業効率を上げるための実務フローを紹介します。</description>
     </item>
   </channel>
 </rss>
