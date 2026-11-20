@@ -701,5 +701,10 @@
     "date": "2026-11-19",
     "title": "ドット絵キャラクターの九面図をゲーム素材へ変換する手順",
     "draft": "drafts/2026-11-19-pixel-art-sprite-conversion-guide.json"
+  },
+  {
+    "date": "2026-11-20",
+    "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+    "draft": "drafts/2026-11-20-ai-game-thumbnail-automation.json"
   }
 ]

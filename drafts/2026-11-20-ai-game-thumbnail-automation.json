@@ -1,0 +1,42 @@
+{
+  "title": "AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法",
+  "slug": "ai-game-thumbnail-automation",
+  "category": "AI活用",
+  "summary": "AI生成で毎回変わってしまうキャラクターの表情や服装に悩んでいませんか？本記事では、固定マスコット画像をPythonライブラリ『Pillow』で背景と自動合成し、サムネイル作成を効率化・安定化させる具体的な手順を解説します。",
+  "article_markdown": "## はじめに\nゲーム実況のサムネイル作りで、毎回AIにキャラクターを生成させていませんか？服装や髪型が微妙に変わってしまうと、視聴者がチャンネルを認識しづらくなってしまいます。\n\nそこで提案したいのが、あらかじめ用意した「固定マスコット画像」を、AI生成した背景に重ねる手法です。Pythonの画像処理ライブラリ『Pillow』を使えば、この作業を自動化し、ブランドの統一感と作業効率を両立できます。\n\n## 固定マスコットを用意する\nまずは、チャンネルの顔となるマスコット画像を1枚作成しましょう。背景を透過したPNG形式で保存するのが鉄則です。一度作成すれば使い回せるため、毎回AIで生成する手間が省けます。\n\nポイントは「表情のバリエーション」です。笑顔、驚き、真剣な顔など、数パターン用意しておけば、動画のテーマに合わせて使い分けるだけで、サムネイルの表現力がぐっと広がります。\n\n## Pillowで画像を自動合成する\nPythonのPillowライブラリを使えば、背景とキャラクターの合成を数行のコードで実行できます。\n\n```python\nfrom PIL import Image\n\n# 背景とマスコットを読み込み\nbackground = Image.open('background.png')\nmascot = Image.open('mascot.png')\n\n# マスコットを重ねる（位置を指定）\nbackground.paste(mascot, (100, 200), mascot)\n\n# 保存\nbackground.save('thumbnail.png')\n```\n\n`paste`関数の第三引数にマスコット画像自体を指定することで、透過情報を保持したままきれいに合成できます。\n\n## 失敗例と改善策\n背景とキャラクターが浮いて見える場合は、以下の調整を試してみてください。\n\n1. 明るさとコントラスト：`ImageEnhance`モジュールを使い、背景の雰囲気に合わせてマスコットの色味を微調整します。\n2. ドロップシャドウ：マスコットの背後に薄い黒い影を描画すると、背景との境界がはっきりし、立体感が生まれます。\n\n## まとめ\n「背景はAI、キャラは固定素材」と役割を分担することで、サムネイル作成の安定感は大きく変わります。まずは手持ちの素材でテンプレートを構築し、効率的な動画制作環境を整えてみてください。",
+  "social_post": "ゲーム実況のサムネイル、毎回AIキャラ生成で悩んでいませんか？「背景はAI、キャラは固定素材」と分担すると、クオリティが安定し、作業も爆速になります。PythonのPillowを使った自動合成のコツをまとめました！",
+  "short_video_script": "サムネのキャラが毎回変わる問題、解決します。AIで背景を作ったら、あとはPythonのPillowで固定のキャラ画像を重ねるだけ。時短とブランディングを両立するサムネ作成術、詳細は記事をチェック！",
+  "thumbnail_prompt": "Futuristic gaming setup, neon lights, empty space for character overlay, high resolution, 4k, cinematic lighting, vibrant colors",
+  "pikoron_tips": [
+    {
+      "after_heading": "Pillowで画像を自動合成する",
+      "message": "Pillowのpaste関数を使う際は、第三引数に透過画像自体を指定するのがコツです。これで背景をきれいに抜いた状態で合成できます。"
+    }
+  ],
+  "quality_score": 95,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "technical_accessibility",
+        "detail": "Pythonコードの解説は非常に具体的ですが、プログラミング未経験の読者にとっては環境構築のハードルがやや高い可能性があります。"
+      }
+    ],
+    "rewrite_instructions": [
+      "必要に応じて、Python環境がない読者向けに、Canvaなどのツールで同様の合成を行う代替案を補足すると、より幅広い層にリーチできます。"
+    ],
+    "publishable": true
+  },
+  "estimated_review_minutes": 10,
+  "_meta": {
+    "created_at": "2026-11-20T11:49:34.038444+09:00",
+    "seed": {
+      "title": "ゲーム用サムネイルを固定マスコットで自動生成する方法",
+      "category": "AI活用",
+      "original_angle": "毎回キャラクターを生成せずPillowで安定した画像を合成する"
+    },
+    "status": "review"
+  }
+}
