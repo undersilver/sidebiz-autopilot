@@ -1,0 +1,40 @@
+{
+  "title": "AI画像生成で「同じキャラ」を描き続ける！一貫性を保つ3つの鉄則",
+  "slug": "ai-character-consistency-guide",
+  "category": "AI活用",
+  "summary": "AI画像生成で毎回顔が変わってしまう悩みを解決。参照画像、固定特徴、差分指示の3ステップで、キャラクターの一貫性を維持する具体的な手法を解説します。",
+  "article_markdown": "## なぜAIはキャラクターの顔を変えてしまうのか\nAI画像生成において、同じキャラクターを継続して描くことは最大の難関です。生成のたびにAIが新しい確率で画像を構成するため、少しのプロンプト変更でも顔立ちが微妙に変化してしまいます。これを防ぐには、AIに対してキャラクターの定義を明確に固定する仕組みが欠かせません。\n\n## 参照画像を活用する：キャラクターの「顔見本」を作る\n最初に行うべきは、基準となるキャラクター画像を1枚作成し、それを「参照画像」として活用することです。多くの生成ツールには「Image-to-Image」や「ControlNet」といった機能が搭載されています。これらを使用して、基準画像の構図や顔の輪郭をAIに参照させることで、生成時のブレを大幅に抑えることができます。\n\n## 固定特徴を言語化する：プロンプトのテンプレート化\n参照画像だけでなく、キャラクターの特徴を言語化してプロンプトに組み込むことも重要です。髪型、目の色、髪の色、特徴的なアクセサリーなどは、毎回必ずプロンプトの先頭に記載する「固定パーツ」としてテンプレート化しておくと便利です。\n\n・失敗例：毎回その時の気分で髪型や服装を詳しく書き直す\n・改善例：『blue hair, twin tails, blue eyes, silver necklace』のような固定セットを常にプロンプトの先頭に置く\n\n## 差分指示でバリエーションを増やす\nキャラクターの基本情報が固まったら、次に「差分」を指示します。ここで重要なのは、キャラクターの顔に関する記述は一切変えず、動作や背景の記述だけを後ろに付け足すという点です。\n\n例えば、「笑顔で走っている」というシーンを作りたい場合、固定プロンプトの後に『running, smiling, park background』と追加するだけで、顔の個性を維持したまま別のシーンを生成しやすくなります。\n\n## 一貫性を保つためのチェックリスト\n生成した画像が意図したキャラクターと異なる場合は、以下の手順で確認してみましょう。\n1. 参照画像の影響度が強すぎないか（構図が固定されすぎていないか）\n2. プロンプトの先頭に固定特徴が正しく記載されているか\n3. 意図しない要素がプロンプトに含まれていないか\n\nこれらを意識するだけで、AI生成の品質はぐっと安定します。まずは、お気に入りのキャラクターを一人、プロンプトのテンプレート化から始めてみるのがおすすめです。",
+  "social_post": "AI画像生成で「毎回キャラの顔が変わる」問題に悩んでいませんか？参照画像とプロンプトの固定化で、一貫性を保つための具体的な3ステップをまとめました。創作活動の効率化にぜひお役立てください！ #AI画像生成 #キャラクターデザイン #AI活用",
+  "short_video_script": "AIで同じキャラを描くコツ、知ってる？1.顔見本の参照画像を用意する。2.特徴をプロンプトの先頭に固定する。3.差分は後ろに付け足すだけ。これだけで顔のブレが劇的に減ります！詳細は記事をチェックしてね。",
+  "thumbnail_prompt": "A professional digital illustration of a split-screen composition. On the left, a consistent anime-style character portrait. On the right, the same character in different poses and outfits, showing visual consistency. High quality, clean background, aesthetic color palette, 8k resolution.",
+  "pikoron_tips": [
+    {
+      "after_heading": "固定特徴を言語化する：プロンプトのテンプレート化",
+      "message": "キャラクターの特徴をプロンプトの先頭に固定しましょう。髪型や目の色などの基本情報をテンプレート化し、毎回同じ順序で入力することで、AIがキャラクターを同一人物として認識しやすくなります。"
+    }
+  ],
+  "quality_score": 95,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The article is highly practical, but adding a brief mention that 'consistency may still vary depending on the specific AI model used' would further improve accuracy."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "estimated_review_minutes": 10,
+  "_meta": {
+    "created_at": "2026-11-22T10:54:06.261678+09:00",
+    "seed": {
+      "title": "AI画像生成で同じキャラクターの顔を保つ方法",
+      "category": "AI活用",
+      "original_angle": "参照画像・固定特徴・差分指示を分けて一貫性を高める"
+    },
+    "status": "review"
+  }
+}
