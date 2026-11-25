@@ -726,5 +726,10 @@
     "date": "2026-11-24",
     "title": "AIにゲームバランス調整案を出させる入力表の作り方",
     "draft": "drafts/2026-11-24-ai-game-balance-optimization-table.json"
+  },
+  {
+    "date": "2026-11-25",
+    "title": "PythonとPillowで日本語サムネイルを作るときの注意点",
+    "draft": "drafts/2026-11-25-python-pillow-japanese-thumbnail-tips.json"
   }
 ]

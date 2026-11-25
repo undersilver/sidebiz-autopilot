@@ -1,0 +1,54 @@
+{
+  "title": "PythonとPillowで日本語サムネイルを自動生成！失敗しないための4つのポイント",
+  "slug": "python-pillow-japanese-thumbnail-tips",
+  "category": "プログラミング",
+  "summary": "Pythonの画像処理ライブラリ「Pillow」を使って日本語サムネイルを自動生成する際、よくある失敗例と解決策を解説。フォント選びからレイアウトの調整まで、実用的なノウハウを紹介します。",
+  "article_markdown": "## はじめに\n\nAIを活用したコンテンツ制作において、サムネイルを自動生成できれば作業効率は劇的に向上します。Pythonの画像処理ライブラリ「Pillow」は、文字入れや装飾をプログラムで制御できるため、大量の画像作成に最適です。しかし、日本語特有の「フォント崩れ」や「改行の難しさ」に直面し、挫折するケースも少なくありません。本記事では、自動生成で陥りやすい失敗例と、それを回避するための具体的な改善策を解説します。\n\n## 1. 日本語フォントが文字化けする・表示されない\n\nPillowで日本語を扱う際、最も多い失敗が「豆腐（□）」の表示です。これは、デフォルトのフォントが日本語に対応していないことが原因です。\n\n### 失敗例\n`ImageFont.truetype(\"arial.ttf\", 40)` のように英語フォントを指定している。\n\n### 改善策\nOS内にある日本語フォント（.ttfや.otf）のパスを直接指定します。Windowsなら「C:\\Windows\\Fonts\\msgothic.ttc」、macOSなら「/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc」などを指定してください。また、ライブラリのバージョンによっては、フォントの読み込みに失敗することがあるため、パスの存在確認を行うコードを組み込むのが定石です。\n\n## 2. 長い文章が枠からはみ出す（折り返しの失敗）\n\nサムネイルのタイトルが長すぎると、画像の外へ文字が突き抜けてしまいます。Pillowは標準で自動改行機能を持っていないため、自前で実装する必要があります。\n\n### 失敗例\n`text()` メソッドで長い文字列をそのまま流し込み、画像からはみ出した状態で生成する。\n\n### 改善策\n`textbbox()` メソッドを活用し、現在の文字列の幅を計測しながら、指定した幅を超えたら改行コードを挿入する関数を作成します。\n\n```python\nfrom PIL import ImageFont\n\ndef wrap_text(text, font, max_width):\n    lines = []\n    current_line = \"\"\n    for char in text:\n        bbox = font.getbbox(current_line + char)\n        if bbox[2] < max_width:\n            current_line += char\n        else:\n            lines.append(current_line)\n            current_line = char\n    lines.append(current_line)\n    return \"\\n\".join(lines)\n```\n\nこのように「1行あたりの最大幅」を制限することで、レイアウト崩れを防ぐことができます。\n\n## 3. 文字サイズが固定で読みづらい\n\nタイトルによって文字数が大きく異なる場合、常に同じフォントサイズを指定すると、短いタイトルはスカスカになり、長いタイトルは窮屈になります。\n\n### 改善策\n文字数に応じてフォントサイズを動的に変更するロジックを組み込みましょう。例えば、タイトルが10文字以内ならサイズを大きく、20文字以上なら小さくするといった条件分岐を入れるだけで、視認性が大幅に向上します。\n\n## 4. 余白（マージン）が考慮されていない\n\n画像ギリギリまで文字を配置すると、スマホの小さな画面で見たときに非常に窮屈に見えます。\n\n### 失敗例\n座標を(0, 0)から指定し、画像の端に文字が接触している。\n\n### 改善策\n「セーフゾーン」を定義しましょう。画像全体の幅の10%を左右の余白として確保し、その内側に文字が収まるように描画開始位置を調整します。これにより、どんなデバイスで見てもバランスの取れたプロフェッショナルな見た目を維持できます。\n\n## まとめ\n\nPythonとPillowでのサムネイル自動生成は、一度ロジックを組んでしまえば強力な武器になります。まずは「フォントの指定」「改行処理」「余白管理」の3点を意識して実装してみてください。小さな調整を積み重ねることで、AI時代にふさわしい、クオリティの高い自動生成環境を構築できます。",
+  "social_post": "【Pythonでサムネイル自動化】Pillowで日本語を扱う際の「あるある」な失敗と回避策をまとめました。文字化け、改行、余白の問題を解決して、効率的なコンテンツ制作を始めましょう！ #Python #プログラミング #画像処理",
+  "short_video_script": "PythonとPillowでサムネイルを自動生成する時、日本語で失敗していませんか？文字化け、改行ミス、余白不足。これらを解決するコツは、フォントパスの正しい指定と、textbboxを使った動的な改行処理です。詳しくは記事をチェック！",
+  "thumbnail_prompt": "A modern, minimalist workspace with a laptop displaying Python code, a clean thumbnail design mockup on the screen, bright lighting, professional photography style, 8k resolution.",
+  "pikoron_tips": [
+    {
+      "after_heading": "2. 長い文章が枠からはみ出す（折り返しの失敗）",
+      "message": "Pillowには自動改行機能がないため、textbboxで文字幅を測りながら、指定した幅を超えたら手動で改行コードを挿入するロジックを必ず組み込みましょう。"
+    }
+  ],
+  "human_checks": [
+    {
+      "type": "画像",
+      "item": "コード例の動作確認",
+      "risk": "低"
+    },
+    {
+      "type": "表現",
+      "item": "日本語フォントのパス指定に関する注意書き",
+      "risk": "低"
+    }
+  ],
+  "sources_needed": [],
+  "affiliate_candidates": [],
+  "quality_score": 95,
+  "estimated_review_minutes": 5,
+  "_validation": {
+    "status": "pass",
+    "score": 95,
+    "issues": [
+      {
+        "severity": "low",
+        "category": "content",
+        "detail": "The article is high quality and meets all criteria. The score was adjusted to reflect the high standard of the content."
+      }
+    ],
+    "rewrite_instructions": [],
+    "publishable": true
+  },
+  "_meta": {
+    "created_at": "2026-11-25T13:46:41.498084+09:00",
+    "seed": {
+      "title": "PythonとPillowで日本語サムネイルを作るときの注意点",
+      "category": "プログラミング",
+      "original_angle": "日本語フォント・折り返し・文字サイズ・余白の失敗例を扱う"
+    },
+    "status": "review"
+  }
+}
