@@ -6,6 +6,13 @@
     <description>AIとゲーム制作の実験、失敗、改善を記録する研究所</description>
     <language>ja</language>
     <item>
+      <title>PythonとPillowで日本語サムネイルを自動生成！失敗しないための4つのポイント</title>
+      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-25-python-pillow-japanese-thumbnail-tips.html</link>
+      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-25-python-pillow-japanese-thumbnail-tips.html</guid>
+      <pubDate>Wed, 25 Nov 2026 22:49:43 +0900</pubDate>
+      <description>Pythonの画像処理ライブラリ「Pillow」を使って日本語サムネイルを自動生成する際、よくある失敗例と解決策を解説。フォント選びからレイアウトの調整まで、実用的なノウハウを紹介します。</description>
+    </item>
+    <item>
       <title>AIでゲーム実況サムネイルを爆速作成！固定キャラ合成でクオリティを安定させる方法</title>
       <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-20-ai-game-thumbnail-automation.html</link>
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-11-20-ai-game-thumbnail-automation.html</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-06-enemy-role-design-5-types.html</guid>
       <pubDate>Tue, 06 Oct 2026 13:33:14 +0900</pubDate>
       <description>複雑な敵の設計を「高速・高耐久・遠距離・状態異常・特殊」の5つの役割に分類することで、バランス調整が劇的に楽になる設計手法を解説します。</description>
-    </item>
-    <item>
-      <title>GitHub Pagesでゲーム開発記録サイトを無料公開する方法</title>
-      <link>https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-03-github-pages-game-dev-log.html</link>
-      <guid isPermaLink="true">https://undersilver.github.io/sidebiz-autopilot/posts/2026-10-03-github-pages-game-dev-log.html</guid>
-      <pubDate>Sat, 03 Oct 2026 16:30:40 +0900</pubDate>
-      <description>GitHub Pagesを活用して、あなたのゲーム開発記録を無料で公開する方法を解説。リポジトリ作成からGitHub Actionsによる自動公開まで、初心者でも迷わない手順をまとめました。</description>
     </item>
   </channel>
 </rss>
